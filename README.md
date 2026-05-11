@@ -1,4 +1,4 @@
-# BNY Agentic DDQ Response Platform — `ddq-platform`
+# Agentic DDQ Response Platform — `ddq-platform`
 
 Auto-responds to industry-standard due-diligence questionnaires (AFME, SIG, CAIQ, ADV, bespoke). The durable asset is the answer **library**, not the agent.
 
@@ -10,7 +10,7 @@ Auto-responds to industry-standard due-diligence questionnaires (AFME, SIG, CAIQ
 | Phase | Source | Status |
 |---|---|---|
 | Day 1–2 — Vendor public frameworks (AFME, NIST, CSA) | DATA-PLAN §8 | ✅ done |
-| Day 3–4 — EDGAR + BNY IR ingest into LocalStack S3 | DATA-PLAN §8 | ✅ done (126 objects, ~143 MB) |
+| Day 3–4 — EDGAR + investor-relations ingest into LocalStack S3 | DATA-PLAN §8 | ✅ done (126 objects, ~143 MB) |
 | Day 5 — Parse corpus to evidence spans | DATA-PLAN §8 | ✅ done (13,466 spans, hash-stable) |
 | Day 6 — Lexical index (OpenSearch BM25) | DATA-PLAN §8 | ✅ done (`spans-v1`, 6/7 smoke PASS) |
 | Day 7 — Dense index + hybrid retrieval (RRF) | DATA-PLAN §8 | ✅ done (Qdrant, BGE-small-en-v1.5, 7/7 PASS) |
@@ -55,7 +55,7 @@ flowchart TB
     classDef audit       fill:#FCEBEB,stroke:#A32D2D,color:#A32D2D
 
     subgraph L08["L08 · Client & SME Interface"]
-        EMAIL["📧 Email intake<br/>ddq@bny.com<br/><i>services/intake/email_parser.py</i>"]:::ui
+        EMAIL["📧 Email intake<br/>ddq@example.com<br/><i>services/intake/email_parser.py</i>"]:::ui
         UI["🖥 React UI · TanStack Router<br/>/pipeline/$ddqId · SME console · Audit viewer<br/><i>apps/ui/</i>"]:::ui
     end
 
