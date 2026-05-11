@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+dist/
+build/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Vendored data — large public artifacts. Tracked via manifest+hashes, not git LFS.
+# See data/sources/README.md and data/sources/manifest.json for provenance.
+data/sources/**/*.docx
+data/sources/**/*.xlsx
+data/sources/**/*.pdf
+data/sources/**/*.zip
+data/sources/**/*.csv
+# Extracted CSA bundles — derivative artifacts, regenerable from the .zip + verify_sources.py.
+data/sources/caiq/_extracted/
+# Keep top-level machine-readable JSON/OSCAL in-repo (small, frequently inspected):
+!data/sources/nist/*.json
+!data/sources/manifest.json
+
+# Local LocalStack volumes
+infra/docker/.localstack/
+infra/docker/volume/

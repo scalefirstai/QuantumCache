@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Stub manifest of known BNY-affiliated investment advisers. DATA-PLAN §9 risk #4 explicitly marks this as 'manual at first — IAPD search by entity name'. Detailed ADV pulls happen at Day 8 in 05_parse_adv.py; this file just records identifying info we already know plus IAPD lookup URLs. Populate `crd` from IAPD when each entry is verified.",
+  "as_of": "2026-05-08",
+  "advisers": [
+    {
+      "legal_name": "BNY Mellon Investment Adviser, Inc.",
+      "doing_business_as": ["BNYM Investment Adviser"],
+      "iapd_search_url": "https://adviserinfo.sec.gov/firm/summary/?firmName=BNY+Mellon+Investment+Adviser",
+      "crd": null,
+      "cik": null,
+      "notes": "Largest US-registered BNY adviser; CRD/CIK to be confirmed via IAPD before Day 8."
+    },
+    {
+      "legal_name": "Mellon Investments Corporation",
+      "doing_business_as": [],
+      "iapd_search_url": "https://adviserinfo.sec.gov/firm/summary/?firmName=Mellon+Investments+Corporation",
+      "crd": null,
+      "cik": null,
+      "notes": "Index/quant-focused BNY-affiliated adviser."
+    },
+    {
+      "legal_name": "Insight North America LLC",
+      "doing_business_as": ["Insight Investment"],
+      "iapd_search_url": "https://adviserinfo.sec.gov/firm/summary/?firmName=Insight+North+America",
+      "crd": null,
+      "cik": null,
+      "notes": "Insight Investment's US adviser entity (BNY-owned)."
+    },
+    {
+      "legal_name": "Newton Investment Management North America LLC",
+      "doing_business_as": ["Newton"],
+      "iapd_search_url": "https://adviserinfo.sec.gov/firm/summary/?firmName=Newton+Investment+Management",
+      "crd": null,
+      "cik": null,
+      "notes": "Newton's US-registered adviser arm."
+    },
+    {
+      "legal_name": "Walter Scott & Partners Limited",
+      "doing_business_as": [],
+      "iapd_search_url": "https://adviserinfo.sec.gov/firm/summary/?firmName=Walter+Scott",
+      "crd": null,
+      "cik": null,
+      "notes": "Edinburgh-based BNY-affiliated equity manager; SEC-registered."
+    },
+    {
+      "legal_name": "ARX Investimentos Ltda.",
+      "doing_business_as": ["ARX"],
+      "iapd_search_url": "https://adviserinfo.sec.gov/firm/summary/?firmName=ARX+Investimentos",
+      "crd": null,
+      "cik": null,
+      "notes": "Brazilian BNY-affiliated adviser."
+    }
+  ],
+  "deferred_until_day_8": "Per DATA-PLAN §8 step 05_parse_adv.py, the actual ADV Part 1 / Part 2 ingest happens on Day 8 from the SEC FOIA bulk extracts (or live IAPD per-firm). This stub exists so canonical IDs that already need to reference an entity can use stable DBA names; CRD/CIK are filled in at verification time."
+}

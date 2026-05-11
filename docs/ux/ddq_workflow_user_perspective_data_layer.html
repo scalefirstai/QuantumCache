@@ -1,0 +1,184 @@
+<h2 class="sr-only">Interactive walkthrough of the DDQ workflow showing user actions, system actions, and data layer activity at each of seven stages.</h2>
+
+<style>
+  .stage-nav { display: flex; gap: 6px; margin: 0 0 1.25rem; flex-wrap: wrap; }
+  .stage-pill { font-size: 12px; padding: 6px 10px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary); background: transparent; cursor: pointer; color: var(--color-text-secondary); transition: all .15s; }
+  .stage-pill:hover { background: var(--color-background-secondary); }
+  .stage-pill.active { background: var(--color-background-info); color: var(--color-text-info); border-color: var(--color-border-info); font-weight: 500; }
+  .stage-num { display: inline-block; width: 18px; height: 18px; border-radius: 50%; background: var(--color-background-secondary); text-align: center; line-height: 18px; margin-right: 6px; font-size: 11px; }
+  .stage-pill.active .stage-num { background: rgba(255,255,255,0.3); }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  .panel-header { margin: 0 0 1rem; }
+  .panel-title { font-size: 18px; font-weight: 500; margin: 0 0 4px; }
+  .panel-sub { font-size: 13px; color: var(--color-text-secondary); margin: 0; }
+  .lane { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 14px 16px; margin: 0 0 10px; }
+  .lane-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-text-tertiary); margin: 0 0 8px; font-weight: 500; }
+  .lane-body { font-size: 14px; line-height: 1.6; color: var(--color-text-primary); margin: 0; }
+  .lane-body strong { font-weight: 500; }
+  .data-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 8px 0 0; }
+  .data-cell { padding: 10px 12px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary); }
+  .data-cell-label { font-size: 11px; font-weight: 500; margin: 0 0 4px; }
+  .data-cell-body { font-size: 12px; line-height: 1.5; margin: 0; }
+  .k { font-family: var(--font-mono); font-size: 12px; padding: 1px 5px; border-radius: 3px; background: var(--color-background-tertiary); }
+  .nav-row { display: flex; gap: 8px; justify-content: space-between; margin: 1.25rem 0 0; }
+  .nav-btn { font-size: 13px; padding: 8px 14px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-secondary); background: transparent; cursor: pointer; transition: all .15s; }
+  .nav-btn:hover:not(:disabled) { background: var(--color-background-secondary); }
+  .nav-btn:disabled { opacity: .4; cursor: not-allowed; }
+  .pill { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 10px; margin-left: 6px; font-weight: 500; }
+  .pill-knowledge { background: #E1F5EE; color: #085041; }
+  .pill-canonical { background: #EEEDFE; color: #3C3489; }
+  .pill-audit { background: #F1EFE8; color: #444441; }
+  @media (prefers-color-scheme: dark) {
+    .pill-knowledge { background: #085041; color: #9FE1CB; }
+    .pill-canonical { background: #3C3489; color: #CECBF6; }
+    .pill-audit { background: #444441; color: #D3D1C7; }
+  }
+</style>
+
+<div class="stage-nav" id="nav"></div>
+
+<div id="panels"></div>
+
+<div class="nav-row">
+  <button class="nav-btn" id="prev" onclick="step(-1)">← Previous</button>
+  <button class="nav-btn" id="next" onclick="step(1)">Next →</button>
+</div>
+
+<script>
+const stages = [
+  {
+    title: "Intake",
+    sub: "Client sends a DDQ; the platform parses it into questions",
+    user: "<strong>Client RM at a pension fund</strong> emails a 180-question AFME custodian DDQ as an Excel attachment to <span class='k'>ddq@bny.com</span>, copying the BNY relationship manager. They expect a response in 3 weeks.",
+    system: "<strong>Intake worker</strong> receives the message via Microsoft Graph subscription, downloads the attachment to S3, runs Unstructured.io to extract questions, and creates a <span class='k'>Run</span> with a parsed question list. The RM gets a confirmation in their inbox within 60 seconds.",
+    data: [
+      { lane: "knowledge", label: "Source DDQ stored", body: "Raw <span class='k'>.xlsx</span> written to <span class='k'>s3://ddq-intake-raw/</span> with <span class='k'>doc_hash</span>" },
+      { lane: "audit", label: "Run created", body: "<span class='k'>run_id</span> minted; first <span class='k'>audit_event</span> of kind <span class='k'>intake</span> written" },
+      { lane: "canonical", label: "Taxonomy version pinned", body: "Run records the active <span class='k'>taxonomy_version_id</span> for reproducibility" }
+    ]
+  },
+  {
+    title: "Classify",
+    sub: "Each incoming question gets mapped to a canonical ID",
+    user: "<strong>Nothing visible yet.</strong> The RM and the client are waiting. Internally, an SME may later see flagged unmapped questions in their queue, but most questions classify automatically.",
+    system: "<strong>QuestionMapper agent</strong> (Haiku) embeds each question, retrieves top-k candidate canonical IDs from Qdrant, reranks, and assigns. High confidence mappings auto-confirm; low confidence routes to an SME for one-click confirmation. AFME-IS-3.4 → <span class='k'>canon.is.access_control.privileged_access_review</span>.",
+    data: [
+      { lane: "canonical", label: "Taxonomy lookup", body: "Embedding similarity over <span class='k'>canonical_questions</span> at the pinned version" },
+      { lane: "canonical", label: "Mapping recorded", body: "<span class='k'>framework_mappings</span> row written if new; existing mappings reused" },
+      { lane: "audit", label: "Classification logged", body: "<span class='k'>classify.match</span> event with confidence score per question" }
+    ]
+  },
+  {
+    title: "Retrieve",
+    sub: "Find the right answer — from the library if one exists, or from evidence",
+    user: "<strong>Still invisible to the client.</strong> SMEs may see a small queue of questions where retrieval surfaced low-confidence matches needing human review.",
+    system: "<strong>For each canonical_id, library lookup runs first.</strong> Cache hit → reuse the approved answer (target: 92% of questions). Miss → <strong>EvidenceSourcer agent</strong> hits the hybrid retrieval pipeline: BM25 + dense + Cohere rerank against the corpus, filtered to the right entity and within freshness windows.",
+    data: [
+      { lane: "canonical", label: "Library lookup", body: "<span class='k'>library_entries</span> queried by <span class='k'>(canonical_id, entity, product)</span> with fallback chain" },
+      { lane: "knowledge", label: "Evidence retrieval", body: "<span class='k'>spans</span> + <span class='k'>embeddings</span> searched on miss; entity-scoped at the database layer" },
+      { lane: "audit", label: "Every candidate logged", body: "<span class='k'>retrieve.query</span> + <span class='k'>retrieve.result</span> with full ranked list, not just what was used" }
+    ]
+  },
+  {
+    title: "Draft",
+    sub: "Compose a response, anchored to evidence",
+    user: "<strong>Still no visible activity.</strong> By now the orchestrator is fanning out across all 180 questions in parallel batches.",
+    system: "<strong>DraftComposer agent</strong> (Sonnet for tier-2/3, Opus for tier-1) writes prose constrained by the evidence bundle. Every factual claim must cite a <span class='k'>(doc_hash, span_hash)</span> tuple. Library hits skip drafting entirely — the approved text is reused verbatim.",
+    data: [
+      { lane: "canonical", label: "Library text reused", body: "On hit, the <span class='k'>answer_text</span> from the live entry is used unmodified" },
+      { lane: "knowledge", label: "Evidence bundle attached", body: "Cited spans tracked by hash, not span_id (stable across reparses)" },
+      { lane: "audit", label: "LLM call recorded", body: "<span class='k'>llm.prompt</span> + <span class='k'>llm.response</span> events with prompt_hash, response_hash, model, params" }
+    ]
+  },
+  {
+    title: "Validate",
+    sub: "Run all four guardrails before anything ships",
+    user: "<strong>Validation halts surface in SME queues</strong> when a guardrail fails: \"3 questions blocked — citation missing\", \"5 questions stale — SOC report expired\". The SME sees the draft, the evidence, and the failed check side-by-side.",
+    system: "<strong>Validator service</strong> evaluates four OPA policies in parallel: citation resolution, evidence freshness, cross-DDQ consistency, confidentiality scrub. Single fail → halt or escalate. Cross-DDQ check queries DuckDB over the response register for the same canonical_id shipped in the last 90 days.",
+    data: [
+      { lane: "audit", label: "Consistency check", body: "<span class='k'>response_register</span> scanned for divergent answers to same <span class='k'>canonical_id</span>" },
+      { lane: "knowledge", label: "Freshness check", body: "<span class='k'>freshness_index</span> consulted; SOC < 12 months, ISO within validity" },
+      { lane: "audit", label: "Verdict logged", body: "<span class='k'>validate.check</span> events; failures sunk to SIEM within 30s" }
+    ]
+  },
+  {
+    title: "Approve",
+    sub: "SME and legal sign off where needed; tier-2/3 auto-pass",
+    user: "<strong>SMEs work their queues</strong> by domain (infosec, ops, regulatory, ESG, cyber, legal). Each item: question, draft, evidence, validation report. They click approve, edit, reject, or escalate. Tier-1 questions also flow to legal review. Auto-pass target: ~70% for tier-2/3.",
+    system: "<strong>ApprovalRouter</strong> uses OPA policy to determine the required approver set per tier. Decisions flow back into the orchestrator graph. Edits loop back to validation. Approved entries can be promoted into the library so the next DDQ benefits.",
+    data: [
+      { lane: "canonical", label: "Library promotion", body: "New approved answers may become <span class='k'>library_entries</span> with full <span class='k'>library_approvers</span> chain" },
+      { lane: "audit", label: "Decision recorded", body: "<span class='k'>approval.decision</span> event with named user, role, timestamp, comment" },
+      { lane: "audit", label: "Override register", body: "Any guardrail override writes to <span class='k'>override_register</span> with legal approver" }
+    ]
+  },
+  {
+    title: "Respond",
+    sub: "Sealed, signed, journaled, delivered",
+    user: "<strong>Client RM receives the completed DDQ</strong> as a downloadable package — the original questionnaire format with answers filled in, plus citations to BNY public material where required. Optionally signed via DocuSign for formal sign-off. The client portal shows a full audit trail on request.",
+    system: "<strong>Orchestrator seals the run.</strong> Every event, prompt, retrieval, decision, and artifact bundled. Merkle root computed. Bundle written to S3 with Object Lock. Response register populated for future consistency checks. Sealed run is bit-exact reproducible from the journal alone.",
+    data: [
+      { lane: "audit", label: "Run sealed", body: "<span class='k'>sealed_runs</span> row + S3 Object Lock bundle; <span class='k'>merkle_root</span> over all events" },
+      { lane: "audit", label: "Response register populated", body: "One row per <span class='k'>(run_id, canonical_id)</span> for downstream consistency checks" },
+      { lane: "canonical", label: "Library entries hashed", body: "<span class='k'>library_entry_hashes</span> recorded so historical replay finds the exact version cited" }
+    ]
+  }
+];
+
+let current = 0;
+const nav = document.getElementById('nav');
+const panels = document.getElementById('panels');
+
+stages.forEach((s, i) => {
+  const pill = document.createElement('button');
+  pill.className = 'stage-pill' + (i === 0 ? ' active' : '');
+  pill.innerHTML = `<span class="stage-num">${i+1}</span>${s.title}`;
+  pill.onclick = () => goto(i);
+  nav.appendChild(pill);
+
+  const panel = document.createElement('div');
+  panel.className = 'panel' + (i === 0 ? ' active' : '');
+  panel.innerHTML = `
+    <div class="panel-header">
+      <p class="panel-title">${s.title}</p>
+      <p class="panel-sub">${s.sub}</p>
+    </div>
+    <div class="lane">
+      <p class="lane-label">User perspective</p>
+      <p class="lane-body">${s.user}</p>
+    </div>
+    <div class="lane">
+      <p class="lane-label">System action</p>
+      <p class="lane-body">${s.system}</p>
+    </div>
+    <div class="lane">
+      <p class="lane-label">Data layer</p>
+      <div class="data-grid">
+        ${s.data.map(d => `
+          <div class="data-cell">
+            <p class="data-cell-label"><span class="pill pill-${d.lane}" style="margin-left:0">${d.lane}</span></p>
+            <p class="data-cell-body"><strong>${d.label}.</strong> ${d.body}</p>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+  panels.appendChild(panel);
+});
+
+function goto(i) {
+  current = i;
+  document.querySelectorAll('.stage-pill').forEach((p, idx) => p.classList.toggle('active', idx === i));
+  document.querySelectorAll('.panel').forEach((p, idx) => p.classList.toggle('active', idx === i));
+  document.getElementById('prev').disabled = i === 0;
+  document.getElementById('next').disabled = i === stages.length - 1;
+}
+
+function step(delta) {
+  const next = current + delta;
+  if (next >= 0 && next < stages.length) goto(next);
+}
+
+document.getElementById('prev').disabled = true;
+</script>

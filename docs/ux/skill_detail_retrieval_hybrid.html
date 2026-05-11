@@ -1,0 +1,197 @@
+<div style="font-family: var(--font-sans); color: var(--color-text-primary);">
+
+  <div style="background: #04243C; color: #FFF; padding: 16px 20px; border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <i class="ti ti-search" style="font-size: 20px; color: #2B9CAE;" aria-hidden="true"></i>
+      <div style="font-size: 16px; font-weight: 500; font-family: var(--font-mono);">Retrieval.hybrid</div>
+      <span style="background: #2B9CAE; color: #FFF; font-size: 10px; padding: 2px 8px; border-radius: 10px; font-weight: 500;">SKILL</span>
+    </div>
+    <div style="font-size: 12px; color: #7FCAD5; margin-top: 6px;">Lexical · dense · rerank pipeline · used by EvidenceSourcer</div>
+  </div>
+
+  <div style="background: #F4F8FA; border: 0.5px solid var(--color-border-tertiary); border-top: none; border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg); padding: 18px;">
+
+    <div style="background: #FFF; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; margin-bottom: 14px;">
+      <div style="display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; font-size: 12px;">
+        <div style="color: #7B8E9D;">Signature</div>
+        <div style="color: #04243C; font-family: var(--font-mono);">retrieve(RetrievalQuery) → list[EvidenceSpan]</div>
+        <div style="color: #7B8E9D;">Owner</div>
+        <div style="color: #04243C;">Retrieval service · L03</div>
+        <div style="color: #7B8E9D;">Callers</div>
+        <div style="color: #04243C;">EvidenceSourcer · agent · L06</div>
+        <div style="color: #7B8E9D;">SLA</div>
+        <div style="color: #04243C;">P95 &lt; 1.2s · recall@10 ≥ 0.85</div>
+        <div style="color: #7B8E9D;">Audit</div>
+        <div style="color: #04243C;">Every call emits retrieve.query and retrieve.result events</div>
+      </div>
+    </div>
+
+    <div style="background: #FFF; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; margin-bottom: 14px;">
+      <div style="font-size: 13px; font-weight: 500; color: #04243C; margin-bottom: 4px;">Internal pipeline</div>
+      <div style="font-size: 11px; color: #7B8E9D; margin-bottom: 10px;">BM25 ∪ dense → rerank → top-k</div>
+
+      <svg width="100%" viewBox="0 0 680 360" role="img" xmlns="http://www.w3.org/2000/svg">
+        <title>Internal pipeline of the Retrieval.hybrid skill</title>
+        <desc>Query enters at left, splits into BM25 lexical retrieval over OpenSearch and dense retrieval over Qdrant. Both produce top 100 candidates that union to about 150, get filtered by entity and product scoping, then reranked by Cohere into top 20 results.</desc>
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+        </defs>
+
+        <rect x="20" y="58" width="120" height="52" rx="8" fill="#FFFFFF" stroke="#04243C" stroke-width="0.5"/>
+        <text x="80" y="80" text-anchor="middle" font-size="13" font-weight="500" font-family="var(--font-sans)" fill="#04243C">Query</text>
+        <text x="80" y="98" text-anchor="middle" font-size="11" font-family="var(--font-sans)" fill="#4A6478">canonical_id + text</text>
+
+        <line x1="140" y1="84" x2="178" y2="40" stroke="#7B8E9D" stroke-width="0.5" marker-end="url(#arrow)"/>
+        <line x1="140" y1="84" x2="178" y2="128" stroke="#7B8E9D" stroke-width="0.5" marker-end="url(#arrow)"/>
+
+        <rect x="180" y="20" width="180" height="60" rx="8" fill="#FFFFFF" stroke="#2B9CAE" stroke-width="0.5"/>
+        <text x="270" y="42" text-anchor="middle" font-size="13" font-weight="500" font-family="var(--font-sans)" fill="#04243C">BM25 lexical</text>
+        <text x="270" y="58" text-anchor="middle" font-size="11" font-family="var(--font-sans)" fill="#4A6478">OpenSearch · custom analyzer</text>
+        <text x="270" y="73" text-anchor="middle" font-size="11" font-family="var(--font-mono)" fill="#7B8E9D">top 100 · ~340ms P95</text>
+
+        <rect x="180" y="108" width="180" height="60" rx="8" fill="#FFFFFF" stroke="#2B9CAE" stroke-width="0.5"/>
+        <text x="270" y="130" text-anchor="middle" font-size="13" font-weight="500" font-family="var(--font-sans)" fill="#04243C">Dense retrieval</text>
+        <text x="270" y="146" text-anchor="middle" font-size="11" font-family="var(--font-sans)" fill="#4A6478">Qdrant · HNSW · payload filters</text>
+        <text x="270" y="161" text-anchor="middle" font-size="11" font-family="var(--font-mono)" fill="#7B8E9D">top 100 · ~280ms P95</text>
+
+        <line x1="360" y1="50" x2="396" y2="86" stroke="#7B8E9D" stroke-width="0.5" marker-end="url(#arrow)"/>
+        <line x1="360" y1="138" x2="396" y2="98" stroke="#7B8E9D" stroke-width="0.5" marker-end="url(#arrow)"/>
+
+        <rect x="398" y="62" width="160" height="60" rx="8" fill="#DDF1F4" stroke="#2B9CAE" stroke-width="0.5"/>
+        <text x="478" y="84" text-anchor="middle" font-size="13" font-weight="500" font-family="var(--font-sans)" fill="#04243C">Union + dedupe</text>
+        <text x="478" y="100" text-anchor="middle" font-size="11" font-family="var(--font-sans)" fill="#04243C">by span_hash</text>
+        <text x="478" y="115" text-anchor="middle" font-size="11" font-family="var(--font-mono)" fill="#04243C">~150 unique</text>
+
+        <line x1="478" y1="122" x2="478" y2="148" stroke="#7B8E9D" stroke-width="0.5" marker-end="url(#arrow)"/>
+
+        <rect x="398" y="150" width="160" height="48" rx="8" fill="#FFFFFF" stroke="#BA7517" stroke-width="0.5"/>
+        <text x="478" y="170" text-anchor="middle" font-size="13" font-weight="500" font-family="var(--font-sans)" fill="#04243C">Filter · OPA</text>
+        <text x="478" y="186" text-anchor="middle" font-size="11" font-family="var(--font-sans)" fill="#4A6478">entity · product · freshness</text>
+
+        <line x1="478" y1="198" x2="478" y2="226" stroke="#7B8E9D" stroke-width="0.5" marker-end="url(#arrow)"/>
+
+        <rect x="398" y="228" width="160" height="60" rx="8" fill="#FFFFFF" stroke="#2B9CAE" stroke-width="0.5"/>
+        <text x="478" y="250" text-anchor="middle" font-size="13" font-weight="500" font-family="var(--font-sans)" fill="#04243C">Cohere Rerank v3</text>
+        <text x="478" y="266" text-anchor="middle" font-size="11" font-family="var(--font-sans)" fill="#4A6478">cross-encoder scores</text>
+        <text x="478" y="281" text-anchor="middle" font-size="11" font-family="var(--font-mono)" fill="#7B8E9D">~480ms P95</text>
+
+        <line x1="478" y1="288" x2="478" y2="316" stroke="#04243C" stroke-width="0.5" marker-end="url(#arrow)"/>
+
+        <rect x="398" y="318" width="160" height="34" rx="8" fill="#04243C" stroke="none"/>
+        <text x="478" y="335" text-anchor="middle" font-size="13" font-weight="500" font-family="var(--font-sans)" fill="#FFFFFF">Top-k EvidenceSpans</text>
+        <text x="478" y="349" text-anchor="middle" font-size="11" font-family="var(--font-mono)" fill="#7FCAD5">k = 20 · with anchors</text>
+
+        <rect x="22" y="170" width="320" height="178" rx="8" fill="none" stroke="#BFD9E4" stroke-width="0.5" stroke-dasharray="4 3"/>
+        <text x="36" y="190" font-size="11" font-weight="500" font-family="var(--font-sans)" fill="#7B8E9D">CACHE · per (query_hash, corpus_version)</text>
+        <text x="36" y="208" font-size="11" font-family="var(--font-sans)" fill="#4A6478">Redis · TTL 24h</text>
+        <text x="36" y="224" font-size="11" font-family="var(--font-sans)" fill="#4A6478">Cache key includes corpus_version so corpus</text>
+        <text x="36" y="240" font-size="11" font-family="var(--font-sans)" fill="#4A6478">updates invalidate downstream automatically.</text>
+        <text x="36" y="266" font-size="11" font-weight="500" font-family="var(--font-sans)" fill="#7B8E9D">HIT RATE · 47% (last 30 days)</text>
+        <text x="36" y="284" font-size="11" font-family="var(--font-sans)" fill="#4A6478">Cache returns top-k directly · no BM25,</text>
+        <text x="36" y="300" font-size="11" font-family="var(--font-sans)" fill="#4A6478">no dense, no rerank cost.</text>
+        <text x="36" y="326" font-size="11" font-family="var(--font-mono)" fill="#7B8E9D">P95 cached · 14ms</text>
+      </svg>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+      <div style="background: #FFF; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px;">
+        <div style="font-size: 13px; font-weight: 500; color: #04243C; margin-bottom: 12px;">Inputs</div>
+        <div style="display: flex; flex-direction: column; gap: 8px; font-size: 12px;">
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: 10px;"><span style="color: #2B9CAE; font-family: var(--font-mono);">canonical_id</span><span style="color: #4A6478;">stable taxonomy id · drives KG expansion</span></div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: 10px;"><span style="color: #2B9CAE; font-family: var(--font-mono);">free_text</span><span style="color: #4A6478;">original question · dense embedding source</span></div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: 10px;"><span style="color: #2B9CAE; font-family: var(--font-mono);">framework</span><span style="color: #4A6478;">AFME · SIG · CAIQ · ADV · scoping hint</span></div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: 10px;"><span style="color: #2B9CAE; font-family: var(--font-mono);">entity</span><span style="color: #4A6478;">BNY legal entity · OPA-enforced filter</span></div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: 10px;"><span style="color: #2B9CAE; font-family: var(--font-mono);">product</span><span style="color: #4A6478;">optional · further scopes evidence</span></div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: 10px;"><span style="color: #2B9CAE; font-family: var(--font-mono);">k</span><span style="color: #4A6478;">return count · default 20</span></div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: 10px;"><span style="color: #2B9CAE; font-family: var(--font-mono);">filters</span><span style="color: #4A6478;">doc_type · freshness_max_days · etc.</span></div>
+        </div>
+      </div>
+      <div style="background: #FFF; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px;">
+        <div style="font-size: 13px; font-weight: 500; color: #04243C; margin-bottom: 12px;">Output · EvidenceSpan</div>
+        <div style="display: flex; flex-direction: column; gap: 8px; font-size: 12px;">
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: 10px;"><span style="color: #2B9CAE; font-family: var(--font-mono);">doc_hash</span><span style="color: #4A6478;">sha256 of source document</span></div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: 10px;"><span style="color: #2B9CAE; font-family: var(--font-mono);">span_hash</span><span style="color: #4A6478;">sha256 of the span itself</span></div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: 10px;"><span style="color: #2B9CAE; font-family: var(--font-mono);">text</span><span style="color: #4A6478;">verbatim span content</span></div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: 10px;"><span style="color: #2B9CAE; font-family: var(--font-mono);">anchor</span><span style="color: #4A6478;">PageAnchor or SectionAnchor for citation</span></div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: 10px;"><span style="color: #2B9CAE; font-family: var(--font-mono);">score</span><span style="color: #4A6478;">post-rerank · 0..1</span></div>
+          <div style="display: grid; grid-template-columns: 100px 1fr; gap: 10px;"><span style="color: #2B9CAE; font-family: var(--font-mono);">provenance</span><span style="color: #4A6478;">author · version · effective_date</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+      <div style="background: #FFF; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px;">
+        <div style="font-size: 13px; font-weight: 500; color: #04243C; margin-bottom: 4px;">Latency budget</div>
+        <div style="font-size: 11px; color: #7B8E9D; margin-bottom: 10px;">P95 · 30-day rolling · ms</div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 11px; color: #4A6478; margin-bottom: 3px;"><span>BM25 lexical</span><span style="color: #04243C;">340ms</span></div>
+            <div style="height: 6px; background: #E1ECF1; border-radius: 3px; overflow: hidden;"><div style="width: 28%; height: 100%; background: #2B9CAE;"></div></div>
+          </div>
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 11px; color: #4A6478; margin-bottom: 3px;"><span>Dense retrieval</span><span style="color: #04243C;">280ms</span></div>
+            <div style="height: 6px; background: #E1ECF1; border-radius: 3px; overflow: hidden;"><div style="width: 23%; height: 100%; background: #2B9CAE;"></div></div>
+          </div>
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 11px; color: #4A6478; margin-bottom: 3px;"><span>Filter · OPA</span><span style="color: #04243C;">60ms</span></div>
+            <div style="height: 6px; background: #E1ECF1; border-radius: 3px; overflow: hidden;"><div style="width: 5%; height: 100%; background: #BA7517;"></div></div>
+          </div>
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 11px; color: #4A6478; margin-bottom: 3px;"><span>Cohere Rerank</span><span style="color: #04243C;">480ms</span></div>
+            <div style="height: 6px; background: #E1ECF1; border-radius: 3px; overflow: hidden;"><div style="width: 40%; height: 100%; background: #2B9CAE;"></div></div>
+          </div>
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 11px; color: #4A6478; margin-bottom: 3px;"><span>Total uncached</span><span style="color: #04243C; font-weight: 500;">1,160ms</span></div>
+            <div style="height: 6px; background: #E1ECF1; border-radius: 3px; overflow: hidden;"><div style="width: 97%; height: 100%; background: #04243C;"></div></div>
+          </div>
+          <div style="margin-top: 4px;">
+            <div style="display: flex; justify-content: space-between; font-size: 11px; color: #4A6478; margin-bottom: 3px;"><span>Cached (47% of calls)</span><span style="color: #04243C; font-weight: 500;">14ms</span></div>
+            <div style="height: 6px; background: #E1ECF1; border-radius: 3px; overflow: hidden;"><div style="width: 1%; height: 100%; background: #3B6D11;"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: #FFF; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px;">
+        <div style="font-size: 13px; font-weight: 500; color: #04243C; margin-bottom: 4px;">Quality · last 30 days</div>
+        <div style="font-size: 11px; color: #7B8E9D; margin-bottom: 12px;">measured against eval set v0</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <div style="background: #F4F8FA; border-radius: var(--border-radius-md); padding: 10px 12px;">
+            <div style="font-size: 10px; color: #7B8E9D;">Recall @ 10</div>
+            <div style="font-size: 18px; font-weight: 500; color: #04243C; margin-top: 2px;">0.89</div>
+            <div style="font-size: 10px; color: #3B6D11; margin-top: 1px;">tgt 0.85</div>
+          </div>
+          <div style="background: #F4F8FA; border-radius: var(--border-radius-md); padding: 10px 12px;">
+            <div style="font-size: 10px; color: #7B8E9D;">Recall @ 20</div>
+            <div style="font-size: 18px; font-weight: 500; color: #04243C; margin-top: 2px;">0.94</div>
+            <div style="font-size: 10px; color: #3B6D11; margin-top: 1px;">tgt 0.92</div>
+          </div>
+          <div style="background: #F4F8FA; border-radius: var(--border-radius-md); padding: 10px 12px;">
+            <div style="font-size: 10px; color: #7B8E9D;">MRR</div>
+            <div style="font-size: 18px; font-weight: 500; color: #04243C; margin-top: 2px;">0.71</div>
+            <div style="font-size: 10px; color: #7B8E9D; margin-top: 1px;">no target</div>
+          </div>
+          <div style="background: #F4F8FA; border-radius: var(--border-radius-md); padding: 10px 12px;">
+            <div style="font-size: 10px; color: #7B8E9D;">Entity bleed</div>
+            <div style="font-size: 18px; font-weight: 500; color: #04243C; margin-top: 2px;">0</div>
+            <div style="font-size: 10px; color: #3B6D11; margin-top: 1px;">tgt 0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: #FFF; border-left: 3px solid #BA7517; border-top: 0.5px solid var(--color-border-tertiary); border-right: 0.5px solid var(--color-border-tertiary); border-bottom: 0.5px solid var(--color-border-tertiary); padding: 14px 16px;">
+      <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 6px;">
+        <i class="ti ti-info-circle" style="font-size: 14px; color: #BA7517;" aria-hidden="true"></i>
+        <div style="font-size: 12px; font-weight: 500; color: #04243C;">Failure modes worth knowing</div>
+      </div>
+      <ul style="font-size: 12px; color: #4A6478; line-height: 1.7; margin: 0; padding-left: 18px;">
+        <li>Stale corpus · clients refuse to serve when corpus_version older than 5 minutes after a corpus bump.</li>
+        <li>Entity filter is server-side via OPA — never trust client-supplied entity scoping.</li>
+        <li>Cohere rerank failures fall back to BM25-only scoring; this is a degraded mode, journaled as a warning.</li>
+      </ul>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,10 @@
+{
+  "collection": "spans_v1",
+  "model": "BAAI/bge-small-en-v1.5",
+  "vector_dim": 384,
+  "device": "mps",
+  "spans": 13466,
+  "upserted": 13466,
+  "points_in_collection": 13466,
+  "elapsed_secs": 287.06
+}

@@ -1,0 +1,225 @@
+{
+  "run_id": "run_20260510T125908_009a2d70",
+  "sealed_at": "2026-05-10T12:59:08.851063+00:00",
+  "platform_version": "v0.1.0",
+  "taxonomy_version": "tx_v0.1",
+  "library_version": "lib_v0.1",
+  "input": {
+    "eval_id": "ev_8091f68675",
+    "framework": "AFME",
+    "framework_question_ref": "AFME-1.5.5",
+    "framework_version": "2026",
+    "raw_question_text": "1.5.5 Does the firm have an excess SIPC, or equivalent, insurance policy?",
+    "expected_canonical_id": "canon.is.audit.a_a_03_q1",
+    "expected_evidence_spans": [
+      {
+        "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f",
+        "span_hash": "sha256:05476f044fd7cd09ff1c5d44eb393f3b98886cab132eb022ef3d5e1af14f292d",
+        "anchor": {
+          "kind": "section",
+          "item": "Item_3",
+          "subsection": null,
+          "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f"
+        },
+        "doc_id": "edgar:bny-mellon-corp:0001193125-25-046216",
+        "span_id": "edgar:bny-mellon-corp:0001193125-25-046216::Item_3#0064"
+      },
+      {
+        "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29",
+        "span_hash": "sha256:55e36d3de3d21f7d19242ab83d5e30de1bbfe1128463c7213b8b687c9e2b0511",
+        "anchor": {
+          "kind": "section",
+          "item": "Item_4",
+          "subsection": null,
+          "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29"
+        },
+        "doc_id": "edgar:bny-mellon-corp:0001193125-22-059759",
+        "span_id": "edgar:bny-mellon-corp:0001193125-22-059759::Item_4#0063"
+      },
+      {
+        "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636",
+        "span_hash": "sha256:3271ebdab4455dc670ed61b8b630e82fbcee94b1c2938f4eeefa80b04201a8f6",
+        "anchor": {
+          "kind": "section",
+          "item": "Item_5",
+          "subsection": null,
+          "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636"
+        },
+        "doc_id": "edgar:bny-mellon-corp:0001193125-24-051895",
+        "span_id": "edgar:bny-mellon-corp:0001193125-24-051895::Item_5#0065"
+      }
+    ],
+    "expected_verdict": "pass",
+    "notes": "library-backed (entry lib_bootstrap_canon_is_audit_a_a_03_q1)"
+  },
+  "outbound_response": "Additionally, we have captive insurance subsidiaries that provide property and casualty insurance coverage for the primary benefit of BNY and its subsidiaries. As captive insurance subsidiaries, they primarily insure the risks of those BNY entities related to it through common ownership. The insured businesses pay premiums to the captive insurance subsidiaries in exchange for insurance. Our two captive insurance subsidiaries are underwriters and currently only underwrite the risks associated with BNY and its subsidiaries. As of Dec. 31, 2025, these insurance subsidiaries had $0.8 billion of aggregate capital surplus in excess of their statutory minimum requirements which is included in the total capital of BNY. We have not identified any BNY subsidiaries that failed to meet minimum regulatory capital requirements. The Bank of New York Mellon Corporation Pillar 3 Disclosure BNY 5 [bny-ir/bny-ir:bny-mellon-corp:pillar-3:2025q4/page 6]\n\nWe have insurance subsidiaries that offer life, accident, health and annuity products. Additionally, we have captive insurance subsidiaries that provide property and casualty insurance coverage for the primary benefit of BNY Mellon and its subsidiaries. As captive insurance subsidiaries, they primarily insure the risks of those BNY Mellon entities related to it through common ownership. The insured businesses pay premiums to the captive insurance subsidiaries in exchange for insurance. Our two captive insurance subsidiaries are underwriters and currently only underwrite the risks associated with BNY Mellon and its subsidiaries. As of Dec. 31, 2023, these insurance subsidiaries had $1.1 billion of aggregate capital surplus in excess of their statutory minimum requirements which is included in the total capital of BNY Mellon. We have not identified any BNY Mellon subsidiaries that failed to meet minimum regulatory capital requirements. The Bank of New York Mellon Corporation Pillar 3 Disclosure BNY Mellon 5 [bny-ir/bny-ir:bny-mellon-corp:pillar-3:2023q4/page 6]\n\nMost of these insurance subsidiaries are required to meet minimum capital levels. We have insurance subsidiaries that offer life, accident, health and annuity products. Additionally, we have captive insurance subsidiaries that provide property and casualty insurance coverage for the primary benefit of BNY Mellon and its subsidiaries. As captive insurance subsidiaries, they primarily insure the risks of those BNY Mellon entities related to it through common ownership. The insured businesses pay premiums to the captive insurance subsidiaries in exchange for insurance. Our two captive insurance subsidiaries are underwriters and currently only underwrite the risks associated with BNY Mellon and its subsidiaries. As of June 30, 2023, these insurance subsidiaries had $1.1 billion of aggregate capital surplus in excess of their statutory minimum requirements which is included in the total capital of BNY Mellon. We have not identified any BNY Mellon subsidiaries that failed to meet minimum regulatory capital requirements. The Bank of New York Mellon Corporation Pillar 3 Disclosure BNY Mellon 5 [bny-ir/bny-ir:bny-mellon-corp:pillar-3:2023q2/page 6]",
+  "outbound_response_hash": "sha256:658859b3e5c3420c569c9ed01135b631333122eef8899e74d5d4943b6bf6d86f",
+  "evidence_refs": [
+    {
+      "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26",
+      "span_hash": "sha256:9804599cd09d388a1fb23ff14819344f1f6f3f907df6fd08dad69b6c4d09e88c",
+      "anchor": {
+        "kind": "page",
+        "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26"
+      },
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+      "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4::The_Bank_of_New_York_Mellon_Corporation.p6#0011"
+    },
+    {
+      "doc_hash": "sha256:1300b2ea7e59eb6472313f919d94ea33e26885baa4476f2112a8ea545410f981",
+      "span_hash": "sha256:278707a7d4887128e13cd333f042ff419b13652f4d066cbe3627628073fd84df",
+      "anchor": {
+        "kind": "page",
+        "doc_hash": "sha256:1300b2ea7e59eb6472313f919d94ea33e26885baa4476f2112a8ea545410f981"
+      },
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2023q4",
+      "span_id": "bny-ir:bny-mellon-corp:pillar-3:2023q4::The_Bank_of_New_York_Mellon_Corporation.p6#0011"
+    },
+    {
+      "doc_hash": "sha256:184550cb8ba12d388e4b706e913c84cd4f7d722adfc3bb57b074f8951c6acbeb",
+      "span_hash": "sha256:1da8dcbff5411681388ae5375071d19b52371bd96bfe39d6ed5dd065b6a9c5d6",
+      "anchor": {
+        "kind": "page",
+        "doc_hash": "sha256:184550cb8ba12d388e4b706e913c84cd4f7d722adfc3bb57b074f8951c6acbeb"
+      },
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2023q2",
+      "span_id": "bny-ir:bny-mellon-corp:pillar-3:2023q2::The_Bank_of_New_York_Mellon_Corporation.p6#0011"
+    }
+  ],
+  "verdict": "pass",
+  "events": [
+    {
+      "event_id": "evt_0826ca0b078f4d71",
+      "parent_event_id": null,
+      "kind": "intake",
+      "ts": "2026-05-10T12:59:08.271299+00:00",
+      "payload": {
+        "eval_id": "ev_8091f68675",
+        "framework": "AFME",
+        "raw_question_text_hash": "b2bc49ab04e9303d102ccc29b7fc8341c4a17612546ca4b09aae8bf39565851d"
+      },
+      "payload_hash": "sha256:cd6f0cbbb139dad347e5ceb7d6137a103e7187c96df5468a234b0f182d021d50",
+      "prev_hash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "chain_hash": "sha256:2d644b5f106b8cd9065fa38a8571c41fbf079d22049df946f862c26febc7a6ca"
+    },
+    {
+      "event_id": "evt_3361cdde422c4c55",
+      "parent_event_id": "evt_0826ca0b078f4d71",
+      "kind": "classify.match",
+      "ts": "2026-05-10T12:59:08.602514+00:00",
+      "payload": {
+        "canonical_id": null,
+        "confidence": 0.0,
+        "top_candidates": []
+      },
+      "payload_hash": "sha256:b2e2daf6cf06a63f324fd0082cf151215202ac941985290a2418ed4b609f85e3",
+      "prev_hash": "sha256:2d644b5f106b8cd9065fa38a8571c41fbf079d22049df946f862c26febc7a6ca",
+      "chain_hash": "sha256:76c5691203f8f23393fc3b2fd581489fb83f2e76c9794c087cf6bd5769e34ce1"
+    },
+    {
+      "event_id": "evt_5bd80754ccf146c3",
+      "parent_event_id": "evt_3361cdde422c4c55",
+      "kind": "library.lookup",
+      "ts": "2026-05-10T12:59:08.602583+00:00",
+      "payload": {
+        "canonical_id": null,
+        "entity": "BNY_MELLON_CORP",
+        "product": null,
+        "hit": false,
+        "entry_id": null,
+        "reason": "no canonical_id"
+      },
+      "payload_hash": "sha256:8c527dae5b49b57510adfb9d4fbb77e1e7206ca2b72b4b5c03ce8d8f24aeb563",
+      "prev_hash": "sha256:76c5691203f8f23393fc3b2fd581489fb83f2e76c9794c087cf6bd5769e34ce1",
+      "chain_hash": "sha256:6b98f6e8bb0ec0c2fb014df12151af635b89b3d738caf971585840f8d35f703b"
+    },
+    {
+      "event_id": "evt_8a5d594a146b45d0",
+      "parent_event_id": "evt_5bd80754ccf146c3",
+      "kind": "retrieve.query",
+      "ts": "2026-05-10T12:59:08.602632+00:00",
+      "payload": {
+        "query_hash": "b2bc49ab04e9303d102ccc29b7fc8341c4a17612546ca4b09aae8bf39565851d",
+        "filters": {
+          "source": [
+            "edgar",
+            "bny-ir"
+          ]
+        },
+        "k": 10
+      },
+      "payload_hash": "sha256:bb3643f3816e806b0d2c93f50e0f6668def8c84ebf9345f5eb5a0dd272feae64",
+      "prev_hash": "sha256:6b98f6e8bb0ec0c2fb014df12151af635b89b3d738caf971585840f8d35f703b",
+      "chain_hash": "sha256:2836a931e35f7c1e91a1b7850668b00338bec6fa796ec15e7d6a052eb4e83fc8"
+    },
+    {
+      "event_id": "evt_2f1ebfecc220458c",
+      "parent_event_id": "evt_8a5d594a146b45d0",
+      "kind": "retrieve.result",
+      "ts": "2026-05-10T12:59:08.850602+00:00",
+      "payload": {
+        "candidate_count": 41,
+        "returned_count": 10,
+        "top_score": 0.03278688524590164,
+        "top_3_sources": [
+          "bny-ir",
+          "bny-ir",
+          "bny-ir"
+        ]
+      },
+      "payload_hash": "sha256:e32849e06b10747894f096a54674706d8250610ef31269c4d8582182e9b0da02",
+      "prev_hash": "sha256:2836a931e35f7c1e91a1b7850668b00338bec6fa796ec15e7d6a052eb4e83fc8",
+      "chain_hash": "sha256:fb8336cc50289585128334dc6b9ab33907194ca3d3ce0762612a9b4d72153e1e"
+    },
+    {
+      "event_id": "evt_2eaae64a95de4a31",
+      "parent_event_id": "evt_2f1ebfecc220458c",
+      "kind": "draft.compose",
+      "ts": "2026-05-10T12:59:08.850711+00:00",
+      "payload": {
+        "draft_text_hash": "658859b3e5c3420c569c9ed01135b631333122eef8899e74d5d4943b6bf6d86f",
+        "draft_chars": 3182,
+        "evidence_count": 3,
+        "source": "retrieval",
+        "library_entry_id": null
+      },
+      "payload_hash": "sha256:37c5b375af54a2f00b61cbf29dcf085653dcfbdfc7c044a33f23930a2cb33283",
+      "prev_hash": "sha256:fb8336cc50289585128334dc6b9ab33907194ca3d3ce0762612a9b4d72153e1e",
+      "chain_hash": "sha256:2af65b86fa65a0e1f2097db74e8d482eae2b9566caa4e07601f2b39c381057d4"
+    },
+    {
+      "event_id": "evt_80f3077c85bc4ddc",
+      "parent_event_id": "evt_2eaae64a95de4a31",
+      "kind": "validate.check",
+      "ts": "2026-05-10T12:59:08.850960+00:00",
+      "payload": {
+        "verdict": "pass",
+        "halt_reason": null,
+        "checks": [
+          {
+            "id": "guardrail.01_citation_resolution",
+            "verdict": "pass"
+          },
+          {
+            "id": "guardrail.02_evidence_freshness",
+            "verdict": "pass",
+            "reason": "bootstrap mode \u2014 public-corpus evidence assumed fresh"
+          },
+          {
+            "id": "guardrail.03_cross_ddq_consistency",
+            "verdict": "pass",
+            "reason": "no prior shipped responses"
+          },
+          {
+            "id": "guardrail.04_confidentiality_scrub",
+            "verdict": "pass"
+          }
+        ]
+      },
+      "payload_hash": "sha256:3c88f61c7239c776dfef68cc52c0ebc30e3215aa0e508bcbf186901f7cb56d4c",
+      "prev_hash": "sha256:2af65b86fa65a0e1f2097db74e8d482eae2b9566caa4e07601f2b39c381057d4",
+      "chain_hash": "sha256:5ce84ecb985813af881c7bbd3e2c538860b29a2ff5d0a03b1559f0e909c50e2f"
+    }
+  ],
+  "merkle_root": "sha256:b6fc87e0afadfde1628821a9f6b2ea9e2f8f4df574e38ac730f7cff446cfd6b4"
+}

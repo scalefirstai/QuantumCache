@@ -1,0 +1,218 @@
+{
+  "run_id": "run_20260510T125908_5de42c30",
+  "sealed_at": "2026-05-10T12:59:09.369199+00:00",
+  "platform_version": "v0.1.0",
+  "taxonomy_version": "tx_v0.1",
+  "library_version": "lib_v0.1",
+  "input": {
+    "eval_id": "ev_604b9d9996",
+    "framework": "CAIQ",
+    "framework_question_ref": "A&A-01.1",
+    "framework_version": "v4.0.3",
+    "raw_question_text": "Are audit and assurance policies, procedures, and standards established, documented, approved, communicated, applied, evaluated, and maintained?",
+    "expected_canonical_id": "canon.is.audit.a_a_01_q1",
+    "expected_evidence_spans": [
+      {
+        "doc_hash": "sha256:2aa2f5e77b9cd1649ac08ad5c62ebf1ab3fc868690ac7b67acdd8c9bc0778df5",
+        "span_hash": "sha256:295b087f226c76b4f01e47ee3922522855dd38a63874af24d0d7df70ae34d4da",
+        "anchor": {
+          "kind": "section",
+          "item": "PART_II.Item_6",
+          "subsection": null,
+          "doc_hash": "sha256:2aa2f5e77b9cd1649ac08ad5c62ebf1ab3fc868690ac7b67acdd8c9bc0778df5"
+        },
+        "doc_id": "edgar:bny-mellon-corp:0001390777-22-000049",
+        "span_id": "edgar:bny-mellon-corp:0001390777-22-000049::PART_II.Item_6#0164"
+      },
+      {
+        "doc_hash": "sha256:2b53c760d20ee6a37dfbf8ce7303250d1e6aaa01b3c0b4518eb5eb466dd851da",
+        "span_hash": "sha256:295b087f226c76b4f01e47ee3922522855dd38a63874af24d0d7df70ae34d4da",
+        "anchor": {
+          "kind": "section",
+          "item": "PART_II.Item_6",
+          "subsection": null,
+          "doc_hash": "sha256:2b53c760d20ee6a37dfbf8ce7303250d1e6aaa01b3c0b4518eb5eb466dd851da"
+        },
+        "doc_id": "edgar:bny-mellon-corp:0001390777-23-000046",
+        "span_id": "edgar:bny-mellon-corp:0001390777-23-000046::PART_II.Item_6#0165"
+      },
+      {
+        "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f",
+        "span_hash": "sha256:02d20f1cb980976c191950af8949a72664865e19877955639a9c06233abf5fe1",
+        "anchor": {
+          "kind": "section",
+          "item": "Item_3",
+          "subsection": null,
+          "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f"
+        },
+        "doc_id": "edgar:bny-mellon-corp:0001193125-25-046216",
+        "span_id": "edgar:bny-mellon-corp:0001193125-25-046216::Item_3#0154"
+      }
+    ],
+    "expected_verdict": "pass",
+    "notes": "library-backed (entry lib_bootstrap_canon_is_audit_a_a_01_q1)"
+  },
+  "outbound_response": "Controls and Procedures\nDisclosure controls and procedures\nOur management, including the Chief Executive Officer and Chief Financial Officer, with participation by the members of the Disclosure Committee, has responsibility for ensuring that there is an adequate and effective process for establishing, maintaining, and evaluating disclosure controls and procedures that are designed to ensure that information required to be disclosed by us in our SEC reports is timely recorded, processed, summarized and reported and that information required to be disclosed by BNY Mellon is accumulated and communicated to BNY Mellon\u2019s management to allow timely decisions regarding the required disclosure. In addition, our ethics hotline can also be used by employees and others for the anonymous communication of concerns about financial controls or reporting matters. There are inherent limitations to the effectiveness of any system of disclosure controls and procedures, including the possibility of human error and the circumvention or overriding of the controls and procedures. Accordingly, even effective disclosure controls and procedures can only provide reasonable assurance of achieving their control objectives. As of the end of the period covered by this report, an evaluation was carried out under the supervision and with the participation of our management, including the Chief Executive Officer and Chief Financial Officer, of the effectiveness of our disclosure controls and procedures as defined in Rule 13a-15(e) under the Securities Exchange Act of 1934, as amended (the \u201cExchange Act\u201d). Based on that evaluation, the Chief Executive Officer and Chief Financial Officer concluded that our disclosure controls and procedures were effective. Changes in internal control over financial reporting\nIn the ordinary course of business, we may routinely modify, upgrade or enhance our internal controls and procedures for financial reporting. [edgar/10-Q/PART_II.Item_6]\n\nControls and Procedures\nDisclosure controls and procedures\nOur management, including the Chief Executive Officer and Chief Financial Officer, with participation by the members of the Disclosure Committee, has responsibility for ensuring that there is an adequate and effective process for establishing, maintaining, and evaluating disclosure controls and procedures that are designed to ensure that information required to be disclosed by us in our SEC reports is timely recorded, processed, summarized and reported and that information required to be disclosed by BNY Mellon is accumulated and communicated to BNY Mellon\u2019s management to allow timely decisions regarding the required disclosure. In addition, our ethics hotline can also be used by employees and others for the anonymous communication of concerns about financial controls or reporting matters. There are inherent limitations to the effectiveness of any system of disclosure controls and procedures, including the possibility of human error and the circumvention or overriding of the controls and procedures. Accordingly, even effective disclosure controls and procedures can only provide reasonable assurance of achieving their control objectives. As of the end of the period covered by this report, an evaluation was carried out under the supervision and with the participation of our management, including the Chief Executive Officer and Chief Financial Officer, of the effectiveness of our disclosure controls and procedures as defined in Rule 13a-15(e) under the Securities Exchange Act of 1934, as amended (the \u201cExchange Act\u201d). Based on that evaluation, the Chief Executive Officer and Chief Financial Officer concluded that our disclosure controls and procedures were effective. Changes in internal control over financial reporting\nIn the ordinary course of business, we may routinely modify, upgrade or enhance our internal controls and procedures for financial reporting. [edgar/10-Q/PART_II.Item_6]\n\nPre-Approval Policy\nOur Audit Committee has established pre-approval policies and procedures applicable to all services provided by our independent registered public accountants. In accordance with SEC rules, our pre-approval policy has two different approaches to pre-approving audit and permitted non-audit services performed by our independent registered public accountants. Proposed services may be pre-approved pursuant to policies and procedures established by the Audit Committee that are detailed as to a particular class of service without consideration by the Audit Committee of the specific case-by-case services to be performed (\u201cclass pre-approval\u201d). If a class of service has not received class pre-approval, the service will require specific pre-approval by the Audit Committee before it is provided by our independent registered public accountants (\u201cspecific pre-approval\u201d). A list of services that has received class pre-approval from our Audit Committee (or its delegate) is attached to our Audit and Permitted Non-Audit Services Pre-Approval Policy, a copy of which is available on our website (see \u201cHelpful Resources\u201d on page 105). [edgar/DEF 14A/Item_3]",
+  "outbound_response_hash": "sha256:7fa880d6fa1ad4d9f072d327897077661eec343976fc1794db95a695ce496956",
+  "evidence_refs": [
+    {
+      "doc_hash": "sha256:2aa2f5e77b9cd1649ac08ad5c62ebf1ab3fc868690ac7b67acdd8c9bc0778df5",
+      "span_hash": "sha256:295b087f226c76b4f01e47ee3922522855dd38a63874af24d0d7df70ae34d4da",
+      "anchor": {
+        "kind": "section",
+        "item": "PART_II.Item_6",
+        "subsection": null,
+        "doc_hash": "sha256:2aa2f5e77b9cd1649ac08ad5c62ebf1ab3fc868690ac7b67acdd8c9bc0778df5"
+      },
+      "doc_id": "edgar:bny-mellon-corp:0001390777-22-000049",
+      "span_id": "edgar:bny-mellon-corp:0001390777-22-000049::PART_II.Item_6#0164"
+    },
+    {
+      "doc_hash": "sha256:2b53c760d20ee6a37dfbf8ce7303250d1e6aaa01b3c0b4518eb5eb466dd851da",
+      "span_hash": "sha256:295b087f226c76b4f01e47ee3922522855dd38a63874af24d0d7df70ae34d4da",
+      "anchor": {
+        "kind": "section",
+        "item": "PART_II.Item_6",
+        "subsection": null,
+        "doc_hash": "sha256:2b53c760d20ee6a37dfbf8ce7303250d1e6aaa01b3c0b4518eb5eb466dd851da"
+      },
+      "doc_id": "edgar:bny-mellon-corp:0001390777-23-000046",
+      "span_id": "edgar:bny-mellon-corp:0001390777-23-000046::PART_II.Item_6#0165"
+    },
+    {
+      "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f",
+      "span_hash": "sha256:02d20f1cb980976c191950af8949a72664865e19877955639a9c06233abf5fe1",
+      "anchor": {
+        "kind": "section",
+        "item": "Item_3",
+        "subsection": null,
+        "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f"
+      },
+      "doc_id": "edgar:bny-mellon-corp:0001193125-25-046216",
+      "span_id": "edgar:bny-mellon-corp:0001193125-25-046216::Item_3#0154"
+    }
+  ],
+  "verdict": "pass",
+  "events": [
+    {
+      "event_id": "evt_debe31d910bc4236",
+      "parent_event_id": null,
+      "kind": "intake",
+      "ts": "2026-05-10T12:59:08.919339+00:00",
+      "payload": {
+        "eval_id": "ev_604b9d9996",
+        "framework": "CAIQ",
+        "raw_question_text_hash": "55a524417188dc1b0a4c7f98546f13d9a7ea85bf53b69e86a8aa8afd564f2cda"
+      },
+      "payload_hash": "sha256:fb3f3301639a9cc5269407cfe4c920f8a5bbed817cb4655600d94c8af41da14e",
+      "prev_hash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "chain_hash": "sha256:7b3b871a1298ed8cdef1dd2913816de7979a3ddd7b6060aa58c85632c4f7302f"
+    },
+    {
+      "event_id": "evt_da5a150adf654adf",
+      "parent_event_id": "evt_debe31d910bc4236",
+      "kind": "classify.match",
+      "ts": "2026-05-10T12:59:09.341159+00:00",
+      "payload": {
+        "canonical_id": "canon.is.audit.a_a_01_q1",
+        "confidence": 1.0,
+        "top_candidates": [
+          {
+            "canonical_id": "canon.is.audit.a_a_01_q1",
+            "framework": "CAIQ",
+            "version": "v4.0.3",
+            "question_ref": "A&A-01.1",
+            "dense_score": 1.0000001,
+            "span_id": "caiq:v4.0.3:primary-dataset::CAIQ.A&A.A&A-01.1#0000"
+          },
+          {
+            "canonical_id": "canon.is.logging.log_01_q1",
+            "framework": "CAIQ",
+            "version": "v4.0.3",
+            "question_ref": "LOG-01.1",
+            "dense_score": 0.88986236,
+            "span_id": "caiq:v4.0.3:primary-dataset::CAIQ.LOG.LOG-01.1#0000"
+          },
+          {
+            "canonical_id": "canon.is.interop.ipy_01_q4",
+            "framework": "CAIQ",
+            "version": "v4.0.3",
+            "question_ref": "IPY-01.4",
+            "dense_score": 0.8738322,
+            "span_id": "caiq:v4.0.3:primary-dataset::CAIQ.IPY.IPY-01.4#0000"
+          }
+        ]
+      },
+      "payload_hash": "sha256:45ae46bed8c8475877b980b38a19866b73ef2f6d0e5842514bb4e9297ac5f56c",
+      "prev_hash": "sha256:7b3b871a1298ed8cdef1dd2913816de7979a3ddd7b6060aa58c85632c4f7302f",
+      "chain_hash": "sha256:cd40202009630d6053ff09704baf75a0f267fced8a633d5a0ad56396e7b120d3"
+    },
+    {
+      "event_id": "evt_c3a87fc7319d4f98",
+      "parent_event_id": "evt_da5a150adf654adf",
+      "kind": "library.lookup",
+      "ts": "2026-05-10T12:59:09.368660+00:00",
+      "payload": {
+        "canonical_id": "canon.is.audit.a_a_01_q1",
+        "entity": "BNY_MELLON_CORP",
+        "product": null,
+        "hit": true,
+        "entry_id": "lib_bootstrap_canon_is_audit_a_a_01_q1",
+        "reason": null
+      },
+      "payload_hash": "sha256:64192f9eb6a59d4bc76a44a4e5acd3402719879be0386f591c78b0191bc095a3",
+      "prev_hash": "sha256:cd40202009630d6053ff09704baf75a0f267fced8a633d5a0ad56396e7b120d3",
+      "chain_hash": "sha256:ce587568b61a7bb870b934e0bd2e34f2f1cbddb34b1c5be7f9ddc3c87e34ed8f"
+    },
+    {
+      "event_id": "evt_cddfa6252693421c",
+      "parent_event_id": "evt_c3a87fc7319d4f98",
+      "kind": "draft.compose",
+      "ts": "2026-05-10T12:59:09.368765+00:00",
+      "payload": {
+        "draft_text_hash": "7fa880d6fa1ad4d9f072d327897077661eec343976fc1794db95a695ce496956",
+        "draft_chars": 5124,
+        "evidence_count": 3,
+        "source": "library",
+        "library_entry_id": "lib_bootstrap_canon_is_audit_a_a_01_q1"
+      },
+      "payload_hash": "sha256:b9b3041abf8adf8e375756324f86942a3a616cd661bfac8848fe875cd8bffe0b",
+      "prev_hash": "sha256:ce587568b61a7bb870b934e0bd2e34f2f1cbddb34b1c5be7f9ddc3c87e34ed8f",
+      "chain_hash": "sha256:0d1eecf255cb4550edc7af762054ec58dd256476b929148b5a3ad26eea391e4c"
+    },
+    {
+      "event_id": "evt_fe368d4c753c4487",
+      "parent_event_id": "evt_cddfa6252693421c",
+      "kind": "validate.check",
+      "ts": "2026-05-10T12:59:09.369130+00:00",
+      "payload": {
+        "verdict": "pass",
+        "halt_reason": null,
+        "checks": [
+          {
+            "id": "guardrail.01_citation_resolution",
+            "verdict": "pass"
+          },
+          {
+            "id": "guardrail.02_evidence_freshness",
+            "verdict": "pass",
+            "reason": "bootstrap mode \u2014 public-corpus evidence assumed fresh"
+          },
+          {
+            "id": "guardrail.03_cross_ddq_consistency",
+            "verdict": "pass",
+            "reason": "no prior shipped responses"
+          },
+          {
+            "id": "guardrail.04_confidentiality_scrub",
+            "verdict": "pass"
+          }
+        ]
+      },
+      "payload_hash": "sha256:3c88f61c7239c776dfef68cc52c0ebc30e3215aa0e508bcbf186901f7cb56d4c",
+      "prev_hash": "sha256:0d1eecf255cb4550edc7af762054ec58dd256476b929148b5a3ad26eea391e4c",
+      "chain_hash": "sha256:72c9400331190629b700645db27ef96ce0187d167cadc5a6be865ff7317916fe"
+    }
+  ],
+  "merkle_root": "sha256:ee15dd2d672e38d739c68ca9eea599b37ec19af34930152e79fb7eb08f778a89"
+}

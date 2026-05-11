@@ -1,0 +1,188 @@
+{
+  "run_id": "run_20260510T125909_ceff7322",
+  "sealed_at": "2026-05-10T12:59:09.799415+00:00",
+  "platform_version": "v0.1.0",
+  "taxonomy_version": "tx_v0.1",
+  "library_version": "lib_v0.1",
+  "input": {
+    "eval_id": "ev_af29c018a9",
+    "framework": "AFME_ESG",
+    "framework_question_ref": "AFME-HY-ESG-p3-a3d24382",
+    "framework_version": "2026-01",
+    "raw_question_text": "Describe BNY's approach to: 1. Introduction AFME and its members acknowledge that sustainability-related factors are an increasingly urgent focus of investors in the context of capital markets offerings, including with respect to high yield bond and other leveraged fi",
+    "expected_canonical_id": null,
+    "expected_evidence_spans": [],
+    "expected_verdict": "halt",
+    "notes": "BNY sustainability disclosures not yet ingested (Day 3-4 gap); citation guardrail should halt."
+  },
+  "outbound_response": "ELECTION OF DIRECTORS\nCorporate Governance and Board Information\nOur related party transactions policy does not limit or affect the application of our other policies applicable to our directors, executive officers and other related persons, including our Employee Code of Conduct and Directors\u2019 Code of Conduct. Our Approach to Sustainability\nBNY plays an important role in the global financial system, and that foundation drives our approach to sustainability. We manage our firm with a focus on resilience, and we operate to enable an inclusive, sustainable and trusted financial system. We empower our clients and partners with solutions to meet their own sustainability objectives. To do this, we consider where we have the greatest opportunity to create value for clients, and how we can appropriately manage material risks to our business as well as the impact of our business on the environment and the communities where we operate. BNY is committed to partnering with our clients through market changes. Our innovation moves us forward and our proven resilience makes us a trusted partner for our clients. Our strategic approach enables us to effectively manage our firm and support the broader financial system for the long term, while unlocking opportunities for the future. Sustainability continues to be an important tool for how we adapt our business to meet the needs of our clients and the broader economy, and address risks along the way. Our sustainability approach is aligned to business objectives to do more for our clients, run our company better and power our culture. Within our operations, we prioritize understanding and enhancing the efficiency of our real estate footprint to address a range of areas, including monitoring our emissions and improving our physical locations to foster an efficient use of resources and vibrant workspaces. We also look to promote a workplace where people can thrive together and spark progress in their communities. [edgar/DEF 14A/Item_3]\n\nIf a related party transaction is identified after it is already ongoing or completed, the policy requires that such transaction must be submitted to the CGNSR Committee promptly for ratification, applying the standards described above. In this circumstance, the CGNSR Committee will evaluate all options available, including ratification, amendment, termination or rescission of the transaction. BNY 2025 PROXY STATEMENT\u200333\nTable of Contents\nITEM\u20091. ELECTION OF DIRECTORS\nCorporate Governance and Board Information\nOur related party transactions policy does not limit or affect the application of our other policies applicable to our directors, executive officers and other related persons, including our Employee Code of Conduct and Directors\u2019 Code of Conduct. Our Approach to Sustainability\nBNY plays an important role in the global financial system\u2014touching one-fifth of the world\u2019s investable assets\u2014and that foundation drives our approach to sustainability. As a global financial services company, we believe it is important to manage and mitigate our environmental footprint in a way that aligns with our business strategy and supports the needs of our clients and the broader economy. We manage our company with a focus on resilience; we operate to enable a trusted, sustainable, and inclusive financial system; and we empower our clients and partners with solutions that help meet their own sustainability objectives and advance an inclusive economy. To do this, we consider where we have the greatest opportunity to create value for our clients and where we can proactively and appropriately manage the effects of our business on the environment and communities where we operate, as well as the effects these factors can have on our business. Within our own operations, we prioritize understanding and managing our environmental footprint, from our emissions to our building standards and our efficient use of natural resources. [edgar/DEF 14A/Item_3]\n\nELECTION OF DIRECTORS\nCorporate Governance and Board Information\nIn addition, BNY\u2019s sustainability-related governance councils and groups meet at a regular cadence throughout the year to address and align strategy execution and regulatory implementation. Please see below:\n\u2022\nThe Business Management and Client Committee (\u201cBMCC\u201d) is composed of a group of Executive Committee members that review strategies, guidelines and policies, including those related to sustainability; to guide enterprise-wide integration; and to monitor ongoing progress.\n\u2022\nThe Sustainability Steering Council is a senior level group which offers strategic guidance and recommendations on the articulation of BNY\u2019s sustainability strategy in line with commercial objectives. As needed, the Sustainability Steering Council will make decisions related to sustainability strategy implementation as delegated by the BMCC.\n\u2022\nThe Sustainability Strategy Implementation Council is a working-level group that provides platforms and regions with direct visibility and representation in enterprise-level sustainability strategy development and initiative execution.\n\u2022\nThe Climate Strategy Implementation Group is a specialist-focused group responsible for monitoring and informing progress against BNY\u2019s emissions reduction targets and support the execution of our global climate strategy. Spotlight on Inclusive Economy\nWe work to advance an inclusive economy by offering impactful solutions and opportunities that expand financial access, increase market reach and empower communities to thrive.\n\u2022\nWe partner with and provide solutions for community banks, including working with the U.S. Department of Treasury\u2019s Financial Agent Mentor-Prot\u00e9g\u00e9 Program. We deploy our longstanding knowledge and insight to help these market participants remain competitive and succeed in the financial system. [edgar/DEF 14A/Item_3]",
+  "outbound_response_hash": "sha256:2f832be33381e8ba78582b3d4f143662a8791a40b91a441aa28ffee3c2dfc042",
+  "evidence_refs": [
+    {
+      "doc_hash": "sha256:cdb1202c87b8404a89a02361ec1ae0fc8bbf783b2db373c51f0f9681f66c50ad",
+      "span_hash": "sha256:a5c0ae0e3a3a2e69a89c0b02ce66a1374583fcb1b2117a685f790b9f86eff9b1",
+      "anchor": {
+        "kind": "section",
+        "doc_hash": "sha256:cdb1202c87b8404a89a02361ec1ae0fc8bbf783b2db373c51f0f9681f66c50ad"
+      },
+      "doc_id": "edgar:bny-mellon-corp:0001193125-26-092500",
+      "span_id": "edgar:bny-mellon-corp:0001193125-26-092500::Item_3#0061"
+    },
+    {
+      "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f",
+      "span_hash": "sha256:1daaff8ce6cdbd3243b7dc5eb66647ae162670a40ccd4aa3f7650ea94696838c",
+      "anchor": {
+        "kind": "section",
+        "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f"
+      },
+      "doc_id": "edgar:bny-mellon-corp:0001193125-25-046216",
+      "span_id": "edgar:bny-mellon-corp:0001193125-25-046216::Item_3#0057"
+    },
+    {
+      "doc_hash": "sha256:cdb1202c87b8404a89a02361ec1ae0fc8bbf783b2db373c51f0f9681f66c50ad",
+      "span_hash": "sha256:fa5e98b4a3dc168b595769977269d19ffc42a8875c39522f537f7f3eb719817e",
+      "anchor": {
+        "kind": "section",
+        "doc_hash": "sha256:cdb1202c87b8404a89a02361ec1ae0fc8bbf783b2db373c51f0f9681f66c50ad"
+      },
+      "doc_id": "edgar:bny-mellon-corp:0001193125-26-092500",
+      "span_id": "edgar:bny-mellon-corp:0001193125-26-092500::Item_3#0063"
+    }
+  ],
+  "verdict": "pass",
+  "events": [
+    {
+      "event_id": "evt_dee0b700d74d4e68",
+      "parent_event_id": null,
+      "kind": "intake",
+      "ts": "2026-05-10T12:59:09.402571+00:00",
+      "payload": {
+        "eval_id": "ev_af29c018a9",
+        "framework": "AFME_ESG",
+        "raw_question_text_hash": "944ed2c9efda8c6cf05511bbc9034ce81a78ac65248692e14209a19927607bc0"
+      },
+      "payload_hash": "sha256:2c40c7fc04fd679a1b037cdee98f3822af15fbea6f69e86dc3de8de8ab4cb5e3",
+      "prev_hash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "chain_hash": "sha256:1262a111294083affa8c91ac91303774f8130b3ce4fcbaaa7d4deb100045b8dd"
+    },
+    {
+      "event_id": "evt_33f69b3f9f90461f",
+      "parent_event_id": "evt_dee0b700d74d4e68",
+      "kind": "classify.match",
+      "ts": "2026-05-10T12:59:09.618966+00:00",
+      "payload": {
+        "canonical_id": null,
+        "confidence": 0.0,
+        "top_candidates": []
+      },
+      "payload_hash": "sha256:b2e2daf6cf06a63f324fd0082cf151215202ac941985290a2418ed4b609f85e3",
+      "prev_hash": "sha256:1262a111294083affa8c91ac91303774f8130b3ce4fcbaaa7d4deb100045b8dd",
+      "chain_hash": "sha256:0b1ec9fe74ad30ca54ff4f232482dd694ccc86485738f3396fdc7371363b3eb8"
+    },
+    {
+      "event_id": "evt_9436104590994d2f",
+      "parent_event_id": "evt_33f69b3f9f90461f",
+      "kind": "library.lookup",
+      "ts": "2026-05-10T12:59:09.619040+00:00",
+      "payload": {
+        "canonical_id": null,
+        "entity": "BNY_MELLON_CORP",
+        "product": null,
+        "hit": false,
+        "entry_id": null,
+        "reason": "no canonical_id"
+      },
+      "payload_hash": "sha256:8c527dae5b49b57510adfb9d4fbb77e1e7206ca2b72b4b5c03ce8d8f24aeb563",
+      "prev_hash": "sha256:0b1ec9fe74ad30ca54ff4f232482dd694ccc86485738f3396fdc7371363b3eb8",
+      "chain_hash": "sha256:bc32e97b002bc3bb06ba672a710164d495ad2cf9b2720a3c9de52b1a8ab02c7a"
+    },
+    {
+      "event_id": "evt_5596edb2514d41b7",
+      "parent_event_id": "evt_9436104590994d2f",
+      "kind": "retrieve.query",
+      "ts": "2026-05-10T12:59:09.619133+00:00",
+      "payload": {
+        "query_hash": "944ed2c9efda8c6cf05511bbc9034ce81a78ac65248692e14209a19927607bc0",
+        "filters": {
+          "source": [
+            "edgar",
+            "bny-ir"
+          ]
+        },
+        "k": 10
+      },
+      "payload_hash": "sha256:0ba256938377cd02fa506f559f60eefc136a822dde8d3ce35131fd09f206ce5b",
+      "prev_hash": "sha256:bc32e97b002bc3bb06ba672a710164d495ad2cf9b2720a3c9de52b1a8ab02c7a",
+      "chain_hash": "sha256:b8f7fb479c1ca4bd673258924e6b4406744fcc27a248d981b981b4ad0b620e86"
+    },
+    {
+      "event_id": "evt_7cf9453786e2444c",
+      "parent_event_id": "evt_5596edb2514d41b7",
+      "kind": "retrieve.result",
+      "ts": "2026-05-10T12:59:09.798667+00:00",
+      "payload": {
+        "candidate_count": 57,
+        "returned_count": 10,
+        "top_score": 0.02889344262295082,
+        "top_3_sources": [
+          "edgar",
+          "edgar",
+          "edgar"
+        ]
+      },
+      "payload_hash": "sha256:39453c7b57ed1b08af36883eff68e43cba01a249e8f21a006a6f3c98ac57c104",
+      "prev_hash": "sha256:b8f7fb479c1ca4bd673258924e6b4406744fcc27a248d981b981b4ad0b620e86",
+      "chain_hash": "sha256:e637373636ff0e411f3db188f7e9545c4a5883fc635d19abcf5e2b60509cd308"
+    },
+    {
+      "event_id": "evt_8e2b1add199a4051",
+      "parent_event_id": "evt_7cf9453786e2444c",
+      "kind": "draft.compose",
+      "ts": "2026-05-10T12:59:09.798790+00:00",
+      "payload": {
+        "draft_text_hash": "2f832be33381e8ba78582b3d4f143662a8791a40b91a441aa28ffee3c2dfc042",
+        "draft_chars": 5843,
+        "evidence_count": 3,
+        "source": "retrieval",
+        "library_entry_id": null
+      },
+      "payload_hash": "sha256:0f1553abc68070471e6279e03d139e4c77184e9cef593f0b2d16c0c88df5406c",
+      "prev_hash": "sha256:e637373636ff0e411f3db188f7e9545c4a5883fc635d19abcf5e2b60509cd308",
+      "chain_hash": "sha256:b64d6ba4c156fef28f6c6de645b75aad38ec16bd06c9ce99b386fc75aa8e7000"
+    },
+    {
+      "event_id": "evt_be71ae165ba841c6",
+      "parent_event_id": "evt_8e2b1add199a4051",
+      "kind": "validate.check",
+      "ts": "2026-05-10T12:59:09.799236+00:00",
+      "payload": {
+        "verdict": "pass",
+        "halt_reason": null,
+        "checks": [
+          {
+            "id": "guardrail.01_citation_resolution",
+            "verdict": "pass"
+          },
+          {
+            "id": "guardrail.02_evidence_freshness",
+            "verdict": "pass",
+            "reason": "bootstrap mode \u2014 public-corpus evidence assumed fresh"
+          },
+          {
+            "id": "guardrail.03_cross_ddq_consistency",
+            "verdict": "pass",
+            "reason": "no prior shipped responses"
+          },
+          {
+            "id": "guardrail.04_confidentiality_scrub",
+            "verdict": "pass"
+          }
+        ]
+      },
+      "payload_hash": "sha256:3c88f61c7239c776dfef68cc52c0ebc30e3215aa0e508bcbf186901f7cb56d4c",
+      "prev_hash": "sha256:b64d6ba4c156fef28f6c6de645b75aad38ec16bd06c9ce99b386fc75aa8e7000",
+      "chain_hash": "sha256:112cd78efe0df83ddbfac5a7ed81ba5e860de0b5031ae0797cbabef616a432f4"
+    }
+  ],
+  "merkle_root": "sha256:74187ed2e3cb9a0723a0f9298805b76fc45febeec2f093fd991a7492d91aec65"
+}

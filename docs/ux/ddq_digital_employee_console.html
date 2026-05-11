@@ -1,0 +1,286 @@
+<div style="font-family: var(--font-sans); color: var(--color-text-primary);">
+
+  <!-- Top: Digital Employee identity card -->
+  <div style="background: #04243C; color: #FFF; padding: 18px 20px; border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0; display: grid; grid-template-columns: 56px 1fr auto; gap: 14px; align-items: center;">
+    <div style="width: 56px; height: 56px; border-radius: 50%; background: #2B9CAE; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 500; color: #FFF; border: 2px solid #7FCAD5;">DE</div>
+    <div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="font-size: 16px; font-weight: 500;">Aria · DDQ specialist</div>
+        <span style="background: #2B9CAE; color: #FFF; font-size: 10px; padding: 2px 8px; border-radius: 10px; font-weight: 500;">DIGITAL EMPLOYEE</span>
+      </div>
+      <div style="font-size: 12px; color: #7FCAD5; margin-top: 3px;">Owns run_01HQK4M9 · Schroders AFME 2026 · 187 questions · BNY Fund Services</div>
+      <div style="font-size: 11px; color: #BFD9E4; margin-top: 2px;">Reports to Compliance Ops · scope: institutional DDQs · supervisor: J. Lin</div>
+    </div>
+    <div style="text-align: right;">
+      <div style="font-size: 11px; color: #BFD9E4;">Run progress</div>
+      <div style="font-size: 22px; font-weight: 500; color: #FFF; margin-top: 2px;">73%</div>
+      <div style="font-size: 11px; color: #2B9CAE;">● Live</div>
+    </div>
+  </div>
+
+  <div style="background: #F4F8FA; border: 0.5px solid var(--color-border-tertiary); border-top: none; border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg); padding: 18px;">
+
+    <!-- KPI strip owned by the Digital Employee -->
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 18px;">
+      <div style="background: #FFF; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px 12px;">
+        <div style="font-size: 10px; color: #7B8E9D;">Auto-pass</div>
+        <div style="font-size: 18px; font-weight: 500; color: #04243C; margin-top: 2px;">71%</div>
+      </div>
+      <div style="background: #FFF; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px 12px;">
+        <div style="font-size: 10px; color: #7B8E9D;">Library hit</div>
+        <div style="font-size: 18px; font-weight: 500; color: #04243C; margin-top: 2px;">88%</div>
+      </div>
+      <div style="background: #FFF; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px 12px;">
+        <div style="font-size: 10px; color: #7B8E9D;">Hallucination</div>
+        <div style="font-size: 18px; font-weight: 500; color: #04243C; margin-top: 2px;">0.3%</div>
+      </div>
+      <div style="background: #FFF; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px 12px;">
+        <div style="font-size: 10px; color: #7B8E9D;">P95 / question</div>
+        <div style="font-size: 18px; font-weight: 500; color: #04243C; margin-top: 2px;">38s</div>
+      </div>
+    </div>
+
+    <!-- Two-column body: Agents+Skills on left, Humans on right -->
+    <div style="display: grid; grid-template-columns: 1fr 240px; gap: 16px;">
+
+      <!-- Agents + Skills -->
+      <div style="background: #FFF; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px;">
+          <div style="font-size: 13px; font-weight: 500; color: #04243C;">Agents · L06 roster</div>
+          <div style="font-size: 11px; color: #7B8E9D;">8 specialists · single responsibility each</div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+
+          <div style="display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start;">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: #2B9CAE; margin-top: 8px;"></div>
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <span style="font-size: 13px; color: #04243C; font-weight: 500;">QuestionMapper</span>
+                <span style="font-size: 10px; color: #7B8E9D; font-family: var(--font-mono);">Haiku 4.5 · v1.2.0</span>
+              </div>
+              <div style="font-size: 11px; color: #4A6478; margin-top: 2px;">Maps framework Q to canonical_id with confidence</div>
+              <div style="display: flex; gap: 4px; margin-top: 4px; flex-wrap: wrap;">
+                <span style="background: #DDF1F4; color: #04243C; font-size: 10px; padding: 1px 6px; border-radius: 3px;">Taxonomy.classify</span>
+                <span style="background: #DDF1F4; color: #04243C; font-size: 10px; padding: 1px 6px; border-radius: 3px;">Embedding.search</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start;">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: #2B9CAE; margin-top: 8px;"></div>
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <span style="font-size: 13px; color: #04243C; font-weight: 500;">EvidenceSourcer</span>
+                <span style="font-size: 10px; color: #7B8E9D; font-family: var(--font-mono);">Sonnet 4.6 · v2.1.4</span>
+              </div>
+              <div style="font-size: 11px; color: #4A6478; margin-top: 2px;">Produces evidence bundle · never drafts prose</div>
+              <div style="display: flex; gap: 4px; margin-top: 4px; flex-wrap: wrap;">
+                <span style="background: #DDF1F4; color: #04243C; font-size: 10px; padding: 1px 6px; border-radius: 3px;">Library.lookup</span>
+                <span style="background: #DDF1F4; color: #04243C; font-size: 10px; padding: 1px 6px; border-radius: 3px;">Retrieval.hybrid</span>
+                <span style="background: #DDF1F4; color: #04243C; font-size: 10px; padding: 1px 6px; border-radius: 3px;">Neo4j.traverse</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start;">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: #2B9CAE; margin-top: 8px;"></div>
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <span style="font-size: 13px; color: #04243C; font-weight: 500;">DraftComposer</span>
+                <span style="font-size: 10px; color: #7B8E9D; font-family: var(--font-mono);">Sonnet 4.6 / Opus 4.7 · v3.0.1</span>
+              </div>
+              <div style="font-size: 11px; color: #4A6478; margin-top: 2px;">Drafts response from evidence · cites every claim</div>
+              <div style="display: flex; gap: 4px; margin-top: 4px; flex-wrap: wrap;">
+                <span style="background: #DDF1F4; color: #04243C; font-size: 10px; padding: 1px 6px; border-radius: 3px;">LLM.complete</span>
+                <span style="background: #DDF1F4; color: #04243C; font-size: 10px; padding: 1px 6px; border-radius: 3px;">PromptRegistry</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start;">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: #2B9CAE; margin-top: 8px;"></div>
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <span style="font-size: 13px; color: #04243C; font-weight: 500;">CitationVerifier</span>
+                <span style="font-size: 10px; color: #7B8E9D; font-family: var(--font-mono);">Haiku 4.5 · v1.0.7</span>
+              </div>
+              <div style="font-size: 11px; color: #4A6478; margin-top: 2px;">Verifies every cited span resolves and matches</div>
+              <div style="display: flex; gap: 4px; margin-top: 4px; flex-wrap: wrap;">
+                <span style="background: #DDF1F4; color: #04243C; font-size: 10px; padding: 1px 6px; border-radius: 3px;">Corpus.fetch_span</span>
+                <span style="background: #DDF1F4; color: #04243C; font-size: 10px; padding: 1px 6px; border-radius: 3px;">Hash.verify</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start;">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: #2B9CAE; margin-top: 8px;"></div>
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <span style="font-size: 13px; color: #04243C; font-weight: 500;">ConsistencyChecker</span>
+                <span style="font-size: 10px; color: #7B8E9D; font-family: var(--font-mono);">Sonnet 4.6 · v1.4.2</span>
+              </div>
+              <div style="font-size: 11px; color: #4A6478; margin-top: 2px;">Compares against recent shipped responses</div>
+              <div style="display: flex; gap: 4px; margin-top: 4px; flex-wrap: wrap;">
+                <span style="background: #DDF1F4; color: #04243C; font-size: 10px; padding: 1px 6px; border-radius: 3px;">DuckDB.query</span>
+                <span style="background: #DDF1F4; color: #04243C; font-size: 10px; padding: 1px 6px; border-radius: 3px;">Embedding.similarity</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start;">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: #2B9CAE; margin-top: 8px;"></div>
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <span style="font-size: 13px; color: #04243C; font-weight: 500;">PiiScrubber</span>
+                <span style="font-size: 10px; color: #7B8E9D; font-family: var(--font-mono);">Haiku + Presidio · v1.1.0</span>
+              </div>
+              <div style="font-size: 11px; color: #4A6478; margin-top: 2px;">Detects PII · internal refs · client commercials</div>
+              <div style="display: flex; gap: 4px; margin-top: 4px; flex-wrap: wrap;">
+                <span style="background: #DDF1F4; color: #04243C; font-size: 10px; padding: 1px 6px; border-radius: 3px;">Presidio.analyze</span>
+                <span style="background: #DDF1F4; color: #04243C; font-size: 10px; padding: 1px 6px; border-radius: 3px;">RegexRecognizer</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start;">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: #4FB5C4; margin-top: 8px;"></div>
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <span style="font-size: 13px; color: #04243C; font-weight: 500;">FreshnessAuditor</span>
+                <span style="font-size: 10px; color: #7B8E9D; font-family: var(--font-mono);">rule-based · v0.9.3</span>
+              </div>
+              <div style="font-size: 11px; color: #4A6478; margin-top: 2px;">Flags stale evidence and library entries</div>
+              <div style="display: flex; gap: 4px; margin-top: 4px; flex-wrap: wrap;">
+                <span style="background: #DDF1F4; color: #04243C; font-size: 10px; padding: 1px 6px; border-radius: 3px;">Library.expiry</span>
+                <span style="background: #DDF1F4; color: #04243C; font-size: 10px; padding: 1px 6px; border-radius: 3px;">Corpus.freshness</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start;">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: #4FB5C4; margin-top: 8px;"></div>
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <span style="font-size: 13px; color: #04243C; font-weight: 500;">ApprovalRouter</span>
+                <span style="font-size: 10px; color: #7B8E9D; font-family: var(--font-mono);">OPA · v0.6.0</span>
+              </div>
+              <div style="font-size: 11px; color: #4A6478; margin-top: 2px;">Routes to right SME queue by domain + tier</div>
+              <div style="display: flex; gap: 4px; margin-top: 4px; flex-wrap: wrap;">
+                <span style="background: #DDF1F4; color: #04243C; font-size: 10px; padding: 1px 6px; border-radius: 3px;">OPA.evaluate</span>
+                <span style="background: #DDF1F4; color: #04243C; font-size: 10px; padding: 1px 6px; border-radius: 3px;">Queue.enqueue</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Human in the loop column -->
+      <div>
+        <div style="background: #FFF; border: 0.5px solid #BA7517; border-radius: var(--border-radius-lg); padding: 14px;">
+          <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
+            <i class="ti ti-user-check" style="font-size: 16px; color: #BA7517;" aria-hidden="true"></i>
+            <div style="font-size: 13px; font-weight: 500; color: #04243C;">Human in the loop</div>
+          </div>
+          <div style="font-size: 11px; color: #7B8E9D; margin-bottom: 12px;">31 awaiting decision</div>
+
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="border-left: 2px solid #BA7517; padding-left: 10px; padding-top: 2px; padding-bottom: 2px;">
+              <div style="font-size: 12px; color: #04243C; font-weight: 500;">InfoSec SME</div>
+              <div style="font-size: 11px; color: #4A6478; margin-top: 1px;">Tier 1 · access control · encryption</div>
+              <div style="font-size: 10px; color: #7B8E9D; margin-top: 4px;">12 queued · approves library entries</div>
+            </div>
+
+            <div style="border-left: 2px solid #BA7517; padding-left: 10px; padding-top: 2px; padding-bottom: 2px;">
+              <div style="font-size: 12px; color: #04243C; font-weight: 500;">Op resilience SME</div>
+              <div style="font-size: 11px; color: #4A6478; margin-top: 1px;">BCP · DR · sub-custody</div>
+              <div style="font-size: 10px; color: #7B8E9D; margin-top: 4px;">8 queued</div>
+            </div>
+
+            <div style="border-left: 2px solid #BA7517; padding-left: 10px; padding-top: 2px; padding-bottom: 2px;">
+              <div style="font-size: 12px; color: #04243C; font-weight: 500;">Regulatory SME</div>
+              <div style="font-size: 11px; color: #4A6478; margin-top: 1px;">ADV · Pillar 3 · resolution</div>
+              <div style="font-size: 10px; color: #7B8E9D; margin-top: 4px;">5 queued</div>
+            </div>
+
+            <div style="border-left: 2px solid #BA7517; padding-left: 10px; padding-top: 2px; padding-bottom: 2px;">
+              <div style="font-size: 12px; color: #04243C; font-weight: 500;">ESG SME</div>
+              <div style="font-size: 11px; color: #4A6478; margin-top: 1px;">Sustainability · climate</div>
+              <div style="font-size: 10px; color: #7B8E9D; margin-top: 4px;">3 queued</div>
+            </div>
+
+            <div style="border-left: 2px solid #BA7517; padding-left: 10px; padding-top: 2px; padding-bottom: 2px;">
+              <div style="font-size: 12px; color: #04243C; font-weight: 500;">Cyber SME</div>
+              <div style="font-size: 11px; color: #4A6478; margin-top: 1px;">Threat · incident · SOC</div>
+              <div style="font-size: 10px; color: #7B8E9D; margin-top: 4px;">2 queued</div>
+            </div>
+
+            <div style="border-left: 2px solid #A32D2D; padding-left: 10px; padding-top: 2px; padding-bottom: 2px; background: #FCEBEB; border-radius: 0 4px 4px 0;">
+              <div style="font-size: 12px; color: #04243C; font-weight: 500;">Legal review</div>
+              <div style="font-size: 11px; color: #4A6478; margin-top: 1px;">Override · do-not-answer</div>
+              <div style="font-size: 10px; color: #A32D2D; margin-top: 4px;">1 halted · action required</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: #FFF; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px; margin-top: 10px;">
+          <div style="font-size: 11px; color: #7B8E9D; letter-spacing: 0.3px; margin-bottom: 8px;">DECISION RIGHTS</div>
+          <div style="font-size: 11px; color: #04243C; line-height: 1.6;">
+            <div style="display: flex; gap: 6px; margin-bottom: 4px;">
+              <i class="ti ti-circle-check" style="font-size: 13px; color: #2B9CAE; flex-shrink: 0;" aria-hidden="true"></i>
+              <span>Aria seals tier 2/3 with passing validation</span>
+            </div>
+            <div style="display: flex; gap: 6px; margin-bottom: 4px;">
+              <i class="ti ti-user-check" style="font-size: 13px; color: #BA7517; flex-shrink: 0;" aria-hidden="true"></i>
+              <span>SME approves all tier 1 outputs</span>
+            </div>
+            <div style="display: flex; gap: 6px;">
+              <i class="ti ti-shield-x" style="font-size: 13px; color: #A32D2D; flex-shrink: 0;" aria-hidden="true"></i>
+              <span>Legal owns every guardrail override</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom: how Aria's day looks - condensed timeline -->
+    <div style="background: #FFF; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; margin-top: 16px;">
+      <div style="font-size: 13px; font-weight: 500; color: #04243C; margin-bottom: 12px;">A question through Aria's hands</div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; gap: 8px;">
+
+        <div style="text-align: center;">
+          <div style="background: #04243C; color: #FFF; height: 32px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500;">Intake</div>
+          <div style="font-size: 10px; color: #7B8E9D; margin-top: 4px;">Aria accepts</div>
+          <div style="font-size: 10px; color: #04243C; font-weight: 500;">14ms</div>
+        </div>
+
+        <div style="text-align: center;">
+          <div style="background: #2B9CAE; color: #FFF; height: 32px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500;">Map · source</div>
+          <div style="font-size: 10px; color: #7B8E9D; margin-top: 4px;">2 agents · 2 skills</div>
+          <div style="font-size: 10px; color: #04243C; font-weight: 500;">400ms</div>
+        </div>
+
+        <div style="text-align: center;">
+          <div style="background: #2B9CAE; color: #FFF; height: 32px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500;">Draft</div>
+          <div style="font-size: 10px; color: #7B8E9D; margin-top: 4px;">DraftComposer</div>
+          <div style="font-size: 10px; color: #04243C; font-weight: 500;">2.4s</div>
+        </div>
+
+        <div style="text-align: center;">
+          <div style="background: #2B9CAE; color: #FFF; height: 32px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500;">Validate × 4</div>
+          <div style="font-size: 10px; color: #7B8E9D; margin-top: 4px;">4 agents · parallel</div>
+          <div style="font-size: 10px; color: #04243C; font-weight: 500;">1.1s</div>
+        </div>
+
+        <div style="text-align: center;">
+          <div style="background: #BA7517; color: #FFF; height: 32px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500;">Human · then seal</div>
+          <div style="font-size: 10px; color: #7B8E9D; margin-top: 4px;">SME if tier 1</div>
+          <div style="font-size: 10px; color: #04243C; font-weight: 500;">~8min wait</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

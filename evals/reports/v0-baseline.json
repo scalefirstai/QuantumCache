@@ -1,0 +1,1663 @@
+{
+  "version": "v0",
+  "generated_at": "2026-05-10T12:50:45.463611+00:00",
+  "corpus_pin": {
+    "knowledge_documents_path": "data/manifests/knowledge-documents.json",
+    "taxonomy_version": "tx_v0.1",
+    "library_version": "lib_v0.1"
+  },
+  "halt_rrf_threshold": 0.018,
+  "metrics": {
+    "by_slice": {
+      "AFME": {
+        "count": 30,
+        "pass_count": 30,
+        "halt_count": 0,
+        "recall_at_1": 0.2,
+        "recall_at_10": 0.3,
+        "mrr": 0.21865079365079368
+      },
+      "CAIQ": {
+        "count": 25,
+        "pass_count": 25,
+        "halt_count": 0,
+        "recall_at_1": 0.48,
+        "recall_at_10": 0.88,
+        "mrr": 0.598095238095238
+      },
+      "AFME_ESG": {
+        "count": 15,
+        "pass_count": 0,
+        "halt_count": 15,
+        "halt_rate": 0.06666666666666667
+      },
+      "ADVERSARIAL": {
+        "count": 10,
+        "pass_count": 0,
+        "halt_count": 10,
+        "halt_rate": 0.6
+      },
+      "ADV": {
+        "count": 20,
+        "pass_count": 0,
+        "halt_count": 20,
+        "halt_rate": 0.45
+      }
+    },
+    "overall": {
+      "total": 100,
+      "pass_items": 55,
+      "halt_items": 45,
+      "recall_at_1": 0.32727272727272727,
+      "recall_at_10": 0.5636363636363636,
+      "mrr": 0.3911255411255411,
+      "halt_rate": 0.35555555555555557
+    }
+  },
+  "deferred": [
+    "L05 mapping precision (TaxonomyService.classify_new_question \u2014 M1)",
+    "L06 hallucination rate (DraftComposer \u2014 M3)"
+  ],
+  "per_item": [
+    {
+      "eval_id": "ev_4bb0518811",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.027757078986587184,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_8091f68675",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.03278688524590164,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_85253e8d64",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_43ca2429b9",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.03278688524590164,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_09ed197bdb",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.028790389395194696,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_e51eba43c8",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.0251821349382325,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_a5bd5abddb",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.03177805800756621,
+      "halt_signal": false,
+      "hit_at_1": true,
+      "hit_at_10": true,
+      "rank_of_first_hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_075bcb10b9",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.031099324975891997,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_16dc83d51b",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.028068137824235385,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_df566112a6",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.026419626007891578,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_35eb5fea8a",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_a4b9732fdd",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.030679156908665108,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": true,
+      "rank_of_first_hit": 6,
+      "reciprocal_rank": 0.16666666666666666,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_b6e9be7fe8",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_a72c7a24fd",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.03252247488101534,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_55b9219526",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_c2e2be4d4a",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_0721bda774",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": true,
+      "hit_at_10": true,
+      "rank_of_first_hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_9328cebd90",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.026779422128259338,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_cef41b456c",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.030017921146953404,
+      "halt_signal": false,
+      "hit_at_1": true,
+      "hit_at_10": true,
+      "rank_of_first_hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_90c3824dae",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.031544957774465976,
+      "halt_signal": false,
+      "hit_at_1": true,
+      "hit_at_10": true,
+      "rank_of_first_hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_9aef1b8876",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_f28f3f1643",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.03036576949620428,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_a1f650f97e",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.027757078986587184,
+      "halt_signal": false,
+      "hit_at_1": true,
+      "hit_at_10": true,
+      "rank_of_first_hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_bffae7ad86",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_fcf153331f",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.02474946856969329,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_39ad02812a",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.029571646010002173,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_ec7ab36a3b",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.025816993464052286,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_a2b8432aef",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.030309988518943745,
+      "halt_signal": false,
+      "hit_at_1": true,
+      "hit_at_10": true,
+      "rank_of_first_hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_2b4344522c",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.028958333333333336,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": true,
+      "rank_of_first_hit": 4,
+      "reciprocal_rank": 0.25,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_15a059e4b9",
+      "framework": "AFME",
+      "expected_verdict": "pass",
+      "top_score": 0.029631255487269532,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": true,
+      "rank_of_first_hit": 7,
+      "reciprocal_rank": 0.14285714285714285,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_604b9d9996",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.029211087420042643,
+      "halt_signal": false,
+      "hit_at_1": true,
+      "hit_at_10": true,
+      "rank_of_first_hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_54da6977ca",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.03125763125763126,
+      "halt_signal": false,
+      "hit_at_1": true,
+      "hit_at_10": true,
+      "rank_of_first_hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_bd706da886",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.030679156908665108,
+      "halt_signal": false,
+      "hit_at_1": true,
+      "hit_at_10": true,
+      "rank_of_first_hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_ef6a4056bd",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.022347066167290888,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "edgar",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_5b47d309bd",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": true,
+      "rank_of_first_hit": 2,
+      "reciprocal_rank": 0.5,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_70d06b695a",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.029551337359792925,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_6801a0c360",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": true,
+      "rank_of_first_hit": 3,
+      "reciprocal_rank": 0.3333333333333333,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "edgar",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_072a05eb9a",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.030886196246139225,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": true,
+      "rank_of_first_hit": 6,
+      "reciprocal_rank": 0.16666666666666666,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "bny-ir",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_ed5493b4f1",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.03278688524590164,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": true,
+      "rank_of_first_hit": 4,
+      "reciprocal_rank": 0.25,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "bny-ir",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_dc03be57f8",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.032018442622950824,
+      "halt_signal": false,
+      "hit_at_1": true,
+      "hit_at_10": true,
+      "rank_of_first_hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_69679a6ccf",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": true,
+      "rank_of_first_hit": 3,
+      "reciprocal_rank": 0.3333333333333333,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "edgar",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_374d206cea",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.032018442622950824,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": true,
+      "rank_of_first_hit": 4,
+      "reciprocal_rank": 0.25,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_c301ffd002",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.028588564574170333,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": true,
+      "rank_of_first_hit": 2,
+      "reciprocal_rank": 0.5,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_f712689562",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.03225806451612903,
+      "halt_signal": false,
+      "hit_at_1": true,
+      "hit_at_10": true,
+      "rank_of_first_hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_bbc82e83a1",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.032018442622950824,
+      "halt_signal": false,
+      "hit_at_1": true,
+      "hit_at_10": true,
+      "rank_of_first_hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_abd56ea530",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.03252247488101534,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": true,
+      "rank_of_first_hit": 7,
+      "reciprocal_rank": 0.14285714285714285,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_5d2148481a",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.032266458495966696,
+      "halt_signal": false,
+      "hit_at_1": true,
+      "hit_at_10": true,
+      "rank_of_first_hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_509557fbfe",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.029910714285714284,
+      "halt_signal": false,
+      "hit_at_1": true,
+      "hit_at_10": true,
+      "rank_of_first_hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_ea59360d4c",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.02878726010616578,
+      "halt_signal": false,
+      "hit_at_1": true,
+      "hit_at_10": true,
+      "rank_of_first_hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_b2fbe6f0a3",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "bny-ir",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_0edb8b0af6",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.030117753623188408,
+      "halt_signal": false,
+      "hit_at_1": true,
+      "hit_at_10": true,
+      "rank_of_first_hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_31c7711c25",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.02862400327131466,
+      "halt_signal": false,
+      "hit_at_1": true,
+      "hit_at_10": true,
+      "rank_of_first_hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_8c24f25602",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.03007688828584351,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": true,
+      "rank_of_first_hit": 7,
+      "reciprocal_rank": 0.14285714285714285,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_bf15e588ae",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": true,
+      "rank_of_first_hit": 3,
+      "reciprocal_rank": 0.3333333333333333,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "edgar",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_948c042597",
+      "framework": "CAIQ",
+      "expected_verdict": "pass",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": true,
+      "hit_at_10": true,
+      "rank_of_first_hit": 1,
+      "reciprocal_rank": 1.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_af29c018a9",
+      "framework": "AFME_ESG",
+      "expected_verdict": "halt",
+      "top_score": 0.02889344262295082,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_2099dd2750",
+      "framework": "AFME_ESG",
+      "expected_verdict": "halt",
+      "top_score": 0.029726775956284153,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_9c9fc2e7fb",
+      "framework": "AFME_ESG",
+      "expected_verdict": "halt",
+      "top_score": 0.02638888888888889,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_8ebb987c0f",
+      "framework": "AFME_ESG",
+      "expected_verdict": "halt",
+      "top_score": 0.028790389395194696,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_b3229fb21f",
+      "framework": "AFME_ESG",
+      "expected_verdict": "halt",
+      "top_score": 0.03200204813108039,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_1214d7f3ac",
+      "framework": "AFME_ESG",
+      "expected_verdict": "halt",
+      "top_score": 0.029051670471052088,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_d103a81412",
+      "framework": "AFME_ESG",
+      "expected_verdict": "halt",
+      "top_score": 0.03131881575727918,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_18a3297644",
+      "framework": "AFME_ESG",
+      "expected_verdict": "halt",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_6c4b096761",
+      "framework": "AFME_ESG",
+      "expected_verdict": "halt",
+      "top_score": 0.03200204813108039,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_ec2151e5a3",
+      "framework": "AFME_ESG",
+      "expected_verdict": "halt",
+      "top_score": 0.028665028665028666,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_9848f8f361",
+      "framework": "AFME_ESG",
+      "expected_verdict": "halt",
+      "top_score": 0.03028233151183971,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_31bfa60849",
+      "framework": "AFME_ESG",
+      "expected_verdict": "halt",
+      "top_score": 0.02844163539403516,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_4a7d57c19a",
+      "framework": "AFME_ESG",
+      "expected_verdict": "halt",
+      "top_score": 0.0315136476426799,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_6860898157",
+      "framework": "AFME_ESG",
+      "expected_verdict": "halt",
+      "top_score": 0.029910714285714284,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_924e2ccf2f",
+      "framework": "AFME_ESG",
+      "expected_verdict": "halt",
+      "top_score": 0.031754032258064516,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_e5b2acd7f5",
+      "framework": "ADVERSARIAL",
+      "expected_verdict": "halt",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_012b0b9f20",
+      "framework": "ADVERSARIAL",
+      "expected_verdict": "halt",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_2a3e6084c1",
+      "framework": "ADVERSARIAL",
+      "expected_verdict": "halt",
+      "top_score": 0.02792120864410021,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_362019a19e",
+      "framework": "ADVERSARIAL",
+      "expected_verdict": "halt",
+      "top_score": 0.026878868258178604,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_87118a5e39",
+      "framework": "ADVERSARIAL",
+      "expected_verdict": "halt",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_da671229e4",
+      "framework": "ADVERSARIAL",
+      "expected_verdict": "halt",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "edgar",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_1286584371",
+      "framework": "ADVERSARIAL",
+      "expected_verdict": "halt",
+      "top_score": 0.029827662395050816,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_c9786f52cb",
+      "framework": "ADVERSARIAL",
+      "expected_verdict": "halt",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_0ff8f5c8f5",
+      "framework": "ADVERSARIAL",
+      "expected_verdict": "halt",
+      "top_score": 0.031099324975891997,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_48b7f5adce",
+      "framework": "ADVERSARIAL",
+      "expected_verdict": "halt",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "edgar",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_38e3eecb2b",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_f589b4acfb",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "bny-ir",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_840e873e11",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_6e8c6e82fc",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_9a4567cdc0",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.023128342245989305,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_0ec6e228a1",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.03057889822595705,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_6aadcce240",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "bny-ir",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_45f270bea8",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_72f7a9740e",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.028125,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_5799edc307",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.031009615384615385,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_f87eeae94f",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.028373015873015873,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_711bc67f33",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.027730294396961064,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_7bf1f95c62",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_ce43ae62b3",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.03278688524590164,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_ed64b92bab",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.028577260665441927,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "bny-ir",
+        "bny-ir",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_9dc02dbb2f",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.026419626007891578,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "bny-ir"
+      ]
+    },
+    {
+      "eval_id": "ev_d0ee4406ee",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "bny-ir",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_12e094c6a3",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.01639344262295082,
+      "halt_signal": true,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "bny-ir",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_4da7af70c7",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.032266458495966696,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "edgar",
+        "edgar"
+      ]
+    },
+    {
+      "eval_id": "ev_816bb46fcb",
+      "framework": "ADV",
+      "expected_verdict": "halt",
+      "top_score": 0.025252525252525252,
+      "halt_signal": false,
+      "hit_at_1": false,
+      "hit_at_10": false,
+      "rank_of_first_hit": null,
+      "reciprocal_rank": 0.0,
+      "retrieved_top_3_sources": [
+        "edgar",
+        "bny-ir",
+        "edgar"
+      ]
+    }
+  ]
+}

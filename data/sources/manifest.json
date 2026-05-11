@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Day 1-2 vendor manifest. See docs/DATA-PLAN.md §1 (source manifest) and §8 (build sequence). Each entry MUST be a public source with a stable URL. SHA-256 of the downloaded artifact is captured at fetch time and recorded in data/sources/README.md.",
+  "user_agent": "QuantumCache-DDQ-Bootstrap/0.1 (selwyn.theo@gmail.com)",
+  "sources": [
+    {
+      "id": "afme.ddq.custodian.docx",
+      "family": "afme",
+      "title": "AFME Post Trade Due Diligence Questionnaire (custodian) 2026",
+      "license": "free for all; AFME encourages widest usage",
+      "format": "docx",
+      "url": "https://www.afme.eu/media/xfmhzoef/afme-due-diligence-questionnaire-for-use-in-2026-final-version-clean-3.docx",
+      "out": "afme/afme-ddq-custodian-2026.docx",
+      "version_note": "DATA-PLAN §1 lists 2024 version; AFME has refreshed to 2026 (current as of 2026-05). Drift recorded in README."
+    },
+    {
+      "id": "afme.ddq.custodian.xlsx",
+      "family": "afme",
+      "title": "AFME Post Trade Due Diligence Questionnaire (custodian) 2026 — Excel template",
+      "license": "free for all; AFME encourages widest usage",
+      "format": "xlsx",
+      "url": "https://www.afme.eu/media/kx0j5a43/ddq-2026-excel-template-2.xlsx",
+      "out": "afme/afme-ddq-custodian-2026.xlsx"
+    },
+    {
+      "id": "afme.ddq.csd.docx",
+      "family": "afme",
+      "title": "AFME Post Trade CSD Due Diligence Questionnaire 2026",
+      "license": "free for all; AFME encourages widest usage",
+      "format": "docx",
+      "url": "https://www.afme.eu/media/nfelwk3h/afme-ddq-csd-version-for-use-in-2026-2.docx",
+      "out": "afme/afme-ddq-csd-2026.docx"
+    },
+    {
+      "id": "afme.ddq.prime_broker.docx",
+      "family": "afme",
+      "title": "AFME-Irish Funds Prime Brokerage Due Diligence Questionnaire 2026",
+      "license": "free for all; AFME encourages widest usage",
+      "format": "docx",
+      "url": "https://www.afme.eu/media/h5cpngzj/afme-irish-funds-pb-ddq.docx",
+      "out": "afme/afme-ddq-prime-broker-2026.docx",
+      "note": "Beyond DATA-PLAN §1 scope; included because plan calls out custodian-adjacent products and prime brokerage is one. Optional."
+    },
+    {
+      "id": "afme.esg.hy_disclosure.pdf",
+      "family": "afme",
+      "title": "AFME Recommended ESG Disclosure and Diligence Practices for the European High Yield Market — Jan 2026",
+      "license": "free for all; AFME encourages widest usage",
+      "format": "pdf",
+      "url": "https://www.afme.eu/media/qr0l1ove/afme-hy-esg-disclosure-and-diligence-guidelines-jan-2026.pdf",
+      "out": "afme/afme-hy-esg-2026.pdf",
+      "version_note": "DATA-PLAN §1 expects a standalone 'AFME ESG DDQ'. AFME has consolidated ESG content under HY Disclosure Guidelines as of 2026; closest substitute. SME review needed before using as canon.esg.* seed."
+    },
+    {
+      "id": "nist.csf.v2_0.oscal.json",
+      "family": "nist",
+      "title": "NIST Cybersecurity Framework 2.0 — OSCAL JSON catalog",
+      "license": "Public domain (US government work)",
+      "format": "oscal-json",
+      "url": "https://raw.githubusercontent.com/usnistgov/oscal-content/main/nist.gov/CSF/v2.0/json/NIST_CSF_v2.0_catalog.json",
+      "out": "nist/NIST_CSF_v2.0_catalog.json"
+    },
+    {
+      "id": "nist.sp800_53.rev5.oscal.json",
+      "family": "nist",
+      "title": "NIST SP 800-53 rev5 — OSCAL JSON catalog",
+      "license": "Public domain (US government work)",
+      "format": "oscal-json",
+      "url": "https://raw.githubusercontent.com/usnistgov/oscal-content/main/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json",
+      "out": "nist/NIST_SP-800-53_rev5_catalog.json"
+    },
+    {
+      "id": "csa.ccm.machine_readable.bundle",
+      "family": "caiq",
+      "title": "CSA CCM v4 — machine-readable bundle (JSON / YAML / OSCAL)",
+      "license": "CSA license — free, redistribution permitted with attribution",
+      "format": "zip",
+      "url": "https://cloudsecurityalliance.org/download/artifacts/ccm-machine-readable-bundle-json-yaml-oscal",
+      "out": "caiq/ccm-machine-readable-bundle.zip",
+      "note": "This bundle is the gift per DATA-PLAN §1 — contains CAIQ JSON + CCM JSON/OSCAL. Verified via verify_sources.py."
+    },
+    {
+      "id": "csa.ccm.v4_1.bundle",
+      "family": "caiq",
+      "title": "CSA Cloud Controls Matrix v4.1 — main bundle (xlsx + companions)",
+      "license": "CSA license — free, redistribution permitted with attribution",
+      "format": "zip",
+      "url": "https://cloudsecurityalliance.org/download/artifacts/cloud-controls-matrix-v4-1",
+      "out": "caiq/ccm-v4.1-bundle.zip",
+      "note": "Contains CCM v4.1 xlsx, CAIQ v4.1 xlsx, and mapping spreadsheets to NIST/ISO/PCI/SOC2/CCPA/GDPR/AICPA TSC."
+    }
+  ],
+  "deferred": [
+    {
+      "id": "sec.formadv.bulk",
+      "title": "SEC Form ADV bulk CSVs (all advisers)",
+      "url": "https://www.sec.gov/foia-services/frequently-requested-documents/form-adv-data",
+      "reason": "Multi-GB; Day 8 (05_parse_adv.py) per DATA-PLAN §8. Defer until Day 8."
+    },
+    {
+      "id": "sig.lite_core",
+      "title": "SIG Lite / SIG Core",
+      "reason": "Licensed ($6,500-$7,200/yr). Not redistributable. Stub canonical IDs from NIST/ISO until license procured. DATA-PLAN §1 + §4.4."
+    },
+    {
+      "id": "bny.edgar.filings",
+      "title": "BNY Mellon Corp 10-K, 10-Q, 8-K, DEF 14A via SEC EDGAR (CIK 1390777)",
+      "reason": "Day 3-4 ingest via 01_fetch_edgar.py. Day 1-2 vendors framework sources only."
+    },
+    {
+      "id": "bny.ir.pillar3_sustainability",
+      "title": "BNY Pillar 3 + Sustainability disclosures",
+      "reason": "Day 3-4 ingest via 02_fetch_bny_ir.py."
+    }
+  ]
+}

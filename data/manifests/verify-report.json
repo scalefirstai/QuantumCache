@@ -1,0 +1,200 @@
+{
+  "caiq_json_load": [
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CAIQ/primary-dataset.json",
+      "ok": true,
+      "top_level": "dict",
+      "approx_record_count": 261,
+      "size_bytes": 60520
+    },
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/primary-dataset.json",
+      "ok": true,
+      "top_level": "dict",
+      "approx_record_count": 1,
+      "size_bytes": 65592
+    },
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/applicability/ownership.json",
+      "ok": true,
+      "top_level": "dict",
+      "approx_record_count": 1,
+      "size_bytes": 49593
+    },
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/applicability/architectural-relevance.json",
+      "ok": true,
+      "top_level": "dict",
+      "approx_record_count": 1,
+      "size_bytes": 94034
+    },
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/applicability/acknowledgments.json",
+      "ok": true,
+      "top_level": "dict",
+      "approx_record_count": 1,
+      "size_bytes": 567
+    },
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/applicability/organizational-relevance.json",
+      "ok": true,
+      "top_level": "dict",
+      "approx_record_count": 1,
+      "size_bytes": 141303
+    },
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/mappings/ISO27001_2022/mappings.json",
+      "ok": true,
+      "top_level": "list",
+      "approx_record_count": 1,
+      "size_bytes": 59223
+    },
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/mappings/CIS_v8.0/mappings.json",
+      "ok": true,
+      "top_level": "list",
+      "approx_record_count": 1,
+      "size_bytes": 51089
+    },
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/mappings/NIST_CSF_v1.1/mappings.json",
+      "ok": true,
+      "top_level": "list",
+      "approx_record_count": 1,
+      "size_bytes": 63623
+    },
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/mappings/PCI_DSS_v4.0/mappings.json",
+      "ok": true,
+      "top_level": "list",
+      "approx_record_count": 1,
+      "size_bytes": 51388
+    },
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/mappings/PCI_DSS_v3.2.1/mappings.json",
+      "ok": true,
+      "top_level": "list",
+      "approx_record_count": 1,
+      "size_bytes": 47695
+    },
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/mappings/ISF_SOGP_2022/mappings.json",
+      "ok": true,
+      "top_level": "list",
+      "approx_record_count": 1,
+      "size_bytes": 40795
+    },
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/mappings/AICPA_TSC_2017/mappings.json",
+      "ok": true,
+      "top_level": "list",
+      "approx_record_count": 1,
+      "size_bytes": 53754
+    },
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/mappings/ISO27001_02-17-18/mappings.json",
+      "ok": true,
+      "top_level": "list",
+      "approx_record_count": 1,
+      "size_bytes": 70722
+    },
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/mappings/NIST_CSF_v2.0/mappings.json",
+      "ok": true,
+      "top_level": "list",
+      "approx_record_count": 1,
+      "size_bytes": 65699
+    },
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/mappings/NIST_800_53_rev5/mappings.json",
+      "ok": true,
+      "top_level": "list",
+      "approx_record_count": 1,
+      "size_bytes": 58303
+    },
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/mappings/CCM_v3.0.1/mappings.json",
+      "ok": true,
+      "top_level": "list",
+      "approx_record_count": 1,
+      "size_bytes": 52821
+    },
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12-OSCAL-Dataset_Generated-at_2024-06-03/ccm-oscal-mappings.json",
+      "ok": true,
+      "top_level": "dict",
+      "approx_record_count": 0,
+      "size_bytes": 303572
+    },
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12-OSCAL-Dataset_Generated-at_2024-06-03/ccm-v4.0.12-oscal.json",
+      "ok": true,
+      "top_level": "dict",
+      "approx_record_count": 0,
+      "size_bytes": 346627
+    },
+    {
+      "path": "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12-OSCAL-Dataset_Generated-at_2024-06-03/ccm-lite-v4.0.12-oscal.json",
+      "ok": true,
+      "top_level": "dict",
+      "approx_record_count": 0,
+      "size_bytes": 169585
+    }
+  ],
+  "ccm_mapping_coverage": {
+    "nist_800_53": {
+      "found": true,
+      "matches": [
+        "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-YAML-Dataset_Generated-at_2024-06-03/CCM/mappings/NIST_800_53_rev5/mappings.yaml",
+        "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/mappings/NIST_800_53_rev5/mappings.json"
+      ],
+      "match_count": 2
+    },
+    "iso_27001": {
+      "found": true,
+      "matches": [
+        "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-YAML-Dataset_Generated-at_2024-06-03/CCM/mappings/ISO27001_2022/mappings.yaml",
+        "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-YAML-Dataset_Generated-at_2024-06-03/CCM/mappings/ISO27001_02-17-18/mappings.yaml",
+        "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/mappings/ISO27001_2022/mappings.json",
+        "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/mappings/ISO27001_02-17-18/mappings.json"
+      ],
+      "match_count": 4
+    },
+    "pci_dss": {
+      "found": true,
+      "matches": [
+        "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-YAML-Dataset_Generated-at_2024-06-03/CCM/mappings/PCI_DSS_v4.0/mappings.yaml",
+        "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-YAML-Dataset_Generated-at_2024-06-03/CCM/mappings/PCI_DSS_v3.2.1/mappings.yaml",
+        "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/mappings/PCI_DSS_v4.0/mappings.json",
+        "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/mappings/PCI_DSS_v3.2.1/mappings.json"
+      ],
+      "match_count": 4
+    },
+    "soc2_aicpa_tsc": {
+      "found": true,
+      "matches": [
+        "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-YAML-Dataset_Generated-at_2024-06-03/CCM/mappings/AICPA_TSC_2017/mappings.yaml",
+        "data/sources/caiq/_extracted/ccm-machine-readable-bundle/CCMv4.0.12+CAIQv4.0.3-JSON-Dataset_Generated-at_2024-06-03/CCM/mappings/AICPA_TSC_2017/mappings.json"
+      ],
+      "match_count": 2
+    }
+  },
+  "nist_oscal_parse": [
+    {
+      "path": "data/sources/nist/NIST_CSF_v2.0_catalog.json",
+      "ok": true,
+      "top_keys": [
+        "catalog"
+      ],
+      "size_bytes": 317504
+    },
+    {
+      "path": "data/sources/nist/NIST_SP-800-53_rev5_catalog.json",
+      "ok": true,
+      "top_keys": [
+        "catalog"
+      ],
+      "size_bytes": 10441264
+    }
+  ]
+}

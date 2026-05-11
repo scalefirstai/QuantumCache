@@ -1,0 +1,324 @@
+{
+  "runId": "run_01HQK4M9",
+  "client": "Schroders",
+  "framework": "AFME 2026",
+  "questionCount": 187,
+  "stages": [
+    {
+      "id": "intake",
+      "ordinal": 1,
+      "title": "Intake",
+      "sub": "Client sends a DDQ; the platform parses it into questions",
+      "user": [
+        { "kind": "strong", "value": "Client RM at a pension fund" },
+        { "kind": "text", "value": " emails a 180-question AFME custodian DDQ as an Excel attachment to " },
+        { "kind": "code", "value": "ddq@bny.com" },
+        { "kind": "text", "value": ", copying the BNY relationship manager. They expect a response in 3 weeks." }
+      ],
+      "system": [
+        { "kind": "strong", "value": "Intake worker" },
+        { "kind": "text", "value": " receives the message via Microsoft Graph subscription, downloads the attachment to S3, runs Unstructured.io to extract questions, and creates a " },
+        { "kind": "code", "value": "Run" },
+        { "kind": "text", "value": " with a parsed question list. The RM gets a confirmation in their inbox within 60 seconds." }
+      ],
+      "data": [
+        {
+          "lane": "knowledge",
+          "label": "Source DDQ stored",
+          "body": [
+            { "kind": "text", "value": "Raw " },
+            { "kind": "code", "value": ".xlsx" },
+            { "kind": "text", "value": " written to " },
+            { "kind": "code", "value": "s3://ddq-intake-raw/" },
+            { "kind": "text", "value": " with " },
+            { "kind": "code", "value": "doc_hash" }
+          ]
+        },
+        {
+          "lane": "audit",
+          "label": "Run created",
+          "body": [
+            { "kind": "code", "value": "run_id" },
+            { "kind": "text", "value": " minted; first " },
+            { "kind": "code", "value": "audit_event" },
+            { "kind": "text", "value": " of kind " },
+            { "kind": "code", "value": "intake" },
+            { "kind": "text", "value": " written" }
+          ]
+        },
+        {
+          "lane": "canonical",
+          "label": "Taxonomy version pinned",
+          "body": [
+            { "kind": "text", "value": "Run records the active " },
+            { "kind": "code", "value": "taxonomy_version_id" },
+            { "kind": "text", "value": " for reproducibility" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "classify",
+      "ordinal": 2,
+      "title": "Classify",
+      "sub": "Each incoming question gets mapped to a canonical ID",
+      "user": [
+        { "kind": "strong", "value": "Nothing visible yet." },
+        { "kind": "text", "value": " The RM and the client are waiting. Internally, an SME may later see flagged unmapped questions in their queue, but most questions classify automatically." }
+      ],
+      "system": [
+        { "kind": "strong", "value": "QuestionMapper agent" },
+        { "kind": "text", "value": " (Haiku) embeds each question, retrieves top-k candidate canonical IDs from Qdrant, reranks, and assigns. High confidence mappings auto-confirm; low confidence routes to an SME for one-click confirmation. AFME-IS-3.4 → " },
+        { "kind": "code", "value": "canon.is.access_control.privileged_access_review" },
+        { "kind": "text", "value": "." }
+      ],
+      "data": [
+        {
+          "lane": "canonical",
+          "label": "Taxonomy lookup",
+          "body": [
+            { "kind": "text", "value": "Embedding similarity over " },
+            { "kind": "code", "value": "canonical_questions" },
+            { "kind": "text", "value": " at the pinned version" }
+          ]
+        },
+        {
+          "lane": "canonical",
+          "label": "Mapping recorded",
+          "body": [
+            { "kind": "code", "value": "framework_mappings" },
+            { "kind": "text", "value": " row written if new; existing mappings reused" }
+          ]
+        },
+        {
+          "lane": "audit",
+          "label": "Classification logged",
+          "body": [
+            { "kind": "code", "value": "classify.match" },
+            { "kind": "text", "value": " event with confidence score per question" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "retrieve",
+      "ordinal": 3,
+      "title": "Retrieve",
+      "sub": "Find the right answer — from the library if one exists, or from evidence",
+      "user": [
+        { "kind": "strong", "value": "Still invisible to the client." },
+        { "kind": "text", "value": " SMEs may see a small queue of questions where retrieval surfaced low-confidence matches needing human review." }
+      ],
+      "system": [
+        { "kind": "strong", "value": "For each canonical_id, library lookup runs first." },
+        { "kind": "text", "value": " Cache hit → reuse the approved answer (target: 92% of questions). Miss → " },
+        { "kind": "strong", "value": "EvidenceSourcer agent" },
+        { "kind": "text", "value": " hits the hybrid retrieval pipeline: BM25 + dense + Cohere rerank against the corpus, filtered to the right entity and within freshness windows." }
+      ],
+      "data": [
+        {
+          "lane": "canonical",
+          "label": "Library lookup",
+          "body": [
+            { "kind": "code", "value": "library_entries" },
+            { "kind": "text", "value": " queried by " },
+            { "kind": "code", "value": "(canonical_id, entity, product)" },
+            { "kind": "text", "value": " with fallback chain" }
+          ]
+        },
+        {
+          "lane": "knowledge",
+          "label": "Evidence retrieval",
+          "body": [
+            { "kind": "code", "value": "spans" },
+            { "kind": "text", "value": " + " },
+            { "kind": "code", "value": "embeddings" },
+            { "kind": "text", "value": " searched on miss; entity-scoped at the database layer" }
+          ]
+        },
+        {
+          "lane": "audit",
+          "label": "Every candidate logged",
+          "body": [
+            { "kind": "code", "value": "retrieve.query" },
+            { "kind": "text", "value": " + " },
+            { "kind": "code", "value": "retrieve.result" },
+            { "kind": "text", "value": " with full ranked list, not just what was used" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "draft",
+      "ordinal": 4,
+      "title": "Draft",
+      "sub": "Compose a response, anchored to evidence",
+      "user": [
+        { "kind": "strong", "value": "Still no visible activity." },
+        { "kind": "text", "value": " By now the orchestrator is fanning out across all 180 questions in parallel batches." }
+      ],
+      "system": [
+        { "kind": "strong", "value": "DraftComposer agent" },
+        { "kind": "text", "value": " (Sonnet for tier-2/3, Opus for tier-1) writes prose constrained by the evidence bundle. Every factual claim must cite a " },
+        { "kind": "code", "value": "(doc_hash, span_hash)" },
+        { "kind": "text", "value": " tuple. Library hits skip drafting entirely — the approved text is reused verbatim." }
+      ],
+      "data": [
+        {
+          "lane": "canonical",
+          "label": "Library text reused",
+          "body": [
+            { "kind": "text", "value": "On hit, the " },
+            { "kind": "code", "value": "answer_text" },
+            { "kind": "text", "value": " from the live entry is used unmodified" }
+          ]
+        },
+        {
+          "lane": "knowledge",
+          "label": "Evidence bundle attached",
+          "body": [
+            { "kind": "text", "value": "Cited spans tracked by hash, not span_id (stable across reparses)" }
+          ]
+        },
+        {
+          "lane": "audit",
+          "label": "LLM call recorded",
+          "body": [
+            { "kind": "code", "value": "llm.prompt" },
+            { "kind": "text", "value": " + " },
+            { "kind": "code", "value": "llm.response" },
+            { "kind": "text", "value": " events with prompt_hash, response_hash, model, params" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "validate",
+      "ordinal": 5,
+      "title": "Validate",
+      "sub": "Run all four guardrails before anything ships",
+      "user": [
+        { "kind": "strong", "value": "Validation halts surface in SME queues" },
+        { "kind": "text", "value": " when a guardrail fails: \"3 questions blocked — citation missing\", \"5 questions stale — SOC report expired\". The SME sees the draft, the evidence, and the failed check side-by-side." }
+      ],
+      "system": [
+        { "kind": "strong", "value": "Validator service" },
+        { "kind": "text", "value": " evaluates four OPA policies in parallel: citation resolution, evidence freshness, cross-DDQ consistency, confidentiality scrub. Single fail → halt or escalate. Cross-DDQ check queries DuckDB over the response register for the same canonical_id shipped in the last 90 days." }
+      ],
+      "data": [
+        {
+          "lane": "audit",
+          "label": "Consistency check",
+          "body": [
+            { "kind": "code", "value": "response_register" },
+            { "kind": "text", "value": " scanned for divergent answers to same " },
+            { "kind": "code", "value": "canonical_id" }
+          ]
+        },
+        {
+          "lane": "knowledge",
+          "label": "Freshness check",
+          "body": [
+            { "kind": "code", "value": "freshness_index" },
+            { "kind": "text", "value": " consulted; SOC < 12 months, ISO within validity" }
+          ]
+        },
+        {
+          "lane": "audit",
+          "label": "Verdict logged",
+          "body": [
+            { "kind": "code", "value": "validate.check" },
+            { "kind": "text", "value": " events; failures sunk to SIEM within 30s" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "approve",
+      "ordinal": 6,
+      "title": "Approve",
+      "sub": "SME and legal sign off where needed; tier-2/3 auto-pass",
+      "user": [
+        { "kind": "strong", "value": "SMEs work their queues" },
+        { "kind": "text", "value": " by domain (infosec, ops, regulatory, ESG, cyber, legal). Each item: question, draft, evidence, validation report. They click approve, edit, reject, or escalate. Tier-1 questions also flow to legal review. Auto-pass target: ~70% for tier-2/3." }
+      ],
+      "system": [
+        { "kind": "strong", "value": "ApprovalRouter" },
+        { "kind": "text", "value": " uses OPA policy to determine the required approver set per tier. Decisions flow back into the orchestrator graph. Edits loop back to validation. Approved entries can be promoted into the library so the next DDQ benefits." }
+      ],
+      "data": [
+        {
+          "lane": "canonical",
+          "label": "Library promotion",
+          "body": [
+            { "kind": "text", "value": "New approved answers may become " },
+            { "kind": "code", "value": "library_entries" },
+            { "kind": "text", "value": " with full " },
+            { "kind": "code", "value": "library_approvers" },
+            { "kind": "text", "value": " chain" }
+          ]
+        },
+        {
+          "lane": "audit",
+          "label": "Decision recorded",
+          "body": [
+            { "kind": "code", "value": "approval.decision" },
+            { "kind": "text", "value": " event with named user, role, timestamp, comment" }
+          ]
+        },
+        {
+          "lane": "audit",
+          "label": "Override register",
+          "body": [
+            { "kind": "text", "value": "Any guardrail override writes to " },
+            { "kind": "code", "value": "override_register" },
+            { "kind": "text", "value": " with legal approver" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "respond",
+      "ordinal": 7,
+      "title": "Respond",
+      "sub": "Sealed, signed, journaled, delivered",
+      "user": [
+        { "kind": "strong", "value": "Client RM receives the completed DDQ" },
+        { "kind": "text", "value": " as a downloadable package — the original questionnaire format with answers filled in, plus citations to BNY public material where required. Optionally signed via DocuSign for formal sign-off. The client portal shows a full audit trail on request." }
+      ],
+      "system": [
+        { "kind": "strong", "value": "Orchestrator seals the run." },
+        { "kind": "text", "value": " Every event, prompt, retrieval, decision, and artifact bundled. Merkle root computed. Bundle written to S3 with Object Lock. Response register populated for future consistency checks. Sealed run is bit-exact reproducible from the journal alone." }
+      ],
+      "data": [
+        {
+          "lane": "audit",
+          "label": "Run sealed",
+          "body": [
+            { "kind": "code", "value": "sealed_runs" },
+            { "kind": "text", "value": " row + S3 Object Lock bundle; " },
+            { "kind": "code", "value": "merkle_root" },
+            { "kind": "text", "value": " over all events" }
+          ]
+        },
+        {
+          "lane": "audit",
+          "label": "Response register populated",
+          "body": [
+            { "kind": "text", "value": "One row per " },
+            { "kind": "code", "value": "(run_id, canonical_id)" },
+            { "kind": "text", "value": " for downstream consistency checks" }
+          ]
+        },
+        {
+          "lane": "canonical",
+          "label": "Library entries hashed",
+          "body": [
+            { "kind": "code", "value": "library_entry_hashes" },
+            { "kind": "text", "value": " recorded so historical replay finds the exact version cited" }
+          ]
+        }
+      ]
+    }
+  ]
+}

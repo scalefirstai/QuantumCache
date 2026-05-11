@@ -1,0 +1,46 @@
+{
+  "data_plan_section": "DATA-PLAN.md \u00a73.6",
+  "criteria": {
+    "1_coverage": {
+      "expected_forms": [
+        "10-K",
+        "10-Q",
+        "8-K",
+        "DEF 14A"
+      ],
+      "edgar_form_counts": {
+        "10-K": 5,
+        "10-Q": 15,
+        "8-K": 81,
+        "DEF 14A": 5
+      },
+      "ir_kind_counts": {
+        "pillar3": 20
+      },
+      "adv": "deferred to Day 8 per DATA-PLAN \u00a78",
+      "pass": true,
+      "note": "ADV deferred to Day 8 per plan; counts as partial-met for now."
+    },
+    "2_hash_stability": {
+      "method": "spot check: recompute sha256 of one S3 object, compare to recorded doc_hash",
+      "spot_check": {
+        "key": "edgar/bny-mellon-corp/0001193125-23-263108/d535040d8k.htm",
+        "recorded_doc_hash": "sha256:46a597721a6c5dd78133a495a5911d560af8022a3c4280dcfd4972eeb4c8c6f2",
+        "recomputed_from_s3": "sha256:46a597721a6c5dd78133a495a5911d560af8022a3c4280dcfd4972eeb4c8c6f2",
+        "ok": true,
+        "bytes": 30999
+      },
+      "pass": true
+    },
+    "3_anchor_resolution": {
+      "status": "deferred to Day 5-7 (parse + index); requires Unstructured.io output",
+      "pass": null
+    },
+    "4_freshness_metadata": {
+      "documents_total": 126,
+      "documents_missing_effective_date": 0,
+      "missing_doc_ids": [],
+      "pass": true
+    }
+  }
+}

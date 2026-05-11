@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-text-primary: #141413;
+  --color-text-secondary: #3D3D3A;
+  --color-text-tertiary: #7B8E9D;
+  --color-text-info: #3C3489;
+  --color-background-secondary: #F4F8FA;
+  --color-background-tertiary: #EEEDED;
+  --color-background-info: #EEEDFE;
+  --color-border-secondary: #DEDDD8;
+  --color-border-tertiary: #E5E5E2;
+  --color-border-info: #B8B5E5;
+  --border-radius-md: 6px;
+  --border-radius-lg: 10px;
+  --font-sans: "Anthropic Sans", -apple-system, system-ui, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-primary: #F2F1ED;
+    --color-text-secondary: #C9C8C2;
+    --color-text-tertiary: #98A6B0;
+    --color-background-secondary: #1A2530;
+    --color-background-tertiary: #2A3540;
+    --color-background-info: #3C3489;
+    --color-border-secondary: #3A4550;
+    --color-border-tertiary: #2F3A45;
+    --color-border-info: #514AAB;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+.font-mono,
+code,
+kbd,
+samp {
+  font-family: var(--font-mono);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

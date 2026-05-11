@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "BNY Investor Relations target manifest — DATA-PLAN §8 Day 3-4. Each target is fetched, hashed, and uploaded to s3://bny-ddq-knowledge-raw/bny-ir/<entity>/<doc-slug>/<filename>. URLs were collected from the BNY IR regulatory-filings page on 2026-05-08; some entries reflect a known naming convention with quarterly variants for 2021-2025.",
+  "entity": "bny-mellon-corp",
+  "base_url": "https://www.bnymellon.com",
+  "groups": [
+    {
+      "kind": "pillar3",
+      "doc_slug": "pillar-3",
+      "primary_desc": "Pillar 3 quarterly disclosure",
+      "items": [
+        { "year": 2021, "quarter": 1, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-march-2021.pdf" },
+        { "year": 2021, "quarter": 2, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-june-2021.pdf" },
+        { "year": 2021, "quarter": 3, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-september-2021.pdf" },
+        { "year": 2021, "quarter": 4, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-december-2021.pdf" },
+        { "year": 2022, "quarter": 1, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-march-2022.pdf" },
+        { "year": 2022, "quarter": 2, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-june-2022.pdf" },
+        { "year": 2022, "quarter": 3, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-september-2022.pdf" },
+        { "year": 2022, "quarter": 4, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-december-2022.pdf" },
+        { "year": 2023, "quarter": 1, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-march-2023.pdf" },
+        { "year": 2023, "quarter": 2, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-june-2023.pdf" },
+        { "year": 2023, "quarter": 3, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-september-2023.pdf" },
+        { "year": 2023, "quarter": 4, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-december-2023.pdf" },
+        { "year": 2024, "quarter": 1, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-march-2024.pdf" },
+        { "year": 2024, "quarter": 2, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-june-2024.pdf" },
+        { "year": 2024, "quarter": 3, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-corporate-pillar-3-disclosure-september-2024.pdf" },
+        { "year": 2024, "quarter": 4, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-corporate-pillar-3-disclosure-december-2024.pdf" },
+        { "year": 2025, "quarter": 1, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-corporate-pillar-3-disclosure-march-2025.pdf" },
+        { "year": 2025, "quarter": 2, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-2q2025-pillar3-report.pdf" },
+        { "year": 2025, "quarter": 3, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-3q2025-pillar3-report.pdf" },
+        { "year": 2025, "quarter": 4, "url_path": "/content/dam/bnymellon/documents/pdf/investor-relations/bny-4q2025-pillar-3-report.pdf" }
+      ]
+    }
+  ],
+  "deferred": [
+    {
+      "kind": "sustainability",
+      "doc_slug": "sustainability-report",
+      "reason": "Sustainability landing page on bny.com 404s as of 2026-05-08. Add direct PDF URL once confirmed (likely under /corporate/global/en/about-us/corporate-citizenship.html when republished). DATA-PLAN §3.1 doc type 5."
+    },
+    {
+      "kind": "resolution-plan",
+      "doc_slug": "resolution-plan",
+      "reason": "165(d) resolution plans live at federalreserve.gov/supervisionreg/resolution-plans/, not BNY IR. Add as separate target manifest if needed."
+    }
+  ]
+}

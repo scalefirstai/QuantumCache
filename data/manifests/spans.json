@@ -1,0 +1,694 @@
+{
+  "generated_at": "2026-05-10T10:39:40.831703+00:00",
+  "total_spans": 13466,
+  "by_source": {
+    "bny-ir": 3842,
+    "edgar": 4596,
+    "caiq": 261,
+    "ccm": 197,
+    "nist_csf": 219,
+    "nist_800_53": 1196,
+    "afme": 3155
+  },
+  "parquet_uris": {
+    "bny-ir": "s3://bny-ddq-knowledge-parquet/year=2026/month=05/source=bny-ir/spans.parquet",
+    "edgar": "s3://bny-ddq-knowledge-parquet/year=2026/month=05/source=edgar/spans.parquet",
+    "caiq": "s3://bny-ddq-knowledge-parquet/year=2026/month=05/source=caiq/spans.parquet",
+    "ccm": "s3://bny-ddq-knowledge-parquet/year=2026/month=05/source=ccm/spans.parquet",
+    "nist_csf": "s3://bny-ddq-knowledge-parquet/year=2026/month=05/source=nist_csf/spans.parquet",
+    "nist_800_53": "s3://bny-ddq-knowledge-parquet/year=2026/month=05/source=nist_800_53/spans.parquet",
+    "afme": "s3://bny-ddq-knowledge-parquet/year=2026/month=05/source=afme/spans.parquet"
+  },
+  "per_doc": [
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q1",
+      "source": "bny-ir",
+      "spans": 185
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-21-202195",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q2",
+      "source": "bny-ir",
+      "spans": 183
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-21-000069",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-21-225868",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-21-000070",
+      "source": "edgar",
+      "spans": 204
+    },
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3",
+      "source": "bny-ir",
+      "spans": 183
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-21-000094",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-21-306733",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-21-000095",
+      "source": "edgar",
+      "spans": 198
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-21-322458",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-21-333873",
+      "source": "edgar",
+      "spans": 7
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-21-000110",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-21-356450",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-21-364306",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q4",
+      "source": "bny-ir",
+      "spans": 185
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-22-000002",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-22-018349",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-22-030664",
+      "source": "edgar",
+      "spans": 3
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-22-000043",
+      "source": "edgar",
+      "spans": 55
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-22-059759",
+      "source": "edgar",
+      "spans": 179
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-22-071298",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-22-078398",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q1",
+      "source": "bny-ir",
+      "spans": 182
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-22-102956",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-22-102368",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-22-000048",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-22-120467",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-22-000049",
+      "source": "edgar",
+      "spans": 181
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-22-163216",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-22-173035",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-22-182952",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2",
+      "source": "bny-ir",
+      "spans": 180
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-22-188260",
+      "source": "edgar",
+      "spans": 6
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-22-000074",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-22-202104",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-22-000075",
+      "source": "edgar",
+      "spans": 198
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-22-216259",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q3",
+      "source": "bny-ir",
+      "spans": 194
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-22-000100",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-22-268454",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-22-000101",
+      "source": "edgar",
+      "spans": 204
+    },
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q4",
+      "source": "bny-ir",
+      "spans": 195
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-23-000002",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-23-020450",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-23-000033",
+      "source": "edgar",
+      "spans": 59
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-23-055130",
+      "source": "edgar",
+      "spans": 235
+    },
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2023q1",
+      "source": "bny-ir",
+      "spans": 194
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-23-099221",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-23-000042",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-23-118617",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-23-000046",
+      "source": "edgar",
+      "spans": 182
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-23-152542",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-23-180577",
+      "source": "edgar",
+      "spans": 3
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-23-180508",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2023q2",
+      "source": "bny-ir",
+      "spans": 196
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-23-000066",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-23-000081",
+      "source": "edgar",
+      "spans": 203
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-23-210801",
+      "source": "edgar",
+      "spans": 6
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-23-228153",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-23-232967",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2023q3",
+      "source": "bny-ir",
+      "spans": 197
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-23-000088",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-23-263108",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-23-000103",
+      "source": "edgar",
+      "spans": 207
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-23-279368",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-23-301208",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2023q4",
+      "source": "bny-ir",
+      "spans": 199
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-24-000003",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-24-000051",
+      "source": "edgar",
+      "spans": 56
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-24-051895",
+      "source": "edgar",
+      "spans": 198
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-24-059352",
+      "source": "edgar",
+      "spans": 3
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-24-068013",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-24-000055",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2024q1",
+      "source": "bny-ir",
+      "spans": 196
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-24-091966",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-24-000061",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-24-000075",
+      "source": "edgar",
+      "spans": 197
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-24-163414",
+      "source": "edgar",
+      "spans": 3
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-24-172396",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2024q2",
+      "source": "bny-ir",
+      "spans": 193
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-24-000091",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-24-182287",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-24-000105",
+      "source": "edgar",
+      "spans": 209
+    },
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2024q3",
+      "source": "bny-ir",
+      "spans": 195
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-24-000115",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-24-000133",
+      "source": "edgar",
+      "spans": 208
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-24-262579",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-24-271502",
+      "source": "edgar",
+      "spans": 3
+    },
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2024q4",
+      "source": "bny-ir",
+      "spans": 199
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-25-003516",
+      "source": "edgar",
+      "spans": 3
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-25-000015",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-25-024378",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-25-000046",
+      "source": "edgar",
+      "spans": 56
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-25-043535",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-25-046216",
+      "source": "edgar",
+      "spans": 182
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-25-051003",
+      "source": "edgar",
+      "spans": 7
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-25-054816",
+      "source": "edgar",
+      "spans": 7
+    },
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q1",
+      "source": "bny-ir",
+      "spans": 198
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-25-000056",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-25-082955",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-25-000084",
+      "source": "edgar",
+      "spans": 187
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-25-138504",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-25-139989",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2",
+      "source": "bny-ir",
+      "spans": 196
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-25-154128",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-25-000100",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-25-000118",
+      "source": "edgar",
+      "spans": 203
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-25-194557",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-25-200101",
+      "source": "edgar",
+      "spans": 7
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-25-200823",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-25-213396",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3",
+      "source": "bny-ir",
+      "spans": 196
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-25-000144",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-25-000159",
+      "source": "edgar",
+      "spans": 205
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-25-315973",
+      "source": "edgar",
+      "spans": 6
+    },
+    {
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+      "source": "bny-ir",
+      "spans": 196
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-26-000004",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-26-019554",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-26-000033",
+      "source": "edgar",
+      "spans": 57
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-26-073612",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-26-094111",
+      "source": "edgar",
+      "spans": 7
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-26-092500",
+      "source": "edgar",
+      "spans": 194
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-26-000042",
+      "source": "edgar",
+      "spans": 5
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001193125-26-173843",
+      "source": "edgar",
+      "spans": 4
+    },
+    {
+      "doc_id": "edgar:bny-mellon-corp:0001390777-26-000060",
+      "source": "edgar",
+      "spans": 178
+    },
+    {
+      "doc_id": "caiq:v4.0.3:primary-dataset",
+      "source": "caiq",
+      "spans": 261
+    },
+    {
+      "doc_id": "ccm:v4.0.12:primary-dataset",
+      "source": "ccm",
+      "spans": 197
+    },
+    {
+      "doc_id": "nist:csf:v2.0:catalog",
+      "source": "nist_csf",
+      "spans": 219
+    },
+    {
+      "doc_id": "nist:sp800-53:rev5:catalog",
+      "source": "nist_800_53",
+      "spans": 1196
+    },
+    {
+      "doc_id": "afme:ddq-custodian:2026",
+      "source": "afme",
+      "spans": 1116
+    },
+    {
+      "doc_id": "afme:ddq-csd:2026",
+      "source": "afme",
+      "spans": 790
+    },
+    {
+      "doc_id": "afme:ddq-prime-broker:2026",
+      "source": "afme",
+      "spans": 1002
+    },
+    {
+      "doc_id": "afme:hy-esg:2026",
+      "source": "afme",
+      "spans": 247
+    }
+  ]
+}

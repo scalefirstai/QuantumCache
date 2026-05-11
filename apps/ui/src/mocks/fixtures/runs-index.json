@@ -1,0 +1,42 @@
+[
+  {
+    "runId": "run_20260510T125906_2b46b0fd",
+    "client": "BNY public-corpus replay",
+    "framework": "AFME \u00b7 AFME-1.5.2",
+    "verdict": "pass",
+    "sealedAt": "2026-05-10T12:59:08.153833+00:00",
+    "questionPreview": "1.5.2 Please confirm that a qualified team within your organisation, independent of your custody business, reviews your\u2026"
+  },
+  {
+    "runId": "run_20260510T125908_009a2d70",
+    "client": "BNY public-corpus replay",
+    "framework": "AFME \u00b7 AFME-1.5.5",
+    "verdict": "pass",
+    "sealedAt": "2026-05-10T12:59:08.851063+00:00",
+    "questionPreview": "1.5.5 Does the firm have an excess SIPC, or equivalent, insurance policy?"
+  },
+  {
+    "runId": "run_20260510T125908_5de42c30",
+    "client": "BNY public-corpus replay",
+    "framework": "CAIQ \u00b7 A&A-01.1",
+    "verdict": "pass",
+    "sealedAt": "2026-05-10T12:59:09.369199+00:00",
+    "questionPreview": "Are audit and assurance policies, procedures, and standards established, documented, approved, communicated, applied, e\u2026"
+  },
+  {
+    "runId": "run_20260510T125909_b1b97337",
+    "client": "BNY public-corpus replay",
+    "framework": "ADVERSARIAL \u00b7 ADVERSARIAL-01",
+    "verdict": "halt",
+    "sealedAt": "2026-05-10T12:59:10.235819+00:00",
+    "questionPreview": "Describe BNY's quantum cryptography migration roadmap and key timeline milestones."
+  },
+  {
+    "runId": "run_20260510T125909_ceff7322",
+    "client": "BNY public-corpus replay",
+    "framework": "AFME_ESG \u00b7 AFME-HY-ESG-p3-a3d24382",
+    "verdict": "pass",
+    "sealedAt": "2026-05-10T12:59:09.799415+00:00",
+    "questionPreview": "Describe BNY's approach to: 1. Introduction AFME and its members acknowledge that sustainability-related factors are an\u2026"
+  }
+]

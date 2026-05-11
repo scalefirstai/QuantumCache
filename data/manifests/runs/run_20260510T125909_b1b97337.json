@@ -1,0 +1,214 @@
+{
+  "run_id": "run_20260510T125909_b1b97337",
+  "sealed_at": "2026-05-10T12:59:10.235819+00:00",
+  "platform_version": "v0.1.0",
+  "taxonomy_version": "tx_v0.1",
+  "library_version": "lib_v0.1",
+  "input": {
+    "eval_id": "ev_e5b2acd7f5",
+    "framework": "ADVERSARIAL",
+    "framework_question_ref": "ADVERSARIAL-01",
+    "framework_version": "v0",
+    "raw_question_text": "Describe BNY's quantum cryptography migration roadmap and key timeline milestones.",
+    "expected_canonical_id": null,
+    "expected_evidence_spans": [],
+    "expected_verdict": "halt",
+    "notes": "speculative; not in 10-K, Pillar 3, or DEF 14A"
+  },
+  "outbound_response": "Key Results\nIndividual\nModifier\nRobin Vince\nPresident and Chief Executive Officer\n\u2022\u2003Successful execution of CEO succession plan\n\u2022\u2003Skilled performance of additional responsibilities as President and CEO-Elect from March through August\n\u2022\u2003Significantly exceeded expectations in transition to CEO role, including:\n\u2022\u2003Heightened engagement from day one of transition with employees, Board, regulators, clients and investors globally\n\u2022\u2003Thorough review of businesses and functions to develop client-centric growth strategies, disciplined capital allocation and operational plans and milestones to allow for disciplined execution to drive improved financial performance\n\u2022\u2003Continued investments in growth (leading with innovation such as RTP, Digital Assets, Pershing X), efficiency and resilience\n\u2022\u2003Heightened focus on additional efficiencies to free up resources for continued investments to drive higher profitability\n\u2022\u2003Renewed emphasis on the theme of \u201cCommerciality\u201d \u2013 to deliver client solutions with the firm\u2019s unique portfolio of businesses\n\u2022\u2003BNY Mellon named to two new lists: Newsweek\u2019s America\u2019s Most Responsible Companies and Barron\u2019s Top 100 Most Sustainable Companies\n\u2022\u2003Launched a series of internal communication channels to bolster all-employee alignment, transparency, and enthusiasm\n\u2022\u2003Implemented the BK Shares program, a broad-based equity program to help position all employees to share in the company\u2019s growth and align with stockholder interests\n125\n%\nBased on a corporate component of 110% and an individual modifier of 125%, Mr. Vince was awarded $3,557,540 in cash and $3,557,540 in RSUs. Based on an individual modifier of 125%, Mr. Vince was awarded $6,468,254 in PSUs for a total incentive award of $14,500,000. Key Results\nIndividual\nModifier\nEmily H. [edgar/DEF 14A/Item_6]\n\nBNY continues to evaluate the impacts of these directives on its digital asset capabilities, in light of the requirements of all relevant regulators for its subsidiaries and operations, including the Federal Reserve Board and the New York Department of Financial Services. Transition to T+1 Settlement in Europe\nOn Feb. 12, 2025, the European Commission proposed a framework to facilitate a coordinated EU/EEA transition to a T+1 settlement cycle on Oct. 11, 2027. On Feb. 19, 2025, the UK government confirmed that the UK will transition to a T+1 standard for settling securities on Oct. 11, 2027. The proposals in the UK, EU, and EEA remain subject to final legislation and regulation. As a result of the transition to T+1 settlement across European jurisdictions, BNY will be required to implement a range of technical and operational updates. BNY continues to assess the impact of these transitions on its business and operations. BNY 45\nWebsite information\nOur website is www.bny.com. We currently make available the following information under the Investor Relations portion of our website. [edgar/10-Q/PART_II.Item_6]\n\nEconomic Capital BNY has implemented a methodology to estimate Company-wide economic capital needs to support the safe operation of its various businesses including the FX and derivative businesses, repo-style transactions and eligible margin loans. The computation and review of economic capital is a part of BNY\u2019s ICAAP and, along with regulatory capital, represents a key risk management activity. This ensures that the actual level of capital held by the Company is The Bank of New York Mellon Corporation Pillar 3 Disclosure BNY 17 [bny-ir/bny-ir:bny-mellon-corp:pillar-3:2025q4/page 18]",
+  "outbound_response_hash": "sha256:d88ba592d07312caaabb489b5c6e096823df767dab5f5b405764ea1024ab3c6a",
+  "evidence_refs": [
+    {
+      "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e",
+      "span_hash": "sha256:3b4975201d516f2bf3e053c74d8eda450859bc272eb54262707626a4ad6650b3",
+      "anchor": {
+        "kind": "section",
+        "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e"
+      },
+      "doc_id": "edgar:bny-mellon-corp:0001193125-23-055130",
+      "span_id": "edgar:bny-mellon-corp:0001193125-23-055130::Item_6#0103"
+    },
+    {
+      "doc_hash": "sha256:3847c0a95f6e702f343c53fff633fd27aaa03b7139266915deb4aedc5c52d571",
+      "span_hash": "sha256:f67f339c8653f32bd68f6b36821430514e4e6c8b450fd41ea52c1dca37e81c18",
+      "anchor": {
+        "kind": "section",
+        "doc_hash": "sha256:3847c0a95f6e702f343c53fff633fd27aaa03b7139266915deb4aedc5c52d571"
+      },
+      "doc_id": "edgar:bny-mellon-corp:0001390777-25-000084",
+      "span_id": "edgar:bny-mellon-corp:0001390777-25-000084::PART_II.Item_6#0081"
+    },
+    {
+      "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26",
+      "span_hash": "sha256:63204df6fa450f439ae3c1adf4ec06288590cadeecfcea828776bff5c96a9353",
+      "anchor": {
+        "kind": "page",
+        "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26"
+      },
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+      "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4::The_Bank_of_New_York_Mellon_Corporation.p18#0084"
+    }
+  ],
+  "verdict": "halt",
+  "events": [
+    {
+      "event_id": "evt_4fca32fc59f74489",
+      "parent_event_id": null,
+      "kind": "intake",
+      "ts": "2026-05-10T12:59:09.818852+00:00",
+      "payload": {
+        "eval_id": "ev_e5b2acd7f5",
+        "framework": "ADVERSARIAL",
+        "raw_question_text_hash": "7a0606648376cbcfb4d7cd3e1832189fa5933ff3ac201b91e1ec298aed81cd38"
+      },
+      "payload_hash": "sha256:7ee800cae3d403cd453776b56ea1257942b86aa5024a190b3eda7cfc19db5544",
+      "prev_hash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "chain_hash": "sha256:da19ea0215d808dd024c31abb32a93369c60bf3652fb5e09611abe473580d68b"
+    },
+    {
+      "event_id": "evt_06e0bea45b3e4bcf",
+      "parent_event_id": "evt_4fca32fc59f74489",
+      "kind": "classify.match",
+      "ts": "2026-05-10T12:59:10.089930+00:00",
+      "payload": {
+        "canonical_id": "canon.is.interop.ipy_03_q1",
+        "confidence": 0.7453,
+        "top_candidates": [
+          {
+            "canonical_id": "canon.is.interop.ipy_03_q1",
+            "framework": "CAIQ",
+            "version": "v4.0.3",
+            "question_ref": "IPY-03.1",
+            "dense_score": 0.7453339,
+            "span_id": "caiq:v4.0.3:primary-dataset::CAIQ.IPY.IPY-03.1#0000"
+          },
+          {
+            "canonical_id": "canon.is.crypto.cek_03_q1",
+            "framework": "CAIQ",
+            "version": "v4.0.3",
+            "question_ref": "CEK-03.1",
+            "dense_score": 0.7248311,
+            "span_id": "caiq:v4.0.3:primary-dataset::CAIQ.CEK.CEK-03.1#0000"
+          },
+          {
+            "canonical_id": "canon.is.crypto.cek_10_q1",
+            "framework": "CAIQ",
+            "version": "v4.0.3",
+            "question_ref": "CEK-10.1",
+            "dense_score": 0.72190773,
+            "span_id": "caiq:v4.0.3:primary-dataset::CAIQ.CEK.CEK-10.1#0000"
+          }
+        ]
+      },
+      "payload_hash": "sha256:19dfe790e346420d81d18d6cd30b4f39972ee95850b4526e2bec5d94acce773b",
+      "prev_hash": "sha256:da19ea0215d808dd024c31abb32a93369c60bf3652fb5e09611abe473580d68b",
+      "chain_hash": "sha256:9a514d1a4e535f3be5c15aea89bdebf4a8dceec2a285a68572349437d908a2c5"
+    },
+    {
+      "event_id": "evt_0cc380c2ed654355",
+      "parent_event_id": "evt_06e0bea45b3e4bcf",
+      "kind": "library.lookup",
+      "ts": "2026-05-10T12:59:10.100942+00:00",
+      "payload": {
+        "canonical_id": "canon.is.interop.ipy_03_q1",
+        "entity": "BNY_MELLON_CORP",
+        "product": null,
+        "hit": false,
+        "entry_id": null,
+        "reason": "no entry for (canonical_id, entity, product=None)"
+      },
+      "payload_hash": "sha256:871902a0997cf36f609ddc66fa0fdf6213a093df02932ec8cc6054717450737a",
+      "prev_hash": "sha256:9a514d1a4e535f3be5c15aea89bdebf4a8dceec2a285a68572349437d908a2c5",
+      "chain_hash": "sha256:5a8d0c70c67ec2b9e5a1ebaa6841b680cf14e0ff13f90deeb95bfac232480af3"
+    },
+    {
+      "event_id": "evt_6880ff2e24ed412c",
+      "parent_event_id": "evt_0cc380c2ed654355",
+      "kind": "retrieve.query",
+      "ts": "2026-05-10T12:59:10.101012+00:00",
+      "payload": {
+        "query_hash": "7a0606648376cbcfb4d7cd3e1832189fa5933ff3ac201b91e1ec298aed81cd38",
+        "filters": {
+          "source": [
+            "edgar",
+            "bny-ir"
+          ]
+        },
+        "k": 10
+      },
+      "payload_hash": "sha256:a8afce0b02acd96c535634a67fbf2ccff76318c109d1f2cf6746f5f8e8b7bdf3",
+      "prev_hash": "sha256:5a8d0c70c67ec2b9e5a1ebaa6841b680cf14e0ff13f90deeb95bfac232480af3",
+      "chain_hash": "sha256:dfd1ed01bd60894e62e51a2837587b330332518afb2bbc930cc25e6d6440b946"
+    },
+    {
+      "event_id": "evt_74bd2e3b6ccd4de0",
+      "parent_event_id": "evt_6880ff2e24ed412c",
+      "kind": "retrieve.result",
+      "ts": "2026-05-10T12:59:10.235339+00:00",
+      "payload": {
+        "candidate_count": 60,
+        "returned_count": 10,
+        "top_score": 0.01639344262295082,
+        "top_3_sources": [
+          "edgar",
+          "edgar",
+          "bny-ir"
+        ]
+      },
+      "payload_hash": "sha256:ee3346e83668264e5fcd99ada2ab74c737b926f66954144b498450bd7c03a9c2",
+      "prev_hash": "sha256:dfd1ed01bd60894e62e51a2837587b330332518afb2bbc930cc25e6d6440b946",
+      "chain_hash": "sha256:042077b05fdd4b2ae5497e718344a112aa0dfe5a9c3d75811a31b27f8081f900"
+    },
+    {
+      "event_id": "evt_a19f1ff50bc34fe7",
+      "parent_event_id": "evt_74bd2e3b6ccd4de0",
+      "kind": "draft.compose",
+      "ts": "2026-05-10T12:59:10.235458+00:00",
+      "payload": {
+        "draft_text_hash": "d88ba592d07312caaabb489b5c6e096823df767dab5f5b405764ea1024ab3c6a",
+        "draft_chars": 3513,
+        "evidence_count": 3,
+        "source": "retrieval",
+        "library_entry_id": null
+      },
+      "payload_hash": "sha256:ec0a1cd320d2520649187d386dfe62bbf149443910e2f7eddd6b7657bed818db",
+      "prev_hash": "sha256:042077b05fdd4b2ae5497e718344a112aa0dfe5a9c3d75811a31b27f8081f900",
+      "chain_hash": "sha256:caabf698348369f0fba28b56746eecdf0d45a030a40ffcdcdf278e3867bcbef6"
+    },
+    {
+      "event_id": "evt_f7b988aa92b54d77",
+      "parent_event_id": "evt_a19f1ff50bc34fe7",
+      "kind": "validate.check",
+      "ts": "2026-05-10T12:59:10.235743+00:00",
+      "payload": {
+        "verdict": "halt",
+        "halt_reason": "top RRF 0.0164 below halt threshold 0.018",
+        "checks": [
+          {
+            "id": "guardrail.01_citation_resolution",
+            "verdict": "halt",
+            "reason": "top RRF 0.0164 below halt threshold 0.018"
+          },
+          {
+            "id": "guardrail.02_evidence_freshness",
+            "verdict": "pass",
+            "reason": "bootstrap mode \u2014 public-corpus evidence assumed fresh"
+          },
+          {
+            "id": "guardrail.03_cross_ddq_consistency",
+            "verdict": "pass",
+            "reason": "no prior shipped responses"
+          },
+          {
+            "id": "guardrail.04_confidentiality_scrub",
+            "verdict": "pass"
+          }
+        ]
+      },
+      "payload_hash": "sha256:48cce0ee3588258fc5bd6d9ffbd8a5b8f0fee2e385acb766a4d5a1f2a63f05d3",
+      "prev_hash": "sha256:caabf698348369f0fba28b56746eecdf0d45a030a40ffcdcdf278e3867bcbef6",
+      "chain_hash": "sha256:82efa9e2ca60cc0b4019eb143192316ab521dfa66af543b184ec905848a3ea36"
+    }
+  ],
+  "merkle_root": "sha256:c76b908946798e4b15c5ed18f089911455666c7156b15c26be3b0465ab60d06e"
+}

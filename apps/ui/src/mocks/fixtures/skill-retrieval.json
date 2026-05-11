@@ -1,0 +1,275 @@
+{
+  "id": "retrieval-hybrid",
+  "name": "Retrieval.hybrid",
+  "tagline": "BM25 + dense + RRF \u00b7 13466 spans \u00b7 BAAI/bge-small-en-v1.5",
+  "signature": [
+    {
+      "label": "Signature",
+      "value": "hybrid(question, k=10) \u2192 list[EvidenceSpan]",
+      "mono": true
+    },
+    {
+      "label": "Owner",
+      "value": "Retrieval service \u00b7 L03"
+    },
+    {
+      "label": "Callers",
+      "value": "EvidenceSourcer \u00b7 L06"
+    },
+    {
+      "label": "Corpus",
+      "value": "13466 spans \u00b7 edgar (4596), bny-ir (3842), afme (3155), nist_800_53 (1196), caiq (261), nist_csf (219), ccm (197)"
+    },
+    {
+      "label": "Eval",
+      "value": "recall@10=0.56 \u00b7 MRR=0.39"
+    }
+  ],
+  "pipeline": {
+    "nodes": [
+      {
+        "id": "query",
+        "label": "Query",
+        "sub": "canonical_id + text",
+        "variant": "input",
+        "x": 20,
+        "y": 58,
+        "w": 120,
+        "h": 52
+      },
+      {
+        "id": "bm25",
+        "label": "BM25 lexical",
+        "sub": "OpenSearch \u00b7 ddq_text analyzer",
+        "meta": "top 20 over 13466 spans",
+        "variant": "step",
+        "x": 180,
+        "y": 20,
+        "w": 180,
+        "h": 60
+      },
+      {
+        "id": "dense",
+        "label": "Dense retrieval",
+        "sub": "Qdrant \u00b7 BAAI/bge-small-en-v1.5",
+        "meta": "dim 384 \u00b7 13466 pts",
+        "variant": "step",
+        "x": 180,
+        "y": 108,
+        "w": 180,
+        "h": 60
+      },
+      {
+        "id": "merge",
+        "label": "RRF fusion",
+        "sub": "k = 60 \u00b7 by span_id",
+        "meta": "~30 unique",
+        "variant": "merge",
+        "x": 398,
+        "y": 62,
+        "w": 160,
+        "h": 60
+      },
+      {
+        "id": "filter",
+        "label": "Halt threshold",
+        "sub": "top RRF < 0.018",
+        "variant": "filter",
+        "x": 398,
+        "y": 150,
+        "w": 160,
+        "h": 48
+      },
+      {
+        "id": "rerank",
+        "label": "Top-k slice",
+        "sub": "rank by RRF score",
+        "meta": "no cross-encoder yet",
+        "variant": "step",
+        "x": 398,
+        "y": 228,
+        "w": 160,
+        "h": 60
+      },
+      {
+        "id": "output",
+        "label": "Top-k EvidenceSpans",
+        "sub": "k = 10 \u00b7 with anchors",
+        "variant": "output",
+        "x": 398,
+        "y": 318,
+        "w": 160,
+        "h": 34
+      }
+    ],
+    "edges": [
+      {
+        "from": "query",
+        "to": "bm25",
+        "kind": "branch"
+      },
+      {
+        "from": "query",
+        "to": "dense",
+        "kind": "branch"
+      },
+      {
+        "from": "bm25",
+        "to": "merge",
+        "kind": "branch"
+      },
+      {
+        "from": "dense",
+        "to": "merge",
+        "kind": "branch"
+      },
+      {
+        "from": "merge",
+        "to": "filter",
+        "kind": "main"
+      },
+      {
+        "from": "filter",
+        "to": "rerank",
+        "kind": "main"
+      },
+      {
+        "from": "rerank",
+        "to": "output",
+        "kind": "main"
+      }
+    ],
+    "cache": {
+      "title": "CACHE \u00b7 per (query_hash, corpus_version)",
+      "lines": [
+        "Not yet enabled in bootstrap pipeline.",
+        "Cache key would include corpus_version so corpus updates invalidate downstream automatically.",
+        "Designed to return top-k directly with no BM25, dense, or fusion cost."
+      ],
+      "hitRate": "n/a",
+      "cachedP95": "n/a"
+    }
+  },
+  "inputs": [
+    {
+      "name": "canonical_id",
+      "description": "stable taxonomy id \u00b7 drives KG expansion"
+    },
+    {
+      "name": "free_text",
+      "description": "original question \u00b7 dense embedding source"
+    },
+    {
+      "name": "framework",
+      "description": "AFME \u00b7 CAIQ \u00b7 NIST \u00b7 scoping hint"
+    },
+    {
+      "name": "entity",
+      "description": "BNY legal entity \u00b7 OPA-enforced filter"
+    },
+    {
+      "name": "filters",
+      "description": "doc_type \u00b7 source \u00b7 freshness_max_days"
+    },
+    {
+      "name": "k",
+      "description": "return count \u00b7 default 10"
+    }
+  ],
+  "output": {
+    "typeName": "EvidenceSpan",
+    "fields": [
+      {
+        "name": "doc_hash",
+        "description": "sha256 of source document"
+      },
+      {
+        "name": "span_hash",
+        "description": "sha256 of the span itself"
+      },
+      {
+        "name": "text",
+        "description": "verbatim span content"
+      },
+      {
+        "name": "anchor",
+        "description": "PageAnchor or SectionAnchor for citation"
+      },
+      {
+        "name": "score",
+        "description": "RRF score \u00b7 post-fusion"
+      },
+      {
+        "name": "source",
+        "description": "one of: edgar (4596), bny-ir (3842), afme (3155), nist_800_53 (1196), caiq (261), nist_csf (219), ccm (197)"
+      }
+    ]
+  },
+  "latency": {
+    "max": 1200,
+    "budget": [
+      {
+        "label": "BM25 lexical",
+        "ms": 340,
+        "tone": "step"
+      },
+      {
+        "label": "Dense retrieval",
+        "ms": 280,
+        "tone": "step"
+      },
+      {
+        "label": "RRF fusion",
+        "ms": 20,
+        "tone": "filter"
+      },
+      {
+        "label": "Halt + slice",
+        "ms": 10,
+        "tone": "filter"
+      },
+      {
+        "label": "Total uncached",
+        "ms": 650,
+        "tone": "total"
+      },
+      {
+        "label": "Total target",
+        "ms": 1200,
+        "tone": "cached"
+      }
+    ]
+  },
+  "quality": [
+    {
+      "label": "Recall @ 1",
+      "value": "0.33",
+      "target": "tgt 0.50",
+      "tone": "warn"
+    },
+    {
+      "label": "Recall @ 10",
+      "value": "0.56",
+      "target": "tgt 0.85",
+      "tone": "warn"
+    },
+    {
+      "label": "MRR",
+      "value": "0.39",
+      "target": "no target",
+      "tone": "neutral"
+    },
+    {
+      "label": "Halt rate",
+      "value": "36%",
+      "target": "tgt < 20%",
+      "tone": "warn"
+    }
+  ],
+  "failureModes": [
+    "Halt threshold = 0.018; queries below it get routed to SME rather than drafted.",
+    "Adversarial slice halts 60% of items \u2014 that's by design.",
+    "Cross-encoder rerank not yet wired; RRF fusion is the only ranker today.",
+    "Entity filter is enforced at the journal/OPA layer once L08 lands; the bootstrap pipeline filters at the source level only."
+  ]
+}

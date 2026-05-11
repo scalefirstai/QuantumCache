@@ -1,0 +1,190 @@
+{
+  "id": "aria",
+  "name": "Aria",
+  "role": "DDQ specialist",
+  "runId": "run_20260510T125909_b1b97337",
+  "runDescription": "Owns run_20260510T125909_b1b97337 \u00b7 ADVERSARIAL \u00b7 5 questions \u00b7 BNY public-corpus replay",
+  "reportingLine": "Reports to Compliance Ops \u00b7 taxonomy tx_v0.1 \u00b7 library lib_v0.1",
+  "progressPct": 100,
+  "kpis": [
+    {
+      "label": "Auto-pass",
+      "value": "80.0%"
+    },
+    {
+      "label": "Library hit",
+      "value": "20.0%"
+    },
+    {
+      "label": "Halt rate",
+      "value": "20.0%"
+    },
+    {
+      "label": "P95 / question",
+      "value": "2379ms"
+    }
+  ],
+  "agents": [
+    {
+      "name": "QuestionMapper",
+      "modelLine": "Haiku 4.5 \u00b7 v1.2.0",
+      "description": "Maps framework Q to canonical_id with confidence",
+      "skills": [
+        "Taxonomy.classify",
+        "Embedding.search"
+      ],
+      "tone": "primary"
+    },
+    {
+      "name": "EvidenceSourcer",
+      "modelLine": "Sonnet 4.6 \u00b7 v2.1.4",
+      "description": "Produces evidence bundle \u00b7 never drafts prose",
+      "skills": [
+        "Library.lookup",
+        "Retrieval.hybrid"
+      ],
+      "tone": "primary"
+    },
+    {
+      "name": "DraftComposer",
+      "modelLine": "Sonnet 4.6 / Opus 4.7 \u00b7 v3.0.1",
+      "description": "Drafts response from evidence \u00b7 cites every claim",
+      "skills": [
+        "LLM.complete",
+        "PromptRegistry"
+      ],
+      "tone": "primary"
+    },
+    {
+      "name": "CitationVerifier",
+      "modelLine": "Haiku 4.5 \u00b7 v1.0.7",
+      "description": "Verifies every cited span resolves and matches",
+      "skills": [
+        "Corpus.fetch_span",
+        "Hash.verify"
+      ],
+      "tone": "primary"
+    },
+    {
+      "name": "ConsistencyChecker",
+      "modelLine": "Sonnet 4.6 \u00b7 v1.4.2",
+      "description": "Compares against recent shipped responses",
+      "skills": [
+        "DuckDB.query",
+        "Embedding.similarity"
+      ],
+      "tone": "primary"
+    },
+    {
+      "name": "PiiScrubber",
+      "modelLine": "Haiku + Presidio \u00b7 v1.1.0",
+      "description": "Detects PII \u00b7 internal refs \u00b7 client commercials",
+      "skills": [
+        "Presidio.analyze",
+        "RegexRecognizer"
+      ],
+      "tone": "primary"
+    },
+    {
+      "name": "FreshnessAuditor",
+      "modelLine": "rule-based \u00b7 v0.9.3",
+      "description": "Flags stale evidence and library entries",
+      "skills": [
+        "Library.expiry",
+        "Corpus.freshness"
+      ],
+      "tone": "rule"
+    },
+    {
+      "name": "ApprovalRouter",
+      "modelLine": "OPA \u00b7 v0.6.0",
+      "description": "Routes to right SME queue by domain + tier",
+      "skills": [
+        "OPA.evaluate",
+        "Queue.enqueue"
+      ],
+      "tone": "rule"
+    }
+  ],
+  "queue": {
+    "awaiting": 7,
+    "items": [
+      {
+        "domain": "InfoSec SME",
+        "scope": "Tier 1 \u00b7 access control \u00b7 encryption",
+        "caption": "9 library entries \u00b7 approves new submissions",
+        "status": "open"
+      },
+      {
+        "domain": "Op resilience SME",
+        "scope": "BCP \u00b7 DR \u00b7 sub-custody",
+        "caption": "15 library entries",
+        "status": "open"
+      },
+      {
+        "domain": "Regulatory SME",
+        "scope": "ADV \u00b7 Pillar 3 \u00b7 resolution",
+        "caption": "24 library entries",
+        "status": "open"
+      },
+      {
+        "domain": "Sub-custody SME",
+        "scope": "Network \u00b7 clearing \u00b7 settlement",
+        "caption": "12 library entries",
+        "status": "open"
+      },
+      {
+        "domain": "Legal review",
+        "scope": "Override \u00b7 do-not-answer",
+        "caption": "1 halted \u00b7 action required",
+        "status": "halted"
+      }
+    ]
+  },
+  "decisionRights": [
+    {
+      "icon": "check",
+      "text": "Aria seals tier 2/3 with passing validation"
+    },
+    {
+      "icon": "user-check",
+      "text": "SME approves all tier 1 outputs"
+    },
+    {
+      "icon": "shield-x",
+      "text": "Legal owns every guardrail override"
+    }
+  ],
+  "timeline": [
+    {
+      "title": "Intake",
+      "caption": "Aria accepts",
+      "duration": "14ms",
+      "tone": "ink"
+    },
+    {
+      "title": "Classify",
+      "caption": "QuestionMapper",
+      "duration": "~400ms",
+      "tone": "teal"
+    },
+    {
+      "title": "Draft",
+      "caption": "DraftComposer",
+      "duration": "~2.4s",
+      "tone": "teal"
+    },
+    {
+      "title": "Validate \u00d7 4",
+      "caption": "4 guardrails",
+      "duration": "~1.1s",
+      "tone": "teal"
+    },
+    {
+      "title": "Seal \u00b7 or halt",
+      "caption": "SME if halted",
+      "duration": "P95 2379ms",
+      "tone": "ochre"
+    }
+  ]
+}

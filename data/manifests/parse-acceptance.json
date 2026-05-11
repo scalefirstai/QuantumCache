@@ -1,0 +1,54 @@
+{
+  "hash_integrity": {
+    "sampled": 500,
+    "failures": [],
+    "pass": true
+  },
+  "determinism": {
+    "bny-ir": {
+      "pass": true,
+      "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q1",
+      "spans": 185
+    },
+    "edgar": {
+      "pass": true,
+      "doc_id": "edgar:bny-mellon-corp:0001193125-21-202195",
+      "spans": 4
+    },
+    "caiq": {
+      "pass": true,
+      "doc_id": "caiq:v4.0.3:primary-dataset",
+      "spans": 261
+    },
+    "ccm": {
+      "pass": true,
+      "doc_id": "ccm:v4.0.12:primary-dataset",
+      "spans": 197
+    },
+    "nist_csf": {
+      "pass": true,
+      "doc_id": "nist:csf:v2.0:catalog",
+      "spans": 219
+    },
+    "nist_800_53": {
+      "pass": true,
+      "doc_id": "nist:sp800-53:rev5:catalog",
+      "spans": 1196
+    },
+    "afme": {
+      "pass": true,
+      "doc_id": "afme:ddq-custodian:2026",
+      "spans": 1116
+    }
+  },
+  "by_source_counts": {
+    "bny-ir": 3842,
+    "edgar": 4596,
+    "caiq": 261,
+    "ccm": 197,
+    "nist_csf": 219,
+    "nist_800_53": 1196,
+    "afme": 3155
+  },
+  "total_spans": 13466
+}

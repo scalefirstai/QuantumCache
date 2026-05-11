@@ -1,0 +1,25 @@
+{
+  "version": "lib_v0.1",
+  "generated_at": "2026-05-10T11:04:02.936184+00:00",
+  "merkle_root": "sha256:a1f550206e7205177f02c939539ad0f8a3a79cca004d26eee66dc8881e69f184",
+  "signed_by": "dev.bootstrap@local",
+  "entry_count": 60,
+  "by_entity": {
+    "BNY_MELLON_CORP": 60
+  },
+  "by_top_level": {
+    "canon.or": 15,
+    "canon.reg": 24,
+    "canon.subc": 12,
+    "canon.is": 9
+  },
+  "candidates_scored": 139,
+  "validator_failures": [],
+  "acceptance": {
+    "ac1_coverage": true,
+    "ac2_validator": true,
+    "ac3_replay": "deferred (L01 audit not yet built)",
+    "ac4_bootstrap_tag": true,
+    "snapshot_integrity": true
+  }
+}

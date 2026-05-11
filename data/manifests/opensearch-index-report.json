@@ -1,0 +1,91 @@
+{
+  "index": "spans-v1",
+  "indexed": 13466,
+  "errors": 0,
+  "count": 13466,
+  "elapsed_secs": 8.31,
+  "aggs": {
+    "by_source": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "edgar",
+          "doc_count": 4596
+        },
+        {
+          "key": "bny-ir",
+          "doc_count": 3842
+        },
+        {
+          "key": "afme",
+          "doc_count": 3155
+        },
+        {
+          "key": "nist_800_53",
+          "doc_count": 1196
+        },
+        {
+          "key": "caiq",
+          "doc_count": 261
+        },
+        {
+          "key": "nist_csf",
+          "doc_count": 219
+        },
+        {
+          "key": "ccm",
+          "doc_count": 197
+        }
+      ]
+    },
+    "by_form": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "10-Q",
+          "doc_count": 2964
+        },
+        {
+          "key": "DEF 14A",
+          "doc_count": 988
+        },
+        {
+          "key": "8-K",
+          "doc_count": 361
+        },
+        {
+          "key": "10-K",
+          "doc_count": 283
+        }
+      ]
+    },
+    "by_framework": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "AFME_2026",
+          "doc_count": 3155
+        },
+        {
+          "key": "NIST_SP800_53_rev5",
+          "doc_count": 1196
+        },
+        {
+          "key": "CAIQ_v4.0.3",
+          "doc_count": 261
+        },
+        {
+          "key": "NIST_CSF_v2.0",
+          "doc_count": 219
+        },
+        {
+          "key": "CCM_v4.0.12",
+          "doc_count": 197
+        }
+      ]
+    }
+  }
+}

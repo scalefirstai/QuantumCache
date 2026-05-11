@@ -1,0 +1,225 @@
+{
+  "run_id": "run_20260510T125906_2b46b0fd",
+  "sealed_at": "2026-05-10T12:59:08.153833+00:00",
+  "platform_version": "v0.1.0",
+  "taxonomy_version": "tx_v0.1",
+  "library_version": "lib_v0.1",
+  "input": {
+    "eval_id": "ev_4bb0518811",
+    "framework": "AFME",
+    "framework_question_ref": "AFME-1.5.2",
+    "framework_version": "2026",
+    "raw_question_text": "1.5.2 Please confirm that a qualified team within your organisation,  independent of your custody business, reviews your insurance cover on at least an annual basis",
+    "expected_canonical_id": "canon.is.audit.a_a_02_q1",
+    "expected_evidence_spans": [
+      {
+        "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29",
+        "span_hash": "sha256:c9e3e97851d44eedf764170091b89e28e80f08942f79d1c9a1918e7be0d75e3b",
+        "anchor": {
+          "kind": "section",
+          "item": "Item_4",
+          "subsection": null,
+          "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29"
+        },
+        "doc_id": "edgar:bny-mellon-corp:0001193125-22-059759",
+        "span_id": "edgar:bny-mellon-corp:0001193125-22-059759::Item_4#0142"
+      },
+      {
+        "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636",
+        "span_hash": "sha256:e5eb716e5b94f2762b733620a568dfe50fb86870ec526f4ed55d9a59238ed674",
+        "anchor": {
+          "kind": "section",
+          "item": "Item_5",
+          "subsection": null,
+          "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636"
+        },
+        "doc_id": "edgar:bny-mellon-corp:0001193125-24-051895",
+        "span_id": "edgar:bny-mellon-corp:0001193125-24-051895::Item_5#0153"
+      },
+      {
+        "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e",
+        "span_hash": "sha256:c20d914d5eca1bd0b1931662e48b70a98d68025fef3251b9a2174a55abe47981",
+        "anchor": {
+          "kind": "section",
+          "item": "Item_6",
+          "subsection": null,
+          "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e"
+        },
+        "doc_id": "edgar:bny-mellon-corp:0001193125-23-055130",
+        "span_id": "edgar:bny-mellon-corp:0001193125-23-055130::Item_6#0153"
+      }
+    ],
+    "expected_verdict": "pass",
+    "notes": "library-backed (entry lib_bootstrap_canon_is_audit_a_a_02_q1)"
+  },
+  "outbound_response": "As in prior years, the Audit Committee engaged in a review of KPMG in connection with considering whether to recommend that stockholders ratify the selection of KPMG as BNY\u2019s independent auditor for 2026. In that review, the Audit Committee considered the continued independence of KPMG; the breadth and complexity of BNY\u2019s business and its global footprint and the resulting demands placed on its auditing firm; KPMG\u2019s demonstrated understanding of the financial services industry in general and BNY\u2019s business in particular; and the professionalism of KPMG\u2019s team, including their exhibited professional skepticism, objectivity and integrity. To assist the Audit Committee with its review, management prepares an annual assessment of KPMG that includes (1) an analysis of KPMG\u2019s known legal risks and significant proceedings that may impair KPMG\u2019s ability to perform BNY\u2019s annual audit, (2) the results of a survey of management and Audit Committee members regarding KPMG\u2019s overall performance and (3) KPMG\u2019s fees and services compared to services provided by KPMG and other auditing firms to peer companies. In addition, KPMG provides to, and reviews with, the Audit Committee an analysis of KPMG\u2019s independence, including the policies that KPMG follows with respect to rotating key audit personnel so that there is a new\npartner-in-charge\nat least every five years. We expect that representatives of KPMG will be present at the Annual Meeting to respond to appropriate questions, and they will have the opportunity to make a statement if they desire. Voting\nAdoption of this proposal requires the affirmative vote of a majority of the votes cast on the proposal at the Annual Meeting by the holders of our common stock voting electronically at the Annual Meeting or by proxy. [edgar/DEF 14A/Item_3]\n\nAs in prior years, in 2022, the Audit Committee engaged in a review of KPMG in connection with considering whether to recommend that stockholders ratify the selection of KPMG as BNY Mellon\u2019s independent auditor for 2023. In that review, the Audit Committee considered the continued independence of KPMG; the breadth and complexity of BNY Mellon\u2019s business and its global footprint and the resulting demands placed on its auditing firm; KPMG\u2019s demonstrated understanding of the financial services industry in general and BNY Mellon\u2019s business in particular; and the professionalism of KPMG\u2019s team, including their exhibited professional skepticism, objectivity and integrity. To assist the Audit Committee with its review, management prepares an annual assessment of KPMG that includes (1) an analysis of KPMG\u2019s known legal risks and significant proceedings that may impair KPMG\u2019s ability to perform BNY Mellon\u2019s annual audit, (2) the results of a survey of management and Audit Committee members regarding KPMG\u2019s overall performance and (3) KPMG\u2019s fees and services compared to services provided by KPMG and other auditing firms to peer companies. In addition, KPMG provides to, and reviews with, the Audit Committee an analysis of KPMG\u2019s independence, including the policies that KPMG follows with respect to rotating key audit personnel so that there is a new\npartner-in-charge\nat least every five years. We expect that representatives of KPMG will be present at the Annual Meeting to respond to appropriate questions, and they will have the opportunity to make a statement if they desire. Voting\nAdoption of this proposal requires the affirmative vote of a majority of the votes cast on the proposal at the Annual Meeting by the holders of our common stock voting electronically at the Annual Meeting or by proxy. [edgar/DEF 14A/Item_6]\n\nThe Internet voting procedures, as set forth on the proxy card, are designed to authenticate your identity, to allow you to provide your voting instructions and to confirm that your instructions have been properly recorded. If you vote by Internet, you should not return your proxy card.\n108\u2003BNY MELLON 2024 PROXY STATEMENT\nTable of Contents\nADDITIONAL INFORMATION\nAnnual Meeting Q&A\nQ\n:\nWhat If I Am a \u201cBeneficial Owner?\u201d\nA\n:\nIf you are a \u201cbeneficial owner,\u201d also known as a \u201cstreet name\u201d holder (that is, you hold your shares of our common stock through a broker, bank or other nominee), you will receive instructions on how to vote at the meeting (including, if your broker, bank or other nominee elects to do so, instructions on how to vote your shares by telephone or over the Internet) as part of your proxy materials provided by the record holder. You must follow those instructions to be able to attend the Annual Meeting and have your shares voted. Q\n:\nIf I Vote By Proxy, How Will My Shares Be Voted? What If I Submit a Proxy Without Indicating How To Vote My Shares? A\n:\nIf you vote by proxy through mail, telephone or over the Internet, your shares will be voted in accordance with your instructions. If you sign, date and return your proxy card without indicating how you want to vote your shares, the proxy holders will vote your shares in accordance with the following recommendations of the Board:\nProposal 1\nFOR\nthe election of each nominee for director. Proposal 2\nFOR\nthe advisory resolution to approve the 2023 compensation of our NEOs. Proposal 3\nFOR\nthe ratification of the appointment of KPMG LLP as our independent registered public accounting firm for the fiscal year ending December 31, 2024. Proposal 4\nAGAINST\nthe stockholder proposal regarding transparency in lobbying, if properly presented. Proposal 5\nAGAINST\nthe stockholder proposal regarding politicized\nde-banking,\nif properly presented. [edgar/DEF 14A/Item_5]",
+  "outbound_response_hash": "sha256:ca6a1205d08b49194289321b09a03f1f4aa8aed2a36e0d2341c9585409ae17a4",
+  "evidence_refs": [
+    {
+      "doc_hash": "sha256:cdb1202c87b8404a89a02361ec1ae0fc8bbf783b2db373c51f0f9681f66c50ad",
+      "span_hash": "sha256:faa1fccbf53808784f379a76842d873a64520f3b30a97c311127e36336941292",
+      "anchor": {
+        "kind": "section",
+        "doc_hash": "sha256:cdb1202c87b8404a89a02361ec1ae0fc8bbf783b2db373c51f0f9681f66c50ad"
+      },
+      "doc_id": "edgar:bny-mellon-corp:0001193125-26-092500",
+      "span_id": "edgar:bny-mellon-corp:0001193125-26-092500::Item_3#0158"
+    },
+    {
+      "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e",
+      "span_hash": "sha256:2908406ce70f92e28b7b50978a7b31549cd6446f6c54fff1b26be6b0e28ec92b",
+      "anchor": {
+        "kind": "section",
+        "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e"
+      },
+      "doc_id": "edgar:bny-mellon-corp:0001193125-23-055130",
+      "span_id": "edgar:bny-mellon-corp:0001193125-23-055130::Item_6#0151"
+    },
+    {
+      "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636",
+      "span_hash": "sha256:8af547f09048aed3703fcaae9c08e90b57a2599e3a112437fb881874c75b39d5",
+      "anchor": {
+        "kind": "section",
+        "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636"
+      },
+      "doc_id": "edgar:bny-mellon-corp:0001193125-24-051895",
+      "span_id": "edgar:bny-mellon-corp:0001193125-24-051895::Item_5#0177"
+    }
+  ],
+  "verdict": "pass",
+  "events": [
+    {
+      "event_id": "evt_90fe6f846f984b78",
+      "parent_event_id": null,
+      "kind": "intake",
+      "ts": "2026-05-10T12:59:06.515022+00:00",
+      "payload": {
+        "eval_id": "ev_4bb0518811",
+        "framework": "AFME",
+        "raw_question_text_hash": "115d64e1ee743cbffebba5e222073fb21ed1968dc931e18b201bfe4f9a782a23"
+      },
+      "payload_hash": "sha256:abad31b8cbea12bd452097d99569270efa885adb36f8bdea2fa1ed5e0000bfca",
+      "prev_hash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "chain_hash": "sha256:adac45c01e05b6a8c0376bf68b102b86585bd3ff57d9639fcb965c0ca70cb081"
+    },
+    {
+      "event_id": "evt_4bf7b0672efc4158",
+      "parent_event_id": "evt_90fe6f846f984b78",
+      "kind": "classify.match",
+      "ts": "2026-05-10T12:59:07.931294+00:00",
+      "payload": {
+        "canonical_id": null,
+        "confidence": 0.0,
+        "top_candidates": []
+      },
+      "payload_hash": "sha256:b2e2daf6cf06a63f324fd0082cf151215202ac941985290a2418ed4b609f85e3",
+      "prev_hash": "sha256:adac45c01e05b6a8c0376bf68b102b86585bd3ff57d9639fcb965c0ca70cb081",
+      "chain_hash": "sha256:77914012501eed962ac66199c609c15f13965891102b7b800ecd8fcf6509a9cd"
+    },
+    {
+      "event_id": "evt_02a9b0c0dfd34a40",
+      "parent_event_id": "evt_4bf7b0672efc4158",
+      "kind": "library.lookup",
+      "ts": "2026-05-10T12:59:07.931378+00:00",
+      "payload": {
+        "canonical_id": null,
+        "entity": "BNY_MELLON_CORP",
+        "product": null,
+        "hit": false,
+        "entry_id": null,
+        "reason": "no canonical_id"
+      },
+      "payload_hash": "sha256:8c527dae5b49b57510adfb9d4fbb77e1e7206ca2b72b4b5c03ce8d8f24aeb563",
+      "prev_hash": "sha256:77914012501eed962ac66199c609c15f13965891102b7b800ecd8fcf6509a9cd",
+      "chain_hash": "sha256:f995f41d4d0c76c8440cee3788ce4d7c40a45afb286fc7e0c86c457ca7ccf857"
+    },
+    {
+      "event_id": "evt_5d0c332f1c5f4aab",
+      "parent_event_id": "evt_02a9b0c0dfd34a40",
+      "kind": "retrieve.query",
+      "ts": "2026-05-10T12:59:07.931436+00:00",
+      "payload": {
+        "query_hash": "115d64e1ee743cbffebba5e222073fb21ed1968dc931e18b201bfe4f9a782a23",
+        "filters": {
+          "source": [
+            "edgar",
+            "bny-ir"
+          ]
+        },
+        "k": 10
+      },
+      "payload_hash": "sha256:ce4ea63cbf71e1b6713f6e7369ad9706b8d0e17bc26ccbf931fcb6c365d322a2",
+      "prev_hash": "sha256:f995f41d4d0c76c8440cee3788ce4d7c40a45afb286fc7e0c86c457ca7ccf857",
+      "chain_hash": "sha256:d7f0dd99341d38bb1ee81c55498630e6bdd32ed14ef71703c296c1b3a2bb9108"
+    },
+    {
+      "event_id": "evt_87fe4a719eec43a9",
+      "parent_event_id": "evt_5d0c332f1c5f4aab",
+      "kind": "retrieve.result",
+      "ts": "2026-05-10T12:59:08.153053+00:00",
+      "payload": {
+        "candidate_count": 58,
+        "returned_count": 10,
+        "top_score": 0.027757078986587184,
+        "top_3_sources": [
+          "edgar",
+          "edgar",
+          "edgar"
+        ]
+      },
+      "payload_hash": "sha256:cf5777eb051007fde36a72f9f5b3ba1a91fc875512e932b410f3306c006ba877",
+      "prev_hash": "sha256:d7f0dd99341d38bb1ee81c55498630e6bdd32ed14ef71703c296c1b3a2bb9108",
+      "chain_hash": "sha256:6968f73ad80feb38ca8f3d8d0879ce147c0431006a977bd1dbbcde338f12bf94"
+    },
+    {
+      "event_id": "evt_f2a4c7063bd347d4",
+      "parent_event_id": "evt_87fe4a719eec43a9",
+      "kind": "draft.compose",
+      "ts": "2026-05-10T12:59:08.153234+00:00",
+      "payload": {
+        "draft_text_hash": "ca6a1205d08b49194289321b09a03f1f4aa8aed2a36e0d2341c9585409ae17a4",
+        "draft_chars": 5590,
+        "evidence_count": 3,
+        "source": "retrieval",
+        "library_entry_id": null
+      },
+      "payload_hash": "sha256:637cc7e5c3f30ee91640851e0e5cd7fbc746aa26c2a6c7ad86365104b4d971b6",
+      "prev_hash": "sha256:6968f73ad80feb38ca8f3d8d0879ce147c0431006a977bd1dbbcde338f12bf94",
+      "chain_hash": "sha256:22106b032de781f2708bc73f2c9d1c602b60e07c968cc7190436ecbceec8dcda"
+    },
+    {
+      "event_id": "evt_8fded5a3ce7e4c11",
+      "parent_event_id": "evt_f2a4c7063bd347d4",
+      "kind": "validate.check",
+      "ts": "2026-05-10T12:59:08.153744+00:00",
+      "payload": {
+        "verdict": "pass",
+        "halt_reason": null,
+        "checks": [
+          {
+            "id": "guardrail.01_citation_resolution",
+            "verdict": "pass"
+          },
+          {
+            "id": "guardrail.02_evidence_freshness",
+            "verdict": "pass",
+            "reason": "bootstrap mode \u2014 public-corpus evidence assumed fresh"
+          },
+          {
+            "id": "guardrail.03_cross_ddq_consistency",
+            "verdict": "pass",
+            "reason": "no prior shipped responses"
+          },
+          {
+            "id": "guardrail.04_confidentiality_scrub",
+            "verdict": "pass"
+          }
+        ]
+      },
+      "payload_hash": "sha256:3c88f61c7239c776dfef68cc52c0ebc30e3215aa0e508bcbf186901f7cb56d4c",
+      "prev_hash": "sha256:22106b032de781f2708bc73f2c9d1c602b60e07c968cc7190436ecbceec8dcda",
+      "chain_hash": "sha256:af7d85b14576dd7526cf0d2b23cc349da9bd7bf5d8476f491c2d8b2c0aa70d31"
+    }
+  ],
+  "merkle_root": "sha256:f1468f1b676564d34362a63cf4bf80ce83787f72202374b924ad8267b35c9709"
+}

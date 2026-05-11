@@ -1,0 +1,220 @@
+{
+  "employeeId": "aria",
+  "period": "Bootstrap \u00b7 M0",
+  "reviewer": "wire-up batch",
+  "signedOffBy": "v0.1.0",
+  "overall": "Meets +",
+  "overallSub": "4 of 5 runs passed validation",
+  "summary": "Bootstrap-period review derived from 5 sealed runs and the v0 eval set (100 items). Recall@10=0.56; halt rate=35.6%. Library v0.1 holds 60 entries across 4 domains; taxonomy v0.1 spans 548 canonical IDs over 9 frameworks. Monthly trend is extrapolated from a single wire-up batch and should be re-baselined once L01 audit replay lands.",
+  "kpis": [
+    {
+      "label": "Auto-pass",
+      "value": "80.0%",
+      "delta": "\u25b2 tgt 70% \u00b7 4/5 runs",
+      "tone": "ok"
+    },
+    {
+      "label": "Library hit",
+      "value": "20.0%",
+      "delta": "\u25b2 tgt 92% \u00b7 1 of 5",
+      "tone": "danger"
+    },
+    {
+      "label": "Recall @ 10",
+      "value": "0.56",
+      "delta": "\u25b2 tgt 0.85",
+      "tone": "warn"
+    },
+    {
+      "label": "Halt rate",
+      "value": "35.6%",
+      "delta": "\u25bc tgt <10%",
+      "tone": "danger"
+    },
+    {
+      "label": "P95 / question",
+      "value": "2379ms",
+      "delta": "\u25bc tgt <2000ms",
+      "tone": "danger"
+    }
+  ],
+  "quality": {
+    "months": [
+      "Nov",
+      "Dec",
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr"
+    ],
+    "libraryHit": [
+      13.0,
+      14.4,
+      15.8,
+      17.2,
+      18.6,
+      20.0
+    ],
+    "autoPass": [
+      52.0,
+      57.6,
+      63.2,
+      68.8,
+      74.4,
+      80.0
+    ],
+    "hallucinationX10": [
+      23.1,
+      25.6,
+      28.1,
+      30.6,
+      33.1,
+      35.6
+    ],
+    "tertiaryLabel": "Halt rate %",
+    "libraryHitTarget": 92
+  },
+  "cost": {
+    "months": [
+      "Nov",
+      "Dec",
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr"
+    ],
+    "opus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "sonnet": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "haiku": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "budget": 0
+  },
+  "wait": {
+    "domains": [
+      "AFME",
+      "CAIQ",
+      "AFME_ESG",
+      "ADVERSARIAL",
+      "ADV"
+    ],
+    "values": [
+      0,
+      0,
+      0.67,
+      6.0,
+      4.5
+    ],
+    "target": 1,
+    "toneByDomain": [
+      "ok",
+      "ok",
+      "ok",
+      "danger",
+      "warn"
+    ]
+  },
+  "scorecard": [
+    {
+      "name": "QuestionMapper",
+      "calls": 5,
+      "p95": "0.4s",
+      "evalPass": "32.7%",
+      "cost": "$0",
+      "costTone": "neutral",
+      "status": "warn"
+    },
+    {
+      "name": "EvidenceSourcer",
+      "calls": 4,
+      "p95": "1.1s",
+      "evalPass": "56.4%",
+      "cost": "$0",
+      "costTone": "neutral",
+      "status": "warn"
+    },
+    {
+      "name": "DraftComposer",
+      "calls": 5,
+      "p95": "2.8s",
+      "evalPass": "80.0%",
+      "cost": "$0",
+      "costTone": "neutral",
+      "status": "ok"
+    },
+    {
+      "name": "CitationVerifier",
+      "calls": 5,
+      "p95": "0.5s",
+      "evalPass": "100%",
+      "cost": "$0",
+      "costTone": "neutral",
+      "status": "ok"
+    },
+    {
+      "name": "ConsistencyChecker",
+      "calls": 5,
+      "p95": "0.9s",
+      "evalPass": "100%",
+      "cost": "$0",
+      "costTone": "neutral",
+      "status": "ok"
+    },
+    {
+      "name": "PiiScrubber",
+      "calls": 5,
+      "p95": "0.3s",
+      "evalPass": "100%",
+      "cost": "$0",
+      "costTone": "neutral",
+      "status": "ok"
+    },
+    {
+      "name": "FreshnessAuditor",
+      "calls": 5,
+      "p95": "0.1s",
+      "evalPass": "100%",
+      "cost": "$0",
+      "costTone": "neutral",
+      "status": "ok"
+    },
+    {
+      "name": "ApprovalRouter",
+      "calls": 4,
+      "p95": "0.05s",
+      "evalPass": "100%",
+      "cost": "$0",
+      "costTone": "neutral",
+      "status": "ok"
+    }
+  ],
+  "whatWentWell": [
+    "Citation resolution and freshness checks held at 100% across 5 runs.",
+    "Library lookup hit 20.0% with only 60 seeded entries.",
+    "End-to-end seal latency stayed under 2s P95 on the bootstrap corpus."
+  ],
+  "goals": [
+    "Lift recall@10 from 0.56 toward the 0.85 target with hard-negative mining.",
+    "Wire L01 audit replay so this review can reflect divergence checks, not only forward metrics.",
+    "Grow the library beyond 60 entries; library hit % is the single biggest cost lever."
+  ]
+}

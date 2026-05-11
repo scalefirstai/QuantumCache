@@ -1,0 +1,682 @@
+{
+  "runId": "run_20260510T125909_ceff7322",
+  "client": "BNY public-corpus replay",
+  "framework": "AFME_ESG \u00b7 AFME-HY-ESG-p3-a3d24382",
+  "questionCount": 1,
+  "rawQuestion": "Describe BNY's approach to: 1. Introduction AFME and its members acknowledge that sustainability-related factors are an increasingly urgent focus of investors in the context of capital markets offerings, including with respect to high yield bond and other leveraged fi",
+  "verdict": "pass",
+  "sealedAt": "2026-05-10T12:59:09.799415+00:00",
+  "merkleRoot": "sha256:74187ed2e3cb9a0723a0f9298805b76fc45febeec2f093fd991a7492d91aec65",
+  "stages": [
+    {
+      "id": "intake",
+      "ordinal": 1,
+      "title": "Intake",
+      "sub": "Question received; the platform created a Run",
+      "user": [
+        {
+          "kind": "strong",
+          "value": "Question received"
+        },
+        {
+          "kind": "text",
+          "value": " from AFME_ESG (AFME-HY-ESG-p3-a3d24382)."
+        }
+      ],
+      "system": [
+        {
+          "kind": "strong",
+          "value": "Intake worker"
+        },
+        {
+          "kind": "text",
+          "value": " wrote the question to the journal and minted "
+        },
+        {
+          "kind": "code",
+          "value": "run_id"
+        },
+        {
+          "kind": "text",
+          "value": "."
+        }
+      ],
+      "data": [
+        {
+          "lane": "knowledge",
+          "label": "Source DDQ stored",
+          "body": [
+            {
+              "kind": "text",
+              "value": "Question received from framework "
+            },
+            {
+              "kind": "code",
+              "value": "AFME_ESG"
+            },
+            {
+              "kind": "text",
+              "value": " \u00b7 ref "
+            },
+            {
+              "kind": "code",
+              "value": "AFME-HY-ESG-p3-a3d24382"
+            }
+          ]
+        },
+        {
+          "lane": "audit",
+          "label": "Run created",
+          "body": [
+            {
+              "kind": "code",
+              "value": "run_id"
+            },
+            {
+              "kind": "text",
+              "value": " = "
+            },
+            {
+              "kind": "code",
+              "value": "run_20260510T125909_ceff7322"
+            },
+            {
+              "kind": "text",
+              "value": "; first "
+            },
+            {
+              "kind": "code",
+              "value": "audit_event"
+            },
+            {
+              "kind": "text",
+              "value": " of kind "
+            },
+            {
+              "kind": "code",
+              "value": "intake"
+            },
+            {
+              "kind": "text",
+              "value": " written"
+            }
+          ]
+        },
+        {
+          "lane": "canonical",
+          "label": "Taxonomy version pinned",
+          "body": [
+            {
+              "kind": "text",
+              "value": "Run pinned to "
+            },
+            {
+              "kind": "code",
+              "value": "tx_v0.1"
+            },
+            {
+              "kind": "text",
+              "value": " + "
+            },
+            {
+              "kind": "code",
+              "value": "lib_v0.1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "classify",
+      "ordinal": 2,
+      "title": "Classify",
+      "sub": "Map the framework question to a canonical ID",
+      "user": [
+        {
+          "kind": "strong",
+          "value": "Routed to SME"
+        },
+        {
+          "kind": "text",
+          "value": " \u2014 low or zero confidence; mapping unset."
+        }
+      ],
+      "system": [
+        {
+          "kind": "strong",
+          "value": "QuestionMapper agent"
+        },
+        {
+          "kind": "text",
+          "value": " embedded the question and searched the canonical taxonomy. Top score "
+        },
+        {
+          "kind": "code",
+          "value": "0.000"
+        },
+        {
+          "kind": "text",
+          "value": "; 0 candidates considered."
+        }
+      ],
+      "data": [
+        {
+          "lane": "canonical",
+          "label": "Taxonomy lookup",
+          "body": [
+            {
+              "kind": "text",
+              "value": "Best candidate: "
+            },
+            {
+              "kind": "code",
+              "value": "(none)"
+            }
+          ]
+        },
+        {
+          "lane": "canonical",
+          "label": "Mapping recorded",
+          "body": [
+            {
+              "kind": "text",
+              "value": "Confidence threshold = 0.85; this run "
+            },
+            {
+              "kind": "strong",
+              "value": "did not auto-confirm"
+            },
+            {
+              "kind": "text",
+              "value": "."
+            }
+          ]
+        },
+        {
+          "lane": "audit",
+          "label": "Classification logged",
+          "body": [
+            {
+              "kind": "code",
+              "value": "classify.match"
+            },
+            {
+              "kind": "text",
+              "value": " event with score "
+            },
+            {
+              "kind": "code",
+              "value": "0.000"
+            },
+            {
+              "kind": "text",
+              "value": " persisted to journal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "retrieve",
+      "ordinal": 3,
+      "title": "Retrieve",
+      "sub": "Find the right answer \u2014 from the library or from evidence",
+      "user": [
+        {
+          "kind": "text",
+          "value": "Library miss; fell through to hybrid retrieval over the BNY public corpus."
+        }
+      ],
+      "system": [
+        {
+          "kind": "strong",
+          "value": "EvidenceSourcer agent"
+        },
+        {
+          "kind": "text",
+          "value": " ran the hybrid pipeline (BM25 + dense + RRF). Top RRF "
+        },
+        {
+          "kind": "code",
+          "value": "0.0289"
+        },
+        {
+          "kind": "text",
+          "value": "; 10 of 57 candidates returned."
+        }
+      ],
+      "data": [
+        {
+          "lane": "canonical",
+          "label": "Library lookup",
+          "body": [
+            {
+              "kind": "code",
+              "value": "library_entries"
+            },
+            {
+              "kind": "text",
+              "value": " queried by "
+            },
+            {
+              "kind": "code",
+              "value": "(canonical_id, entity, product)"
+            },
+            {
+              "kind": "text",
+              "value": " \u00b7 "
+            },
+            {
+              "kind": "strong",
+              "value": "miss"
+            }
+          ]
+        },
+        {
+          "lane": "knowledge",
+          "label": "Evidence retrieval",
+          "body": [
+            {
+              "kind": "text",
+              "value": "10 spans returned (of 57 candidates) \u00b7 "
+            },
+            {
+              "kind": "code",
+              "value": "filters="
+            },
+            {
+              "kind": "code",
+              "value": "{\"source\":[\"edgar\",\"bny-ir\"]}"
+            }
+          ]
+        },
+        {
+          "lane": "audit",
+          "label": "Every candidate logged",
+          "body": [
+            {
+              "kind": "code",
+              "value": "retrieve.query"
+            },
+            {
+              "kind": "text",
+              "value": " + "
+            },
+            {
+              "kind": "code",
+              "value": "retrieve.result"
+            },
+            {
+              "kind": "text",
+              "value": " emitted; top_score="
+            },
+            {
+              "kind": "code",
+              "value": "0.0289"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "draft",
+      "ordinal": 4,
+      "title": "Draft",
+      "sub": "Compose a response, anchored to evidence",
+      "user": [
+        {
+          "kind": "strong",
+          "value": "Draft composed"
+        },
+        {
+          "kind": "text",
+          "value": " \u00b7 5843 characters \u00b7 source = "
+        },
+        {
+          "kind": "code",
+          "value": "retrieval"
+        },
+        {
+          "kind": "text",
+          "value": "."
+        }
+      ],
+      "system": [
+        {
+          "kind": "strong",
+          "value": "DraftComposer agent"
+        },
+        {
+          "kind": "text",
+          "value": " assembled the response from "
+        },
+        {
+          "kind": "code",
+          "value": "3 cited spans"
+        },
+        {
+          "kind": "text",
+          "value": "; every factual claim is anchored to "
+        },
+        {
+          "kind": "code",
+          "value": "(doc_hash, span_hash)"
+        },
+        {
+          "kind": "text",
+          "value": "."
+        }
+      ],
+      "data": [
+        {
+          "lane": "canonical",
+          "label": "Library not used",
+          "body": [
+            {
+              "kind": "text",
+              "value": "Library miss \u2014 draft built from retrieval evidence only."
+            }
+          ]
+        },
+        {
+          "lane": "knowledge",
+          "label": "Evidence bundle attached",
+          "body": [
+            {
+              "kind": "text",
+              "value": "3 evidence spans referenced \u00b7 cited by hash, stable across reparses"
+            }
+          ]
+        },
+        {
+          "lane": "audit",
+          "label": "Draft hash recorded",
+          "body": [
+            {
+              "kind": "code",
+              "value": "draft.compose"
+            },
+            {
+              "kind": "text",
+              "value": " event \u00b7 "
+            },
+            {
+              "kind": "code",
+              "value": "draft_text_hash=2f832be33381"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "validate",
+      "ordinal": 5,
+      "title": "Validate",
+      "sub": "Run all four guardrails before anything ships",
+      "user": [
+        {
+          "kind": "strong",
+          "value": "All four guardrails passed."
+        },
+        {
+          "kind": "text",
+          "value": " The orchestrator advanced to approval."
+        }
+      ],
+      "system": [
+        {
+          "kind": "strong",
+          "value": "Validator service"
+        },
+        {
+          "kind": "text",
+          "value": " ran 4 OPA policies in parallel."
+        }
+      ],
+      "data": [
+        {
+          "lane": "audit",
+          "label": "Consistency check",
+          "body": [
+            {
+              "kind": "code",
+              "value": "response_register"
+            },
+            {
+              "kind": "text",
+              "value": " scanned for divergent answers to same "
+            },
+            {
+              "kind": "code",
+              "value": "canonical_id"
+            },
+            {
+              "kind": "text",
+              "value": " \u00b7 PASS"
+            }
+          ]
+        },
+        {
+          "lane": "knowledge",
+          "label": "Freshness check",
+          "body": [
+            {
+              "kind": "code",
+              "value": "freshness_index"
+            },
+            {
+              "kind": "text",
+              "value": " consulted \u00b7 bootstrap mode (public corpus assumed fresh)"
+            }
+          ]
+        },
+        {
+          "lane": "audit",
+          "label": "Verdict logged",
+          "body": [
+            {
+              "kind": "code",
+              "value": "validate.check"
+            },
+            {
+              "kind": "text",
+              "value": " \u00b7 "
+            },
+            {
+              "kind": "strong",
+              "value": "PASS"
+            },
+            {
+              "kind": "text",
+              "value": " \u00b7 0 guardrail failures"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "approve",
+      "ordinal": 6,
+      "title": "Approve",
+      "sub": "SME and legal sign off where needed; tier-2/3 auto-pass",
+      "user": [
+        {
+          "kind": "strong",
+          "value": "Auto-approved."
+        },
+        {
+          "kind": "text",
+          "value": " Tier-2/3 with passing validation seals without SME intervention."
+        }
+      ],
+      "system": [
+        {
+          "kind": "strong",
+          "value": "ApprovalRouter"
+        },
+        {
+          "kind": "text",
+          "value": " used the OPA policy to determine the approver set; verdict was "
+        },
+        {
+          "kind": "strong",
+          "value": "PASS"
+        },
+        {
+          "kind": "text",
+          "value": "."
+        }
+      ],
+      "data": [
+        {
+          "lane": "canonical",
+          "label": "Library promotion",
+          "body": [
+            {
+              "kind": "text",
+              "value": "Approved answers are candidates for promotion into "
+            },
+            {
+              "kind": "code",
+              "value": "library_entries"
+            },
+            {
+              "kind": "text",
+              "value": " by the InfoSec SME team."
+            }
+          ]
+        },
+        {
+          "lane": "audit",
+          "label": "Decision recorded",
+          "body": [
+            {
+              "kind": "code",
+              "value": "approval.decision"
+            },
+            {
+              "kind": "text",
+              "value": " event with named user, role, timestamp, comment"
+            }
+          ]
+        },
+        {
+          "lane": "audit",
+          "label": "Override register",
+          "body": [
+            {
+              "kind": "text",
+              "value": "Any guardrail override would write to "
+            },
+            {
+              "kind": "code",
+              "value": "override_register"
+            },
+            {
+              "kind": "text",
+              "value": " with legal approver."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "respond",
+      "ordinal": 7,
+      "title": "Respond",
+      "sub": "Sealed, journaled, delivered",
+      "user": [
+        {
+          "kind": "strong",
+          "value": "Sealed."
+        },
+        {
+          "kind": "text",
+          "value": " Bit-exact reproducible from the journal alone; bundle written to S3 with Object Lock."
+        }
+      ],
+      "system": [
+        {
+          "kind": "strong",
+          "value": "Orchestrator sealed the run."
+        },
+        {
+          "kind": "text",
+          "value": " Merkle root over 7 events computed and signed."
+        }
+      ],
+      "data": [
+        {
+          "lane": "audit",
+          "label": "Run sealed",
+          "body": [
+            {
+              "kind": "code",
+              "value": "sealed_runs"
+            },
+            {
+              "kind": "text",
+              "value": " row + S3 Object Lock bundle \u00b7 "
+            },
+            {
+              "kind": "code",
+              "value": "merkle_root"
+            },
+            {
+              "kind": "text",
+              "value": " = "
+            },
+            {
+              "kind": "code",
+              "value": "74187ed2e3cb"
+            }
+          ]
+        },
+        {
+          "lane": "audit",
+          "label": "Response register populated",
+          "body": [
+            {
+              "kind": "text",
+              "value": "One row per "
+            },
+            {
+              "kind": "code",
+              "value": "(run_id, canonical_id)"
+            },
+            {
+              "kind": "text",
+              "value": " with "
+            },
+            {
+              "kind": "code",
+              "value": "outbound_response_hash"
+            },
+            {
+              "kind": "text",
+              "value": " = "
+            },
+            {
+              "kind": "code",
+              "value": "2f832be33381"
+            }
+          ]
+        },
+        {
+          "lane": "canonical",
+          "label": "Library entries hashed",
+          "body": [
+            {
+              "kind": "code",
+              "value": "library_entry_hashes"
+            },
+            {
+              "kind": "text",
+              "value": " recorded so historical replay finds the exact version cited"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

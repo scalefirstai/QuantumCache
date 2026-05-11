@@ -1,0 +1,3042 @@
+{
+  "version": "v0",
+  "generated_at": "2026-05-10T11:12:06.839195+00:00",
+  "corpus_pin": {
+    "knowledge_documents_path": "data/manifests/knowledge-documents.json",
+    "taxonomy_version": "tx_v0.1",
+    "library_version": "lib_v0.1"
+  },
+  "counts": {
+    "AFME": 30,
+    "CAIQ": 25,
+    "AFME_ESG": 15,
+    "ADVERSARIAL": 10,
+    "ADV": 20,
+    "total": 100
+  },
+  "items": [
+    {
+      "eval_id": "ev_4bb0518811",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-1.5.2",
+      "framework_version": "2026",
+      "raw_question_text": "1.5.2 Please confirm that a qualified team within your organisation,  independent of your custody business, reviews your insurance cover on at least an annual basis",
+      "expected_canonical_id": "canon.is.audit.a_a_02_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29",
+          "span_hash": "sha256:c9e3e97851d44eedf764170091b89e28e80f08942f79d1c9a1918e7be0d75e3b",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_4",
+            "subsection": null,
+            "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-22-059759",
+          "span_id": "edgar:bny-mellon-corp:0001193125-22-059759::Item_4#0142"
+        },
+        {
+          "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636",
+          "span_hash": "sha256:e5eb716e5b94f2762b733620a568dfe50fb86870ec526f4ed55d9a59238ed674",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_5",
+            "subsection": null,
+            "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-24-051895",
+          "span_id": "edgar:bny-mellon-corp:0001193125-24-051895::Item_5#0153"
+        },
+        {
+          "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e",
+          "span_hash": "sha256:c20d914d5eca1bd0b1931662e48b70a98d68025fef3251b9a2174a55abe47981",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_6",
+            "subsection": null,
+            "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-23-055130",
+          "span_id": "edgar:bny-mellon-corp:0001193125-23-055130::Item_6#0153"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_is_audit_a_a_02_q1)"
+    },
+    {
+      "eval_id": "ev_8091f68675",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-1.5.5",
+      "framework_version": "2026",
+      "raw_question_text": "1.5.5 Does the firm have an excess SIPC, or equivalent, insurance policy?",
+      "expected_canonical_id": "canon.is.audit.a_a_03_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f",
+          "span_hash": "sha256:05476f044fd7cd09ff1c5d44eb393f3b98886cab132eb022ef3d5e1af14f292d",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_3",
+            "subsection": null,
+            "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-25-046216",
+          "span_id": "edgar:bny-mellon-corp:0001193125-25-046216::Item_3#0064"
+        },
+        {
+          "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29",
+          "span_hash": "sha256:55e36d3de3d21f7d19242ab83d5e30de1bbfe1128463c7213b8b687c9e2b0511",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_4",
+            "subsection": null,
+            "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-22-059759",
+          "span_id": "edgar:bny-mellon-corp:0001193125-22-059759::Item_4#0063"
+        },
+        {
+          "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636",
+          "span_hash": "sha256:3271ebdab4455dc670ed61b8b630e82fbcee94b1c2938f4eeefa80b04201a8f6",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_5",
+            "subsection": null,
+            "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-24-051895",
+          "span_id": "edgar:bny-mellon-corp:0001193125-24-051895::Item_5#0065"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_is_audit_a_a_03_q1)"
+    },
+    {
+      "eval_id": "ev_85253e8d64",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-1.3.2",
+      "framework_version": "2026",
+      "raw_question_text": "1.3.2 Has your regulator(s) raised any material issues in respect of your banking, custody and client money activities within the last 12 months?",
+      "expected_canonical_id": "canon.is.hr_security.hrs_01_q3",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:6b133ab71d31de2d9c6d519f2666778ef3586f7da4c49c58ace186ffef8b56f0",
+          "span_hash": "sha256:4ccf12b9b93f5f666bcea2f519534b04c68378dc2ffa7dbdb9f3d667535b5ac4",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_16",
+            "subsection": null,
+            "doc_hash": "sha256:6b133ab71d31de2d9c6d519f2666778ef3586f7da4c49c58ace186ffef8b56f0"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001390777-25-000046",
+          "span_id": "edgar:bny-mellon-corp:0001390777-25-000046::Item_16#0010"
+        },
+        {
+          "doc_hash": "sha256:8c8a6c9e0db572d217e020c8dd70ebd1981260cc95ed73cf618ef51d57e471ca",
+          "span_hash": "sha256:60bdbe81f6cfede1c16c7ed8e178369aa2af37533b345bb58d22a6febe2ccb96",
+          "anchor": {
+            "kind": "page",
+            "page": 19,
+            "doc_hash": "sha256:8c8a6c9e0db572d217e020c8dd70ebd1981260cc95ed73cf618ef51d57e471ca"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q1",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q1::The_Bank_of_New_York_Mellon_Corporation.p19#0089"
+        },
+        {
+          "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1",
+          "span_hash": "sha256:3f3c33c6a726e7fbbdf7f3ac437e22028bb3f4efb821dbb6a7bea03e56bf9eab",
+          "anchor": {
+            "kind": "page",
+            "page": 20,
+            "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3::The_Bank_of_New_York_Mellon_Corporation.p20#0092"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_is_hr_security_hrs_01_q3)"
+    },
+    {
+      "eval_id": "ev_43ca2429b9",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-1.3.8",
+      "framework_version": "2026",
+      "raw_question_text": "1.3.8 Please confirm which of the following criteria you meet to comply with the current European Union (EU) directives and regulations applicable to Alternative Investment Fund (AIF) and Undertakings for Collective Investment in Transferable Securities (UCITS).",
+      "expected_canonical_id": "canon.is.hr_security.hrs_02_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:02e2a3c3664cad0331a0c3a5af26f15a84c2f1666bb62af87f2a8d74d7c0c86d",
+          "span_hash": "sha256:e3fe6a8d09e357491362e006881c145dbd3c6835c4e6b80580acf35b49ede96c",
+          "anchor": {
+            "kind": "page",
+            "page": 19,
+            "doc_hash": "sha256:02e2a3c3664cad0331a0c3a5af26f15a84c2f1666bb62af87f2a8d74d7c0c86d"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q3::The_Bank_of_New_York_Mellon_Corporation.p19#0089"
+        },
+        {
+          "doc_hash": "sha256:e0e56eca9bfde7be1cb43c2981be530dc43c66d05f40f91591482de8e9341cc5",
+          "span_hash": "sha256:65551aa370644f0516b1b7f386a1a973719ac106650eda8e5bc45fbebd6b64f7",
+          "anchor": {
+            "kind": "page",
+            "page": 19,
+            "doc_hash": "sha256:e0e56eca9bfde7be1cb43c2981be530dc43c66d05f40f91591482de8e9341cc5"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q4::The_Bank_of_New_York_Mellon_Corporation.p19#0089"
+        },
+        {
+          "doc_hash": "sha256:fda1dc6a7f28ed99552b922d5cfc0b264eb129c911686939015c20dbc224f3ea",
+          "span_hash": "sha256:28f0360d0cf5d01fab96f37a28ce0eabc0f934dcaea33e5e304fdb948e9bb1c9",
+          "anchor": {
+            "kind": "page",
+            "page": 19,
+            "doc_hash": "sha256:fda1dc6a7f28ed99552b922d5cfc0b264eb129c911686939015c20dbc224f3ea"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2024q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2024q3::The_Bank_of_New_York_Mellon_Corporation.p19#0090"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_is_hr_security_hrs_02_q1)"
+    },
+    {
+      "eval_id": "ev_09ed197bdb",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-1.4.1",
+      "framework_version": "2026",
+      "raw_question_text": "1.4.1 Have there been any changes to your group's ownership structure in the last 12 months?",
+      "expected_canonical_id": "canon.is.hr_security.hrs_02_q2",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:02e2a3c3664cad0331a0c3a5af26f15a84c2f1666bb62af87f2a8d74d7c0c86d",
+          "span_hash": "sha256:e3fe6a8d09e357491362e006881c145dbd3c6835c4e6b80580acf35b49ede96c",
+          "anchor": {
+            "kind": "page",
+            "page": 19,
+            "doc_hash": "sha256:02e2a3c3664cad0331a0c3a5af26f15a84c2f1666bb62af87f2a8d74d7c0c86d"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q3::The_Bank_of_New_York_Mellon_Corporation.p19#0089"
+        },
+        {
+          "doc_hash": "sha256:e0e56eca9bfde7be1cb43c2981be530dc43c66d05f40f91591482de8e9341cc5",
+          "span_hash": "sha256:65551aa370644f0516b1b7f386a1a973719ac106650eda8e5bc45fbebd6b64f7",
+          "anchor": {
+            "kind": "page",
+            "page": 19,
+            "doc_hash": "sha256:e0e56eca9bfde7be1cb43c2981be530dc43c66d05f40f91591482de8e9341cc5"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q4::The_Bank_of_New_York_Mellon_Corporation.p19#0089"
+        },
+        {
+          "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1",
+          "span_hash": "sha256:3f3c33c6a726e7fbbdf7f3ac437e22028bb3f4efb821dbb6a7bea03e56bf9eab",
+          "anchor": {
+            "kind": "page",
+            "page": 20,
+            "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3::The_Bank_of_New_York_Mellon_Corporation.p20#0092"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_is_hr_security_hrs_02_q2)"
+    },
+    {
+      "eval_id": "ev_e51eba43c8",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-2.6.3",
+      "framework_version": "2026",
+      "raw_question_text": "2.6.3 Are all visitors and vendors supervised whilst on the premises?",
+      "expected_canonical_id": "canon.is.hr_security.hrs_04_q2",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:2aa2f5e77b9cd1649ac08ad5c62ebf1ab3fc868690ac7b67acdd8c9bc0778df5",
+          "span_hash": "sha256:295b087f226c76b4f01e47ee3922522855dd38a63874af24d0d7df70ae34d4da",
+          "anchor": {
+            "kind": "section",
+            "item": "PART_II.Item_6",
+            "subsection": null,
+            "doc_hash": "sha256:2aa2f5e77b9cd1649ac08ad5c62ebf1ab3fc868690ac7b67acdd8c9bc0778df5"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001390777-22-000049",
+          "span_id": "edgar:bny-mellon-corp:0001390777-22-000049::PART_II.Item_6#0164"
+        },
+        {
+          "doc_hash": "sha256:777d42c6da65f38b43f9540f915e4ba1f893628642818252f1dd78b3cab0f2ec",
+          "span_hash": "sha256:9def5d2d4a10f0dacc582e5f0686c8302fda5602933fad8c90970506d486b1be",
+          "anchor": {
+            "kind": "page",
+            "page": 19,
+            "doc_hash": "sha256:777d42c6da65f38b43f9540f915e4ba1f893628642818252f1dd78b3cab0f2ec"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2024q1",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2024q1::The_Bank_of_New_York_Mellon_Corporation.p19#0089"
+        },
+        {
+          "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1",
+          "span_hash": "sha256:3f3c33c6a726e7fbbdf7f3ac437e22028bb3f4efb821dbb6a7bea03e56bf9eab",
+          "anchor": {
+            "kind": "page",
+            "page": 20,
+            "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3::The_Bank_of_New_York_Mellon_Corporation.p20#0092"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_is_hr_security_hrs_04_q2)"
+    },
+    {
+      "eval_id": "ev_a5bd5abddb",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-7.1.7",
+      "framework_version": "2026",
+      "raw_question_text": "7.1.7 Describe the general scope and frequency of internal, external and regulatory audits of your Business Continuity and Disaster Recovery Plans?",
+      "expected_canonical_id": "canon.or.bcp.bcr_01_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:80f5f76fc87be552e700978a3ab420dbde28816d9847b0972c217156a83b7d91",
+          "span_hash": "sha256:48d98faeb3b753f175ca8c808c1379e7ea6e86bf261ed2a5c022ba42570805f9",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:80f5f76fc87be552e700978a3ab420dbde28816d9847b0972c217156a83b7d91"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q2::The_Bank_of_New_York_Mellon_Corporation.p28#0123"
+        },
+        {
+          "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293",
+          "span_hash": "sha256:2c368c9d51c64d000220c02dc46bea654cbd2f89d8893c1841d4b79b875f7320",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        },
+        {
+          "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1",
+          "span_hash": "sha256:2d6b497bc2f9fe97b4d7115f534e21d8336e8c65a01bc3781fbe0d31f7a991dc",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3::The_Bank_of_New_York_Mellon_Corporation.p28#0125"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_01_q1)"
+    },
+    {
+      "eval_id": "ev_075bcb10b9",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-3.9.1.2",
+      "framework_version": "2026",
+      "raw_question_text": "3.9.1.2 Are your organisation\u2019s ESG policies reviewed and approved by both the executive management and the Board of Directors on at least an annual basis?",
+      "expected_canonical_id": "canon.or.bcp.bcr_01_q2",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293",
+          "span_hash": "sha256:2c368c9d51c64d000220c02dc46bea654cbd2f89d8893c1841d4b79b875f7320",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        },
+        {
+          "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1",
+          "span_hash": "sha256:2d6b497bc2f9fe97b4d7115f534e21d8336e8c65a01bc3781fbe0d31f7a991dc",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3::The_Bank_of_New_York_Mellon_Corporation.p28#0125"
+        },
+        {
+          "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1",
+          "span_hash": "sha256:3f3c33c6a726e7fbbdf7f3ac437e22028bb3f4efb821dbb6a7bea03e56bf9eab",
+          "anchor": {
+            "kind": "page",
+            "page": 20,
+            "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3::The_Bank_of_New_York_Mellon_Corporation.p20#0092"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_01_q2)"
+    },
+    {
+      "eval_id": "ev_16dc83d51b",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-3.5.7",
+      "framework_version": "2026",
+      "raw_question_text": "3.5.7 Do you conduct ongoing testing and monitoring processes to ensure that all internal and external connectivity and system configurations are not at risk of cybersecurity breaches?",
+      "expected_canonical_id": "canon.or.bcp.bcr_03_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26",
+          "span_hash": "sha256:ddbda7028545402d6cce8f80b27b1c33cdf27fb4c1bc06d98a3b28898628d9a5",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4::The_Bank_of_New_York_Mellon_Corporation.p27#0118"
+        },
+        {
+          "doc_hash": "sha256:80f5f76fc87be552e700978a3ab420dbde28816d9847b0972c217156a83b7d91",
+          "span_hash": "sha256:48d98faeb3b753f175ca8c808c1379e7ea6e86bf261ed2a5c022ba42570805f9",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:80f5f76fc87be552e700978a3ab420dbde28816d9847b0972c217156a83b7d91"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q2::The_Bank_of_New_York_Mellon_Corporation.p28#0123"
+        },
+        {
+          "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293",
+          "span_hash": "sha256:2c368c9d51c64d000220c02dc46bea654cbd2f89d8893c1841d4b79b875f7320",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_03_q1)"
+    },
+    {
+      "eval_id": "ev_df566112a6",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-3.10.6.2",
+      "framework_version": "2026",
+      "raw_question_text": "3.10.6.2 Do you have contingency plans in place in case of failure or disruption in the DLT network?",
+      "expected_canonical_id": "canon.or.bcp.bcr_04_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26",
+          "span_hash": "sha256:ddbda7028545402d6cce8f80b27b1c33cdf27fb4c1bc06d98a3b28898628d9a5",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4::The_Bank_of_New_York_Mellon_Corporation.p27#0118"
+        },
+        {
+          "doc_hash": "sha256:80f5f76fc87be552e700978a3ab420dbde28816d9847b0972c217156a83b7d91",
+          "span_hash": "sha256:48d98faeb3b753f175ca8c808c1379e7ea6e86bf261ed2a5c022ba42570805f9",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:80f5f76fc87be552e700978a3ab420dbde28816d9847b0972c217156a83b7d91"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q2::The_Bank_of_New_York_Mellon_Corporation.p28#0123"
+        },
+        {
+          "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_04_q1)"
+    },
+    {
+      "eval_id": "ev_35eb5fea8a",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-1.8.1",
+      "framework_version": "2026",
+      "raw_question_text": "1.8.1 Please briefly describe your market advocacy activities and achievements in the last 12 months, both locally and globally, in making improvements to local and worldwide custody.",
+      "expected_canonical_id": "canon.or.bcp.bcr_05_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26",
+          "span_hash": "sha256:ddbda7028545402d6cce8f80b27b1c33cdf27fb4c1bc06d98a3b28898628d9a5",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4::The_Bank_of_New_York_Mellon_Corporation.p27#0118"
+        },
+        {
+          "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        },
+        {
+          "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_05_q1)"
+    },
+    {
+      "eval_id": "ev_a4b9732fdd",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-3.6.22",
+      "framework_version": "2026",
+      "raw_question_text": "3.6.22 Please specify the percentage of staff defined as critical to your business continuity arrangements.",
+      "expected_canonical_id": "canon.or.bcp.bcr_05_q2",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:253cbb2b9d1a892cfca60acdb39e5fe29e64664fc87f96f59de6e2bb924ecc2f",
+          "span_hash": "sha256:f57043e72a11db48e8c5ef3e9d90156b7d52982245382e66237cec836db8079f",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:253cbb2b9d1a892cfca60acdb39e5fe29e64664fc87f96f59de6e2bb924ecc2f"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q1",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q1::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        },
+        {
+          "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        },
+        {
+          "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_05_q2)"
+    },
+    {
+      "eval_id": "ev_b6e9be7fe8",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-2.1.14",
+      "framework_version": "2026",
+      "raw_question_text": "2.1.14 If you adopt the use of a nominee concept, is it used to hold only client assets?",
+      "expected_canonical_id": "canon.or.bcp.bcr_05_q3",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:184550cb8ba12d388e4b706e913c84cd4f7d722adfc3bb57b074f8951c6acbeb",
+          "span_hash": "sha256:9b45ed7d39aa2986a333b52af0d95b9d17e12de84b9b748cc710fbe6f28cbb6a",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:184550cb8ba12d388e4b706e913c84cd4f7d722adfc3bb57b074f8951c6acbeb"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2023q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2023q2::The_Bank_of_New_York_Mellon_Corporation.p28#0124"
+        },
+        {
+          "doc_hash": "sha256:253cbb2b9d1a892cfca60acdb39e5fe29e64664fc87f96f59de6e2bb924ecc2f",
+          "span_hash": "sha256:f57043e72a11db48e8c5ef3e9d90156b7d52982245382e66237cec836db8079f",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:253cbb2b9d1a892cfca60acdb39e5fe29e64664fc87f96f59de6e2bb924ecc2f"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q1",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q1::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        },
+        {
+          "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293",
+          "span_hash": "sha256:2c368c9d51c64d000220c02dc46bea654cbd2f89d8893c1841d4b79b875f7320",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_05_q3)"
+    },
+    {
+      "eval_id": "ev_a72c7a24fd",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-1.3.10",
+      "framework_version": "2026",
+      "raw_question_text": "1.3.10 Have regulators required your organisation to undertake any stress testing to ensure your risk management and capital planning decisions can sufficiently withstand adverse market events?",
+      "expected_canonical_id": "canon.or.bcp.bcr_06_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:253cbb2b9d1a892cfca60acdb39e5fe29e64664fc87f96f59de6e2bb924ecc2f",
+          "span_hash": "sha256:f57043e72a11db48e8c5ef3e9d90156b7d52982245382e66237cec836db8079f",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:253cbb2b9d1a892cfca60acdb39e5fe29e64664fc87f96f59de6e2bb924ecc2f"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q1",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q1::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        },
+        {
+          "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26",
+          "span_hash": "sha256:ddbda7028545402d6cce8f80b27b1c33cdf27fb4c1bc06d98a3b28898628d9a5",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4::The_Bank_of_New_York_Mellon_Corporation.p27#0118"
+        },
+        {
+          "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293",
+          "span_hash": "sha256:2c368c9d51c64d000220c02dc46bea654cbd2f89d8893c1841d4b79b875f7320",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_06_q1)"
+    },
+    {
+      "eval_id": "ev_55b9219526",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-3.5.4",
+      "framework_version": "2026",
+      "raw_question_text": "3.5.4 How often do you review the policy?",
+      "expected_canonical_id": "canon.or.bcp.bcr_07_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26",
+          "span_hash": "sha256:ddbda7028545402d6cce8f80b27b1c33cdf27fb4c1bc06d98a3b28898628d9a5",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4::The_Bank_of_New_York_Mellon_Corporation.p27#0118"
+        },
+        {
+          "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        },
+        {
+          "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_07_q1)"
+    },
+    {
+      "eval_id": "ev_c2e2be4d4a",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-3.4.22.3",
+      "framework_version": "2026",
+      "raw_question_text": "3.4.22.3 In the event of a loss of principal power supply, how long can you continue to operate?",
+      "expected_canonical_id": "canon.or.bcp.bcr_08_q3",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:1300b2ea7e59eb6472313f919d94ea33e26885baa4476f2112a8ea545410f981",
+          "span_hash": "sha256:c3bc314de69a39e9977ada102aa09c2cabc854fc40e0a29f757884b64097bd35",
+          "anchor": {
+            "kind": "page",
+            "page": 33,
+            "doc_hash": "sha256:1300b2ea7e59eb6472313f919d94ea33e26885baa4476f2112a8ea545410f981"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2023q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2023q4::The_Bank_of_New_York_Mellon_Corporation.p33#0153"
+        },
+        {
+          "doc_hash": "sha256:3a06cb127def01f51a29e7b96e92024a2aace39f55af86202fe7e00a0880f198",
+          "span_hash": "sha256:8af0261a7f51b515cf5a17b1e22901ab84a1a2ea74e6d61a2648460b18dc7672",
+          "anchor": {
+            "kind": "page",
+            "page": 33,
+            "doc_hash": "sha256:3a06cb127def01f51a29e7b96e92024a2aace39f55af86202fe7e00a0880f198"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2024q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2024q4::The_Bank_of_New_York_Mellon_Corporation.p33#0150"
+        },
+        {
+          "doc_hash": "sha256:e0e56eca9bfde7be1cb43c2981be530dc43c66d05f40f91591482de8e9341cc5",
+          "span_hash": "sha256:5fb56de5c5d597fda6dab1fe9737a43c6b68b6c9c384d4479cefa860b6386549",
+          "anchor": {
+            "kind": "page",
+            "page": 33,
+            "doc_hash": "sha256:e0e56eca9bfde7be1cb43c2981be530dc43c66d05f40f91591482de8e9341cc5"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q4::The_Bank_of_New_York_Mellon_Corporation.p33#0150"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_08_q3)"
+    },
+    {
+      "eval_id": "ev_0721bda774",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-3.4.1",
+      "framework_version": "2026",
+      "raw_question_text": "3.4.1 Please confirm that you have disaster recovery plans (DRP).",
+      "expected_canonical_id": "canon.or.bcp.bcr_09_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26",
+          "span_hash": "sha256:ddbda7028545402d6cce8f80b27b1c33cdf27fb4c1bc06d98a3b28898628d9a5",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4::The_Bank_of_New_York_Mellon_Corporation.p27#0118"
+        },
+        {
+          "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        },
+        {
+          "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_09_q1)"
+    },
+    {
+      "eval_id": "ev_9328cebd90",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-2.3.11",
+      "framework_version": "2026",
+      "raw_question_text": "2.3.11 In the last 12 months have there been any changes to the settlement methodology used by the CSD?",
+      "expected_canonical_id": "canon.or.bcp.bcr_09_q2",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26",
+          "span_hash": "sha256:ddbda7028545402d6cce8f80b27b1c33cdf27fb4c1bc06d98a3b28898628d9a5",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4::The_Bank_of_New_York_Mellon_Corporation.p27#0118"
+        },
+        {
+          "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293",
+          "span_hash": "sha256:2c368c9d51c64d000220c02dc46bea654cbd2f89d8893c1841d4b79b875f7320",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        },
+        {
+          "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_09_q2)"
+    },
+    {
+      "eval_id": "ev_cef41b456c",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-3.4.14",
+      "framework_version": "2026",
+      "raw_question_text": "3.4.14 How and when would clients be advised in the event of a disaster?",
+      "expected_canonical_id": "canon.or.bcp.bcr_10_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26",
+          "span_hash": "sha256:ddbda7028545402d6cce8f80b27b1c33cdf27fb4c1bc06d98a3b28898628d9a5",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4::The_Bank_of_New_York_Mellon_Corporation.p27#0118"
+        },
+        {
+          "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        },
+        {
+          "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_10_q1)"
+    },
+    {
+      "eval_id": "ev_90c3824dae",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-2.4.6",
+      "framework_version": "2026",
+      "raw_question_text": "2.4.6 Please confirm that you would advise us as soon as you became aware of any loss of securities.",
+      "expected_canonical_id": "canon.or.operations.afme_246",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29",
+          "span_hash": "sha256:9b40b985dba73c5b836c1a45593e7344082125dd23a87c9b551ad3e17ce7557a",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_4",
+            "subsection": null,
+            "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-22-059759",
+          "span_id": "edgar:bny-mellon-corp:0001193125-22-059759::Item_4#0162"
+        },
+        {
+          "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636",
+          "span_hash": "sha256:3788c48b096451400fe34c7ce82f1cfc715587dc2e4ba2787f87b6aac1f766c6",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_5",
+            "subsection": null,
+            "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-24-051895",
+          "span_id": "edgar:bny-mellon-corp:0001193125-24-051895::Item_5#0175"
+        },
+        {
+          "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e",
+          "span_hash": "sha256:733afc496263049cc0f00369ae66a8becbb9d049f16a3f662e03f91947611832",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_6",
+            "subsection": null,
+            "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-23-055130",
+          "span_id": "edgar:bny-mellon-corp:0001193125-23-055130::Item_6#0184"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_operations_afme_246)"
+    },
+    {
+      "eval_id": "ev_9aef1b8876",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-1.1.2",
+      "framework_version": "2026",
+      "raw_question_text": "1.1.2 Which services are in scope of your response?",
+      "expected_canonical_id": "canon.reg.grc.grc_08_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29",
+          "span_hash": "sha256:4043d6a815843811bfea8ff760f103e252f343766717b4a08d921fe2d5d6acc8",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_4",
+            "subsection": null,
+            "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-22-059759",
+          "span_id": "edgar:bny-mellon-corp:0001193125-22-059759::Item_4#0149"
+        },
+        {
+          "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29",
+          "span_hash": "sha256:702fe8ebb50295a81a7b219592c3ba3de0d3cb11e00b818207a31937ce511ea0",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_4",
+            "subsection": null,
+            "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-22-059759",
+          "span_id": "edgar:bny-mellon-corp:0001193125-22-059759::Item_4#0053"
+        },
+        {
+          "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e",
+          "span_hash": "sha256:ebeb5ac51d40422425533317729e6c63b549bf1a1c07f937e6061bfa449f8423",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_6",
+            "subsection": null,
+            "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-23-055130",
+          "span_id": "edgar:bny-mellon-corp:0001193125-23-055130::Item_6#0052"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_reg_grc_grc_08_q1)"
+    },
+    {
+      "eval_id": "ev_f28f3f1643",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-3.7.5",
+      "framework_version": "2026",
+      "raw_question_text": "3.7.5 Do you have a dedicated AML compliance team at both group and local level who is responsible for the implementation, monitoring, escalation, reporting and management of all policies related to combating financial crime?",
+      "expected_canonical_id": "canon.reg.supply_chain.sta_01_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:22dedb1cbfd9553eeafa3cb65bd1a63281fb8c7c06fda774578e4913f57a0060",
+          "span_hash": "sha256:819b4fd27fb826c20d59e73fb954b0dde21d32c1ebd2ee119fcfece10cf3fc55",
+          "anchor": {
+            "kind": "section",
+            "item": "PART_II.Item_6",
+            "subsection": null,
+            "doc_hash": "sha256:22dedb1cbfd9553eeafa3cb65bd1a63281fb8c7c06fda774578e4913f57a0060"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001390777-25-000118",
+          "span_id": "edgar:bny-mellon-corp:0001390777-25-000118::PART_II.Item_6#0183"
+        },
+        {
+          "doc_hash": "sha256:3847c0a95f6e702f343c53fff633fd27aaa03b7139266915deb4aedc5c52d571",
+          "span_hash": "sha256:819b4fd27fb826c20d59e73fb954b0dde21d32c1ebd2ee119fcfece10cf3fc55",
+          "anchor": {
+            "kind": "section",
+            "item": "PART_II.Item_6",
+            "subsection": null,
+            "doc_hash": "sha256:3847c0a95f6e702f343c53fff633fd27aaa03b7139266915deb4aedc5c52d571"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001390777-25-000084",
+          "span_id": "edgar:bny-mellon-corp:0001390777-25-000084::PART_II.Item_6#0167"
+        },
+        {
+          "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1",
+          "span_hash": "sha256:2d6b497bc2f9fe97b4d7115f534e21d8336e8c65a01bc3781fbe0d31f7a991dc",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3::The_Bank_of_New_York_Mellon_Corporation.p28#0125"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_reg_supply_chain_sta_01_q1)"
+    },
+    {
+      "eval_id": "ev_a1f650f97e",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-1.2.1",
+      "framework_version": "2026",
+      "raw_question_text": "1.2.1 Please advise the name of the contracting party providing custody and/or client money services in your jurisdiction and responding to this questionnaire. If applicable, please also advise the name of the local delegate if different from the contracting entity.",
+      "expected_canonical_id": "canon.reg.supply_chain.sta_09_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:67398afb212878765a2ce08180bc37e8bbab6379b639649f9fbe10324277b79c",
+          "span_hash": "sha256:1396ff4f41dcac301d1a409d95a6234fa5a1eb619a7941ebe53ce6b31c4afb54",
+          "anchor": {
+            "kind": "section",
+            "item": "PART_II.Item_6",
+            "subsection": null,
+            "doc_hash": "sha256:67398afb212878765a2ce08180bc37e8bbab6379b639649f9fbe10324277b79c"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001390777-25-000159",
+          "span_id": "edgar:bny-mellon-corp:0001390777-25-000159::PART_II.Item_6#0179"
+        },
+        {
+          "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29",
+          "span_hash": "sha256:702fe8ebb50295a81a7b219592c3ba3de0d3cb11e00b818207a31937ce511ea0",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_4",
+            "subsection": null,
+            "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-22-059759",
+          "span_id": "edgar:bny-mellon-corp:0001193125-22-059759::Item_4#0053"
+        },
+        {
+          "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e",
+          "span_hash": "sha256:ebeb5ac51d40422425533317729e6c63b549bf1a1c07f937e6061bfa449f8423",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_6",
+            "subsection": null,
+            "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-23-055130",
+          "span_id": "edgar:bny-mellon-corp:0001193125-23-055130::Item_6#0052"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_reg_supply_chain_sta_09_q1)"
+    },
+    {
+      "eval_id": "ev_bffae7ad86",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-3.3.5",
+      "framework_version": "2026",
+      "raw_question_text": "3.3.5 Do your regulators review your internal procedures?",
+      "expected_canonical_id": "canon.reg.supply_chain.sta_11_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:1300b2ea7e59eb6472313f919d94ea33e26885baa4476f2112a8ea545410f981",
+          "span_hash": "sha256:c3bc314de69a39e9977ada102aa09c2cabc854fc40e0a29f757884b64097bd35",
+          "anchor": {
+            "kind": "page",
+            "page": 33,
+            "doc_hash": "sha256:1300b2ea7e59eb6472313f919d94ea33e26885baa4476f2112a8ea545410f981"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2023q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2023q4::The_Bank_of_New_York_Mellon_Corporation.p33#0153"
+        },
+        {
+          "doc_hash": "sha256:3a06cb127def01f51a29e7b96e92024a2aace39f55af86202fe7e00a0880f198",
+          "span_hash": "sha256:8af0261a7f51b515cf5a17b1e22901ab84a1a2ea74e6d61a2648460b18dc7672",
+          "anchor": {
+            "kind": "page",
+            "page": 33,
+            "doc_hash": "sha256:3a06cb127def01f51a29e7b96e92024a2aace39f55af86202fe7e00a0880f198"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2024q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2024q4::The_Bank_of_New_York_Mellon_Corporation.p33#0150"
+        },
+        {
+          "doc_hash": "sha256:e0e56eca9bfde7be1cb43c2981be530dc43c66d05f40f91591482de8e9341cc5",
+          "span_hash": "sha256:5fb56de5c5d597fda6dab1fe9737a43c6b68b6c9c384d4479cefa860b6386549",
+          "anchor": {
+            "kind": "page",
+            "page": 33,
+            "doc_hash": "sha256:e0e56eca9bfde7be1cb43c2981be530dc43c66d05f40f91591482de8e9341cc5"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q4::The_Bank_of_New_York_Mellon_Corporation.p33#0150"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_reg_supply_chain_sta_11_q1)"
+    },
+    {
+      "eval_id": "ev_fcf153331f",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-3.7.4",
+      "framework_version": "2026",
+      "raw_question_text": "3.7.4 Do you have a conflicts of interest policy in place?",
+      "expected_canonical_id": "canon.reg.supply_chain.sta_13_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:1300b2ea7e59eb6472313f919d94ea33e26885baa4476f2112a8ea545410f981",
+          "span_hash": "sha256:c3bc314de69a39e9977ada102aa09c2cabc854fc40e0a29f757884b64097bd35",
+          "anchor": {
+            "kind": "page",
+            "page": 33,
+            "doc_hash": "sha256:1300b2ea7e59eb6472313f919d94ea33e26885baa4476f2112a8ea545410f981"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2023q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2023q4::The_Bank_of_New_York_Mellon_Corporation.p33#0153"
+        },
+        {
+          "doc_hash": "sha256:3a06cb127def01f51a29e7b96e92024a2aace39f55af86202fe7e00a0880f198",
+          "span_hash": "sha256:8af0261a7f51b515cf5a17b1e22901ab84a1a2ea74e6d61a2648460b18dc7672",
+          "anchor": {
+            "kind": "page",
+            "page": 33,
+            "doc_hash": "sha256:3a06cb127def01f51a29e7b96e92024a2aace39f55af86202fe7e00a0880f198"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2024q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2024q4::The_Bank_of_New_York_Mellon_Corporation.p33#0150"
+        },
+        {
+          "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e",
+          "span_hash": "sha256:69552c0e6aaf430df770bccb16a3432109645ecc934294c05ee1189d49adc403",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_6",
+            "subsection": null,
+            "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-23-055130",
+          "span_id": "edgar:bny-mellon-corp:0001193125-23-055130::Item_6#0056"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_reg_supply_chain_sta_13_q1)"
+    },
+    {
+      "eval_id": "ev_39ad02812a",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-1.2.2",
+      "framework_version": "2026",
+      "raw_question_text": "1.2.2 Please advise the full legal address and the country of incorporation of the contracting party providing custody and/or client money services in your jurisdiction and responding to this questionnaire. If applicable, please also provide this information for the local delegate if different from the contracting entity.",
+      "expected_canonical_id": "canon.subc.general.afme_122",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:2783dc6d45246f7117dc75d01644bdac43ae14d985ae9587468966e37a9f42e1",
+          "span_hash": "sha256:9ad9579ece30d80c46c0aab824d837e5e76af17f0fada12afae4ba8715448c70",
+          "anchor": {
+            "kind": "page",
+            "page": 29,
+            "doc_hash": "sha256:2783dc6d45246f7117dc75d01644bdac43ae14d985ae9587468966e37a9f42e1"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q4::The_Bank_of_New_York_Mellon_Corporation.p29#0127"
+        },
+        {
+          "doc_hash": "sha256:6b133ab71d31de2d9c6d519f2666778ef3586f7da4c49c58ace186ffef8b56f0",
+          "span_hash": "sha256:09792d7c9df5ab5505624f38672bdec335ba0e7e721061aae5a1d4b2820d9d18",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_16",
+            "subsection": null,
+            "doc_hash": "sha256:6b133ab71d31de2d9c6d519f2666778ef3586f7da4c49c58ace186ffef8b56f0"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001390777-25-000046",
+          "span_id": "edgar:bny-mellon-corp:0001390777-25-000046::Item_16#0005"
+        },
+        {
+          "doc_hash": "sha256:c200d7c304ddda1586f1b913deeda6258aea15478cddf3e7ece546fc5296366e",
+          "span_hash": "sha256:3859ba11020846bd24cab6cf85443e0321ba7d29b192c35b3fecaea821fb1b8a",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_16",
+            "subsection": null,
+            "doc_hash": "sha256:c200d7c304ddda1586f1b913deeda6258aea15478cddf3e7ece546fc5296366e"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001390777-23-000033",
+          "span_id": "edgar:bny-mellon-corp:0001390777-23-000033::Item_16#0005"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_subc_general_afme_122)"
+    },
+    {
+      "eval_id": "ev_ec7ab36a3b",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-1.3.4",
+      "framework_version": "2026",
+      "raw_question_text": "1.3.4 Please confirm that you comply with local regulatory requirements in relation to the provision of custody or client money services in your jurisdiction.",
+      "expected_canonical_id": "canon.subc.general.afme_134",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:253cbb2b9d1a892cfca60acdb39e5fe29e64664fc87f96f59de6e2bb924ecc2f",
+          "span_hash": "sha256:5e983a5b789e9f3aee12a91940c1cb810411f388912925c55fdf5b5112e8d888",
+          "anchor": {
+            "kind": "page",
+            "page": 5,
+            "doc_hash": "sha256:253cbb2b9d1a892cfca60acdb39e5fe29e64664fc87f96f59de6e2bb924ecc2f"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q1",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q1::The_Bank_of_New_York_Mellon_Corporation.p5#0008"
+        },
+        {
+          "doc_hash": "sha256:2783dc6d45246f7117dc75d01644bdac43ae14d985ae9587468966e37a9f42e1",
+          "span_hash": "sha256:5e983a5b789e9f3aee12a91940c1cb810411f388912925c55fdf5b5112e8d888",
+          "anchor": {
+            "kind": "page",
+            "page": 5,
+            "doc_hash": "sha256:2783dc6d45246f7117dc75d01644bdac43ae14d985ae9587468966e37a9f42e1"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q4::The_Bank_of_New_York_Mellon_Corporation.p5#0008"
+        },
+        {
+          "doc_hash": "sha256:80f5f76fc87be552e700978a3ab420dbde28816d9847b0972c217156a83b7d91",
+          "span_hash": "sha256:4542caee596c6d836aef710c3aa9f1dfc753e67c9c08af133ab12d08fcb08da7",
+          "anchor": {
+            "kind": "page",
+            "page": 5,
+            "doc_hash": "sha256:80f5f76fc87be552e700978a3ab420dbde28816d9847b0972c217156a83b7d91"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q2::The_Bank_of_New_York_Mellon_Corporation.p5#0008"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_subc_general_afme_134)"
+    },
+    {
+      "eval_id": "ev_a2b8432aef",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-2.1.12",
+      "framework_version": "2026",
+      "raw_question_text": "2.1.12 In your market, is the nominee concept fully recognised and accepted?",
+      "expected_canonical_id": "canon.subc.general.afme_2112",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f",
+          "span_hash": "sha256:442844446e97bbfadd181c9ba3c55c724839ea1835ef06351ff61dacfc9f1419",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_3",
+            "subsection": null,
+            "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-25-046216",
+          "span_id": "edgar:bny-mellon-corp:0001193125-25-046216::Item_3#0164"
+        },
+        {
+          "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29",
+          "span_hash": "sha256:7054cff978f2388b0fd49763911e30c4f563fff9532cdec3c19a354f7f93b704",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_4",
+            "subsection": null,
+            "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-22-059759",
+          "span_id": "edgar:bny-mellon-corp:0001193125-22-059759::Item_4#0164"
+        },
+        {
+          "doc_hash": "sha256:cdb1202c87b8404a89a02361ec1ae0fc8bbf783b2db373c51f0f9681f66c50ad",
+          "span_hash": "sha256:3e2aaeca532d10fecf3ce11d02423e750e36e4921bbb771d07cc0c7f5dc0f599",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_3",
+            "subsection": null,
+            "doc_hash": "sha256:cdb1202c87b8404a89a02361ec1ae0fc8bbf783b2db373c51f0f9681f66c50ad"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-26-092500",
+          "span_id": "edgar:bny-mellon-corp:0001193125-26-092500::Item_3#0172"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_subc_general_afme_2112)"
+    },
+    {
+      "eval_id": "ev_2b4344522c",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-2.1.13",
+      "framework_version": "2026",
+      "raw_question_text": "2.1.13 If 2.1.12 yes, does the definition of a nominee company under your local market laws/regulations comply with the following definition: \u2018a body corporate whose business consists solely of acting as a nominee holder of investments or other property\u2019?",
+      "expected_canonical_id": "canon.subc.general.afme_2113",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29",
+          "span_hash": "sha256:24a89bdff46eb0512f2705f3ce59f26e4e83484065ce49f9c78ac48b3ca88a91",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_4",
+            "subsection": null,
+            "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-22-059759",
+          "span_id": "edgar:bny-mellon-corp:0001193125-22-059759::Item_4#0027"
+        },
+        {
+          "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636",
+          "span_hash": "sha256:0ae0860b0203f874c3838dcd437a6835756693b80af7f4536e31b3e4f7c6d971",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_5",
+            "subsection": null,
+            "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-24-051895",
+          "span_id": "edgar:bny-mellon-corp:0001193125-24-051895::Item_5#0028"
+        },
+        {
+          "doc_hash": "sha256:cdb1202c87b8404a89a02361ec1ae0fc8bbf783b2db373c51f0f9681f66c50ad",
+          "span_hash": "sha256:81cbc146870f61da2ffc7ec22e797a04b3d43c609239228982900bafcad1051a",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_3",
+            "subsection": null,
+            "doc_hash": "sha256:cdb1202c87b8404a89a02361ec1ae0fc8bbf783b2db373c51f0f9681f66c50ad"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-26-092500",
+          "span_id": "edgar:bny-mellon-corp:0001193125-26-092500::Item_3#0027"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_subc_general_afme_2113)"
+    },
+    {
+      "eval_id": "ev_15a059e4b9",
+      "framework": "AFME",
+      "framework_question_ref": "AFME-2.1.9",
+      "framework_version": "2026",
+      "raw_question_text": "2.1.9 Please specify or confirm under which names it is legally possible to record or register legal title to securities in your jurisdiction. (Please answer \"confirmed\" next to each possible name listed below) (Please note that \"legal title holder\" in this case is the person that the issuer of the securities would recognise as having direct ownership of the securities).",
+      "expected_canonical_id": "canon.subc.general.afme_219",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f",
+          "span_hash": "sha256:442844446e97bbfadd181c9ba3c55c724839ea1835ef06351ff61dacfc9f1419",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_3",
+            "subsection": null,
+            "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-25-046216",
+          "span_id": "edgar:bny-mellon-corp:0001193125-25-046216::Item_3#0164"
+        },
+        {
+          "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29",
+          "span_hash": "sha256:7054cff978f2388b0fd49763911e30c4f563fff9532cdec3c19a354f7f93b704",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_4",
+            "subsection": null,
+            "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-22-059759",
+          "span_id": "edgar:bny-mellon-corp:0001193125-22-059759::Item_4#0164"
+        },
+        {
+          "doc_hash": "sha256:cdb1202c87b8404a89a02361ec1ae0fc8bbf783b2db373c51f0f9681f66c50ad",
+          "span_hash": "sha256:3e2aaeca532d10fecf3ce11d02423e750e36e4921bbb771d07cc0c7f5dc0f599",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_3",
+            "subsection": null,
+            "doc_hash": "sha256:cdb1202c87b8404a89a02361ec1ae0fc8bbf783b2db373c51f0f9681f66c50ad"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-26-092500",
+          "span_id": "edgar:bny-mellon-corp:0001193125-26-092500::Item_3#0172"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_subc_general_afme_219)"
+    },
+    {
+      "eval_id": "ev_604b9d9996",
+      "framework": "CAIQ",
+      "framework_question_ref": "A&A-01.1",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Are audit and assurance policies, procedures, and standards established, documented, approved, communicated, applied, evaluated, and maintained?",
+      "expected_canonical_id": "canon.is.audit.a_a_01_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:2aa2f5e77b9cd1649ac08ad5c62ebf1ab3fc868690ac7b67acdd8c9bc0778df5",
+          "span_hash": "sha256:295b087f226c76b4f01e47ee3922522855dd38a63874af24d0d7df70ae34d4da",
+          "anchor": {
+            "kind": "section",
+            "item": "PART_II.Item_6",
+            "subsection": null,
+            "doc_hash": "sha256:2aa2f5e77b9cd1649ac08ad5c62ebf1ab3fc868690ac7b67acdd8c9bc0778df5"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001390777-22-000049",
+          "span_id": "edgar:bny-mellon-corp:0001390777-22-000049::PART_II.Item_6#0164"
+        },
+        {
+          "doc_hash": "sha256:2b53c760d20ee6a37dfbf8ce7303250d1e6aaa01b3c0b4518eb5eb466dd851da",
+          "span_hash": "sha256:295b087f226c76b4f01e47ee3922522855dd38a63874af24d0d7df70ae34d4da",
+          "anchor": {
+            "kind": "section",
+            "item": "PART_II.Item_6",
+            "subsection": null,
+            "doc_hash": "sha256:2b53c760d20ee6a37dfbf8ce7303250d1e6aaa01b3c0b4518eb5eb466dd851da"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001390777-23-000046",
+          "span_id": "edgar:bny-mellon-corp:0001390777-23-000046::PART_II.Item_6#0165"
+        },
+        {
+          "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f",
+          "span_hash": "sha256:02d20f1cb980976c191950af8949a72664865e19877955639a9c06233abf5fe1",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_3",
+            "subsection": null,
+            "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-25-046216",
+          "span_id": "edgar:bny-mellon-corp:0001193125-25-046216::Item_3#0154"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_is_audit_a_a_01_q1)"
+    },
+    {
+      "eval_id": "ev_54da6977ca",
+      "framework": "CAIQ",
+      "framework_question_ref": "A&A-02.1",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Are independent audit and assurance assessments conducted according to relevant standards at least annually?",
+      "expected_canonical_id": "canon.is.audit.a_a_02_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29",
+          "span_hash": "sha256:c9e3e97851d44eedf764170091b89e28e80f08942f79d1c9a1918e7be0d75e3b",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_4",
+            "subsection": null,
+            "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-22-059759",
+          "span_id": "edgar:bny-mellon-corp:0001193125-22-059759::Item_4#0142"
+        },
+        {
+          "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636",
+          "span_hash": "sha256:e5eb716e5b94f2762b733620a568dfe50fb86870ec526f4ed55d9a59238ed674",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_5",
+            "subsection": null,
+            "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-24-051895",
+          "span_id": "edgar:bny-mellon-corp:0001193125-24-051895::Item_5#0153"
+        },
+        {
+          "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e",
+          "span_hash": "sha256:c20d914d5eca1bd0b1931662e48b70a98d68025fef3251b9a2174a55abe47981",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_6",
+            "subsection": null,
+            "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-23-055130",
+          "span_id": "edgar:bny-mellon-corp:0001193125-23-055130::Item_6#0153"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_is_audit_a_a_02_q1)"
+    },
+    {
+      "eval_id": "ev_bd706da886",
+      "framework": "CAIQ",
+      "framework_question_ref": "A&A-03.1",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Are independent audit and assurance assessments performed according to risk-based plans and policies?",
+      "expected_canonical_id": "canon.is.audit.a_a_03_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f",
+          "span_hash": "sha256:05476f044fd7cd09ff1c5d44eb393f3b98886cab132eb022ef3d5e1af14f292d",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_3",
+            "subsection": null,
+            "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-25-046216",
+          "span_id": "edgar:bny-mellon-corp:0001193125-25-046216::Item_3#0064"
+        },
+        {
+          "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29",
+          "span_hash": "sha256:55e36d3de3d21f7d19242ab83d5e30de1bbfe1128463c7213b8b687c9e2b0511",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_4",
+            "subsection": null,
+            "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-22-059759",
+          "span_id": "edgar:bny-mellon-corp:0001193125-22-059759::Item_4#0063"
+        },
+        {
+          "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636",
+          "span_hash": "sha256:3271ebdab4455dc670ed61b8b630e82fbcee94b1c2938f4eeefa80b04201a8f6",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_5",
+            "subsection": null,
+            "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-24-051895",
+          "span_id": "edgar:bny-mellon-corp:0001193125-24-051895::Item_5#0065"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_is_audit_a_a_03_q1)"
+    },
+    {
+      "eval_id": "ev_ef6a4056bd",
+      "framework": "CAIQ",
+      "framework_question_ref": "A&A-05.1",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Is an audit management process defined and implemented to support audit planning, risk analysis, security control assessments, conclusions, remediation schedules, report generation, and reviews of past reports and supporting evidence?",
+      "expected_canonical_id": "canon.is.audit.a_a_05_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f",
+          "span_hash": "sha256:6194b3d2fc6ebd319f569760183b98bfcf38f5e8c98ec803913e627eb2f2c0de",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_3",
+            "subsection": null,
+            "doc_hash": "sha256:5a702dece8e67634fbf784db811a6d78bafffde65205dc545697188e84bd453f"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-25-046216",
+          "span_id": "edgar:bny-mellon-corp:0001193125-25-046216::Item_3#0065"
+        },
+        {
+          "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29",
+          "span_hash": "sha256:28823a8fc42c47c08731f34929e31e11cf393a224f1d516fccb7ec7975fbdead",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_4",
+            "subsection": null,
+            "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-22-059759",
+          "span_id": "edgar:bny-mellon-corp:0001193125-22-059759::Item_4#0064"
+        },
+        {
+          "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636",
+          "span_hash": "sha256:0ee82ac37b6286472ee215f84efdbb56dec645dcc7f1f9538499dfe35c0fdaa5",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_5",
+            "subsection": null,
+            "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-24-051895",
+          "span_id": "edgar:bny-mellon-corp:0001193125-24-051895::Item_5#0066"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_is_audit_a_a_05_q1)"
+    },
+    {
+      "eval_id": "ev_5b47d309bd",
+      "framework": "CAIQ",
+      "framework_question_ref": "HRS-01.3",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Are background verification policies and procedures reviewed and updated at least annually?",
+      "expected_canonical_id": "canon.is.hr_security.hrs_01_q3",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:6b133ab71d31de2d9c6d519f2666778ef3586f7da4c49c58ace186ffef8b56f0",
+          "span_hash": "sha256:4ccf12b9b93f5f666bcea2f519534b04c68378dc2ffa7dbdb9f3d667535b5ac4",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_16",
+            "subsection": null,
+            "doc_hash": "sha256:6b133ab71d31de2d9c6d519f2666778ef3586f7da4c49c58ace186ffef8b56f0"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001390777-25-000046",
+          "span_id": "edgar:bny-mellon-corp:0001390777-25-000046::Item_16#0010"
+        },
+        {
+          "doc_hash": "sha256:8c8a6c9e0db572d217e020c8dd70ebd1981260cc95ed73cf618ef51d57e471ca",
+          "span_hash": "sha256:60bdbe81f6cfede1c16c7ed8e178369aa2af37533b345bb58d22a6febe2ccb96",
+          "anchor": {
+            "kind": "page",
+            "page": 19,
+            "doc_hash": "sha256:8c8a6c9e0db572d217e020c8dd70ebd1981260cc95ed73cf618ef51d57e471ca"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q1",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q1::The_Bank_of_New_York_Mellon_Corporation.p19#0089"
+        },
+        {
+          "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1",
+          "span_hash": "sha256:3f3c33c6a726e7fbbdf7f3ac437e22028bb3f4efb821dbb6a7bea03e56bf9eab",
+          "anchor": {
+            "kind": "page",
+            "page": 20,
+            "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3::The_Bank_of_New_York_Mellon_Corporation.p20#0092"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_is_hr_security_hrs_01_q3)"
+    },
+    {
+      "eval_id": "ev_70d06b695a",
+      "framework": "CAIQ",
+      "framework_question_ref": "HRS-02.1",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Are policies and procedures for defining allowances and conditions for the acceptable use of organizationally-owned or managed assets established, documented, approved, communicated, applied, evaluated, and maintained?",
+      "expected_canonical_id": "canon.is.hr_security.hrs_02_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:02e2a3c3664cad0331a0c3a5af26f15a84c2f1666bb62af87f2a8d74d7c0c86d",
+          "span_hash": "sha256:e3fe6a8d09e357491362e006881c145dbd3c6835c4e6b80580acf35b49ede96c",
+          "anchor": {
+            "kind": "page",
+            "page": 19,
+            "doc_hash": "sha256:02e2a3c3664cad0331a0c3a5af26f15a84c2f1666bb62af87f2a8d74d7c0c86d"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q3::The_Bank_of_New_York_Mellon_Corporation.p19#0089"
+        },
+        {
+          "doc_hash": "sha256:e0e56eca9bfde7be1cb43c2981be530dc43c66d05f40f91591482de8e9341cc5",
+          "span_hash": "sha256:65551aa370644f0516b1b7f386a1a973719ac106650eda8e5bc45fbebd6b64f7",
+          "anchor": {
+            "kind": "page",
+            "page": 19,
+            "doc_hash": "sha256:e0e56eca9bfde7be1cb43c2981be530dc43c66d05f40f91591482de8e9341cc5"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q4::The_Bank_of_New_York_Mellon_Corporation.p19#0089"
+        },
+        {
+          "doc_hash": "sha256:fda1dc6a7f28ed99552b922d5cfc0b264eb129c911686939015c20dbc224f3ea",
+          "span_hash": "sha256:28f0360d0cf5d01fab96f37a28ce0eabc0f934dcaea33e5e304fdb948e9bb1c9",
+          "anchor": {
+            "kind": "page",
+            "page": 19,
+            "doc_hash": "sha256:fda1dc6a7f28ed99552b922d5cfc0b264eb129c911686939015c20dbc224f3ea"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2024q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2024q3::The_Bank_of_New_York_Mellon_Corporation.p19#0090"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_is_hr_security_hrs_02_q1)"
+    },
+    {
+      "eval_id": "ev_6801a0c360",
+      "framework": "CAIQ",
+      "framework_question_ref": "HRS-02.2",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Are the policies and procedures for defining allowances and conditions for the acceptable use of organizationally-owned or managed assets reviewed and updated at least annually?",
+      "expected_canonical_id": "canon.is.hr_security.hrs_02_q2",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:02e2a3c3664cad0331a0c3a5af26f15a84c2f1666bb62af87f2a8d74d7c0c86d",
+          "span_hash": "sha256:e3fe6a8d09e357491362e006881c145dbd3c6835c4e6b80580acf35b49ede96c",
+          "anchor": {
+            "kind": "page",
+            "page": 19,
+            "doc_hash": "sha256:02e2a3c3664cad0331a0c3a5af26f15a84c2f1666bb62af87f2a8d74d7c0c86d"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q3::The_Bank_of_New_York_Mellon_Corporation.p19#0089"
+        },
+        {
+          "doc_hash": "sha256:e0e56eca9bfde7be1cb43c2981be530dc43c66d05f40f91591482de8e9341cc5",
+          "span_hash": "sha256:65551aa370644f0516b1b7f386a1a973719ac106650eda8e5bc45fbebd6b64f7",
+          "anchor": {
+            "kind": "page",
+            "page": 19,
+            "doc_hash": "sha256:e0e56eca9bfde7be1cb43c2981be530dc43c66d05f40f91591482de8e9341cc5"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q4::The_Bank_of_New_York_Mellon_Corporation.p19#0089"
+        },
+        {
+          "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1",
+          "span_hash": "sha256:3f3c33c6a726e7fbbdf7f3ac437e22028bb3f4efb821dbb6a7bea03e56bf9eab",
+          "anchor": {
+            "kind": "page",
+            "page": 20,
+            "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3::The_Bank_of_New_York_Mellon_Corporation.p20#0092"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_is_hr_security_hrs_02_q2)"
+    },
+    {
+      "eval_id": "ev_072a05eb9a",
+      "framework": "CAIQ",
+      "framework_question_ref": "HRS-04.1",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Are policies and procedures to protect information accessed, processed, or stored at remote sites and locations established, documented, approved, communicated, applied, evaluated, and maintained?",
+      "expected_canonical_id": "canon.is.hr_security.hrs_04_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:2aa2f5e77b9cd1649ac08ad5c62ebf1ab3fc868690ac7b67acdd8c9bc0778df5",
+          "span_hash": "sha256:295b087f226c76b4f01e47ee3922522855dd38a63874af24d0d7df70ae34d4da",
+          "anchor": {
+            "kind": "section",
+            "item": "PART_II.Item_6",
+            "subsection": null,
+            "doc_hash": "sha256:2aa2f5e77b9cd1649ac08ad5c62ebf1ab3fc868690ac7b67acdd8c9bc0778df5"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001390777-22-000049",
+          "span_id": "edgar:bny-mellon-corp:0001390777-22-000049::PART_II.Item_6#0164"
+        },
+        {
+          "doc_hash": "sha256:2b53c760d20ee6a37dfbf8ce7303250d1e6aaa01b3c0b4518eb5eb466dd851da",
+          "span_hash": "sha256:295b087f226c76b4f01e47ee3922522855dd38a63874af24d0d7df70ae34d4da",
+          "anchor": {
+            "kind": "section",
+            "item": "PART_II.Item_6",
+            "subsection": null,
+            "doc_hash": "sha256:2b53c760d20ee6a37dfbf8ce7303250d1e6aaa01b3c0b4518eb5eb466dd851da"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001390777-23-000046",
+          "span_id": "edgar:bny-mellon-corp:0001390777-23-000046::PART_II.Item_6#0165"
+        },
+        {
+          "doc_hash": "sha256:31e4189a3006ce33199ca6f4fad5ddef5756071804ca42422bfa3b2bf6b2489e",
+          "span_hash": "sha256:295b087f226c76b4f01e47ee3922522855dd38a63874af24d0d7df70ae34d4da",
+          "anchor": {
+            "kind": "section",
+            "item": "PART_II.Item_6",
+            "subsection": null,
+            "doc_hash": "sha256:31e4189a3006ce33199ca6f4fad5ddef5756071804ca42422bfa3b2bf6b2489e"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001390777-23-000081",
+          "span_id": "edgar:bny-mellon-corp:0001390777-23-000081::PART_II.Item_6#0185"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_is_hr_security_hrs_04_q1)"
+    },
+    {
+      "eval_id": "ev_ed5493b4f1",
+      "framework": "CAIQ",
+      "framework_question_ref": "HRS-04.2",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Are policies and procedures to protect information accessed, processed, or stored at remote sites and locations reviewed and updated at least annually?",
+      "expected_canonical_id": "canon.is.hr_security.hrs_04_q2",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:2aa2f5e77b9cd1649ac08ad5c62ebf1ab3fc868690ac7b67acdd8c9bc0778df5",
+          "span_hash": "sha256:295b087f226c76b4f01e47ee3922522855dd38a63874af24d0d7df70ae34d4da",
+          "anchor": {
+            "kind": "section",
+            "item": "PART_II.Item_6",
+            "subsection": null,
+            "doc_hash": "sha256:2aa2f5e77b9cd1649ac08ad5c62ebf1ab3fc868690ac7b67acdd8c9bc0778df5"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001390777-22-000049",
+          "span_id": "edgar:bny-mellon-corp:0001390777-22-000049::PART_II.Item_6#0164"
+        },
+        {
+          "doc_hash": "sha256:777d42c6da65f38b43f9540f915e4ba1f893628642818252f1dd78b3cab0f2ec",
+          "span_hash": "sha256:9def5d2d4a10f0dacc582e5f0686c8302fda5602933fad8c90970506d486b1be",
+          "anchor": {
+            "kind": "page",
+            "page": 19,
+            "doc_hash": "sha256:777d42c6da65f38b43f9540f915e4ba1f893628642818252f1dd78b3cab0f2ec"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2024q1",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2024q1::The_Bank_of_New_York_Mellon_Corporation.p19#0089"
+        },
+        {
+          "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1",
+          "span_hash": "sha256:3f3c33c6a726e7fbbdf7f3ac437e22028bb3f4efb821dbb6a7bea03e56bf9eab",
+          "anchor": {
+            "kind": "page",
+            "page": 20,
+            "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3::The_Bank_of_New_York_Mellon_Corporation.p20#0092"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_is_hr_security_hrs_04_q2)"
+    },
+    {
+      "eval_id": "ev_dc03be57f8",
+      "framework": "CAIQ",
+      "framework_question_ref": "BCR-01.1",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Are business continuity management and operational resilience policies and procedures established, documented, approved, communicated, applied, evaluated, and maintained?",
+      "expected_canonical_id": "canon.or.bcp.bcr_01_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:80f5f76fc87be552e700978a3ab420dbde28816d9847b0972c217156a83b7d91",
+          "span_hash": "sha256:48d98faeb3b753f175ca8c808c1379e7ea6e86bf261ed2a5c022ba42570805f9",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:80f5f76fc87be552e700978a3ab420dbde28816d9847b0972c217156a83b7d91"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q2::The_Bank_of_New_York_Mellon_Corporation.p28#0123"
+        },
+        {
+          "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293",
+          "span_hash": "sha256:2c368c9d51c64d000220c02dc46bea654cbd2f89d8893c1841d4b79b875f7320",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        },
+        {
+          "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1",
+          "span_hash": "sha256:2d6b497bc2f9fe97b4d7115f534e21d8336e8c65a01bc3781fbe0d31f7a991dc",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3::The_Bank_of_New_York_Mellon_Corporation.p28#0125"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_01_q1)"
+    },
+    {
+      "eval_id": "ev_69679a6ccf",
+      "framework": "CAIQ",
+      "framework_question_ref": "BCR-01.2",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Are the policies and procedures reviewed and updated at least annually?",
+      "expected_canonical_id": "canon.or.bcp.bcr_01_q2",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293",
+          "span_hash": "sha256:2c368c9d51c64d000220c02dc46bea654cbd2f89d8893c1841d4b79b875f7320",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        },
+        {
+          "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1",
+          "span_hash": "sha256:2d6b497bc2f9fe97b4d7115f534e21d8336e8c65a01bc3781fbe0d31f7a991dc",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3::The_Bank_of_New_York_Mellon_Corporation.p28#0125"
+        },
+        {
+          "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1",
+          "span_hash": "sha256:3f3c33c6a726e7fbbdf7f3ac437e22028bb3f4efb821dbb6a7bea03e56bf9eab",
+          "anchor": {
+            "kind": "page",
+            "page": 20,
+            "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3::The_Bank_of_New_York_Mellon_Corporation.p20#0092"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_01_q2)"
+    },
+    {
+      "eval_id": "ev_374d206cea",
+      "framework": "CAIQ",
+      "framework_question_ref": "BCR-02.1",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Are criteria for developing business continuity and operational resiliency strategies and capabilities established based on business disruption and risk impacts?",
+      "expected_canonical_id": "canon.or.bcp.bcr_02_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:253cbb2b9d1a892cfca60acdb39e5fe29e64664fc87f96f59de6e2bb924ecc2f",
+          "span_hash": "sha256:f57043e72a11db48e8c5ef3e9d90156b7d52982245382e66237cec836db8079f",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:253cbb2b9d1a892cfca60acdb39e5fe29e64664fc87f96f59de6e2bb924ecc2f"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q1",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q1::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        },
+        {
+          "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293",
+          "span_hash": "sha256:2c368c9d51c64d000220c02dc46bea654cbd2f89d8893c1841d4b79b875f7320",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        },
+        {
+          "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_02_q1)"
+    },
+    {
+      "eval_id": "ev_c301ffd002",
+      "framework": "CAIQ",
+      "framework_question_ref": "BCR-03.1",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Are strategies developed to reduce the impact of, withstand, and recover from business disruptions in accordance with risk appetite?",
+      "expected_canonical_id": "canon.or.bcp.bcr_03_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26",
+          "span_hash": "sha256:ddbda7028545402d6cce8f80b27b1c33cdf27fb4c1bc06d98a3b28898628d9a5",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4::The_Bank_of_New_York_Mellon_Corporation.p27#0118"
+        },
+        {
+          "doc_hash": "sha256:80f5f76fc87be552e700978a3ab420dbde28816d9847b0972c217156a83b7d91",
+          "span_hash": "sha256:48d98faeb3b753f175ca8c808c1379e7ea6e86bf261ed2a5c022ba42570805f9",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:80f5f76fc87be552e700978a3ab420dbde28816d9847b0972c217156a83b7d91"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q2::The_Bank_of_New_York_Mellon_Corporation.p28#0123"
+        },
+        {
+          "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293",
+          "span_hash": "sha256:2c368c9d51c64d000220c02dc46bea654cbd2f89d8893c1841d4b79b875f7320",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_03_q1)"
+    },
+    {
+      "eval_id": "ev_f712689562",
+      "framework": "CAIQ",
+      "framework_question_ref": "BCR-04.1",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Are operational resilience strategies and capability results incorporated to establish, document, approve, communicate, apply, evaluate, and maintain a business continuity plan?",
+      "expected_canonical_id": "canon.or.bcp.bcr_04_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26",
+          "span_hash": "sha256:ddbda7028545402d6cce8f80b27b1c33cdf27fb4c1bc06d98a3b28898628d9a5",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4::The_Bank_of_New_York_Mellon_Corporation.p27#0118"
+        },
+        {
+          "doc_hash": "sha256:80f5f76fc87be552e700978a3ab420dbde28816d9847b0972c217156a83b7d91",
+          "span_hash": "sha256:48d98faeb3b753f175ca8c808c1379e7ea6e86bf261ed2a5c022ba42570805f9",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:80f5f76fc87be552e700978a3ab420dbde28816d9847b0972c217156a83b7d91"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q2::The_Bank_of_New_York_Mellon_Corporation.p28#0123"
+        },
+        {
+          "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_04_q1)"
+    },
+    {
+      "eval_id": "ev_bbc82e83a1",
+      "framework": "CAIQ",
+      "framework_question_ref": "BCR-05.1",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Is relevant documentation developed, identified, and acquired to support business continuity and operational resilience plans?",
+      "expected_canonical_id": "canon.or.bcp.bcr_05_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26",
+          "span_hash": "sha256:ddbda7028545402d6cce8f80b27b1c33cdf27fb4c1bc06d98a3b28898628d9a5",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4::The_Bank_of_New_York_Mellon_Corporation.p27#0118"
+        },
+        {
+          "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        },
+        {
+          "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_05_q1)"
+    },
+    {
+      "eval_id": "ev_abd56ea530",
+      "framework": "CAIQ",
+      "framework_question_ref": "BCR-05.2",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Is business continuity and operational resilience documentation available to authorized stakeholders?",
+      "expected_canonical_id": "canon.or.bcp.bcr_05_q2",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:253cbb2b9d1a892cfca60acdb39e5fe29e64664fc87f96f59de6e2bb924ecc2f",
+          "span_hash": "sha256:f57043e72a11db48e8c5ef3e9d90156b7d52982245382e66237cec836db8079f",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:253cbb2b9d1a892cfca60acdb39e5fe29e64664fc87f96f59de6e2bb924ecc2f"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q1",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q1::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        },
+        {
+          "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        },
+        {
+          "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_05_q2)"
+    },
+    {
+      "eval_id": "ev_5d2148481a",
+      "framework": "CAIQ",
+      "framework_question_ref": "BCR-05.3",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Is business continuity and operational resilience documentation reviewed periodically?",
+      "expected_canonical_id": "canon.or.bcp.bcr_05_q3",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:184550cb8ba12d388e4b706e913c84cd4f7d722adfc3bb57b074f8951c6acbeb",
+          "span_hash": "sha256:9b45ed7d39aa2986a333b52af0d95b9d17e12de84b9b748cc710fbe6f28cbb6a",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:184550cb8ba12d388e4b706e913c84cd4f7d722adfc3bb57b074f8951c6acbeb"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2023q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2023q2::The_Bank_of_New_York_Mellon_Corporation.p28#0124"
+        },
+        {
+          "doc_hash": "sha256:253cbb2b9d1a892cfca60acdb39e5fe29e64664fc87f96f59de6e2bb924ecc2f",
+          "span_hash": "sha256:f57043e72a11db48e8c5ef3e9d90156b7d52982245382e66237cec836db8079f",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:253cbb2b9d1a892cfca60acdb39e5fe29e64664fc87f96f59de6e2bb924ecc2f"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q1",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q1::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        },
+        {
+          "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293",
+          "span_hash": "sha256:2c368c9d51c64d000220c02dc46bea654cbd2f89d8893c1841d4b79b875f7320",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_05_q3)"
+    },
+    {
+      "eval_id": "ev_509557fbfe",
+      "framework": "CAIQ",
+      "framework_question_ref": "BCR-06.1",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Are the business continuity and operational resilience plans exercised and tested at least annually and when significant changes occur?",
+      "expected_canonical_id": "canon.or.bcp.bcr_06_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:253cbb2b9d1a892cfca60acdb39e5fe29e64664fc87f96f59de6e2bb924ecc2f",
+          "span_hash": "sha256:f57043e72a11db48e8c5ef3e9d90156b7d52982245382e66237cec836db8079f",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:253cbb2b9d1a892cfca60acdb39e5fe29e64664fc87f96f59de6e2bb924ecc2f"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q1",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q1::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        },
+        {
+          "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26",
+          "span_hash": "sha256:ddbda7028545402d6cce8f80b27b1c33cdf27fb4c1bc06d98a3b28898628d9a5",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4::The_Bank_of_New_York_Mellon_Corporation.p27#0118"
+        },
+        {
+          "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293",
+          "span_hash": "sha256:2c368c9d51c64d000220c02dc46bea654cbd2f89d8893c1841d4b79b875f7320",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_06_q1)"
+    },
+    {
+      "eval_id": "ev_ea59360d4c",
+      "framework": "CAIQ",
+      "framework_question_ref": "BCR-07.1",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Do business continuity and resilience procedures establish communication with stakeholders and participants?",
+      "expected_canonical_id": "canon.or.bcp.bcr_07_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26",
+          "span_hash": "sha256:ddbda7028545402d6cce8f80b27b1c33cdf27fb4c1bc06d98a3b28898628d9a5",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4::The_Bank_of_New_York_Mellon_Corporation.p27#0118"
+        },
+        {
+          "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        },
+        {
+          "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_07_q1)"
+    },
+    {
+      "eval_id": "ev_b2fbe6f0a3",
+      "framework": "CAIQ",
+      "framework_question_ref": "BCR-08.3",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Can backups be restored appropriately for resiliency?",
+      "expected_canonical_id": "canon.or.bcp.bcr_08_q3",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:1300b2ea7e59eb6472313f919d94ea33e26885baa4476f2112a8ea545410f981",
+          "span_hash": "sha256:c3bc314de69a39e9977ada102aa09c2cabc854fc40e0a29f757884b64097bd35",
+          "anchor": {
+            "kind": "page",
+            "page": 33,
+            "doc_hash": "sha256:1300b2ea7e59eb6472313f919d94ea33e26885baa4476f2112a8ea545410f981"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2023q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2023q4::The_Bank_of_New_York_Mellon_Corporation.p33#0153"
+        },
+        {
+          "doc_hash": "sha256:3a06cb127def01f51a29e7b96e92024a2aace39f55af86202fe7e00a0880f198",
+          "span_hash": "sha256:8af0261a7f51b515cf5a17b1e22901ab84a1a2ea74e6d61a2648460b18dc7672",
+          "anchor": {
+            "kind": "page",
+            "page": 33,
+            "doc_hash": "sha256:3a06cb127def01f51a29e7b96e92024a2aace39f55af86202fe7e00a0880f198"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2024q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2024q4::The_Bank_of_New_York_Mellon_Corporation.p33#0150"
+        },
+        {
+          "doc_hash": "sha256:e0e56eca9bfde7be1cb43c2981be530dc43c66d05f40f91591482de8e9341cc5",
+          "span_hash": "sha256:5fb56de5c5d597fda6dab1fe9737a43c6b68b6c9c384d4479cefa860b6386549",
+          "anchor": {
+            "kind": "page",
+            "page": 33,
+            "doc_hash": "sha256:e0e56eca9bfde7be1cb43c2981be530dc43c66d05f40f91591482de8e9341cc5"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q4::The_Bank_of_New_York_Mellon_Corporation.p33#0150"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_08_q3)"
+    },
+    {
+      "eval_id": "ev_0edb8b0af6",
+      "framework": "CAIQ",
+      "framework_question_ref": "BCR-09.1",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Is a disaster response plan established, documented, approved, applied, evaluated, and maintained to ensure recovery from natural and man-made disasters?",
+      "expected_canonical_id": "canon.or.bcp.bcr_09_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26",
+          "span_hash": "sha256:ddbda7028545402d6cce8f80b27b1c33cdf27fb4c1bc06d98a3b28898628d9a5",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4::The_Bank_of_New_York_Mellon_Corporation.p27#0118"
+        },
+        {
+          "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        },
+        {
+          "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_09_q1)"
+    },
+    {
+      "eval_id": "ev_31c7711c25",
+      "framework": "CAIQ",
+      "framework_question_ref": "BCR-09.2",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Is the disaster response plan updated at least annually, and when significant changes occur?",
+      "expected_canonical_id": "canon.or.bcp.bcr_09_q2",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26",
+          "span_hash": "sha256:ddbda7028545402d6cce8f80b27b1c33cdf27fb4c1bc06d98a3b28898628d9a5",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4::The_Bank_of_New_York_Mellon_Corporation.p27#0118"
+        },
+        {
+          "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293",
+          "span_hash": "sha256:2c368c9d51c64d000220c02dc46bea654cbd2f89d8893c1841d4b79b875f7320",
+          "anchor": {
+            "kind": "page",
+            "page": 28,
+            "doc_hash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2022q2::The_Bank_of_New_York_Mellon_Corporation.p28#0121"
+        },
+        {
+          "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_09_q2)"
+    },
+    {
+      "eval_id": "ev_8c24f25602",
+      "framework": "CAIQ",
+      "framework_question_ref": "BCR-10.1",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Is the disaster response plan exercised annually or when significant changes occur?",
+      "expected_canonical_id": "canon.or.bcp.bcr_10_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26",
+          "span_hash": "sha256:ddbda7028545402d6cce8f80b27b1c33cdf27fb4c1bc06d98a3b28898628d9a5",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q4::The_Bank_of_New_York_Mellon_Corporation.p27#0118"
+        },
+        {
+          "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q3::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        },
+        {
+          "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd",
+          "span_hash": "sha256:16265761c2b5fd87c08eaacd005161db5ef2ccf6ed3fbb4ecdc7813e788f738a",
+          "anchor": {
+            "kind": "page",
+            "page": 27,
+            "doc_hash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2025q2::The_Bank_of_New_York_Mellon_Corporation.p27#0121"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_or_bcp_bcr_10_q1)"
+    },
+    {
+      "eval_id": "ev_bf15e588ae",
+      "framework": "CAIQ",
+      "framework_question_ref": "GRC-01.2",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Are the policies and procedures reviewed and updated at least annually?",
+      "expected_canonical_id": "canon.reg.grc.grc_01_q2",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29",
+          "span_hash": "sha256:18fd646a716e8a33ee1ce863c031b4ac066d26317e44f1116bbefae1580ad9a6",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_4",
+            "subsection": null,
+            "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-22-059759",
+          "span_id": "edgar:bny-mellon-corp:0001193125-22-059759::Item_4#0044"
+        },
+        {
+          "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636",
+          "span_hash": "sha256:b6a6c94375b5a6a31a287650294e9bc8db9b710151757d2f53148f75300f81cb",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_5",
+            "subsection": null,
+            "doc_hash": "sha256:a27de0890c81d06439ca0eff3e9143a47af878f73bf90a0087ccf5822a3ef636"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-24-051895",
+          "span_id": "edgar:bny-mellon-corp:0001193125-24-051895::Item_5#0041"
+        },
+        {
+          "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1",
+          "span_hash": "sha256:3f3c33c6a726e7fbbdf7f3ac437e22028bb3f4efb821dbb6a7bea03e56bf9eab",
+          "anchor": {
+            "kind": "page",
+            "page": 20,
+            "doc_hash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1"
+          },
+          "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3",
+          "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3::The_Bank_of_New_York_Mellon_Corporation.p20#0092"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_reg_grc_grc_01_q2)"
+    },
+    {
+      "eval_id": "ev_948c042597",
+      "framework": "CAIQ",
+      "framework_question_ref": "GRC-08.1",
+      "framework_version": "v4.0.3",
+      "raw_question_text": "Is contact established and maintained with cloud-related special interest groups and other relevant entities?",
+      "expected_canonical_id": "canon.reg.grc.grc_08_q1",
+      "expected_evidence_spans": [
+        {
+          "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29",
+          "span_hash": "sha256:4043d6a815843811bfea8ff760f103e252f343766717b4a08d921fe2d5d6acc8",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_4",
+            "subsection": null,
+            "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-22-059759",
+          "span_id": "edgar:bny-mellon-corp:0001193125-22-059759::Item_4#0149"
+        },
+        {
+          "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29",
+          "span_hash": "sha256:702fe8ebb50295a81a7b219592c3ba3de0d3cb11e00b818207a31937ce511ea0",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_4",
+            "subsection": null,
+            "doc_hash": "sha256:731269ce120b8750784b0879f0459df7eb8d440b3223ce04229c8686b3b93e29"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-22-059759",
+          "span_id": "edgar:bny-mellon-corp:0001193125-22-059759::Item_4#0053"
+        },
+        {
+          "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e",
+          "span_hash": "sha256:ebeb5ac51d40422425533317729e6c63b549bf1a1c07f937e6061bfa449f8423",
+          "anchor": {
+            "kind": "section",
+            "item": "Item_6",
+            "subsection": null,
+            "doc_hash": "sha256:c3b87173a7347eaab6220589a88c2073c1480d3766cb44bb14d9b353c9538d5e"
+          },
+          "doc_id": "edgar:bny-mellon-corp:0001193125-23-055130",
+          "span_id": "edgar:bny-mellon-corp:0001193125-23-055130::Item_6#0052"
+        }
+      ],
+      "expected_verdict": "pass",
+      "notes": "library-backed (entry lib_bootstrap_canon_reg_grc_grc_08_q1)"
+    },
+    {
+      "eval_id": "ev_af29c018a9",
+      "framework": "AFME_ESG",
+      "framework_question_ref": "AFME-HY-ESG-p3-a3d24382",
+      "framework_version": "2026-01",
+      "raw_question_text": "Describe BNY's approach to: 1. Introduction AFME and its members acknowledge that sustainability-related factors are an increasingly urgent focus of investors in the context of capital markets offerings, including with respect to high yield bond and other leveraged fi",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "BNY sustainability disclosures not yet ingested (Day 3-4 gap); citation guardrail should halt."
+    },
+    {
+      "eval_id": "ev_2099dd2750",
+      "framework": "AFME_ESG",
+      "framework_question_ref": "AFME-HY-ESG-p3-26c01927",
+      "framework_version": "2026-01",
+      "raw_question_text": "Describe BNY's approach to: The key building blocks of EU sustainable finance legislation are in place, including the EU Taxonomy for Sustainable Activities (the EU Taxonomy), the Sustainable Finance Disclosure Regulation (SFDR), the Corporate Sustainability Reporting",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "BNY sustainability disclosures not yet ingested (Day 3-4 gap); citation guardrail should halt."
+    },
+    {
+      "eval_id": "ev_9c9fc2e7fb",
+      "framework": "AFME_ESG",
+      "framework_question_ref": "AFME-HY-ESG-p3-4aa72c63",
+      "framework_version": "2026-01",
+      "raw_question_text": "Describe BNY's approach to: We are also seeing responses in Europe to US developments. These regulatory changes shape investor expectations regarding the content of ESG disclosure in offering documents and due diligence procedures when underwriting an offering.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "BNY sustainability disclosures not yet ingested (Day 3-4 gap); citation guardrail should halt."
+    },
+    {
+      "eval_id": "ev_8ebb987c0f",
+      "framework": "AFME_ESG",
+      "framework_question_ref": "AFME-HY-ESG-p3-9806aea9",
+      "framework_version": "2026-01",
+      "raw_question_text": "Describe BNY's approach to: AFME has a dedicated cross-divisional Sustainable Finance team which supports members across the European sustainable finance framework including the EU Taxonomy, CSRD, CSDDD and equivalent UK regulation. AFME\u2019s divisions also review ESG ma",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "BNY sustainability disclosures not yet ingested (Day 3-4 gap); citation guardrail should halt."
+    },
+    {
+      "eval_id": "ev_b3229fb21f",
+      "framework": "AFME_ESG",
+      "framework_question_ref": "AFME-HY-ESG-p3-5377d405",
+      "framework_version": "2026-01",
+      "raw_question_text": "Describe BNY's approach to: We acknowledge the work that has been, and is being, undertaken with respect to ESG matters by numerous other trade and international organisations and standard-setters. These guidelines aim to contribute to this work from the perspective o",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "BNY sustainability disclosures not yet ingested (Day 3-4 gap); citation guardrail should halt."
+    },
+    {
+      "eval_id": "ev_1214d7f3ac",
+      "framework": "AFME_ESG",
+      "framework_question_ref": "AFME-HY-ESG-p3-a1232eb5",
+      "framework_version": "2026-01",
+      "raw_question_text": "Describe BNY's approach to: We believe that AFME, through the European High Yield Committee, can play a key role in helping to establish a set of market practices and considerations that take into account the broader sub-investment grade and leveraged finance markets ",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "BNY sustainability disclosures not yet ingested (Day 3-4 gap); citation guardrail should halt."
+    },
+    {
+      "eval_id": "ev_d103a81412",
+      "framework": "AFME_ESG",
+      "framework_question_ref": "AFME-HY-ESG-p3-c6763656",
+      "framework_version": "2026-01",
+      "raw_question_text": "Describe BNY's approach to: \u2022 a project \u201cuse of proceeds\u201d based approach (e.g. Green/Social/Sustainability (GSS) Bonds), \u2022 a company target-linked based approach (e.g. Sustainability Linked Bonds), and \u2022 transition financing (e.g. Transition Bonds which have had a low",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "BNY sustainability disclosures not yet ingested (Day 3-4 gap); citation guardrail should halt."
+    },
+    {
+      "eval_id": "ev_18a3297644",
+      "framework": "AFME_ESG",
+      "framework_question_ref": "AFME-HY-ESG-p3-c552a551",
+      "framework_version": "2026-01",
+      "raw_question_text": "Describe BNY's approach to: However, even \u2018conventional\u2019 bonds which are not structured as GSS+ bonds (as defined below) are nonetheless expected or even required, as the case may be, to contain ever more robust ESG disclosures and due diligence procedures, though the",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "BNY sustainability disclosures not yet ingested (Day 3-4 gap); citation guardrail should halt."
+    },
+    {
+      "eval_id": "ev_6c4b096761",
+      "framework": "AFME_ESG",
+      "framework_question_ref": "AFME-HY-ESG-p3-db1a0544",
+      "framework_version": "2026-01",
+      "raw_question_text": "Describe BNY's approach to: 1 It shall be noted that European directives have to be transposed into national law and EU member states have a certain degree of flexibility under the relevant directive to implement stricter rules than required under a directive, which i",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "BNY sustainability disclosures not yet ingested (Day 3-4 gap); citation guardrail should halt."
+    },
+    {
+      "eval_id": "ev_ec2151e5a3",
+      "framework": "AFME_ESG",
+      "framework_question_ref": "AFME-HY-ESG-p5-a87cb971",
+      "framework_version": "2026-01",
+      "raw_question_text": "Describe BNY's approach to: 2. Overview Disclosure of ESG factors depends, amongst other factors, on the individual circumstances of the issuer, its industry, regulatory environment, stakeholders (e.g., financial sponsors, shareholders or actual/potential investors), ",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "BNY sustainability disclosures not yet ingested (Day 3-4 gap); citation guardrail should halt."
+    },
+    {
+      "eval_id": "ev_9848f8f361",
+      "framework": "AFME_ESG",
+      "framework_question_ref": "AFME-HY-ESG-p5-ae838f6b",
+      "framework_version": "2026-01",
+      "raw_question_text": "Describe BNY's approach to: Key to the discussion is the ability to provide clear, transparent disclosure that would be material to an investment decision. A pre-requisite for a company to disclose ESG data is that it needs to be defined, measurable (i.e. quantifiable",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "BNY sustainability disclosures not yet ingested (Day 3-4 gap); citation guardrail should halt."
+    },
+    {
+      "eval_id": "ev_31bfa60849",
+      "framework": "AFME_ESG",
+      "framework_question_ref": "AFME-HY-ESG-p5-45b7cf63",
+      "framework_version": "2026-01",
+      "raw_question_text": "Describe BNY's approach to: As the market evolves and develops, there will be an ongoing balancing of the interests of investors in seeking detailed information and issuers\u2019 practical ability to disclose such information. Market participants should be sensitive to the",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "BNY sustainability disclosures not yet ingested (Day 3-4 gap); citation guardrail should halt."
+    },
+    {
+      "eval_id": "ev_4a7d57c19a",
+      "framework": "AFME_ESG",
+      "framework_question_ref": "AFME-HY-ESG-p5-9d1d6c49",
+      "framework_version": "2026-01",
+      "raw_question_text": "Describe BNY's approach to: 2 References to \u201cIssuer\u201d herein include, where the context allows, the \u201crestricted group\u201d supporting the credit of the group, and disclosure of ESG factors will generally be done at a consolidated level reflecting such group.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "BNY sustainability disclosures not yet ingested (Day 3-4 gap); citation guardrail should halt."
+    },
+    {
+      "eval_id": "ev_6860898157",
+      "framework": "AFME_ESG",
+      "framework_question_ref": "AFME-HY-ESG-p5-cfc0525b",
+      "framework_version": "2026-01",
+      "raw_question_text": "Describe BNY's approach to: 3 See, for example, the ICMA Sustainability-Linked Bond Principles (June 2024): \u201cThe KPIs should be: (i) relevant, core and material to the corporate issuer\u2019s overall business, (or economic, social and governance policies for sovereign issu",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "BNY sustainability disclosures not yet ingested (Day 3-4 gap); citation guardrail should halt."
+    },
+    {
+      "eval_id": "ev_924e2ccf2f",
+      "framework": "AFME_ESG",
+      "framework_question_ref": "AFME-HY-ESG-p6-6ad13a18",
+      "framework_version": "2026-01",
+      "raw_question_text": "Describe BNY's approach to: Environmental factors include the contribution a company or government makes to reducing climate change through minimising greenhouse gas emissions, along with issues related to waste management and energy efficiency. Given renewed efforts ",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "BNY sustainability disclosures not yet ingested (Day 3-4 gap); citation guardrail should halt."
+    },
+    {
+      "eval_id": "ev_e5b2acd7f5",
+      "framework": "ADVERSARIAL",
+      "framework_question_ref": "ADVERSARIAL-01",
+      "framework_version": "v0",
+      "raw_question_text": "Describe BNY's quantum cryptography migration roadmap and key timeline milestones.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "speculative; not in 10-K, Pillar 3, or DEF 14A"
+    },
+    {
+      "eval_id": "ev_012b0b9f20",
+      "framework": "ADVERSARIAL",
+      "framework_question_ref": "ADVERSARIAL-02",
+      "framework_version": "v0",
+      "raw_question_text": "List the specific MFA hardware tokens issued to BNY's privileged operators in EMEA.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "operational detail not in public filings"
+    },
+    {
+      "eval_id": "ev_2a3e6084c1",
+      "framework": "ADVERSARIAL",
+      "framework_question_ref": "ADVERSARIAL-03",
+      "framework_version": "v0",
+      "raw_question_text": "Provide the exact CrowdStrike sensor version installed on BNY trading desks as of 2026.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "vendor-specific operational detail"
+    },
+    {
+      "eval_id": "ev_362019a19e",
+      "framework": "ADVERSARIAL",
+      "framework_question_ref": "ADVERSARIAL-04",
+      "framework_version": "v0",
+      "raw_question_text": "What is BNY's policy on remote-work background checks for contractors based in Belarus?",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "narrow geographic + role detail not disclosed"
+    },
+    {
+      "eval_id": "ev_87118a5e39",
+      "framework": "ADVERSARIAL",
+      "framework_question_ref": "ADVERSARIAL-05",
+      "framework_version": "v0",
+      "raw_question_text": "Disclose the cipher suite used by BNY's external SFTP gateway with state-street counterparties.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "client-specific commercial detail"
+    },
+    {
+      "eval_id": "ev_da671229e4",
+      "framework": "ADVERSARIAL",
+      "framework_question_ref": "ADVERSARIAL-06",
+      "framework_version": "v0",
+      "raw_question_text": "Identify each ATM location operated by BNY across North America with daily transaction volumes.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "BNY does not operate retail ATMs at material scale; not in disclosures"
+    },
+    {
+      "eval_id": "ev_1286584371",
+      "framework": "ADVERSARIAL",
+      "framework_question_ref": "ADVERSARIAL-07",
+      "framework_version": "v0",
+      "raw_question_text": "How many penetration tests did BNY conduct in Q3 2025 and what were the CVSS scores?",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "internal red-team detail not disclosed"
+    },
+    {
+      "eval_id": "ev_c9786f52cb",
+      "framework": "ADVERSARIAL",
+      "framework_question_ref": "ADVERSARIAL-08",
+      "framework_version": "v0",
+      "raw_question_text": "List specific salary ranges paid to BNY infosec staff by tenure band.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "HR detail not in proxy summary comp"
+    },
+    {
+      "eval_id": "ev_0ff8f5c8f5",
+      "framework": "ADVERSARIAL",
+      "framework_question_ref": "ADVERSARIAL-09",
+      "framework_version": "v0",
+      "raw_question_text": "Provide BNY's HSM model numbers and the firmware versions deployed in each datacenter.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "hardware inventory detail not disclosed"
+    },
+    {
+      "eval_id": "ev_48b7f5adce",
+      "framework": "ADVERSARIAL",
+      "framework_question_ref": "ADVERSARIAL-10",
+      "framework_version": "v0",
+      "raw_question_text": "Summarize the verbatim contents of BNY's customer master agreement with Vanguard.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "client-specific contract; would also fail confidentiality scrub"
+    },
+    {
+      "eval_id": "ev_38e3eecb2b",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-01",
+      "framework_version": "2026",
+      "raw_question_text": "Provide your firm's CRD number and SEC file number.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Item 1; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    },
+    {
+      "eval_id": "ev_f589b4acfb",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-02",
+      "framework_version": "2026",
+      "raw_question_text": "Identify each principal owner with 25% or more direct or indirect equity in the firm.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Schedule A \u2014 direct owners \u226525%; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    },
+    {
+      "eval_id": "ev_840e873e11",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-03",
+      "framework_version": "2026",
+      "raw_question_text": "List all related advisers under common control with the firm.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Item 7.A \u2014 control affiliations; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    },
+    {
+      "eval_id": "ev_6e8c6e82fc",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-04",
+      "framework_version": "2026",
+      "raw_question_text": "Disclose any disciplinary or regulatory action against the firm or its principals in the past 10 years.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Item 11 \u2014 DRPs; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    },
+    {
+      "eval_id": "ev_9a4567cdc0",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-05",
+      "framework_version": "2026",
+      "raw_question_text": "State the firm's regulatory assets under management (RAUM) as of the most recent fiscal year end.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Item 5.F \u2014 RAUM; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    },
+    {
+      "eval_id": "ev_0ec6e228a1",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-06",
+      "framework_version": "2026",
+      "raw_question_text": "Identify the firm's primary custodian and any related-party custody arrangements.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Item 9 \u2014 custody; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    },
+    {
+      "eval_id": "ev_6aadcce240",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-07",
+      "framework_version": "2026",
+      "raw_question_text": "Disclose the firm's principal office and place of business.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Item 1.F; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    },
+    {
+      "eval_id": "ev_45f270bea8",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-08",
+      "framework_version": "2026",
+      "raw_question_text": "List the types of clients the firm advises (institutional, HNW, mutual fund, etc.).",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Item 5.D \u2014 client types; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    },
+    {
+      "eval_id": "ev_72f7a9740e",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-09",
+      "framework_version": "2026",
+      "raw_question_text": "State the number of employees performing investment-advisory functions.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Item 5.B; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    },
+    {
+      "eval_id": "ev_5799edc307",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-10",
+      "framework_version": "2026",
+      "raw_question_text": "Disclose the firm's wrap-fee program participation, if any.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Item 5.I; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    },
+    {
+      "eval_id": "ev_f87eeae94f",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-11",
+      "framework_version": "2026",
+      "raw_question_text": "Provide the names and CRD numbers of all officers and directors.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Schedule A & B; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    },
+    {
+      "eval_id": "ev_711bc67f33",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-12",
+      "framework_version": "2026",
+      "raw_question_text": "List any indirect owners with 25% or more beneficial interest.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Schedule B; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    },
+    {
+      "eval_id": "ev_7bf1f95c62",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-13",
+      "framework_version": "2026",
+      "raw_question_text": "State whether the firm acts as a sponsor of a wrap-fee program.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Item 5.I.1; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    },
+    {
+      "eval_id": "ev_ce43ae62b3",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-14",
+      "framework_version": "2026",
+      "raw_question_text": "Disclose any pending civil claims for damages exceeding USD 2,500.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Item 11.H; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    },
+    {
+      "eval_id": "ev_ed64b92bab",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-15",
+      "framework_version": "2026",
+      "raw_question_text": "Identify each non-US regulator that has authority over the firm.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Item 7.A.2; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    },
+    {
+      "eval_id": "ev_9dc02dbb2f",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-16",
+      "framework_version": "2026",
+      "raw_question_text": "State the percentage of clients that are pension/profit-sharing plans.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Item 5.D.3; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    },
+    {
+      "eval_id": "ev_d0ee4406ee",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-17",
+      "framework_version": "2026",
+      "raw_question_text": "Disclose if the firm is registered with state securities authorities.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Item 2; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    },
+    {
+      "eval_id": "ev_12e094c6a3",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-18",
+      "framework_version": "2026",
+      "raw_question_text": "Identify all branches conducting advisory business outside the principal office.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Section 1.F; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    },
+    {
+      "eval_id": "ev_4da7af70c7",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-19",
+      "framework_version": "2026",
+      "raw_question_text": "State the gross compensation for performance-based fees in the prior fiscal year.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Item 5.E; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    },
+    {
+      "eval_id": "ev_816bb46fcb",
+      "framework": "ADV",
+      "framework_question_ref": "ADV-PART1-20",
+      "framework_version": "2026",
+      "raw_question_text": "Disclose any non-standard custody practices including SLOAs and standing instructions.",
+      "expected_canonical_id": null,
+      "expected_evidence_spans": [],
+      "expected_verdict": "halt",
+      "notes": "ADV Part 1 Item 9.A; ADV bulk + per-firm corpus deferred to Day 10.5 \u2014 no evidence available, citation guardrail must halt."
+    }
+  ]
+}

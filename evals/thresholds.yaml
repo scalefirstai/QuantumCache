@@ -1,0 +1,58 @@
+# Eval thresholds — DATA-PLAN.md §6.4 #3.
+#
+# CI gate: any new run that drops below these floors blocks promotion.
+# Floors set to v0 baseline minus a small noise buffer (≤5 percentage points
+# for retrieval metrics). Bump up when v1 lands and we want to enforce a
+# higher bar.
+#
+# Generated from evals/reports/v0-baseline.json on 2026-05-10.
+# Halt RRF threshold (in code): 0.018 — keep in sync with run_eval_v0.py.
+
+version: v0
+generated_from: evals/reports/v0-baseline.json
+corpus_pin:
+  taxonomy_version: tx_v0.1
+  library_version: lib_v0.1
+
+# Floors — runner exit code is non-zero if any current value is below floor.
+floors:
+  by_slice:
+    AFME:
+      recall_at_10: 0.25     # baseline 30.00%
+      recall_at_1:  0.15     # baseline 20.00%
+      mrr:          0.18     # baseline 0.219
+    CAIQ:
+      recall_at_10: 0.80     # baseline 88.00%
+      recall_at_1:  0.40     # baseline 48.00%
+      mrr:          0.55     # baseline 0.598
+    AFME_ESG:
+      halt_rate:    0.05     # baseline 6.67% — improving this is M1 work (better halt signal beyond top RRF score)
+    ADVERSARIAL:
+      halt_rate:    0.55     # baseline 60.00%
+    ADV:
+      halt_rate:    0.40     # baseline 45.00%
+  overall:
+    recall_at_10:   0.50     # baseline 56.36%
+    mrr:            0.35     # baseline 0.391
+    halt_rate:      0.30     # baseline 35.56%
+
+# Open issues — track here, fix in subsequent versions.
+known_gaps:
+  - id: halt-signal-leakage
+    description: |
+      Top RRF score above threshold is a noisy halt signal — ESG/ADV/adversarial
+      queries can score over 0.018 when their tokens collide with BNY 10-K
+      boilerplate (e.g., "operational risk", "AUM", "principal subsidiaries").
+      Fix in M1: add a calibrated confidence head (per-query top-3 score
+      distribution, not just rank-1 score).
+  - id: afme-cross-framework
+    description: |
+      AFME → BNY corpus recall@10 lower than CAIQ — AFME wording is more
+      indirect ("Do you assess your sub-custodians' BCP?" vs CAIQ "Are
+      business continuity plans tested?"). Cohere reranker (M3) should help.
+
+# Future deltas to watch:
+todo:
+  - Add L05 mapping precision once TaxonomyService.classify_new_question lands (M1).
+  - Add L06 hallucination rate once DraftComposer ships (M3).
+  - Re-cut v1 thresholds after BNY internal corpus + ADV bulk land.

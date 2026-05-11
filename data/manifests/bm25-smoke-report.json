@@ -1,0 +1,240 @@
+[
+  {
+    "id": "q.iam.privileged_access",
+    "text": "privileged access review cadence and approval chain",
+    "expected_sources": [
+      "afme",
+      "caiq",
+      "ccm",
+      "nist_800_53"
+    ],
+    "sources_seen": [
+      "ccm",
+      "nist_800_53"
+    ],
+    "verdict": "PASS",
+    "top_score": 20.738955,
+    "top_3": [
+      {
+        "score": 20.738955,
+        "source": "ccm",
+        "doc_id": "ccm:v4.0.12:primary-dataset",
+        "span_id": "ccm:v4.0.12:primary-dataset::CCM.IAM.IAM-11#0000"
+      },
+      {
+        "score": 17.189611,
+        "source": "nist_800_53",
+        "doc_id": "nist:sp800-53:rev5:catalog",
+        "span_id": "nist:sp800-53:rev5:catalog::NIST_SP800_53_rev5.System and Communications Protection.sc-7.15#0000"
+      },
+      {
+        "score": 16.785927,
+        "source": "ccm",
+        "doc_id": "ccm:v4.0.12:primary-dataset",
+        "span_id": "ccm:v4.0.12:primary-dataset::CCM.IAM.IAM-10#0000"
+      }
+    ]
+  },
+  {
+    "id": "q.bcp.testing",
+    "text": "business continuity plan testing frequency disaster recovery",
+    "expected_sources": [
+      "afme",
+      "caiq",
+      "ccm",
+      "nist_800_53"
+    ],
+    "sources_seen": [
+      "afme",
+      "nist_800_53",
+      "nist_csf"
+    ],
+    "verdict": "PASS",
+    "top_score": 45.46725,
+    "top_3": [
+      {
+        "score": 45.46725,
+        "source": "afme",
+        "doc_id": "afme:ddq-prime-broker:2026",
+        "span_id": "afme:ddq-prime-broker:2026::3_Network_Management_3_3_Ongoing_Oversight_and_Performance.q3.3.11#0016"
+      },
+      {
+        "score": 40.47621,
+        "source": "afme",
+        "doc_id": "afme:ddq-prime-broker:2026",
+        "span_id": "afme:ddq-prime-broker:2026::7_Business_Continuity_7_5_Testing.q7.5.4#0007"
+      },
+      {
+        "score": 40.19468,
+        "source": "afme",
+        "doc_id": "afme:ddq-prime-broker:2026",
+        "span_id": "afme:ddq-prime-broker:2026::7_Business_Continuity_7_5_Testing.q7.5.5#0010"
+      }
+    ]
+  },
+  {
+    "id": "q.crypto.at_rest",
+    "text": "encryption at rest key management cryptographic controls",
+    "expected_sources": [
+      "caiq",
+      "ccm",
+      "nist_800_53"
+    ],
+    "sources_seen": [
+      "caiq",
+      "ccm",
+      "nist_800_53",
+      "nist_csf"
+    ],
+    "verdict": "PASS",
+    "top_score": 30.902523,
+    "top_3": [
+      {
+        "score": 30.902523,
+        "source": "ccm",
+        "doc_id": "ccm:v4.0.12:primary-dataset",
+        "span_id": "ccm:v4.0.12:primary-dataset::CCM.LOG.LOG-10#0000"
+      },
+      {
+        "score": 29.949322,
+        "source": "caiq",
+        "doc_id": "caiq:v4.0.3:primary-dataset",
+        "span_id": "caiq:v4.0.3:primary-dataset::CAIQ.LOG.LOG-10.1#0000"
+      },
+      {
+        "score": 29.902805,
+        "source": "ccm",
+        "doc_id": "ccm:v4.0.12:primary-dataset",
+        "span_id": "ccm:v4.0.12:primary-dataset::CCM.CEK.CEK-03#0000"
+      }
+    ]
+  },
+  {
+    "id": "q.governance.board",
+    "text": "board composition independent directors governance",
+    "expected_sources": [
+      "edgar"
+    ],
+    "sources_seen": [
+      "edgar"
+    ],
+    "verdict": "PASS",
+    "top_score": 23.81732,
+    "top_3": [
+      {
+        "score": 23.81732,
+        "source": "edgar",
+        "doc_id": "edgar:bny-mellon-corp:0001193125-22-059759",
+        "span_id": "edgar:bny-mellon-corp:0001193125-22-059759::Item_4#0046"
+      },
+      {
+        "score": 22.672592,
+        "source": "edgar",
+        "doc_id": "edgar:bny-mellon-corp:0001193125-24-051895",
+        "span_id": "edgar:bny-mellon-corp:0001193125-24-051895::Item_5#0050"
+      },
+      {
+        "score": 22.415718,
+        "source": "edgar",
+        "doc_id": "edgar:bny-mellon-corp:0001193125-23-055130",
+        "span_id": "edgar:bny-mellon-corp:0001193125-23-055130::Item_6#0046"
+      }
+    ]
+  },
+  {
+    "id": "q.business.segments",
+    "text": "principal business segments revenue mix custody investment management",
+    "expected_sources": [
+      "edgar"
+    ],
+    "sources_seen": [
+      "edgar"
+    ],
+    "verdict": "PASS",
+    "top_score": 22.543911,
+    "top_3": [
+      {
+        "score": 22.543911,
+        "source": "edgar",
+        "doc_id": "edgar:bny-mellon-corp:0001390777-22-000043",
+        "span_id": "edgar:bny-mellon-corp:0001390777-22-000043::Item_16#0000"
+      },
+      {
+        "score": 22.167488,
+        "source": "edgar",
+        "doc_id": "edgar:bny-mellon-corp:0001390777-23-000033",
+        "span_id": "edgar:bny-mellon-corp:0001390777-23-000033::Item_16#0000"
+      },
+      {
+        "score": 22.167488,
+        "source": "edgar",
+        "doc_id": "edgar:bny-mellon-corp:0001390777-24-000051",
+        "span_id": "edgar:bny-mellon-corp:0001390777-24-000051::Item_16#0000"
+      }
+    ]
+  },
+  {
+    "id": "q.capital.pillar3",
+    "text": "common equity tier 1 ratio risk weighted assets capital",
+    "expected_sources": [
+      "bny-ir"
+    ],
+    "sources_seen": [
+      "bny-ir"
+    ],
+    "verdict": "PASS",
+    "top_score": 20.348707,
+    "top_3": [
+      {
+        "score": 20.348707,
+        "source": "bny-ir",
+        "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q1",
+        "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q1::The_Bank_of_New_York_Mellon_Corporation.p38#0170"
+      },
+      {
+        "score": 20.348707,
+        "source": "bny-ir",
+        "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q2",
+        "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q2::The_Bank_of_New_York_Mellon_Corporation.p38#0168"
+      },
+      {
+        "score": 20.348707,
+        "source": "bny-ir",
+        "doc_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3",
+        "span_id": "bny-ir:bny-mellon-corp:pillar-3:2021q3::The_Bank_of_New_York_Mellon_Corporation.p38#0168"
+      }
+    ]
+  },
+  {
+    "id": "q.adversarial.no_match",
+    "text": "exotic synthetic CDO origination underwriting cycles",
+    "expected_sources": [],
+    "sources_seen": [
+      "bny-ir",
+      "edgar",
+      "nist_csf"
+    ],
+    "verdict": "WEAK",
+    "top_score": 10.230997,
+    "top_3": [
+      {
+        "score": 10.230997,
+        "source": "nist_csf",
+        "doc_id": "nist:csf:v2.0:catalog",
+        "span_id": "nist:csf:v2.0:catalog::NIST_CSF_v2.0.IDENTIFY.ID.AM-08#0000"
+      },
+      {
+        "score": 8.191552,
+        "source": "edgar",
+        "doc_id": "edgar:bny-mellon-corp:0001193125-25-051003",
+        "span_id": "edgar:bny-mellon-corp:0001193125-25-051003::Item_8.01#0000"
+      },
+      {
+        "score": 8.191552,
+        "source": "edgar",
+        "doc_id": "edgar:bny-mellon-corp:0001193125-25-054816",
+        "span_id": "edgar:bny-mellon-corp:0001193125-25-054816::Item_8.01#0000"
+      }
+    ]
+  }
+]

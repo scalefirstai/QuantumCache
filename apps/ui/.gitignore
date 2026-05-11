@@ -1,0 +1,7 @@
+node_modules
+dist
+.tanstack
+playwright-report
+test-results
+coverage
+.vite

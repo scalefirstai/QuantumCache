@@ -1,0 +1,54 @@
+{
+  "version": "tx_v0.1",
+  "generated_at": "2026-05-10T10:57:12.087248+00:00",
+  "merkle_root": "sha256:1eb45c13f1e6cc0fce3265a03b4bd2b3d2ccfffa7aee670fcf9a0618bf6e9421",
+  "signed_by": "dev.bootstrap@local",
+  "question_count": 548,
+  "framework_coverage": {
+    "NIST_CSF_v2.0": 1111,
+    "AFME": 1077,
+    "AICPA_TSC_2017": 537,
+    "CAIQ": 261,
+    "CCM": 261,
+    "ISO27001_2022": 1559,
+    "NIST_SP800_53_rev5": 2053,
+    "PCI_DSS_v4.0": 777,
+    "AFME_ESG": 60
+  },
+  "domains": {
+    "canon.is": 196,
+    "canon.or": 23,
+    "canon.reg": 58,
+    "canon.cyber": 177,
+    "canon.subc": 30,
+    "canon.esg": 64
+  },
+  "afme_merge_stats": {
+    "merged": 1035,
+    "new": 42,
+    "skipped_low_text": 0,
+    "below_threshold": 46,
+    "by_new_top": {
+      "canon.subc.general": 27,
+      "canon.or.operations": 1,
+      "canon.or.bcp": 4,
+      "canon.esg.general": 4,
+      "canon.subc.network": 3,
+      "canon.reg.grc": 3
+    }
+  },
+  "acceptance": {
+    "ac1_coverage": true,
+    "ac2_mapping_density": {
+      "pass": true,
+      "value": 1.0,
+      "caiq_with_non_self": 261,
+      "caiq_total": 261
+    },
+    "ac3_integrity": true,
+    "ac4_roundtrip": {
+      "pass": true,
+      "failures": []
+    }
+  }
+}
