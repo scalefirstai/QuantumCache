@@ -24,7 +24,8 @@ import {
 } from "@/components/datasets/Common";
 import { StatusBadge } from "@/components/rules/StatusBadge";
 import { ApprovalModal } from "@/components/rules/ApprovalModal";
-import { RuleEditor, blankRuleEditor, type RuleEditorValue } from "@/components/rules/RuleEditor";
+import { RuleEditor } from "@/components/rules/RuleEditor";
+import { blankRuleEditor, type RuleEditorValue } from "@/components/rules/ruleEditorValue";
 
 export function RuleDetailRoute() {
   const { ruleId } = useParams({ from: "/rules/$ruleId" });
@@ -34,7 +35,7 @@ export function RuleDetailRoute() {
   const [submitOpen, setSubmitOpen] = useState(false);
   const [approveOpen, setApproveOpen] = useState(false);
   const [rejectOpen, setRejectOpen] = useState(false);
-  const [evalResult, setEvalResult] = useState<{ fired: boolean; verdict: any } | null>(null);
+  const [evalResult, setEvalResult] = useState<{ fired: boolean; verdict: Record<string, unknown> | null } | null>(null);
   const [evalErr, setEvalErr] = useState<string | null>(null);
 
   const refresh = () => getRule(ruleId).then(setRule).catch((e) => setErr(String(e)));
@@ -249,8 +250,8 @@ function EditModal({
         tags: form.tags,
       });
       onSaved();
-    } catch (e: any) {
-      setErr(e?.message ?? "Save failed");
+    } catch (e) {
+      setErr(e instanceof Error ? e.message : "Save failed");
     } finally {
       setSubmitting(false);
     }
@@ -302,8 +303,8 @@ function SubmitModal({
     try {
       await submitRule(ruleId, { submittedBy: name });
       onSubmitted();
-    } catch (e: any) {
-      setErr(e?.message ?? "Submit failed");
+    } catch (e) {
+      setErr(e instanceof Error ? e.message : "Submit failed");
     } finally {
       setSubmitting(false);
     }
@@ -340,7 +341,7 @@ function EvaluationPanel({
 }: {
   ruleId: string;
   engine: "freshness" | "approval";
-  onResult: (r: { fired: boolean; verdict: any }) => void;
+  onResult: (r: { fired: boolean; verdict: Record<string, unknown> | null }) => void;
   onError: (e: string | null) => void;
 }) {
   // Provide a sensible default sample input per engine so the SME can
@@ -369,8 +370,8 @@ function EvaluationPanel({
       const ctx = JSON.parse(text);
       const r = await evaluateRule(ruleId, ctx);
       onResult({ fired: r.fired, verdict: r.verdict });
-    } catch (e: any) {
-      onError(e?.message ?? "Evaluate failed");
+    } catch (e) {
+      onError(e instanceof Error ? e.message : "Evaluate failed");
     } finally {
       setRunning(false);
     }

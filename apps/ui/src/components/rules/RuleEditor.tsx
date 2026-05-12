@@ -11,7 +11,8 @@ import {
   Select,
   TextArea,
 } from "@/components/datasets/Common";
-import type { RuleCreateBody, RuleEngine, RuleOp } from "@/types/rule";
+import type { RuleEngine, RuleOp } from "@/types/rule";
+import type { RuleEditorValue } from "./ruleEditorValue";
 
 const OPS: RuleOp[] = [
   "eq", "ne", "lt", "lte", "gt", "gte",
@@ -19,29 +20,6 @@ const OPS: RuleOp[] = [
   "startswith", "endswith", "age_days_gt",
   "exists", "truthy",
 ];
-
-export interface RuleEditorValue extends RuleCreateBody {
-  // raw JSON strings shadow the structured fields when editing via JSON mode
-  whenJson: string;
-  thenJson: string;
-}
-
-export function blankRuleEditor(engine: RuleEngine = "freshness"): RuleEditorValue {
-  return {
-    ruleId: "",
-    engine,
-    title: "",
-    description: "",
-    priority: 100,
-    tags: ["operator-added"],
-    when: { field: "", op: "eq", value: "" },
-    then: engine === "freshness"
-      ? { stale: true, reason: "" }
-      : { route: "sme_queue", rationale: "" },
-    whenJson: "",
-    thenJson: "",
-  };
-}
 
 export function RuleEditor({
   value,

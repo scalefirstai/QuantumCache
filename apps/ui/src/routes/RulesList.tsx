@@ -12,11 +12,11 @@ import {
   Input,
   TagPill,
 } from "@/components/datasets/Common";
+import { RuleEditor } from "@/components/rules/RuleEditor";
 import {
-  RuleEditor,
   blankRuleEditor,
   type RuleEditorValue,
-} from "@/components/rules/RuleEditor";
+} from "@/components/rules/ruleEditorValue";
 import { StatusBadge } from "@/components/rules/StatusBadge";
 
 export function RulesListRoute() {
@@ -233,8 +233,8 @@ function CreateRuleModal({
         tags: form.tags,
       });
       onCreated(detail);
-    } catch (e: any) {
-      setError(e?.message ?? "Create failed");
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Create failed");
     } finally {
       setSubmitting(false);
     }

@@ -34,8 +34,8 @@ export function ApprovalModal({
       await onSubmit({ approver, rationale });
       setApprover("");
       setRationale("");
-    } catch (e: any) {
-      setErr(e?.message ?? "Submit failed");
+    } catch (e) {
+      setErr(e instanceof Error ? e.message : "Submit failed");
     } finally {
       setSubmitting(false);
     }
