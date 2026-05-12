@@ -1,5 +1,5 @@
 import { useParams } from "@tanstack/react-router";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   activateVersion,
   applyTemplate,
@@ -7,6 +7,7 @@ import {
   getAgent,
   getAudit,
   listModels,
+  listSkills,
   listTemplates,
   listVersions,
 } from "@/api/agents";
@@ -14,6 +15,7 @@ import type {
   AgentDetail,
   AuditEntry,
   Model,
+  SkillSummary,
   Template,
   VersionSummary,
 } from "@/types/agent";
@@ -27,6 +29,7 @@ export function AgentDetailRoute() {
   const [audit, setAudit] = useState<AuditEntry[]>([]);
   const [models, setModels] = useState<Model[]>([]);
   const [templates, setTemplates] = useState<Template[]>([]);
+  const [skills, setSkills] = useState<SkillSummary[]>([]);
   const [tab, setTab] = useState<Tab>("config");
   const [err, setErr] = useState<string | null>(null);
 
@@ -46,6 +49,7 @@ export function AgentDetailRoute() {
   useEffect(() => {
     listModels().then(setModels).catch(() => {});
     listTemplates().then(setTemplates).catch(() => {});
+    listSkills().then(setSkills).catch(() => {});
     void reload();
   }, [reload]);
 
@@ -104,6 +108,7 @@ export function AgentDetailRoute() {
               agent={agent}
               models={models}
               templates={templates}
+              skills={skills}
               onSaved={reload}
             />
           )}
@@ -123,11 +128,13 @@ function ConfigTab({
   agent,
   models,
   templates,
+  skills,
   onSaved,
 }: {
   agent: AgentDetail;
   models: Model[];
   templates: Template[];
+  skills: SkillSummary[];
   onSaved: () => void;
 }) {
   const active = agent.active!;
@@ -252,23 +259,12 @@ function ConfigTab({
           />
         </Section>
 
-        <Section title="Tools">
-          <ul className="text-xs space-y-1 font-mono">
-            {tools.map((t, idx) => (
-              <li
-                key={t}
-                className="flex items-center justify-between px-2 py-1 rounded bg-bny-paper border border-bny-mist"
-              >
-                {t}
-                <button
-                  className="text-bny-fog hover:text-bny-ink"
-                  onClick={() => setTools(tools.filter((_, i) => i !== idx))}
-                >
-                  ✕
-                </button>
-              </li>
-            ))}
-          </ul>
+        <Section title="Tools" testid="tools-section">
+          <ToolPicker
+            selected={tools}
+            catalog={skills}
+            onChange={setTools}
+          />
         </Section>
 
         <Section title="Save as new version">
@@ -448,6 +444,103 @@ function HistoryTab({ audit }: { audit: AuditEntry[] }) {
         </li>
       ))}
     </ol>
+  );
+}
+
+function ToolPicker({
+  selected,
+  catalog,
+  onChange,
+}: {
+  selected: string[];
+  catalog: SkillSummary[];
+  onChange: (next: string[]) => void;
+}) {
+  const byId = useMemo(() => {
+    const m = new Map<string, SkillSummary>();
+    for (const s of catalog) m.set(s.id, s);
+    return m;
+  }, [catalog]);
+
+  const available = useMemo(
+    () => catalog.filter((s) => !selected.includes(s.id)),
+    [catalog, selected],
+  );
+
+  const grouped = useMemo(() => {
+    const g = new Map<string, SkillSummary[]>();
+    for (const s of available) {
+      const arr = g.get(s.category) ?? [];
+      arr.push(s);
+      g.set(s.category, arr);
+    }
+    return [...g.entries()].sort(([a], [b]) => a.localeCompare(b));
+  }, [available]);
+
+  const onPick = (id: string) => {
+    if (!id || selected.includes(id)) return;
+    onChange([...selected, id]);
+  };
+
+  return (
+    <>
+      <ul className="text-xs space-y-1" data-testid="tools-list">
+        {selected.length === 0 && (
+          <li className="text-bny-fog italic px-2 py-1">No tools configured.</li>
+        )}
+        {selected.map((t, idx) => {
+          const meta = byId.get(t);
+          return (
+            <li
+              key={t}
+              data-testid={`tool-${t}`}
+              className="flex items-start justify-between gap-2 px-2 py-1.5 rounded bg-bny-paper border border-bny-mist"
+            >
+              <div className="min-w-0">
+                <div className="font-mono truncate">{t}</div>
+                {meta && (
+                  <div className="text-[11px] text-bny-fog truncate">
+                    {meta.name} · {meta.category}
+                  </div>
+                )}
+              </div>
+              <button
+                aria-label={`Remove ${t}`}
+                data-testid={`remove-tool-${t}`}
+                className="text-bny-fog hover:text-bny-ink shrink-0"
+                onClick={() => onChange(selected.filter((_, i) => i !== idx))}
+              >
+                ✕
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+
+      {catalog.length === 0 ? (
+        <p className="text-xs text-bny-fog mt-2">Tool catalog unavailable.</p>
+      ) : available.length === 0 ? (
+        <p className="text-xs text-bny-fog mt-2">All available tools added.</p>
+      ) : (
+        <select
+          data-testid="tool-add-select"
+          value=""
+          onChange={(e) => onPick(e.target.value)}
+          className="block w-full min-w-0 mt-3 text-xs p-2 rounded-md border border-bny-mist bg-white"
+        >
+          <option value="">+ Add a tool…</option>
+          {grouped.map(([category, items]) => (
+            <optgroup key={category} label={category}>
+              {items.map((s) => (
+                <option key={s.id} value={s.id} title={s.description}>
+                  {s.id}
+                </option>
+              ))}
+            </optgroup>
+          ))}
+        </select>
+      )}
+    </>
   );
 }
 
