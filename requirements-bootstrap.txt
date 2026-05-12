@@ -18,7 +18,7 @@ opensearch-py==2.8.0
 torch==2.2.2
 # Pinned alongside torch 2.2 — newer s-t lines drop torch 2.2 support.
 sentence-transformers==3.4.1
-qdrant-client>=1.11,<2
+qdrant-client>=1.18.0,<2
 # Pin held below numpy 2 because torch 2.2 needs the older C-API symbols
 # (`numpy.dtype.alignment` etc.). Lifts when we leave Intel Mac / torch 2.2.
 numpy<2
