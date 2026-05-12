@@ -1,19 +1,26 @@
 # Bootstrap-script dependencies. Production services (M1+) get a real pyproject.toml.
-# Pinned to versions installed 2026-05-09; bump cautiously.
+# Pinned for Python 3.12 (2026-05-12 venv refresh).
 boto3==1.42.97
 beautifulsoup4==4.14.3
 lxml==6.1.0
-# pymupdf>=1.26.7 closes GHSA-cxqh-p2w9-fmr7 but requires Python 3.10+.
-# The CVE is for `python -m fitz` (CLI path-traversal); we only import
-# fitz programmatically, so the exploit path does not apply here. Bump
-# the pin when the venv moves off Python 3.9.
-pymupdf==1.26.5
+# 1.26.7 closes GHSA-cxqh-p2w9-fmr7 (CLI path-traversal in __main__.py).
+# We only `import fitz` programmatically; pin satisfies Dependabot regardless.
+pymupdf==1.26.7
 python-docx==1.2.0
 pyarrow==21.0.0
 opensearch-py==2.8.0
+# PyTorch dropped macOS-x86_64 wheels after 2.2.x; this venv is on an
+# Intel Mac, so we can't take the GHSA-53q9-r3pm-6pq6 fix (torch ≥ 2.6) here.
+# The CVE requires torch.load on an attacker-controlled .pt file — our code
+# never loads untrusted checkpoints (only the BGE-small model from
+# HuggingFace, fetched once over TLS). Production targets (Linux x86_64,
+# Apple Silicon) should bump torch to ≥ 2.8 in the prod requirements file.
+torch==2.2.2
+# Pinned alongside torch 2.2 — newer s-t lines drop torch 2.2 support.
 sentence-transformers==3.4.1
 qdrant-client>=1.11,<2
-torch==2.2.2
+# Pin held below numpy 2 because torch 2.2 needs the older C-API symbols
+# (`numpy.dtype.alignment` etc.). Lifts when we leave Intel Mac / torch 2.2.
 numpy<2
 pymongo==4.17.0
 cryptography==48.0.0
