@@ -1,0 +1,29 @@
+{
+  "canonical_id": "canon.is.dsi.dsi_04_q1",
+  "label": "Encryption in transit",
+  "description": "Is sensitive client data encrypted in transit using TLS 1.2+ or equivalent?",
+  "parent_id": "canon.is.dsi",
+  "framework_mappings": [
+    {
+      "framework": "CAIQ",
+      "version": "v4.0.3",
+      "question_ref": "DSI-04.1"
+    },
+    {
+      "framework": "NIST_SP800_53_rev5",
+      "version": "rev5",
+      "question_ref": "SC-8(1)"
+    }
+  ],
+  "tier": 1,
+  "do_not_answer": false,
+  "owners": [
+    "infosec"
+  ],
+  "tags": [
+    "bootstrap"
+  ],
+  "created_at": "2026-05-12T07:55:08.513618+00:00",
+  "updated_at": "2026-05-12T07:55:08.513618+00:00",
+  "synonyms_embedding": null
+}

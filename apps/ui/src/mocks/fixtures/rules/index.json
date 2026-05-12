@@ -1,0 +1,157 @@
+[
+  {
+    "ruleId": "approval.halt.pii",
+    "engine": "approval",
+    "title": "PII halt \u2192 legal review",
+    "priority": 10,
+    "status": "active",
+    "version": "1.0.0",
+    "reviewQueue": "legal",
+    "tags": [
+      "bootstrap",
+      "halt"
+    ],
+    "updatedAt": "2026-05-12T09:02:12.354754+00:00"
+  },
+  {
+    "ruleId": "freshness.library.expired",
+    "engine": "freshness",
+    "title": "Library entry expired",
+    "priority": 10,
+    "status": "active",
+    "version": "1.0.0",
+    "reviewQueue": "ops",
+    "tags": [
+      "bootstrap",
+      "library"
+    ],
+    "updatedAt": "2026-05-12T09:02:12.352199+00:00"
+  },
+  {
+    "ruleId": "approval.halt.validate",
+    "engine": "approval",
+    "title": "Validator halt \u2192 legal review",
+    "priority": 20,
+    "status": "active",
+    "version": "1.0.0",
+    "reviewQueue": "legal",
+    "tags": [
+      "bootstrap",
+      "halt"
+    ],
+    "updatedAt": "2026-05-12T09:02:12.355283+00:00"
+  },
+  {
+    "ruleId": "freshness.library.review_overdue",
+    "engine": "freshness",
+    "title": "Library entry overdue for review",
+    "priority": 20,
+    "status": "active",
+    "version": "1.0.0",
+    "reviewQueue": "ops",
+    "tags": [
+      "bootstrap",
+      "library"
+    ],
+    "updatedAt": "2026-05-12T09:02:12.353007+00:00"
+  },
+  {
+    "ruleId": "approval.sme.freshness_stale",
+    "engine": "approval",
+    "title": "Freshness stale \u2192 SME queue",
+    "priority": 30,
+    "status": "active",
+    "version": "1.0.0",
+    "reviewQueue": "ops",
+    "tags": [
+      "bootstrap",
+      "sme"
+    ],
+    "updatedAt": "2026-05-12T09:02:12.355837+00:00"
+  },
+  {
+    "ruleId": "freshness.library.bootstrap_tag",
+    "engine": "freshness",
+    "title": "Library entry is bootstrap-tagged",
+    "priority": 30,
+    "status": "active",
+    "version": "1.0.0",
+    "reviewQueue": "regulatory",
+    "tags": [
+      "bootstrap",
+      "library"
+    ],
+    "updatedAt": "2026-05-12T09:02:12.353617+00:00"
+  },
+  {
+    "ruleId": "approval.sme.consistency_drift",
+    "engine": "approval",
+    "title": "Consistency drift \u2192 SME queue",
+    "priority": 40,
+    "status": "active",
+    "version": "1.0.0",
+    "reviewQueue": "ops",
+    "tags": [
+      "bootstrap",
+      "sme"
+    ],
+    "updatedAt": "2026-05-12T09:02:12.356384+00:00"
+  },
+  {
+    "ruleId": "freshness.evidence.pillar3.age_12mo",
+    "engine": "freshness",
+    "title": "Pillar 3 evidence older than 12 months",
+    "priority": 40,
+    "status": "active",
+    "version": "1.0.0",
+    "reviewQueue": "ops",
+    "tags": [
+      "bootstrap",
+      "evidence"
+    ],
+    "updatedAt": "2026-05-12T09:02:12.354184+00:00"
+  },
+  {
+    "ruleId": "approval.sme.low_confidence",
+    "engine": "approval",
+    "title": "Low classify confidence \u2192 SME queue",
+    "priority": 50,
+    "status": "active",
+    "version": "1.0.0",
+    "reviewQueue": "ops",
+    "tags": [
+      "bootstrap",
+      "sme"
+    ],
+    "updatedAt": "2026-05-12T09:02:12.356942+00:00"
+  },
+  {
+    "ruleId": "approval.sme.tier1",
+    "engine": "approval",
+    "title": "Tier-1 canonical \u2192 SME queue",
+    "priority": 60,
+    "status": "active",
+    "version": "1.0.0",
+    "reviewQueue": "regulatory",
+    "tags": [
+      "bootstrap",
+      "sme",
+      "tier1"
+    ],
+    "updatedAt": "2026-05-12T09:02:12.357665+00:00"
+  },
+  {
+    "ruleId": "approval.auto.clean",
+    "engine": "approval",
+    "title": "Clean pass \u2192 auto-approve",
+    "priority": 999,
+    "status": "active",
+    "version": "1.0.0",
+    "reviewQueue": "ops",
+    "tags": [
+      "bootstrap",
+      "fallthrough"
+    ],
+    "updatedAt": "2026-05-12T09:02:12.358291+00:00"
+  }
+]

@@ -1,0 +1,367 @@
+[
+  {
+    "rule_id": "approval.auto.clean",
+    "engine": "approval",
+    "title": "Clean pass \u2192 auto-approve",
+    "description": "Default fallthrough: tier-2/3 with no halts, no drift, no low-confidence, and no freshness issues auto-approves.",
+    "priority": 999,
+    "status": "active",
+    "version": "1.0.0",
+    "when": {},
+    "then": {
+      "route": "auto_approve",
+      "rationale": "All guardrails pass; tier-2/3 domain auto-approves."
+    },
+    "review_queue": "ops",
+    "tags": [
+      "bootstrap",
+      "fallthrough"
+    ],
+    "created_at": "2026-05-12T09:02:12.358283+00:00",
+    "updated_at": "2026-05-12T09:02:12.358291+00:00",
+    "approved_at": null,
+    "approved_by": null,
+    "submitted_by": null,
+    "rationale": null
+  },
+  {
+    "rule_id": "approval.halt.pii",
+    "engine": "approval",
+    "title": "PII halt \u2192 legal review",
+    "description": "Any PII halt-severity finding requires legal review before any further action. Mirrors PiiScrubber.halt = True case.",
+    "priority": 10,
+    "status": "active",
+    "version": "1.0.0",
+    "when": {
+      "field": "pii_halt",
+      "op": "truthy"
+    },
+    "then": {
+      "route": "halt",
+      "queue": "legal",
+      "rationale": "PiiScrubber raised halt \u2014 confidentiality risk; legal must review before any further action."
+    },
+    "review_queue": "legal",
+    "tags": [
+      "bootstrap",
+      "halt"
+    ],
+    "created_at": "2026-05-12T09:02:12.354745+00:00",
+    "updated_at": "2026-05-12T09:02:12.354754+00:00",
+    "approved_at": null,
+    "approved_by": null,
+    "submitted_by": null,
+    "rationale": null
+  },
+  {
+    "rule_id": "approval.halt.validate",
+    "engine": "approval",
+    "title": "Validator halt \u2192 legal review",
+    "description": "Validate-verdict = halt means a citation/freshness/scrub guardrail tripped. Route to legal queue for review.",
+    "priority": 20,
+    "status": "active",
+    "version": "1.0.0",
+    "when": {
+      "field": "validate_verdict",
+      "op": "eq",
+      "value": "halt"
+    },
+    "then": {
+      "route": "halt",
+      "queue": "legal",
+      "rationale": "Validator halted (citation/freshness/scrub guardrail) \u2014 legal review."
+    },
+    "review_queue": "legal",
+    "tags": [
+      "bootstrap",
+      "halt"
+    ],
+    "created_at": "2026-05-12T09:02:12.355275+00:00",
+    "updated_at": "2026-05-12T09:02:12.355283+00:00",
+    "approved_at": null,
+    "approved_by": null,
+    "submitted_by": null,
+    "rationale": null
+  },
+  {
+    "rule_id": "approval.sme.consistency_drift",
+    "engine": "approval",
+    "title": "Consistency drift \u2192 SME queue",
+    "description": "ConsistencyChecker flagged drift versus prior shipped responses. Avoid sending a contradicting answer without SME blessing.",
+    "priority": 40,
+    "status": "active",
+    "version": "1.0.0",
+    "when": {
+      "field": "consistency_drift",
+      "op": "truthy"
+    },
+    "then": {
+      "route": "sme_queue",
+      "rationale": "ConsistencyChecker flagged drift versus prior shipped responses \u2014 SME confirmation required."
+    },
+    "review_queue": "ops",
+    "tags": [
+      "bootstrap",
+      "sme"
+    ],
+    "created_at": "2026-05-12T09:02:12.356375+00:00",
+    "updated_at": "2026-05-12T09:02:12.356384+00:00",
+    "approved_at": null,
+    "approved_by": null,
+    "submitted_by": null,
+    "rationale": null
+  },
+  {
+    "rule_id": "approval.sme.freshness_stale",
+    "engine": "approval",
+    "title": "Freshness stale \u2192 SME queue",
+    "description": "FreshnessAuditor flagged stale evidence or library entry; domain-routed SME must confirm before send.",
+    "priority": 30,
+    "status": "active",
+    "version": "1.0.0",
+    "when": {
+      "field": "freshness_stale",
+      "op": "truthy"
+    },
+    "then": {
+      "route": "sme_queue",
+      "rationale": "FreshnessAuditor flagged stale evidence/entry \u2014 SME confirmation required."
+    },
+    "review_queue": "ops",
+    "tags": [
+      "bootstrap",
+      "sme"
+    ],
+    "created_at": "2026-05-12T09:02:12.355829+00:00",
+    "updated_at": "2026-05-12T09:02:12.355837+00:00",
+    "approved_at": null,
+    "approved_by": null,
+    "submitted_by": null,
+    "rationale": null
+  },
+  {
+    "rule_id": "approval.sme.low_confidence",
+    "engine": "approval",
+    "title": "Low classify confidence \u2192 SME queue",
+    "description": "QuestionMapper confidence below 0.70 means the canonical mapping is uncertain. SME must verify before answer is shipped.",
+    "priority": 50,
+    "status": "active",
+    "version": "1.0.0",
+    "when": {
+      "field": "classify_confidence",
+      "op": "lt",
+      "value": 0.7
+    },
+    "then": {
+      "route": "sme_queue",
+      "rationale": "Classify confidence below 0.70 SME threshold \u2014 SME confirmation required."
+    },
+    "review_queue": "ops",
+    "tags": [
+      "bootstrap",
+      "sme"
+    ],
+    "created_at": "2026-05-12T09:02:12.356934+00:00",
+    "updated_at": "2026-05-12T09:02:12.356942+00:00",
+    "approved_at": null,
+    "approved_by": null,
+    "submitted_by": null,
+    "rationale": null
+  },
+  {
+    "rule_id": "approval.sme.tier1",
+    "engine": "approval",
+    "title": "Tier-1 canonical \u2192 SME queue",
+    "description": "Tier-1 domains (regulatory, infosec, cyber) always require SME sign-off, even on a clean pass.",
+    "priority": 60,
+    "status": "active",
+    "version": "1.0.0",
+    "when": {
+      "any": [
+        {
+          "field": "canonical_id",
+          "op": "startswith",
+          "value": "canon.reg"
+        },
+        {
+          "field": "canonical_id",
+          "op": "startswith",
+          "value": "canon.cyber"
+        },
+        {
+          "field": "canonical_id",
+          "op": "startswith",
+          "value": "canon.is"
+        }
+      ]
+    },
+    "then": {
+      "route": "sme_queue",
+      "rationale": "Tier-1 canonical (regulatory/security/cyber) always requires SME sign-off."
+    },
+    "review_queue": "regulatory",
+    "tags": [
+      "bootstrap",
+      "sme",
+      "tier1"
+    ],
+    "created_at": "2026-05-12T09:02:12.357568+00:00",
+    "updated_at": "2026-05-12T09:02:12.357665+00:00",
+    "approved_at": null,
+    "approved_by": null,
+    "submitted_by": null,
+    "rationale": null
+  },
+  {
+    "rule_id": "freshness.evidence.pillar3.age_12mo",
+    "engine": "freshness",
+    "title": "Pillar 3 evidence older than 12 months",
+    "description": "Quarterly Pillar 3 disclosures rotate every quarter; anything older than 12 months is considered stale for client-facing answers.",
+    "priority": 40,
+    "status": "active",
+    "version": "1.0.0",
+    "when": {
+      "any": [
+        {
+          "field": "evidence_oldest.pillar3_date",
+          "op": "exists",
+          "value": null
+        }
+      ]
+    },
+    "then": {
+      "stale": true,
+      "reason": "pillar3 evidence older than 12 months: {evidence_oldest.pillar3_date}",
+      "tags": [
+        "evidence",
+        "pillar3"
+      ]
+    },
+    "review_queue": "ops",
+    "tags": [
+      "bootstrap",
+      "evidence"
+    ],
+    "created_at": "2026-05-12T09:02:12.354176+00:00",
+    "updated_at": "2026-05-12T09:02:12.354184+00:00",
+    "approved_at": null,
+    "approved_by": null,
+    "submitted_by": null,
+    "rationale": null
+  },
+  {
+    "rule_id": "freshness.library.bootstrap_tag",
+    "engine": "freshness",
+    "title": "Library entry is bootstrap-tagged",
+    "description": "Bootstrap-seeded library entries lack SME approval. DATA-PLAN \u00a79 risk #6 requires SME re-approval before any client packet.",
+    "priority": 30,
+    "status": "active",
+    "version": "1.0.0",
+    "when": {
+      "field": "library_entry.tags",
+      "op": "contains",
+      "value": "bootstrap"
+    },
+    "then": {
+      "stale": true,
+      "reason": "library entry is bootstrap-tagged \u2014 needs SME re-approval before client packet",
+      "tags": [
+        "library",
+        "bootstrap-guard"
+      ]
+    },
+    "review_queue": "regulatory",
+    "tags": [
+      "bootstrap",
+      "library"
+    ],
+    "created_at": "2026-05-12T09:02:12.353609+00:00",
+    "updated_at": "2026-05-12T09:02:12.353617+00:00",
+    "approved_at": null,
+    "approved_by": null,
+    "submitted_by": null,
+    "rationale": null
+  },
+  {
+    "rule_id": "freshness.library.expired",
+    "engine": "freshness",
+    "title": "Library entry expired",
+    "description": "Flags a library entry as stale when its `expiry_date` is in the past. Mirrors ddq.md \u00a7L04 review_due/expiry_date semantics.",
+    "priority": 10,
+    "status": "active",
+    "version": "1.0.0",
+    "when": {
+      "all": [
+        {
+          "field": "library_entry.expiry_date",
+          "op": "exists"
+        },
+        {
+          "field": "library_entry.expiry_date",
+          "op": "age_days_gt",
+          "value": 0
+        }
+      ]
+    },
+    "then": {
+      "stale": true,
+      "reason": "library entry expired on {library_entry.expiry_date}",
+      "tags": [
+        "library",
+        "expiry"
+      ]
+    },
+    "review_queue": "ops",
+    "tags": [
+      "bootstrap",
+      "library"
+    ],
+    "created_at": "2026-05-12T09:02:12.351880+00:00",
+    "updated_at": "2026-05-12T09:02:12.352199+00:00",
+    "approved_at": null,
+    "approved_by": null,
+    "submitted_by": null,
+    "rationale": null
+  },
+  {
+    "rule_id": "freshness.library.review_overdue",
+    "engine": "freshness",
+    "title": "Library entry overdue for review",
+    "description": "Flags a library entry when its `review_due` date has passed. Review cadence is governed by SME ownership policy.",
+    "priority": 20,
+    "status": "active",
+    "version": "1.0.0",
+    "when": {
+      "all": [
+        {
+          "field": "library_entry.review_due",
+          "op": "exists"
+        },
+        {
+          "field": "library_entry.review_due",
+          "op": "age_days_gt",
+          "value": 0
+        }
+      ]
+    },
+    "then": {
+      "stale": true,
+      "reason": "library entry overdue for review since {library_entry.review_due}",
+      "tags": [
+        "library",
+        "review"
+      ]
+    },
+    "review_queue": "ops",
+    "tags": [
+      "bootstrap",
+      "library"
+    ],
+    "created_at": "2026-05-12T09:02:12.352999+00:00",
+    "updated_at": "2026-05-12T09:02:12.353007+00:00",
+    "approved_at": null,
+    "approved_by": null,
+    "submitted_by": null,
+    "rationale": null
+  }
+]

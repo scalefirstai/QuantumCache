@@ -21,6 +21,9 @@ M1+ live backends without code changes.
                             runs/packets are read from.
   DDQ_RUNS_BUCKET           S3 bucket for sealed runs. Default
                             "bny-ddq-runs-sealed".
+  DDQ_KNOWLEDGE_RAW_BUCKET  S3 bucket for raw knowledge document bytes
+                            (the operator-upload target). Default
+                            "bny-ddq-knowledge-raw".
   DDQ_USE_MONGO             "1" to enrich /employees aggregates with live
                             Mongo state; "0" (default) keeps reports JSON.
   DDQ_MONGO_URI             Mongo connection string. Default
@@ -52,6 +55,7 @@ class Settings:
     cors_origins: tuple[str, ...]
     runs_backend: str           # "s3" | "fs"
     runs_bucket: str
+    knowledge_raw_bucket: str
     use_mongo: bool
     mongo_uri: str
 
@@ -74,6 +78,7 @@ def load_settings() -> Settings:
         ),
         runs_backend=os.environ.get("DDQ_RUNS_BACKEND", "s3").lower(),
         runs_bucket=os.environ.get("DDQ_RUNS_BUCKET", "bny-ddq-runs-sealed"),
+        knowledge_raw_bucket=os.environ.get("DDQ_KNOWLEDGE_RAW_BUCKET", "bny-ddq-knowledge-raw"),
         use_mongo=os.environ.get("DDQ_USE_MONGO", "1") == "1",
         mongo_uri=os.environ.get("DDQ_MONGO_URI", "mongodb://ddq:ddq-dev@localhost:27018"),
     )

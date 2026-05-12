@@ -1,0 +1,24 @@
+{
+  "canonical_id": "canon.reg.governance.afme_4_1",
+  "label": "Board oversight of risk",
+  "description": "Describe the board's oversight role for enterprise risk management.",
+  "parent_id": null,
+  "framework_mappings": [
+    {
+      "framework": "AFME",
+      "version": "2026",
+      "question_ref": "AFME-4.1"
+    }
+  ],
+  "tier": 1,
+  "do_not_answer": false,
+  "owners": [
+    "legal"
+  ],
+  "tags": [
+    "bootstrap"
+  ],
+  "created_at": "2026-05-12T07:55:08.513618+00:00",
+  "updated_at": "2026-05-12T07:55:08.513618+00:00",
+  "synonyms_embedding": null
+}

@@ -63,4 +63,25 @@ for bucket in "${BUCKETS[@]}"; do
   fi
 done
 
+# CORS on bny-ddq-knowledge-raw so the operator UI (Vite dev server) can
+# PUT files directly via presigned URLs. The API gateway also ensures this
+# at runtime; this keeps fresh containers self-sufficient.
+#
+# Wildcard origin is intentional for the dev bucket — LocalStack is local-
+# only and Vite drifts ports (5173 → 5174 → 5175 when prior runs hold the
+# port, and the dataset e2e suite uses 5175). Real S3 in M1 should pin the
+# origin to the production host.
+echo "[localstack-init] put-bucket-cors on bny-ddq-knowledge-raw"
+aws --endpoint-url="$ENDPOINT" s3api put-bucket-cors \
+  --bucket "bny-ddq-knowledge-raw" \
+  --cors-configuration '{
+    "CORSRules": [{
+      "AllowedHeaders": ["*"],
+      "AllowedMethods": ["PUT", "GET", "HEAD"],
+      "AllowedOrigins": ["*"],
+      "ExposeHeaders": ["ETag"],
+      "MaxAgeSeconds": 3600
+    }]
+  }'
+
 echo "[localstack-init] done."

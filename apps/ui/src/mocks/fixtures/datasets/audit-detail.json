@@ -1,0 +1,609 @@
+{
+  "run_20260512T075018_5a386714": {
+    "runId": "run_20260512T075018_5a386714",
+    "ddqId": "ddq_cccd1f0acbb7",
+    "sealedAt": "2026-05-12T07:50:25.187850+00:00",
+    "platformVersion": "v0.2.0-agents",
+    "taxonomyVersion": "tx_v0.1",
+    "libraryVersion": "lib_v0.1",
+    "input": {
+      "question_id": "PG-1",
+      "framework": "BESPOKE",
+      "text": "Is multi-factor authentication enforced for privileged user access?"
+    },
+    "verdict": "halt",
+    "route": "halt",
+    "merkleRoot": "sha256:25f7f509b0edd772b2fb02def55d506be666d5a17b54677ddab17583e7b4edb2",
+    "events": [
+      {
+        "eventId": "evt_4977359caaf745a4",
+        "kind": "intake.received",
+        "agent": "Orchestrator",
+        "ts": "2026-05-12T07:50:18.032901+00:00",
+        "payloadHash": "sha256:d12be678f22dfa97503c86ae7f607394f31a6abf1e8637766261b2e5a1020f7b",
+        "prevHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+        "chainHash": "sha256:f7ef9aa5cfa5e64f929e1271a1feadc46b62e5fbdd75eb86cdbcaa10b9b42d39"
+      },
+      {
+        "eventId": "evt_f95b5b57308443ff",
+        "kind": "agent.QuestionMapper.invoke",
+        "agent": "QuestionMapper",
+        "ts": "2026-05-12T07:50:18.994850+00:00",
+        "payloadHash": "sha256:fe6952fd1ca8bdf231c32b2e899be2b8f003457a7e9f5df78de4625f961f6b98",
+        "prevHash": "sha256:f7ef9aa5cfa5e64f929e1271a1feadc46b62e5fbdd75eb86cdbcaa10b9b42d39",
+        "chainHash": "sha256:5f62eeb5dd4eb1ddd82f6f9de73411f3b77b10404c53df8ba8f5f7732831c220"
+      },
+      {
+        "eventId": "evt_d195754eba3043be",
+        "kind": "agent.QuestionMapper.result",
+        "agent": "QuestionMapper",
+        "ts": "2026-05-12T07:50:20.302780+00:00",
+        "payloadHash": "sha256:55b71f722310a1742a4470d046446d5df4f051214dd1f0e239254c621e19f063",
+        "prevHash": "sha256:5f62eeb5dd4eb1ddd82f6f9de73411f3b77b10404c53df8ba8f5f7732831c220",
+        "chainHash": "sha256:e79a8f61bbc4186a55fe26ae87e3de423646bd362515ccc1143d1ca2d9ad6bb3"
+      },
+      {
+        "eventId": "evt_6e94e5008e1a4eb5",
+        "kind": "library.lookup",
+        "agent": "Orchestrator",
+        "ts": "2026-05-12T07:50:20.331804+00:00",
+        "payloadHash": "sha256:f4086a17c6b14a5e10a1725b1ee4c45590d356fd73c339630011b7b14b8fcd1a",
+        "prevHash": "sha256:e79a8f61bbc4186a55fe26ae87e3de423646bd362515ccc1143d1ca2d9ad6bb3",
+        "chainHash": "sha256:e4fdbd4048fe6d80976fb097e1cfb423da85e94cfb4d29878e76ccbdd1ddf187"
+      },
+      {
+        "eventId": "evt_93d69fb851b8439f",
+        "kind": "retrieve.hybrid",
+        "agent": "Orchestrator",
+        "ts": "2026-05-12T07:50:20.548536+00:00",
+        "payloadHash": "sha256:64c0b644d6221db62a35c51cc771d3d2f7e73174ecd1ef2e4f0935e6d2c73a30",
+        "prevHash": "sha256:e4fdbd4048fe6d80976fb097e1cfb423da85e94cfb4d29878e76ccbdd1ddf187",
+        "chainHash": "sha256:ac9eac645faafb33d77e1aea5a2a462599d02d856952e05d5b09a31c69d6196d"
+      },
+      {
+        "eventId": "evt_2a506217999e4064",
+        "kind": "agent.EvidenceSourcer.invoke",
+        "agent": "EvidenceSourcer",
+        "ts": "2026-05-12T07:50:20.549774+00:00",
+        "payloadHash": "sha256:7769f2906d5c91a48bc067a6d676bab7765794bd2033cce67f1c1a01bd3f7d0e",
+        "prevHash": "sha256:ac9eac645faafb33d77e1aea5a2a462599d02d856952e05d5b09a31c69d6196d",
+        "chainHash": "sha256:788169baeb8dec375caeca6d1222f60b6706b7c25a15e2fe6f291a87c093a74d"
+      },
+      {
+        "eventId": "evt_f09d81d4a9d443a9",
+        "kind": "agent.EvidenceSourcer.result",
+        "agent": "EvidenceSourcer",
+        "ts": "2026-05-12T07:50:23.650732+00:00",
+        "payloadHash": "sha256:50d84dd7e7d27d8c422c9c36d5030070da39f916ad1001d942dd3a9beb20e308",
+        "prevHash": "sha256:788169baeb8dec375caeca6d1222f60b6706b7c25a15e2fe6f291a87c093a74d",
+        "chainHash": "sha256:cf46933975c0328c7e8b5c94eb240be3ae3e31ae96db0ee7885cb1eb468940bc"
+      },
+      {
+        "eventId": "evt_23c092250b814c14",
+        "kind": "agent.DraftComposer.skip",
+        "agent": "DraftComposer",
+        "ts": "2026-05-12T07:50:23.650837+00:00",
+        "payloadHash": "sha256:790b4d70ad013228dcd2b8ea02a70fe3c8e5fefb57a467e4793ece2a819bfcaf",
+        "prevHash": "sha256:cf46933975c0328c7e8b5c94eb240be3ae3e31ae96db0ee7885cb1eb468940bc",
+        "chainHash": "sha256:2137e0c7d1b0363a5f02802fa505cd95e3f4bb7c65e43e549f03138c056c0c4d"
+      },
+      {
+        "eventId": "evt_26cd81a3289c4d5e",
+        "kind": "agent.CitationVerifier.result",
+        "agent": "CitationVerifier",
+        "ts": "2026-05-12T07:50:23.650923+00:00",
+        "payloadHash": "sha256:53ce38701aa0ebe6aa882c54f597bd83ac717f84558f254b5ff27c02b1a48076",
+        "prevHash": "sha256:2137e0c7d1b0363a5f02802fa505cd95e3f4bb7c65e43e549f03138c056c0c4d",
+        "chainHash": "sha256:f87f75e55c0280cfaec3056546ac2aaabccb2330608c4dc07afdfcdf30ce5d10"
+      },
+      {
+        "eventId": "evt_bfae419e48a74d36",
+        "kind": "agent.ConsistencyChecker.result",
+        "agent": "ConsistencyChecker",
+        "ts": "2026-05-12T07:50:23.651000+00:00",
+        "payloadHash": "sha256:c33a38b14f883aae0c6ea091d814147cd31b04d3d3b30af114f61d41119c9353",
+        "prevHash": "sha256:f87f75e55c0280cfaec3056546ac2aaabccb2330608c4dc07afdfcdf30ce5d10",
+        "chainHash": "sha256:f5fb33046b900f7d5b348a9eee3e4900670cca1a93489f9c54bd6d66e63eba09"
+      },
+      {
+        "eventId": "evt_a72ae646a33b47f4",
+        "kind": "agent.PiiScrubber.invoke",
+        "agent": "PiiScrubber",
+        "ts": "2026-05-12T07:50:23.652091+00:00",
+        "payloadHash": "sha256:a07a630f1010422a4bfb5c41c94c722ed0a5831854d535076ebe48db6515a0cf",
+        "prevHash": "sha256:f5fb33046b900f7d5b348a9eee3e4900670cca1a93489f9c54bd6d66e63eba09",
+        "chainHash": "sha256:4e24107bac6e2b7ebfd02fdd9e020369643b41ab87a738016a4a0856cd371668"
+      },
+      {
+        "eventId": "evt_4d874f40ca154b70",
+        "kind": "agent.PiiScrubber.result",
+        "agent": "PiiScrubber",
+        "ts": "2026-05-12T07:50:25.187302+00:00",
+        "payloadHash": "sha256:ef98f6555c92c32e4151157b30c6aabf001bbbc07d9d4144f32334b8873b93b0",
+        "prevHash": "sha256:4e24107bac6e2b7ebfd02fdd9e020369643b41ab87a738016a4a0856cd371668",
+        "chainHash": "sha256:c30e5ad28059db654683d899695068f405c04bb2a5eaf6de5e98a3a9bf36ded6"
+      },
+      {
+        "eventId": "evt_fe91f94324814cfa",
+        "kind": "agent.FreshnessAuditor.result",
+        "agent": "FreshnessAuditor",
+        "ts": "2026-05-12T07:50:25.187414+00:00",
+        "payloadHash": "sha256:03ede913df39f9b77ee068cb4e56d11be416ca01c9dc8afa1f96e3259f2fada1",
+        "prevHash": "sha256:c30e5ad28059db654683d899695068f405c04bb2a5eaf6de5e98a3a9bf36ded6",
+        "chainHash": "sha256:dcdf6f4fc3600f8c15e1ece198b78481119d24bec27cdf00c7100a47aaae8784"
+      },
+      {
+        "eventId": "evt_e3d270729b8f4254",
+        "kind": "validate.aggregate",
+        "agent": "Orchestrator",
+        "ts": "2026-05-12T07:50:25.187468+00:00",
+        "payloadHash": "sha256:d992d6d908b243f603ffbbf301cec5cc1e19617f185fb515faa2ea73e2c47441",
+        "prevHash": "sha256:dcdf6f4fc3600f8c15e1ece198b78481119d24bec27cdf00c7100a47aaae8784",
+        "chainHash": "sha256:8e15eaadeeba2a2122e7cdbe0d22634bb0d941cb02346c5caa2b9c23f757b7e3"
+      },
+      {
+        "eventId": "evt_ecd7755f17a447ab",
+        "kind": "agent.ApprovalRouter.result",
+        "agent": "ApprovalRouter",
+        "ts": "2026-05-12T07:50:25.187630+00:00",
+        "payloadHash": "sha256:0c811145ba9190dc2fe1d569a6cf56e6285bad8769455ed03612e8257807dbe6",
+        "prevHash": "sha256:8e15eaadeeba2a2122e7cdbe0d22634bb0d941cb02346c5caa2b9c23f757b7e3",
+        "chainHash": "sha256:d07b0ec1a159729bd704e15cdc846aced8efef1e19fcff3f9d542c8fd4e3ce04"
+      }
+    ],
+    "agents": {
+      "QuestionMapper": {
+        "canonical_id": "canon.is.iam.iam_14_q1",
+        "confidence": 0.92,
+        "routed_to_sme": false
+      },
+      "EvidenceSourcer": {
+        "selected": 0,
+        "sufficient": false
+      },
+      "DraftComposer": {
+        "tier": "tier1_opus",
+        "draft_chars": 0,
+        "used_library_entry": false,
+        "citation_count": 0
+      },
+      "CitationVerifier": {
+        "all_pass": false,
+        "checked": 0
+      },
+      "ConsistencyChecker": {
+        "consistent": true,
+        "drift": false
+      },
+      "PiiScrubber": {
+        "findings": 0,
+        "halt": false
+      },
+      "FreshnessAuditor": {
+        "stale": false,
+        "reasons": []
+      },
+      "ApprovalRouter": {
+        "route": "halt",
+        "queue": "legal",
+        "tier": "tier1"
+      }
+    },
+    "redactionCount": 0
+  },
+  "run_20260512T074133_7bed389c": {
+    "runId": "run_20260512T074133_7bed389c",
+    "ddqId": "ddq_8db64d9cb6c5",
+    "sealedAt": "2026-05-12T07:41:52.568872+00:00",
+    "platformVersion": "v0.2.0-agents",
+    "taxonomyVersion": "tx_v0.1",
+    "libraryVersion": "lib_v0.1",
+    "input": {
+      "question_id": "Q1",
+      "framework": "CAIQ",
+      "text": "Are audit and assurance policies, procedures, and standards established, documented, approved, communicated, applied, evaluated, and maintained?"
+    },
+    "verdict": "halt",
+    "route": "halt",
+    "merkleRoot": "sha256:7efed42251bbda22e89b0dacfc159b4a2b5bd45f03124bf8aa5c5d1da35a7f5e",
+    "events": [
+      {
+        "eventId": "evt_8c886ed9d94449cf",
+        "kind": "intake.received",
+        "agent": "Orchestrator",
+        "ts": "2026-05-12T07:41:33.725523+00:00",
+        "payloadHash": "sha256:2686616eeb7d9d1f93f58400ab76ab1335d71a4246cfa260ac016428931c772b",
+        "prevHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+        "chainHash": "sha256:fd7b314a1f919f31cceafad0664953b3fdb50c73814d2de54f26ec8dc735fd9e"
+      },
+      {
+        "eventId": "evt_7c0b469ed2ac4550",
+        "kind": "agent.QuestionMapper.invoke",
+        "agent": "QuestionMapper",
+        "ts": "2026-05-12T07:41:34.657350+00:00",
+        "payloadHash": "sha256:4f7b8b10ea0131ccb8dd5ee8a1fcc96b18f12d516a7a33e55052e9c0e4f6a527",
+        "prevHash": "sha256:fd7b314a1f919f31cceafad0664953b3fdb50c73814d2de54f26ec8dc735fd9e",
+        "chainHash": "sha256:6df4eb060d7f323d1ef92aca80d4ebcd8d8dfa786592d2b5d33efa3db06744d7"
+      },
+      {
+        "eventId": "evt_be34b00d636e42a0",
+        "kind": "agent.QuestionMapper.result",
+        "agent": "QuestionMapper",
+        "ts": "2026-05-12T07:41:35.911466+00:00",
+        "payloadHash": "sha256:7f430b758698715d196316b96a02526e033e9cec0a60aad24501c6e3ddbec156",
+        "prevHash": "sha256:6df4eb060d7f323d1ef92aca80d4ebcd8d8dfa786592d2b5d33efa3db06744d7",
+        "chainHash": "sha256:a529860bf41dcc44ae2dc9512328c4afda1407bfd77e1d12cb45bfab5410d7c7"
+      },
+      {
+        "eventId": "evt_b17a1c8829664311",
+        "kind": "library.lookup",
+        "agent": "Orchestrator",
+        "ts": "2026-05-12T07:41:35.933401+00:00",
+        "payloadHash": "sha256:4bafd8f98a77aad2c672953333ebd4496843262cc6930b3aae54c4a559857ab1",
+        "prevHash": "sha256:a529860bf41dcc44ae2dc9512328c4afda1407bfd77e1d12cb45bfab5410d7c7",
+        "chainHash": "sha256:e9aeef22a36ee7d46fea6912d3d7579723dffc7fd660fffc9b8846ea8cbf93fe"
+      },
+      {
+        "eventId": "evt_46e18fb2ffaf44ad",
+        "kind": "retrieve.hybrid",
+        "agent": "Orchestrator",
+        "ts": "2026-05-12T07:41:36.115689+00:00",
+        "payloadHash": "sha256:679d57a59eaada5c7529232b44dd70688bab9a5439dd1393fe508dc60783375f",
+        "prevHash": "sha256:e9aeef22a36ee7d46fea6912d3d7579723dffc7fd660fffc9b8846ea8cbf93fe",
+        "chainHash": "sha256:368571cec8e6ed53978a056aa63b1408105896e5919e6578d8250cb53aec1fbb"
+      },
+      {
+        "eventId": "evt_bc62fdb047ae4f71",
+        "kind": "agent.EvidenceSourcer.invoke",
+        "agent": "EvidenceSourcer",
+        "ts": "2026-05-12T07:41:36.116480+00:00",
+        "payloadHash": "sha256:75763f552edf86e859d55f0ab684ca475e26bf19372086b9e062f961486e4339",
+        "prevHash": "sha256:368571cec8e6ed53978a056aa63b1408105896e5919e6578d8250cb53aec1fbb",
+        "chainHash": "sha256:8381f6810bd2adeffd21532fc14933b80a8259b479fdfdee37913d02fdc327f8"
+      },
+      {
+        "eventId": "evt_ca7b042a036e41e2",
+        "kind": "agent.EvidenceSourcer.result",
+        "agent": "EvidenceSourcer",
+        "ts": "2026-05-12T07:41:42.431934+00:00",
+        "payloadHash": "sha256:b1ee4392c86af9b68af0456bf9d6538e74082a9375d683d57fcf2e9c850b182a",
+        "prevHash": "sha256:8381f6810bd2adeffd21532fc14933b80a8259b479fdfdee37913d02fdc327f8",
+        "chainHash": "sha256:ace046409f734c92a54f82cf176cb63ea4c8be7e5cdc31fa75e319aa330dc393"
+      },
+      {
+        "eventId": "evt_c8f0147eb8cb42d9",
+        "kind": "agent.DraftComposer.invoke",
+        "agent": "DraftComposer",
+        "ts": "2026-05-12T07:41:42.432697+00:00",
+        "payloadHash": "sha256:92edd347655d7b4aecc1e69357d0037b1afce787430d782a5bbf62863c53f903",
+        "prevHash": "sha256:ace046409f734c92a54f82cf176cb63ea4c8be7e5cdc31fa75e319aa330dc393",
+        "chainHash": "sha256:8da925898d566f0668c53857d8290a5de1876164227cc76342dc76d541d5907e"
+      },
+      {
+        "eventId": "evt_ef6b7ff4d33744ec",
+        "kind": "agent.DraftComposer.result",
+        "agent": "DraftComposer",
+        "ts": "2026-05-12T07:41:50.725607+00:00",
+        "payloadHash": "sha256:dac7495aa72afdeca46e059e3c37c1908a22346f381a28d0f80f67c0c5ea9dfe",
+        "prevHash": "sha256:8da925898d566f0668c53857d8290a5de1876164227cc76342dc76d541d5907e",
+        "chainHash": "sha256:8947cb48f3caa05bc7da62cd2ebbeaafb386c64d3328d3273602b1067653bd9c"
+      },
+      {
+        "eventId": "evt_7243a618e6054ba5",
+        "kind": "agent.CitationVerifier.result",
+        "agent": "CitationVerifier",
+        "ts": "2026-05-12T07:41:50.725683+00:00",
+        "payloadHash": "sha256:53ce38701aa0ebe6aa882c54f597bd83ac717f84558f254b5ff27c02b1a48076",
+        "prevHash": "sha256:8947cb48f3caa05bc7da62cd2ebbeaafb386c64d3328d3273602b1067653bd9c",
+        "chainHash": "sha256:cd8e2219931adf972589280d8eb16a7e6ebf4d96562cb0e4ee69c6037bd02f78"
+      },
+      {
+        "eventId": "evt_35b21c4296324c0c",
+        "kind": "agent.ConsistencyChecker.result",
+        "agent": "ConsistencyChecker",
+        "ts": "2026-05-12T07:41:50.725746+00:00",
+        "payloadHash": "sha256:c33a38b14f883aae0c6ea091d814147cd31b04d3d3b30af114f61d41119c9353",
+        "prevHash": "sha256:cd8e2219931adf972589280d8eb16a7e6ebf4d96562cb0e4ee69c6037bd02f78",
+        "chainHash": "sha256:b42b5e24a0a0713df559c6a45ff5c016cfe0610226b5bb6bc5813fa9b4cb2908"
+      },
+      {
+        "eventId": "evt_914d183d19bc434e",
+        "kind": "agent.PiiScrubber.invoke",
+        "agent": "PiiScrubber",
+        "ts": "2026-05-12T07:41:50.726796+00:00",
+        "payloadHash": "sha256:7eb852c5c9c8a679de0de9e2b319300a782fc5c99ce25fbce18947e91acf565d",
+        "prevHash": "sha256:b42b5e24a0a0713df559c6a45ff5c016cfe0610226b5bb6bc5813fa9b4cb2908",
+        "chainHash": "sha256:292b0f8bdfbd046836d863f1623ddf1fda790a71fb652525b2d8fca680c49954"
+      },
+      {
+        "eventId": "evt_da0ce8ed88e1488b",
+        "kind": "agent.PiiScrubber.result",
+        "agent": "PiiScrubber",
+        "ts": "2026-05-12T07:41:52.568373+00:00",
+        "payloadHash": "sha256:d352b856edba81c9aa7add67146e1c3fa361ce99a4d562f058a9659e9b10941b",
+        "prevHash": "sha256:292b0f8bdfbd046836d863f1623ddf1fda790a71fb652525b2d8fca680c49954",
+        "chainHash": "sha256:9de608d04c03e604bd5ec9c88a1265279c4cf8459c78a19da89f23cbaffe309c"
+      },
+      {
+        "eventId": "evt_1a42e584ad264290",
+        "kind": "agent.FreshnessAuditor.result",
+        "agent": "FreshnessAuditor",
+        "ts": "2026-05-12T07:41:52.568591+00:00",
+        "payloadHash": "sha256:a23633468b9daab1b39b8696953881f756b0871779d8edd882b5fc7f6b7f4214",
+        "prevHash": "sha256:9de608d04c03e604bd5ec9c88a1265279c4cf8459c78a19da89f23cbaffe309c",
+        "chainHash": "sha256:d48525b45a685cc7455ac9d35a8770fd0da6ca9a55635e4cd840422207454cc3"
+      },
+      {
+        "eventId": "evt_b211f749a7ae4774",
+        "kind": "validate.aggregate",
+        "agent": "Orchestrator",
+        "ts": "2026-05-12T07:41:52.568645+00:00",
+        "payloadHash": "sha256:cefb50757360c545e14c17ae6327724ba27103f7989f0a33c18b3b8724ff201d",
+        "prevHash": "sha256:d48525b45a685cc7455ac9d35a8770fd0da6ca9a55635e4cd840422207454cc3",
+        "chainHash": "sha256:419eeeeb77f84833a721b4f9966e4f58ca232034cb61787e91cc11a8d27db4f9"
+      },
+      {
+        "eventId": "evt_73d034117d6f46cf",
+        "kind": "agent.ApprovalRouter.result",
+        "agent": "ApprovalRouter",
+        "ts": "2026-05-12T07:41:52.568734+00:00",
+        "payloadHash": "sha256:08687c70b5a80036f60782fe968e2bbad4fee8c05d0bc33805054f5555b1f13a",
+        "prevHash": "sha256:419eeeeb77f84833a721b4f9966e4f58ca232034cb61787e91cc11a8d27db4f9",
+        "chainHash": "sha256:6631d39d50dc488f17bfb2172fffbe3771ab5d7226ed4752265eb982f0a18572"
+      }
+    ],
+    "agents": {
+      "QuestionMapper": {
+        "canonical_id": "canon.is.audit.a_a_01_q1",
+        "confidence": 0.98,
+        "routed_to_sme": false
+      },
+      "EvidenceSourcer": {
+        "selected": 3,
+        "sufficient": false
+      },
+      "DraftComposer": {
+        "tier": "tier1_opus",
+        "draft_chars": 1544,
+        "used_library_entry": true,
+        "citation_count": 0
+      },
+      "CitationVerifier": {
+        "all_pass": false,
+        "checked": 0
+      },
+      "ConsistencyChecker": {
+        "consistent": true,
+        "drift": false
+      },
+      "PiiScrubber": {
+        "findings": 0,
+        "halt": false
+      },
+      "FreshnessAuditor": {
+        "stale": true,
+        "reasons": [
+          "library entry is bootstrap-tagged \u2014 needs SME re-approval before client packet"
+        ]
+      },
+      "ApprovalRouter": {
+        "route": "halt",
+        "queue": "legal",
+        "tier": "tier1"
+      }
+    },
+    "redactionCount": 0
+  },
+  "run_20260512T074005_876c175f": {
+    "runId": "run_20260512T074005_876c175f",
+    "ddqId": "ddq_8db64d9cb6c5",
+    "sealedAt": "2026-05-12T07:40:30.242061+00:00",
+    "platformVersion": "v0.2.0-agents",
+    "taxonomyVersion": "tx_v0.1",
+    "libraryVersion": "lib_v0.1",
+    "input": {
+      "question_id": "Q1",
+      "framework": "CAIQ",
+      "text": "Are audit and assurance policies, procedures, and standards established, documented, approved, communicated, applied, evaluated, and maintained?"
+    },
+    "verdict": "halt",
+    "route": "halt",
+    "merkleRoot": "sha256:6ebe64c38327cb83ecefe2003ff7c3da7b704859bd2c717fd2366a313cf7fb9b",
+    "events": [
+      {
+        "eventId": "evt_074386fe06c64438",
+        "kind": "intake.received",
+        "agent": "Orchestrator",
+        "ts": "2026-05-12T07:40:05.710548+00:00",
+        "payloadHash": "sha256:2686616eeb7d9d1f93f58400ab76ab1335d71a4246cfa260ac016428931c772b",
+        "prevHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+        "chainHash": "sha256:743f307de10ae3961342fb45b7803d3ff1a9a5dbd8db3908672d45e762916234"
+      },
+      {
+        "eventId": "evt_59c00a735be44325",
+        "kind": "agent.QuestionMapper.invoke",
+        "agent": "QuestionMapper",
+        "ts": "2026-05-12T07:40:06.536064+00:00",
+        "payloadHash": "sha256:4f7b8b10ea0131ccb8dd5ee8a1fcc96b18f12d516a7a33e55052e9c0e4f6a527",
+        "prevHash": "sha256:743f307de10ae3961342fb45b7803d3ff1a9a5dbd8db3908672d45e762916234",
+        "chainHash": "sha256:385c2eae6873bae0f109838c5da4ecdd833c357647324562144d987b767d8063"
+      },
+      {
+        "eventId": "evt_8abf4e2ddd0b4e18",
+        "kind": "agent.QuestionMapper.result",
+        "agent": "QuestionMapper",
+        "ts": "2026-05-12T07:40:08.545393+00:00",
+        "payloadHash": "sha256:a713fd3580e8d48957ad64e7d869b8ff839b49554c802cda2f26b75f878469f5",
+        "prevHash": "sha256:385c2eae6873bae0f109838c5da4ecdd833c357647324562144d987b767d8063",
+        "chainHash": "sha256:fec1bc8933da39d215f874d2914ad93928a6d556d30d4397b4d9bcfbef641ac2"
+      },
+      {
+        "eventId": "evt_5cd0df8666064951",
+        "kind": "library.lookup",
+        "agent": "Orchestrator",
+        "ts": "2026-05-12T07:40:08.569028+00:00",
+        "payloadHash": "sha256:4bafd8f98a77aad2c672953333ebd4496843262cc6930b3aae54c4a559857ab1",
+        "prevHash": "sha256:fec1bc8933da39d215f874d2914ad93928a6d556d30d4397b4d9bcfbef641ac2",
+        "chainHash": "sha256:f6d37de80beeb034eb1e14de94286440d578af3ac3d57ceb802e4ec4f2ee31eb"
+      },
+      {
+        "eventId": "evt_d59f9c02a1f846d6",
+        "kind": "retrieve.hybrid",
+        "agent": "Orchestrator",
+        "ts": "2026-05-12T07:40:08.778985+00:00",
+        "payloadHash": "sha256:679d57a59eaada5c7529232b44dd70688bab9a5439dd1393fe508dc60783375f",
+        "prevHash": "sha256:f6d37de80beeb034eb1e14de94286440d578af3ac3d57ceb802e4ec4f2ee31eb",
+        "chainHash": "sha256:ef92d600390416f456a41737d99fab69a8b2f1be3df9f564020eebff1af85371"
+      },
+      {
+        "eventId": "evt_b86cfdf2960648db",
+        "kind": "agent.EvidenceSourcer.invoke",
+        "agent": "EvidenceSourcer",
+        "ts": "2026-05-12T07:40:08.779709+00:00",
+        "payloadHash": "sha256:75763f552edf86e859d55f0ab684ca475e26bf19372086b9e062f961486e4339",
+        "prevHash": "sha256:ef92d600390416f456a41737d99fab69a8b2f1be3df9f564020eebff1af85371",
+        "chainHash": "sha256:3fdf7b7e87b3bc92bb3955f8fd6c51676effece82a84269d038d58f6ad3f532f"
+      },
+      {
+        "eventId": "evt_86fecdda14924e1e",
+        "kind": "agent.EvidenceSourcer.result",
+        "agent": "EvidenceSourcer",
+        "ts": "2026-05-12T07:40:17.133008+00:00",
+        "payloadHash": "sha256:1d66470e3f417ac53592ef080fbafb7b835475114f45823f1633aadbe68e0ae1",
+        "prevHash": "sha256:3fdf7b7e87b3bc92bb3955f8fd6c51676effece82a84269d038d58f6ad3f532f",
+        "chainHash": "sha256:a03838f0cbc8b00ab27d426f7b4dc7ab6c620fe1445bd339542089679c0542e1"
+      },
+      {
+        "eventId": "evt_e6577a7f967a48d8",
+        "kind": "agent.DraftComposer.invoke",
+        "agent": "DraftComposer",
+        "ts": "2026-05-12T07:40:17.134240+00:00",
+        "payloadHash": "sha256:d1371271b72c6b005ee53c24b3fe7ef019c87a5a3a74bb1789abcc07bf920112",
+        "prevHash": "sha256:a03838f0cbc8b00ab27d426f7b4dc7ab6c620fe1445bd339542089679c0542e1",
+        "chainHash": "sha256:fde40aeb5a025b3d096fabb862a7d600e34050d7427570d6a667d979cde805d4"
+      },
+      {
+        "eventId": "evt_c4f89007e1254af0",
+        "kind": "agent.DraftComposer.result",
+        "agent": "DraftComposer",
+        "ts": "2026-05-12T07:40:24.504433+00:00",
+        "payloadHash": "sha256:31b70f6c5598d7404101fe1d102ca5190e9fc531ffd15e60f8a2571610e6bcc6",
+        "prevHash": "sha256:fde40aeb5a025b3d096fabb862a7d600e34050d7427570d6a667d979cde805d4",
+        "chainHash": "sha256:ff50f69690a48e9b2b4dadf57f2d5cac23311148c6711f31bbcf81881b80e893"
+      },
+      {
+        "eventId": "evt_4bf777ff59ed45ab",
+        "kind": "agent.CitationVerifier.invoke",
+        "agent": "CitationVerifier",
+        "ts": "2026-05-12T07:40:24.535817+00:00",
+        "payloadHash": "sha256:1a51cba298a302c834e3066de5a782925cc96eba37bf7aecc94ea80d77525803",
+        "prevHash": "sha256:ff50f69690a48e9b2b4dadf57f2d5cac23311148c6711f31bbcf81881b80e893",
+        "chainHash": "sha256:0e9d1e3b013215738accfb0b96defcec9a90cc48441141c3c8ef11d69e63518e"
+      },
+      {
+        "eventId": "evt_fd20a43b52e24383",
+        "kind": "agent.CitationVerifier.result",
+        "agent": "CitationVerifier",
+        "ts": "2026-05-12T07:40:28.600591+00:00",
+        "payloadHash": "sha256:8ac1349df894270a5d37b45a132e47a59a730a5c80496b5302caa39181dd0ff1",
+        "prevHash": "sha256:0e9d1e3b013215738accfb0b96defcec9a90cc48441141c3c8ef11d69e63518e",
+        "chainHash": "sha256:85aab74039ceb628b18d1280804eca94829462aedb43056dee7e986dc059b218"
+      },
+      {
+        "eventId": "evt_c7f8ff8a048f4dfa",
+        "kind": "agent.ConsistencyChecker.result",
+        "agent": "ConsistencyChecker",
+        "ts": "2026-05-12T07:40:28.600682+00:00",
+        "payloadHash": "sha256:c33a38b14f883aae0c6ea091d814147cd31b04d3d3b30af114f61d41119c9353",
+        "prevHash": "sha256:85aab74039ceb628b18d1280804eca94829462aedb43056dee7e986dc059b218",
+        "chainHash": "sha256:1e7828f56fa3a4b015007b08b06abdc0c2fe286c4d1585f980a678b8a8ed74d1"
+      },
+      {
+        "eventId": "evt_b8f84357b4964d7a",
+        "kind": "agent.PiiScrubber.invoke",
+        "agent": "PiiScrubber",
+        "ts": "2026-05-12T07:40:28.601874+00:00",
+        "payloadHash": "sha256:61227c886428c71bd546c4f0149e18e17f20fd970e62e8ac08ccc2e21d19f63a",
+        "prevHash": "sha256:1e7828f56fa3a4b015007b08b06abdc0c2fe286c4d1585f980a678b8a8ed74d1",
+        "chainHash": "sha256:0806adb9c5f77d54642842cf57c02fc76840e630431e28b829b98fac519c07ba"
+      },
+      {
+        "eventId": "evt_79f008ec5a72488e",
+        "kind": "agent.PiiScrubber.result",
+        "agent": "PiiScrubber",
+        "ts": "2026-05-12T07:40:30.241399+00:00",
+        "payloadHash": "sha256:31a48b601153cdfdf846592d126bfc34e28d1423bc98951a4c531f59fc5f1857",
+        "prevHash": "sha256:0806adb9c5f77d54642842cf57c02fc76840e630431e28b829b98fac519c07ba",
+        "chainHash": "sha256:f2f07b4477ab28e5058759544bc31e693a68d80b242d47db3e918a3173c6b939"
+      },
+      {
+        "eventId": "evt_c133f0e2e290446d",
+        "kind": "agent.FreshnessAuditor.result",
+        "agent": "FreshnessAuditor",
+        "ts": "2026-05-12T07:40:30.241712+00:00",
+        "payloadHash": "sha256:a23633468b9daab1b39b8696953881f756b0871779d8edd882b5fc7f6b7f4214",
+        "prevHash": "sha256:f2f07b4477ab28e5058759544bc31e693a68d80b242d47db3e918a3173c6b939",
+        "chainHash": "sha256:79d5b59abf15661c602a6e72d7a8f9bb4a46f3ccfa6b5bc6bee6457e89c1d1d0"
+      },
+      {
+        "eventId": "evt_e1850949e3b34e26",
+        "kind": "validate.aggregate",
+        "agent": "Orchestrator",
+        "ts": "2026-05-12T07:40:30.241776+00:00",
+        "payloadHash": "sha256:bca4feeb14f6a6003f41bf227dfc35eac02dfa56f2cf50afbe68ddeaeb2487c1",
+        "prevHash": "sha256:79d5b59abf15661c602a6e72d7a8f9bb4a46f3ccfa6b5bc6bee6457e89c1d1d0",
+        "chainHash": "sha256:0429c213f113e5dabda613d466744567c2c40ebd296d414dd8da4e6b657055d5"
+      },
+      {
+        "eventId": "evt_6f71667457af4f71",
+        "kind": "agent.ApprovalRouter.result",
+        "agent": "ApprovalRouter",
+        "ts": "2026-05-12T07:40:30.241888+00:00",
+        "payloadHash": "sha256:08687c70b5a80036f60782fe968e2bbad4fee8c05d0bc33805054f5555b1f13a",
+        "prevHash": "sha256:0429c213f113e5dabda613d466744567c2c40ebd296d414dd8da4e6b657055d5",
+        "chainHash": "sha256:4224fa69bb73836cc79215fd504e2b857237b64f88d9dfc3f7462208ac141fe3"
+      }
+    ],
+    "agents": {
+      "QuestionMapper": {
+        "canonical_id": "canon.is.audit.a_a_01_q1",
+        "confidence": 0.98,
+        "routed_to_sme": false
+      },
+      "EvidenceSourcer": {
+        "selected": 3,
+        "sufficient": false
+      },
+      "DraftComposer": {
+        "tier": "tier1_opus",
+        "draft_chars": 1870,
+        "used_library_entry": true,
+        "citation_count": 3
+      },
+      "CitationVerifier": {
+        "all_pass": false,
+        "checked": 3
+      },
+      "ConsistencyChecker": {
+        "consistent": true,
+        "drift": false
+      },
+      "PiiScrubber": {
+        "findings": 0,
+        "halt": false
+      },
+      "FreshnessAuditor": {
+        "stale": true,
+        "reasons": [
+          "library entry is bootstrap-tagged \u2014 needs SME re-approval before client packet"
+        ]
+      },
+      "ApprovalRouter": {
+        "route": "halt",
+        "queue": "legal",
+        "tier": "tier1"
+      }
+    },
+    "redactionCount": 0
+  }
+}

@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BNY DDQ · Unified Workflow</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+<style>
+  .material-icons, .material-icons-outlined {
+    font-size: 18px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+  :root {
+    --navy: #04243C;
+    --navy-2: #0A3553;
+    --teal: #2B9CAE;
+    --teal-2: #7FCAD5;
+    --teal-bg: #E8F4F6;
+    --amber: #BA7517;
+    --amber-bg: #FBF0DC;
+    --red: #A32D2D;
+    --red-bg: #F8E3E3;
+    --green: #2F7D4F;
+    --green-bg: #E3F1E9;
+    --page: #F4F8FA;
+    --card: #FFFFFF;
+    --border: #D9E2E8;
+    --border-2: #E8EDF1;
+    --text: #1A2733;
+    --text-2: #56697A;
+    --text-3: #8A98A6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Helvetica Neue", "Segoe UI", system-ui, sans-serif;
+    background: var(--page);
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+
+  /* Layout */
+  .app { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
+
+  /* Left rail */
+  aside {
+    background: var(--navy);
+    color: #C8D6E0;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+  }
+  .brand { padding: 4px 20px 24px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 16px; }
+  .brand-mark { width: 32px; height: 32px; background: var(--teal); border-radius: 6px; color: #fff; font-weight: 600; display: grid; place-items: center; font-size: 12px; }
+  .brand-name { font-size: 11px; color: #8FA4B5; text-transform: uppercase; letter-spacing: 0.08em; }
+  .brand-product { color: #fff; font-weight: 600; font-size: 14px; margin-top: 1px; }
+
+  nav .section-label { padding: 14px 20px 6px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: #6E839A; }
+  nav a {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 20px; color: #C8D6E0; text-decoration: none;
+    font-size: 13px;
+    border-left: 2px solid transparent;
+  }
+  nav a:hover { background: rgba(255,255,255,0.04); color: #fff; }
+  nav a.active { background: rgba(43,156,174,0.12); color: #fff; border-left-color: var(--teal); }
+  nav a .badge { margin-left: auto; background: var(--amber); color: #fff; font-size: 10px; padding: 1px 6px; border-radius: 8px; font-weight: 600; }
+  nav a .badge.red { background: var(--red); }
+  nav a .icon { width: 18px; text-align: center; opacity: 0.7; font-size: 18px; }
+
+  .user-strip { position: absolute; bottom: 0; left: 0; right: 0; padding: 14px 20px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; gap: 10px; }
+  .user-avatar { width: 28px; height: 28px; background: var(--teal); border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 11px; font-weight: 600; }
+  .user-meta { font-size: 12px; }
+  .user-name { color: #fff; }
+  .user-role { color: #8FA4B5; font-size: 11px; }
+
+  /* Main content */
+  main { padding: 0; }
+  .topbar {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 14px 32px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .breadcrumbs { font-size: 12px; color: var(--text-2); display: flex; align-items: center; gap: 6px; }
+  .breadcrumbs a { color: var(--text-2); text-decoration: none; }
+  .breadcrumbs a:hover { color: var(--teal); }
+  .breadcrumbs .sep { color: var(--text-3); }
+  .breadcrumbs .current { color: var(--text); font-weight: 500; }
+  .topbar-spacer { flex: 1; }
+  .lens-toggle { display: flex; background: var(--page); border-radius: 6px; padding: 2px; font-size: 12px; }
+  .lens-toggle button { background: none; border: none; padding: 5px 12px; border-radius: 4px; color: var(--text-2); cursor: pointer; font-family: inherit; font-size: 12px; }
+  .lens-toggle button.active { background: #fff; color: var(--navy); font-weight: 500; box-shadow: 0 1px 2px rgba(0,0,0,0.06); }
+
+  .page { padding: 28px 32px 60px; max-width: 1400px; }
+  .page-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 24px; }
+  .page-title { font-size: 22px; font-weight: 600; color: var(--navy); margin: 0; letter-spacing: -0.01em; }
+  .page-sub { font-size: 13px; color: var(--text-2); margin-top: 4px; }
+
+  /* Cards */
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; }
+  .card-header { padding: 16px 20px; border-bottom: 1px solid var(--border-2); display: flex; align-items: center; justify-content: space-between; }
+  .card-title { font-size: 14px; font-weight: 600; color: var(--navy); margin: 0; }
+  .card-sub { font-size: 12px; color: var(--text-2); }
+  .card-body { padding: 20px; }
+  .card-body.flush { padding: 0; }
+
+  /* KPI strip */
+  .kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 24px; }
+  .kpi { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; }
+  .kpi-label { font-size: 11px; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.05em; }
+  .kpi-value { font-size: 22px; font-weight: 600; color: var(--navy); margin-top: 4px; letter-spacing: -0.01em; }
+  .kpi-delta { font-size: 11px; color: var(--text-3); margin-top: 2px; }
+  .kpi-delta.warn { color: var(--amber); }
+  .kpi-delta.bad { color: var(--red); }
+  .kpi-delta.good { color: var(--green); }
+
+  /* Table */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th { text-align: left; padding: 10px 16px; background: #F8FAFB; border-bottom: 1px solid var(--border); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-2); font-weight: 600; }
+  tbody td { padding: 14px 16px; border-bottom: 1px solid var(--border-2); vertical-align: middle; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr { cursor: pointer; transition: background 80ms; }
+  tbody tr:hover { background: #F8FBFC; }
+  tbody tr.selected { background: var(--teal-bg); }
+  .client { font-weight: 600; color: var(--navy); }
+  .client-sub { color: var(--text-3); font-size: 11px; }
+  .frameworks { display: flex; gap: 4px; flex-wrap: wrap; }
+  .fw-chip { font-size: 10px; background: #F0F4F6; color: var(--text-2); padding: 2px 6px; border-radius: 3px; font-weight: 500; }
+
+  /* Progress */
+  .progress { display: flex; align-items: center; gap: 10px; min-width: 140px; }
+  .progress-bar { flex: 1; height: 6px; background: #E8EDF1; border-radius: 3px; overflow: hidden; position: relative; }
+  .progress-fill { height: 100%; background: var(--teal); }
+  .progress-fill.split { display: flex; }
+  .progress-fill.split .seg { height: 100%; }
+  .seg.sealed { background: var(--green); }
+  .seg.queue { background: var(--amber); }
+  .seg.halt { background: var(--red); }
+  .seg.drafting { background: var(--teal); }
+  .progress-text { font-size: 11px; color: var(--text-2); white-space: nowrap; min-width: 60px; }
+
+  /* Status pills */
+  .pill { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; padding: 2px 7px; border-radius: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; line-height: 1.4; }
+  .pill::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: currentColor; opacity: 0.9; }
+  .pill.sealed { background: var(--green-bg); color: var(--green); }
+  .pill.queue { background: var(--amber-bg); color: var(--amber); }
+  .pill.halt { background: var(--red-bg); color: var(--red); }
+  .pill.drafting { background: var(--teal-bg); color: var(--teal); }
+  .pill.idle { background: #EDF1F4; color: var(--text-2); }
+
+  .deadline { font-size: 12px; }
+  .deadline.urgent { color: var(--red); font-weight: 600; }
+  .deadline.soon { color: var(--amber); }
+
+  /* Section spacing */
+  .section { margin-bottom: 32px; }
+  .section-title { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-2); margin: 0 0 12px; font-weight: 600; }
+
+  /* Question detail layout */
+  .q-detail-grid { display: grid; grid-template-columns: 1fr 320px; gap: 24px; }
+  .q-tabs { display: flex; gap: 0; border-bottom: 1px solid var(--border); margin-bottom: 0; }
+  .q-tab { padding: 11px 18px; font-size: 13px; color: var(--text-2); cursor: pointer; border-bottom: 2px solid transparent; font-weight: 500; }
+  .q-tab.active { color: var(--navy); border-bottom-color: var(--teal); }
+  .q-tab .count { display: inline-block; font-size: 10px; background: #EDF1F4; color: var(--text-2); padding: 1px 6px; border-radius: 8px; margin-left: 6px; font-weight: 600; }
+
+  /* Pipeline strip */
+  .stage-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; padding: 20px; background: #F8FBFC; border-bottom: 1px solid var(--border-2); }
+  .stage-row + .stage-row { padding-top: 0; }
+  .stage {
+    background: #fff;
+    border: 1px solid var(--border-2);
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 12px;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .stage.active { border-color: var(--teal); background: var(--teal-bg); }
+  .stage .num { font-size: 10px; color: var(--text-3); min-width: 14px; }
+  .stage .body { flex: 1; min-width: 0; }
+  .stage .name { font-weight: 600; color: var(--navy); font-size: 12px; }
+  .stage .meta { color: var(--text-2); font-size: 10px; font-family: "SF Mono", Menlo, monospace; margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .stage .dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; display: grid; place-items: center; margin-top: 1px; }
+  .stage .dot.ok { background: var(--green-bg); color: var(--green); }
+  .stage .dot.warn { background: var(--amber-bg); color: var(--amber); }
+  .stage .dot .material-icons-outlined { font-size: 10px; font-weight: 700; }
+
+  /* Side rail on question detail */
+  .side-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px; }
+  .side-card h4 { margin: 0 0 12px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-2); font-weight: 600; }
+  .meta-row { display: flex; justify-content: space-between; padding: 6px 0; font-size: 12px; }
+  .meta-row + .meta-row { border-top: 1px solid var(--border-2); }
+  .meta-label { color: var(--text-2); }
+  .meta-value { color: var(--navy); font-family: "SF Mono", Menlo, monospace; font-size: 11px; }
+
+  /* Buttons */
+  .btn { padding: 9px 14px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; border: 1px solid transparent; font-family: inherit; display: inline-flex; align-items: center; gap: 6px; }
+  .btn.primary { background: var(--teal); color: #fff; }
+  .btn.primary:hover { background: #248A9B; }
+  .btn.secondary { background: #fff; color: var(--navy); border-color: var(--border); }
+  .btn.secondary:hover { background: #F8FBFC; }
+  .btn.danger { background: #fff; color: var(--red); border-color: #E8C5C5; }
+  .btn.amber { background: var(--amber); color: #fff; }
+  .btn-row { display: flex; gap: 8px; }
+  .btn-row.stack { flex-direction: column; }
+  .btn-row.stack .btn { width: 100%; justify-content: center; }
+
+  /* Filter bar */
+  .filter-bar { display: flex; gap: 10px; align-items: center; padding: 14px 20px; border-bottom: 1px solid var(--border-2); background: #F8FBFC; }
+  .filter-input { padding: 7px 11px; border: 1px solid var(--border); border-radius: 6px; font-size: 12px; background: #fff; font-family: inherit; min-width: 200px; }
+  .filter-select { padding: 7px 11px; border: 1px solid var(--border); border-radius: 6px; font-size: 12px; background: #fff; font-family: inherit; }
+  .filter-tag { display: inline-flex; align-items: center; gap: 5px; padding: 4px 9px; background: var(--teal-bg); color: var(--teal); border-radius: 4px; font-size: 11px; font-weight: 500; }
+  .filter-tag .x { cursor: pointer; opacity: 0.6; }
+
+  /* Question table inside DDQ */
+  .qid { font-family: "SF Mono", Menlo, monospace; font-weight: 600; color: var(--navy); }
+  .canon { font-family: "SF Mono", Menlo, monospace; font-size: 11px; color: var(--text-2); }
+  .q-text { color: var(--text); max-width: 480px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .assignee-chip { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; }
+  .assignee-avatar { width: 20px; height: 20px; border-radius: 50%; background: var(--teal-2); color: var(--navy); font-size: 10px; font-weight: 600; display: grid; place-items: center; }
+  .assignee-avatar.amber { background: var(--amber-bg); color: var(--amber); }
+  .assignee-avatar.unassigned { background: #EDF1F4; color: var(--text-3); }
+
+  /* Banner */
+  .banner { padding: 12px 16px; border-radius: 6px; font-size: 12px; display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+  .banner.amber { background: var(--amber-bg); color: #8B5A12; border-left: 3px solid var(--amber); }
+  .banner.red { background: var(--red-bg); color: var(--red); border-left: 3px solid var(--red); }
+  .banner .b-title { font-weight: 600; }
+  .banner .b-spacer { flex: 1; }
+  .banner a { color: inherit; text-decoration: underline; font-weight: 500; }
+
+  /* DDQ detail header */
+  .ddq-hero { background: var(--navy); color: #fff; border-radius: 8px; padding: 24px 28px; margin-bottom: 24px; }
+  .ddq-hero-top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .ddq-client { font-size: 11px; color: var(--teal-2); text-transform: uppercase; letter-spacing: 0.08em; }
+  .ddq-name { font-size: 22px; font-weight: 600; margin: 4px 0 8px; letter-spacing: -0.01em; }
+  .ddq-meta { display: flex; gap: 20px; font-size: 12px; color: #B4C7D6; }
+  .ddq-meta strong { color: #fff; }
+  .ddq-progress-cluster { text-align: right; }
+  .ddq-pct { font-size: 32px; font-weight: 600; letter-spacing: -0.02em; }
+  .ddq-pct-label { font-size: 11px; color: var(--teal-2); text-transform: uppercase; letter-spacing: 0.08em; }
+  .ddq-status-row { margin-top: 18px; display: flex; gap: 8px; align-items: center; }
+  .ddq-stat { background: rgba(255,255,255,0.08); padding: 6px 12px; border-radius: 4px; font-size: 12px; }
+  .ddq-stat .v { font-weight: 600; color: #fff; }
+  .ddq-stat .l { color: #B4C7D6; margin-left: 6px; }
+  .ddq-stat.attn { background: rgba(186,117,23,0.2); }
+  .ddq-stat.halt { background: rgba(163,45,45,0.2); }
+
+  /* Walkthrough stage rail */
+  .walkthrough-rail { display: flex; gap: 4px; padding: 16px 20px; border-bottom: 1px solid var(--border-2); background: #F8FBFC; }
+  .wt-stage { flex: 1; padding: 9px 12px; border-radius: 6px; font-size: 11px; text-align: center; background: #fff; border: 1px solid var(--border-2); cursor: pointer; }
+  .wt-stage.active { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .wt-stage .wt-n { font-size: 9px; opacity: 0.7; }
+  .wt-stage .wt-l { font-weight: 600; margin-top: 2px; }
+
+  /* Drafted answer panel */
+  .answer-panel { background: #FCFDFD; border: 1px solid var(--border-2); border-radius: 6px; padding: 16px; font-size: 13px; line-height: 1.65; color: var(--text); }
+  .answer-panel .citation { background: var(--teal-bg); color: var(--teal); font-family: "SF Mono", monospace; font-size: 10px; padding: 1px 5px; border-radius: 3px; margin: 0 2px; vertical-align: 1px; }
+
+  /* My queue */
+  .queue-list { display: flex; flex-direction: column; gap: 0; }
+  .queue-item { padding: 16px 20px; border-bottom: 1px solid var(--border-2); display: grid; grid-template-columns: auto 1fr auto; gap: 16px; align-items: center; cursor: pointer; }
+  .queue-item:hover { background: #F8FBFC; }
+  .queue-item:last-child { border-bottom: none; }
+  .queue-icon { width: 36px; height: 36px; border-radius: 8px; display: grid; place-items: center; font-size: 14px; font-weight: 600; }
+  .queue-icon.amber { background: var(--amber-bg); color: var(--amber); }
+  .queue-icon.red { background: var(--red-bg); color: var(--red); }
+  .queue-icon.teal { background: var(--teal-bg); color: var(--teal); }
+  .queue-title { font-weight: 600; color: var(--navy); font-size: 13px; }
+  .queue-sub { font-size: 11px; color: var(--text-2); margin-top: 3px; }
+  .queue-meta { text-align: right; font-size: 11px; color: var(--text-2); }
+  .queue-age { color: var(--amber); font-weight: 600; }
+
+  /* Mode label (for the mockup itself) */
+  .mode-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-3); padding: 4px 8px; background: #fff; border: 1px solid var(--border-2); border-radius: 4px; }
+
+  /* Screen separator */
+  .screen-marker { padding: 40px 32px 12px; }
+  .screen-marker h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-3); margin: 0 0 4px; font-weight: 600; }
+  .screen-marker p { font-size: 12px; color: var(--text-2); margin: 0; max-width: 700px; }
+
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- LEFT RAIL (constant across all screens) -->
+  <aside>
+    <div class="brand">
+      <div class="brand-mark">DE</div>
+      <div>
+        <div class="brand-name">BNY DDQ</div>
+        <div class="brand-product">Aria</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#portfolio" class="active"><span class="icon material-icons-outlined">assignment</span>DDQs<span class="badge">23</span></a>
+      <a href="#queue"><span class="icon material-icons-outlined">inbox</span>My queue<span class="badge red">12</span></a>
+      <a href="#inbox"><span class="icon material-icons-outlined">mail</span>Inbox<span class="badge">3</span></a>
+      <a href="#library"><span class="icon material-icons-outlined">menu_book</span>Library</a>
+      <a href="#platform"><span class="icon material-icons-outlined">tune</span>Platform</a>
+    </nav>
+    <div class="user-strip">
+      <div class="user-avatar">SM</div>
+      <div class="user-meta">
+        <div class="user-name">S. Mitra</div>
+        <div class="user-role">Ops Coordinator</div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ============================================================ -->
+    <!-- SCREEN 1 · Portfolio (DDQs landing — ops lead default) -->
+    <!-- ============================================================ -->
+    <div class="screen-marker">
+      <h2>Screen 1 · Portfolio</h2>
+      <p>The ops lead's default home. Replaces the old "directory of demos" home screen. One row per in-flight DDQ. Sortable by deadline. Click a row → DDQ detail (Screen 2).</p>
+    </div>
+
+    <div class="topbar">
+      <div class="breadcrumbs">
+        <span class="current">DDQs</span>
+      </div>
+      <div class="topbar-spacer"></div>
+      <div class="lens-toggle">
+        <button class="active">Coordinator</button>
+        <button>SME</button>
+        <button>Reviewer</button>
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">DDQs in flight</h1>
+          <div class="page-sub">23 active · 4 shipping this week · 3 awaiting kickoff in Inbox</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn secondary">Export CSV</button>
+          <button class="btn primary">+ New DDQ from upload</button>
+        </div>
+      </div>
+
+      <div class="kpis">
+        <div class="kpi">
+          <div class="kpi-label">In flight</div>
+          <div class="kpi-value">23</div>
+          <div class="kpi-delta">+4 this week</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Ship this week</div>
+          <div class="kpi-value">4</div>
+          <div class="kpi-delta warn">1 at risk · Acme</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Auto-pass rate</div>
+          <div class="kpi-value">22.2%</div>
+          <div class="kpi-delta bad">▾ tgt 70%</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Halted, blocking</div>
+          <div class="kpi-value">6</div>
+          <div class="kpi-delta bad">legal review</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">SME queue</div>
+          <div class="kpi-value">47</div>
+          <div class="kpi-delta">across 5 domains</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="filter-bar">
+          <input class="filter-input" placeholder="Search client, DDQ name, run ID…">
+          <select class="filter-select"><option>All frameworks</option><option>AFME</option><option>CAIQ</option><option>ADV</option><option>ESG</option></select>
+          <select class="filter-select"><option>All status</option><option>At risk</option><option>Halted</option><option>Shipping</option></select>
+          <div class="filter-tag">Deadline ≤ 7d <span class="x">×</span></div>
+          <div style="flex:1"></div>
+          <span style="font-size:11px; color:var(--text-2)">Sort: deadline ▾</span>
+        </div>
+        <div class="card-body flush">
+          <table>
+            <thead>
+              <tr>
+                <th>Client / DDQ</th>
+                <th>Frameworks</th>
+                <th style="width:200px">Progress</th>
+                <th>Status</th>
+                <th>Deadline</th>
+                <th>Owner</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="selected">
+                <td>
+                  <div class="client">Acme Pension</div>
+                  <div class="client-sub">Q2 2026 DDQ · 47 questions</div>
+                </td>
+                <td>
+                  <div class="frameworks">
+                    <span class="fw-chip">CAIQ</span>
+                    <span class="fw-chip">AFME</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="progress">
+                    <div class="progress-bar">
+                      <div class="progress-fill split">
+                        <div class="seg sealed" style="width:46%"></div>
+                        <div class="seg queue" style="width:21%"></div>
+                        <div class="seg halt" style="width:8%"></div>
+                        <div class="seg drafting" style="width:13%"></div>
+                      </div>
+                    </div>
+                    <div class="progress-text">22/47</div>
+                  </div>
+                </td>
+                <td><span class="pill halt">at risk</span></td>
+                <td><span class="deadline urgent">2d · May 14</span></td>
+                <td><div class="assignee-chip"><div class="assignee-avatar">SM</div>S. Mitra</div></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="client">Helios Capital</div>
+                  <div class="client-sub">Annual review · 132 questions</div>
+                </td>
+                <td>
+                  <div class="frameworks">
+                    <span class="fw-chip">CAIQ</span>
+                    <span class="fw-chip">SIG candidate</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="progress">
+                    <div class="progress-bar">
+                      <div class="progress-fill split">
+                        <div class="seg sealed" style="width:73%"></div>
+                        <div class="seg queue" style="width:9%"></div>
+                        <div class="seg drafting" style="width:11%"></div>
+                      </div>
+                    </div>
+                    <div class="progress-text">96/132</div>
+                  </div>
+                </td>
+                <td><span class="pill drafting">on track</span></td>
+                <td><span class="deadline soon">5d · May 17</span></td>
+                <td><div class="assignee-chip"><div class="assignee-avatar">RP</div>R. Park</div></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="client">Orion Sovereign</div>
+                  <div class="client-sub">Custody onboarding · 89 questions</div>
+                </td>
+                <td>
+                  <div class="frameworks">
+                    <span class="fw-chip">AFME</span>
+                    <span class="fw-chip">ADV</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="progress">
+                    <div class="progress-bar">
+                      <div class="progress-fill split">
+                        <div class="seg sealed" style="width:88%"></div>
+                        <div class="seg queue" style="width:6%"></div>
+                      </div>
+                    </div>
+                    <div class="progress-text">84/89</div>
+                  </div>
+                </td>
+                <td><span class="pill sealed">shipping</span></td>
+                <td><span class="deadline soon">6d · May 18</span></td>
+                <td><div class="assignee-chip"><div class="assignee-avatar">SM</div>S. Mitra</div></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="client">Northstar Fund Services</div>
+                  <div class="client-sub">ESG due diligence · 28 questions</div>
+                </td>
+                <td>
+                  <div class="frameworks">
+                    <span class="fw-chip">AFME ESG</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="progress">
+                    <div class="progress-bar">
+                      <div class="progress-fill split">
+                        <div class="seg sealed" style="width:35%"></div>
+                        <div class="seg queue" style="width:14%"></div>
+                        <div class="seg drafting" style="width:32%"></div>
+                      </div>
+                    </div>
+                    <div class="progress-text">10/28</div>
+                  </div>
+                </td>
+                <td><span class="pill drafting">drafting</span></td>
+                <td><span class="deadline">11d · May 23</span></td>
+                <td><div class="assignee-chip"><div class="assignee-avatar">LC</div>L. Chen</div></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="client">Meridian Asset Management</div>
+                  <div class="client-sub">Quarterly cyber attestation · 64 questions</div>
+                </td>
+                <td>
+                  <div class="frameworks">
+                    <span class="fw-chip">CAIQ</span>
+                    <span class="fw-chip">NIST CSF</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="progress">
+                    <div class="progress-bar">
+                      <div class="progress-fill split">
+                        <div class="seg sealed" style="width:14%"></div>
+                        <div class="seg queue" style="width:8%"></div>
+                        <div class="seg drafting" style="width:6%"></div>
+                      </div>
+                    </div>
+                    <div class="progress-text">9/64</div>
+                  </div>
+                </td>
+                <td><span class="pill idle">kicked off</span></td>
+                <td><span class="deadline">14d · May 26</span></td>
+                <td><div class="assignee-chip"><div class="assignee-avatar unassigned">—</div>Unassigned</div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- SCREEN 2 · DDQ Detail (the missing middle level) -->
+    <!-- ============================================================ -->
+    <div class="screen-marker">
+      <h2>Screen 2 · DDQ detail</h2>
+      <p>The page that doesn't exist today and is the single biggest gap. Answers "where is this DDQ at, what's blocking, what's next." All 47 questions in one filterable table, with status pills tied to the same color semantics as everywhere else.</p>
+    </div>
+
+    <div class="topbar">
+      <div class="breadcrumbs">
+        <a href="#">DDQs</a>
+        <span class="sep">›</span>
+        <span class="current">Acme Pension · Q2 2026</span>
+      </div>
+      <div class="topbar-spacer"></div>
+      <div class="lens-toggle">
+        <button class="active">Coordinator</button>
+        <button>SME</button>
+        <button>Reviewer</button>
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="ddq-hero">
+        <div class="ddq-hero-top">
+          <div>
+            <div class="ddq-client">Acme Pension Fund · ddq_8db64d9cb6c5</div>
+            <div class="ddq-name">Q2 2026 Due Diligence Questionnaire</div>
+            <div class="ddq-meta">
+              <span><strong>47</strong> questions</span>
+              <span>CAIQ + AFME excerpt</span>
+              <span>Owner: <strong>S. Mitra</strong></span>
+              <span>Received: <strong>May 12, 01:45 UTC</strong></span>
+              <span style="color:#FFB85A"><strong>Deadline May 14</strong> · 2d</span>
+            </div>
+          </div>
+          <div class="ddq-progress-cluster">
+            <div class="ddq-pct">46%</div>
+            <div class="ddq-pct-label">22 of 47 sealed</div>
+          </div>
+        </div>
+        <div class="ddq-status-row">
+          <div class="ddq-stat"><span class="v">22</span><span class="l">sealed</span></div>
+          <div class="ddq-stat attn"><span class="v">10</span><span class="l">in SME queue</span></div>
+          <div class="ddq-stat halt"><span class="v">4</span><span class="l">halted</span></div>
+          <div class="ddq-stat"><span class="v">6</span><span class="l">drafting</span></div>
+          <div class="ddq-stat"><span class="v">5</span><span class="l">queued</span></div>
+        </div>
+      </div>
+
+      <div class="banner red">
+        <strong class="b-title">Blocking shipment:</strong>
+        4 questions halted on cross-DDQ consistency (Q14, Q22, Q31, Q39). Legal review required before May 14.
+        <div class="b-spacer"></div>
+        <a href="#">Review halts →</a>
+      </div>
+
+      <div class="card">
+        <div class="filter-bar">
+          <input class="filter-input" placeholder="Search question, canonical ID…">
+          <select class="filter-select"><option>All status</option><option>SME queue</option><option>Halted</option><option>Sealed</option></select>
+          <select class="filter-select"><option>All frameworks</option><option>CAIQ</option><option>AFME</option></select>
+          <select class="filter-select"><option>All tiers</option><option>Tier 1</option><option>Tier 2</option><option>Tier 3</option></select>
+          <div style="flex:1"></div>
+          <button class="btn secondary">Bulk reassign</button>
+        </div>
+        <div class="card-body flush">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:60px">#</th>
+                <th>Question</th>
+                <th>Canonical</th>
+                <th>Tier</th>
+                <th>Status</th>
+                <th>Assignee</th>
+                <th>Age</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="qid">Q1</span><div class="canon">CAIQ</div></td>
+                <td><div class="q-text">Are audit and assurance policies, procedures, and standards established, documented, approved, communicated, applied, evaluated, and maintained?</div></td>
+                <td><div class="canon">canon.is.audit.a_a_01</div></td>
+                <td>T1</td>
+                <td><span class="pill queue">SME queue</span></td>
+                <td><div class="assignee-chip"><div class="assignee-avatar amber">JK</div>J. Kim · InfoSec</div></td>
+                <td>14m</td>
+              </tr>
+              <tr>
+                <td><span class="qid">Q2</span><div class="canon">CAIQ</div></td>
+                <td><div class="q-text">Are independent audit and assurance assessments conducted at least annually, and the results shared with relevant stakeholders?</div></td>
+                <td><div class="canon">canon.is.audit.a_a_02</div></td>
+                <td>T1</td>
+                <td><span class="pill halt">halt · consistency</span></td>
+                <td><div class="assignee-chip"><div class="assignee-avatar amber">RM</div>R. Mendez · Legal</div></td>
+                <td><span class="queue-age">2h</span></td>
+              </tr>
+              <tr>
+                <td><span class="qid">Q3</span><div class="canon">CAIQ</div></td>
+                <td><div class="q-text">Are policies and procedures established for management authorization for development or acquisition of new applications, systems, databases, infrastructure?</div></td>
+                <td><div class="canon">canon.is.aac.aac_01</div></td>
+                <td>T2</td>
+                <td><span class="pill sealed">sealed</span></td>
+                <td><div class="assignee-chip"><div class="assignee-avatar">AI</div>Auto-pass</div></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="qid">Q4</span><div class="canon">AFME</div></td>
+                <td><div class="q-text">Describe the governance structure for the business continuity programme, including board oversight and management committee structure.</div></td>
+                <td><div class="canon">canon.or.bcp.governance</div></td>
+                <td>T2</td>
+                <td><span class="pill drafting">drafting</span></td>
+                <td><div class="assignee-chip"><div class="assignee-avatar">AI</div>DraftComposer</div></td>
+                <td>1m</td>
+              </tr>
+              <tr>
+                <td><span class="qid">Q5</span><div class="canon">AFME</div></td>
+                <td><div class="q-text">Provide a list of principal subsidiaries by jurisdiction, including legal entity identifiers (LEI).</div></td>
+                <td><div class="canon">canon.reg.entity.subsidiaries</div></td>
+                <td>T3</td>
+                <td><span class="pill sealed">sealed</span></td>
+                <td><div class="assignee-chip"><div class="assignee-avatar">AI</div>Auto-pass</div></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="qid">Q14</span><div class="canon">CAIQ</div></td>
+                <td><div class="q-text">Are encryption keys maintained by the cloud consumer or a trusted key management provider?</div></td>
+                <td><div class="canon">canon.is.crypto.key_mgmt</div></td>
+                <td>T1</td>
+                <td><span class="pill halt">halt · consistency</span></td>
+                <td><div class="assignee-chip"><div class="assignee-avatar amber">RM</div>R. Mendez · Legal</div></td>
+                <td><span class="queue-age">3h</span></td>
+              </tr>
+              <tr>
+                <td><span class="qid">Q22</span><div class="canon">AFME</div></td>
+                <td><div class="q-text">Describe operational resilience testing programme, frequency, and material findings from the most recent test cycle.</div></td>
+                <td><div class="canon">canon.or.resilience.testing</div></td>
+                <td>T1</td>
+                <td><span class="pill queue">SME queue</span></td>
+                <td><div class="assignee-chip"><div class="assignee-avatar amber">DT</div>D. Tanaka · OpRes</div></td>
+                <td>45m</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- SCREEN 3 · Question detail (pipeline + walkthrough unified) -->
+    <!-- ============================================================ -->
+    <div class="screen-marker">
+      <h2>Screen 3 · Question detail</h2>
+      <p>The pipeline view (screens 02–04) and the run walkthrough (screen 05) collapsed onto one page with two tabs. Same question, same data, two abstractions. Side rail holds metadata and actions so SME/legal can act without leaving the page.</p>
+    </div>
+
+    <div class="topbar">
+      <div class="breadcrumbs">
+        <a href="#">DDQs</a>
+        <span class="sep">›</span>
+        <a href="#">Acme Pension · Q2 2026</a>
+        <span class="sep">›</span>
+        <span class="current">Q1 · canon.is.audit.a_a_01</span>
+      </div>
+      <div class="topbar-spacer"></div>
+      <div class="lens-toggle">
+        <button>Coordinator</button>
+        <button class="active">SME</button>
+        <button>Reviewer</button>
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="banner amber">
+        <strong class="b-title">Action required:</strong>
+        Routed to your queue (InfoSec · Tier 1). DraftComposer cited 3 spans · all resolve · 0 PII findings · FreshnessAuditor flagged 1 stale SOC reference.
+        <div class="b-spacer"></div>
+        <span style="color:var(--text-2)">SLA: 4h remaining</span>
+      </div>
+
+      <div class="q-detail-grid">
+        <div>
+          <div class="card">
+            <div class="card-header" style="padding-bottom:0; border-bottom:none">
+              <div>
+                <div class="card-sub mono">Q1 · CAIQ · A&A-01.1</div>
+                <h3 class="card-title" style="margin-top:6px; font-size:15px; max-width:680px">Are audit and assurance policies, procedures, and standards established, documented, approved, communicated, applied, evaluated, and maintained?</h3>
+              </div>
+            </div>
+
+            <div class="q-tabs" style="margin:16px 20px 0">
+              <div class="q-tab">Walkthrough <span class="count">7</span></div>
+              <div class="q-tab active">Pipeline <span class="count">12</span></div>
+              <div class="q-tab">Drafted answer</div>
+              <div class="q-tab">Audit journal</div>
+              <div class="q-tab">Replay</div>
+            </div>
+
+            <!-- Pipeline tab content -->
+            <div class="stage-row">
+              <div class="stage"><div class="dot ok"><span class="material-icons-outlined">check</span></div><div class="body"><div class="name">1 · Email intake</div><div class="meta">QQ1 · CAIQ</div></div></div>
+              <div class="stage"><div class="dot ok"><span class="material-icons-outlined">check</span></div><div class="body"><div class="name">2 · QuestionMapper</div><div class="meta">canon.is.audit.a_a_01</div></div></div>
+              <div class="stage"><div class="dot ok"><span class="material-icons-outlined">check</span></div><div class="body"><div class="name">3 · Library lookup</div><div class="meta">library hit</div></div></div>
+              <div class="stage"><div class="dot ok"><span class="material-icons-outlined">check</span></div><div class="body"><div class="name">4 · Retrieve</div><div class="meta">hybrid · 10 spans · top 0.029</div></div></div>
+              <div class="stage"><div class="dot warn"><span class="material-icons-outlined">priority_high</span></div><div class="body"><div class="name">5 · EvidenceSourcer</div><div class="meta">3 selected · insufficient</div></div></div>
+            </div>
+            <div class="stage-row">
+              <div class="stage active"><div class="dot ok"><span class="material-icons-outlined">check</span></div><div class="body"><div class="name">6 · DraftComposer</div><div class="meta">tier1_opus · 1644 chars · 3 cites</div></div></div>
+              <div class="stage"><div class="dot ok"><span class="material-icons-outlined">check</span></div><div class="body"><div class="name">7 · CitationVerifier</div><div class="meta">3 citations · all pass</div></div></div>
+              <div class="stage"><div class="dot ok"><span class="material-icons-outlined">check</span></div><div class="body"><div class="name">8 · ConsistencyChecker</div><div class="meta">consistent</div></div></div>
+              <div class="stage"><div class="dot ok"><span class="material-icons-outlined">check</span></div><div class="body"><div class="name">9 · PiiScrubber</div><div class="meta">0 findings</div></div></div>
+              <div class="stage"><div class="dot warn"><span class="material-icons-outlined">priority_high</span></div><div class="body"><div class="name">10 · FreshnessAuditor</div><div class="meta">stale · 1 reason</div></div></div>
+            </div>
+            <div class="stage-row" style="grid-template-columns: repeat(2, 1fr); padding-bottom:20px">
+              <div class="stage"><div class="dot warn"><span class="material-icons-outlined">priority_high</span></div><div class="body"><div class="name">11 · ApprovalRouter</div><div class="meta">sme_queue → infosec (tier 1)</div></div></div>
+              <div class="stage"><div class="dot ok"><span class="material-icons-outlined">check</span></div><div class="body"><div class="name">12 · Seal (L01)</div><div class="meta">merkle 24c1f890276c</div></div></div>
+            </div>
+          </div>
+
+          <div style="margin-top:16px"></div>
+
+          <!-- Walkthrough rail (preview of the other tab) -->
+          <div class="card" style="opacity:0.5">
+            <div class="card-header"><h3 class="card-title">Walkthrough view (preview, same data)</h3><span class="card-sub">tab switch · 7-stage pedagogical view from screen 05</span></div>
+            <div class="walkthrough-rail">
+              <div class="wt-stage active"><div class="wt-n">1</div><div class="wt-l">Intake</div></div>
+              <div class="wt-stage"><div class="wt-n">2</div><div class="wt-l">Classify</div></div>
+              <div class="wt-stage"><div class="wt-n">3</div><div class="wt-l">Retrieve</div></div>
+              <div class="wt-stage"><div class="wt-n">4</div><div class="wt-l">Draft</div></div>
+              <div class="wt-stage"><div class="wt-n">5</div><div class="wt-l">Validate</div></div>
+              <div class="wt-stage"><div class="wt-n">6</div><div class="wt-l">Approve</div></div>
+              <div class="wt-stage"><div class="wt-n">7</div><div class="wt-l">Respond</div></div>
+            </div>
+            <div class="card-body" style="padding:16px 20px">
+              <div class="card-sub" style="margin-bottom:8px">Drafted answer · 3 citations</div>
+              <div class="answer-panel">
+                BNY maintains established, documented, and approved audit and assurance policies, procedures, and standards that are actively communicated, applied, evaluated, and maintained. Management, including the Chief Executive Officer and Chief Financial Officer, with participation by members of the Disclosure Committee, is responsible for ensuring an adequate and effective process for establishing, maintaining, and evaluating disclosure controls and procedures designed to ensure that information required to be disclosed in SEC reports is timely recorded, processed, summarized, and reported<span class="citation">edgar:bny-mellon-corp:0001390777-23-000033::Item_16#0009</span>.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right rail: metadata + actions -->
+        <div>
+          <div class="side-card">
+            <h4>SME Actions</h4>
+            <div class="btn-row stack">
+              <button class="btn primary"><span class="material-icons-outlined" style="font-size:15px">check</span>Approve as drafted</button>
+              <button class="btn secondary"><span class="material-icons-outlined" style="font-size:15px">edit</span>Edit and approve</button>
+              <button class="btn secondary"><span class="material-icons-outlined" style="font-size:15px">person_add_alt</span>Reassign</button>
+              <button class="btn danger"><span class="material-icons-outlined" style="font-size:15px">block</span>Reject · escalate</button>
+            </div>
+          </div>
+
+          <div class="side-card">
+            <h4>Routing</h4>
+            <div class="meta-row"><span class="meta-label">Queue</span><span class="meta-value">InfoSec SME</span></div>
+            <div class="meta-row"><span class="meta-label">Tier</span><span class="meta-value">1 (Opus)</span></div>
+            <div class="meta-row"><span class="meta-label">Reason</span><span class="meta-value">stale evidence</span></div>
+            <div class="meta-row"><span class="meta-label">SLA</span><span class="meta-value" style="color:var(--amber)">4h remaining</span></div>
+          </div>
+
+          <div class="side-card">
+            <h4>Identifiers</h4>
+            <div class="meta-row"><span class="meta-label">run_id</span><span class="meta-value">run_20260512T014441_ad0c51de</span></div>
+            <div class="meta-row"><span class="meta-label">canonical</span><span class="meta-value">canon.is.audit.a_a_01</span></div>
+            <div class="meta-row"><span class="meta-label">taxonomy</span><span class="meta-value">tx_v0.1</span></div>
+            <div class="meta-row"><span class="meta-label">library</span><span class="meta-value">lib_v0.1</span></div>
+            <div class="meta-row"><span class="meta-label">platform</span><span class="meta-value">v0.2.0-agents</span></div>
+          </div>
+
+          <div class="side-card">
+            <h4>Validation</h4>
+            <div class="meta-row"><span class="meta-label">Citations</span><span class="meta-value" style="color:var(--green)">3/3 pass</span></div>
+            <div class="meta-row"><span class="meta-label">Freshness</span><span class="meta-value" style="color:var(--amber)">1 stale</span></div>
+            <div class="meta-row"><span class="meta-label">Consistency</span><span class="meta-value" style="color:var(--green)">pass</span></div>
+            <div class="meta-row"><span class="meta-label">PII scrub</span><span class="meta-value" style="color:var(--green)">0 findings</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- SCREEN 4 · My queue (role lens, not separate silo) -->
+    <!-- ============================================================ -->
+    <div class="screen-marker">
+      <h2>Screen 4 · My queue</h2>
+      <p>The same DDQ data filtered by viewer. An SME sees their tier-1 InfoSec items. Legal sees override requests. Ops sees halts blocking shipment. Same status semantics, same colors, same drill-down to the question detail page above.</p>
+    </div>
+
+    <div class="topbar">
+      <div class="breadcrumbs">
+        <span class="current">My queue · InfoSec SME</span>
+      </div>
+      <div class="topbar-spacer"></div>
+      <div class="lens-toggle">
+        <button>Coordinator</button>
+        <button class="active">SME</button>
+        <button>Reviewer</button>
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Your queue · 12 items</h1>
+          <div class="page-sub">9 Tier-1 InfoSec · 2 OpRes · 1 Legal review · across 4 DDQs</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn secondary">Set out-of-office</button>
+          <button class="btn primary">Clear oldest first</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="filter-bar">
+          <select class="filter-select"><option>All domains (12)</option><option>InfoSec (9)</option><option>OpRes (2)</option><option>Legal (1)</option></select>
+          <select class="filter-select"><option>All tiers</option><option>Tier 1</option><option>Tier 2</option></select>
+          <select class="filter-select"><option>All DDQs</option><option>Acme Pension</option><option>Helios Capital</option></select>
+          <div style="flex:1"></div>
+          <span style="font-size:11px; color:var(--text-2)">Sort: oldest first</span>
+        </div>
+        <div class="card-body flush">
+          <div class="queue-list">
+            <div class="queue-item">
+              <div class="queue-icon red"><span class="material-icons-outlined" style="font-size:20px">error_outline</span></div>
+              <div>
+                <div class="queue-title">Q14 · Encryption key management</div>
+                <div class="queue-sub">Acme Pension Q2 · CAIQ · Tier 1 · <strong>halt · consistency</strong> · diverges from Helios DDQ shipped Apr 22</div>
+              </div>
+              <div class="queue-meta">
+                <div class="queue-age">3h 12m</div>
+                <div>SLA breach in 48m</div>
+              </div>
+            </div>
+            <div class="queue-item">
+              <div class="queue-icon amber"><span class="material-icons-outlined" style="font-size:20px">warning_amber</span></div>
+              <div>
+                <div class="queue-title">Q1 · Audit & assurance policies</div>
+                <div class="queue-sub">Acme Pension Q2 · CAIQ · Tier 1 · stale SOC reference flagged by FreshnessAuditor</div>
+              </div>
+              <div class="queue-meta">
+                <div class="queue-age">14m</div>
+                <div>SLA 4h</div>
+              </div>
+            </div>
+            <div class="queue-item">
+              <div class="queue-icon amber"><span class="material-icons-outlined" style="font-size:20px">warning_amber</span></div>
+              <div>
+                <div class="queue-title">Q22 · Operational resilience testing</div>
+                <div class="queue-sub">Acme Pension Q2 · AFME · Tier 1 · routed for SME review (no library hit)</div>
+              </div>
+              <div class="queue-meta">
+                <div class="queue-age">45m</div>
+                <div>SLA 3h 15m</div>
+              </div>
+            </div>
+            <div class="queue-item">
+              <div class="queue-icon teal"><span class="material-icons-outlined" style="font-size:20px">help_outline</span></div>
+              <div>
+                <div class="queue-title">Q47 · Privileged access review cadence</div>
+                <div class="queue-sub">Helios Capital · CAIQ · Tier 1 · approval requested for library entry update</div>
+              </div>
+              <div class="queue-meta">
+                <div class="queue-age">1h 8m</div>
+                <div>library proposal</div>
+              </div>
+            </div>
+            <div class="queue-item">
+              <div class="queue-icon amber"><span class="material-icons-outlined" style="font-size:20px">warning_amber</span></div>
+              <div>
+                <div class="queue-title">Q9 · Data residency controls</div>
+                <div class="queue-sub">Meridian AM · CAIQ · Tier 1 · DraftComposer confidence below threshold</div>
+              </div>
+              <div class="queue-meta">
+                <div class="queue-age">2h 30m</div>
+                <div>SLA 1h 30m</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" style="margin-top:24px">
+        <h3 class="section-title">Library proposals awaiting your review</h3>
+        <div class="card">
+          <div class="card-body" style="font-size:12px; color:var(--text-2)">
+            3 library entries proposed by DraftComposer in the last 24h await SME approval before they're reusable. <a href="#" style="color:var(--teal)">Review proposals →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+[
+  {
+    "canonicalId": "canon.cyber.detect.de_cm_01",
+    "label": "Continuous network monitoring",
+    "description": "Network monitoring detects potentially adverse events.",
+    "parentId": null,
+    "tier": 2,
+    "doNotAnswer": false,
+    "owners": [
+      "cyber"
+    ],
+    "tags": [
+      "bootstrap"
+    ],
+    "frameworkMappings": [
+      {
+        "framework": "NIST_CSF_v2.0",
+        "version": "v2.0",
+        "questionRef": "DE.CM-01"
+      }
+    ],
+    "createdAt": "2026-05-12T07:55:08.513618+00:00",
+    "updatedAt": "2026-05-12T07:55:08.513618+00:00"
+  },
+  {
+    "canonicalId": "canon.cyber.protect.pr_aa_01",
+    "label": "Identity assertion and authentication",
+    "description": "Identities and credentials for authorized users, services, and hardware are managed by the organization.",
+    "parentId": null,
+    "tier": 1,
+    "doNotAnswer": false,
+    "owners": [
+      "cyber"
+    ],
+    "tags": [
+      "bootstrap"
+    ],
+    "frameworkMappings": [
+      {
+        "framework": "NIST_CSF_v2.0",
+        "version": "v2.0",
+        "questionRef": "PR.AA-01"
+      }
+    ],
+    "createdAt": "2026-05-12T07:55:08.513618+00:00",
+    "updatedAt": "2026-05-12T07:55:08.513618+00:00"
+  },
+  {
+    "canonicalId": "canon.esg.governance.afme_esg_3_1",
+    "label": "ESG governance structure",
+    "description": "Describe the governance structure responsible for ESG-related risks and opportunities.",
+    "parentId": null,
+    "tier": 2,
+    "doNotAnswer": false,
+    "owners": [
+      "esg"
+    ],
+    "tags": [
+      "bootstrap"
+    ],
+    "frameworkMappings": [
+      {
+        "framework": "AFME_ESG",
+        "version": "2026",
+        "questionRef": "AFME-ESG-3.1"
+      }
+    ],
+    "createdAt": "2026-05-12T07:55:08.513618+00:00",
+    "updatedAt": "2026-05-12T07:55:08.513618+00:00"
+  },
+  {
+    "canonicalId": "canon.is.dsi.dsi_03_q1",
+    "label": "Encryption at rest",
+    "description": "Is sensitive client data encrypted at rest using approved cryptographic standards?",
+    "parentId": "canon.is.dsi",
+    "tier": 1,
+    "doNotAnswer": false,
+    "owners": [
+      "infosec"
+    ],
+    "tags": [
+      "bootstrap"
+    ],
+    "frameworkMappings": [
+      {
+        "framework": "CAIQ",
+        "version": "v4.0.3",
+        "questionRef": "DSI-03.1"
+      },
+      {
+        "framework": "NIST_SP800_53_rev5",
+        "version": "rev5",
+        "questionRef": "SC-28"
+      }
+    ],
+    "createdAt": "2026-05-12T07:55:08.513618+00:00",
+    "updatedAt": "2026-05-12T07:55:08.513618+00:00"
+  },
+  {
+    "canonicalId": "canon.is.dsi.dsi_04_q1",
+    "label": "Encryption in transit",
+    "description": "Is sensitive client data encrypted in transit using TLS 1.2+ or equivalent?",
+    "parentId": "canon.is.dsi",
+    "tier": 1,
+    "doNotAnswer": false,
+    "owners": [
+      "infosec"
+    ],
+    "tags": [
+      "bootstrap"
+    ],
+    "frameworkMappings": [
+      {
+        "framework": "CAIQ",
+        "version": "v4.0.3",
+        "questionRef": "DSI-04.1"
+      },
+      {
+        "framework": "NIST_SP800_53_rev5",
+        "version": "rev5",
+        "questionRef": "SC-8(1)"
+      }
+    ],
+    "createdAt": "2026-05-12T07:55:08.513618+00:00",
+    "updatedAt": "2026-05-12T07:55:08.513618+00:00"
+  },
+  {
+    "canonicalId": "canon.is.iam.iam_04_q1",
+    "label": "Multi-factor authentication for privileged access",
+    "description": "Are multi-factor authentication mechanisms required for all privileged users accessing production systems?",
+    "parentId": null,
+    "tier": 1,
+    "doNotAnswer": false,
+    "owners": [
+      "infosec"
+    ],
+    "tags": [
+      "bootstrap"
+    ],
+    "frameworkMappings": [
+      {
+        "framework": "CAIQ",
+        "version": "v4.0.3",
+        "questionRef": "IAM-04.1"
+      },
+      {
+        "framework": "NIST_SP800_53_rev5",
+        "version": "rev5",
+        "questionRef": "IA-2(1)"
+      },
+      {
+        "framework": "ISO27001_2022",
+        "version": "2022",
+        "questionRef": "A.8.5"
+      }
+    ],
+    "createdAt": "2026-05-12T07:55:08.513618+00:00",
+    "updatedAt": "2026-05-12T07:55:08.513618+00:00"
+  },
+  {
+    "canonicalId": "canon.is.iam.iam_05_q1",
+    "label": "User access review cadence",
+    "description": "How frequently are user access rights reviewed and reauthorized for privileged accounts?",
+    "parentId": "canon.is.iam",
+    "tier": 2,
+    "doNotAnswer": false,
+    "owners": [
+      "infosec"
+    ],
+    "tags": [
+      "bootstrap"
+    ],
+    "frameworkMappings": [
+      {
+        "framework": "CAIQ",
+        "version": "v4.0.3",
+        "questionRef": "IAM-05.1"
+      },
+      {
+        "framework": "NIST_SP800_53_rev5",
+        "version": "rev5",
+        "questionRef": "AC-2(j)"
+      }
+    ],
+    "createdAt": "2026-05-12T07:55:08.513618+00:00",
+    "updatedAt": "2026-05-12T07:55:08.513618+00:00"
+  },
+  {
+    "canonicalId": "canon.or.bcp.bcr_01_q1",
+    "label": "Business continuity plan testing",
+    "description": "How often is the business continuity plan tested end-to-end?",
+    "parentId": "canon.or.bcp",
+    "tier": 1,
+    "doNotAnswer": false,
+    "owners": [
+      "ops-risk"
+    ],
+    "tags": [
+      "bootstrap"
+    ],
+    "frameworkMappings": [
+      {
+        "framework": "CAIQ",
+        "version": "v4.0.3",
+        "questionRef": "BCR-01.1"
+      },
+      {
+        "framework": "AFME",
+        "version": "2026",
+        "questionRef": "AFME-OR-7.3"
+      }
+    ],
+    "createdAt": "2026-05-12T07:55:08.513618+00:00",
+    "updatedAt": "2026-05-12T07:55:08.513618+00:00"
+  },
+  {
+    "canonicalId": "canon.or.incident.afme_or_5_4",
+    "label": "Incident notification SLA",
+    "description": "What is the SLA for notifying clients of a material security incident?",
+    "parentId": null,
+    "tier": 1,
+    "doNotAnswer": false,
+    "owners": [
+      "legal"
+    ],
+    "tags": [
+      "bootstrap"
+    ],
+    "frameworkMappings": [
+      {
+        "framework": "AFME",
+        "version": "2026",
+        "questionRef": "AFME-OR-5.4"
+      }
+    ],
+    "createdAt": "2026-05-12T07:55:08.513618+00:00",
+    "updatedAt": "2026-05-12T07:55:08.513618+00:00"
+  },
+  {
+    "canonicalId": "canon.reg.audit.afme_6_2",
+    "label": "Internal audit function independence",
+    "description": "Confirm the internal audit function reports independently to the audit committee.",
+    "parentId": "canon.reg.audit",
+    "tier": 2,
+    "doNotAnswer": false,
+    "owners": [
+      "legal"
+    ],
+    "tags": [
+      "bootstrap"
+    ],
+    "frameworkMappings": [
+      {
+        "framework": "AFME",
+        "version": "2026",
+        "questionRef": "AFME-6.2"
+      }
+    ],
+    "createdAt": "2026-05-12T07:55:08.513618+00:00",
+    "updatedAt": "2026-05-12T07:55:08.513618+00:00"
+  },
+  {
+    "canonicalId": "canon.reg.governance.afme_4_1",
+    "label": "Board oversight of risk",
+    "description": "Describe the board's oversight role for enterprise risk management.",
+    "parentId": null,
+    "tier": 1,
+    "doNotAnswer": false,
+    "owners": [
+      "legal"
+    ],
+    "tags": [
+      "bootstrap"
+    ],
+    "frameworkMappings": [
+      {
+        "framework": "AFME",
+        "version": "2026",
+        "questionRef": "AFME-4.1"
+      }
+    ],
+    "createdAt": "2026-05-12T07:55:08.513618+00:00",
+    "updatedAt": "2026-05-12T07:55:08.513618+00:00"
+  },
+  {
+    "canonicalId": "canon.subc.vendor.tpr_01_q1",
+    "label": "Third-party risk assessment cadence",
+    "description": "What is the frequency and scope of third-party risk assessments for critical vendors?",
+    "parentId": "canon.subc.vendor",
+    "tier": 1,
+    "doNotAnswer": false,
+    "owners": [
+      "tprm"
+    ],
+    "tags": [
+      "bootstrap"
+    ],
+    "frameworkMappings": [
+      {
+        "framework": "CAIQ",
+        "version": "v4.0.3",
+        "questionRef": "STA-08.1"
+      },
+      {
+        "framework": "AFME",
+        "version": "2026",
+        "questionRef": "AFME-SUBC-3.1"
+      }
+    ],
+    "createdAt": "2026-05-12T07:55:08.513618+00:00",
+    "updatedAt": "2026-05-12T07:55:08.513618+00:00"
+  }
+]

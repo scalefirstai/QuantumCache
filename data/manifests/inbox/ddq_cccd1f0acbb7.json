@@ -1,0 +1,30 @@
+{
+  "ddq_id": "ddq_cccd1f0acbb7",
+  "sealed_at": "2026-05-12T07:50:25.216946+00:00",
+  "platform_version": "v0.2.0-agents",
+  "from": "Playground <playground@quantumcache.local>",
+  "to": "ddq.intake@bny.com",
+  "subject": "Playground \u00b7 pg_20260512T075006_7d09b3",
+  "raw_eml_sha256": "sha256:3c873e5b1a0420eda1d8bf98a6b5b0cffd53d678fa6bf8d20aec533d5d33f01a",
+  "question_count": 1,
+  "results": [
+    {
+      "run_id": "run_20260512T075018_5a386714",
+      "question_id": "PG-1",
+      "framework": "BESPOKE",
+      "canonical_id": "canon.is.iam.iam_14_q1",
+      "confidence": 0.92,
+      "library_hit": false,
+      "draft_chars": 0,
+      "citation_count": 0,
+      "validate_verdict": "halt",
+      "route": "halt",
+      "queue": "legal",
+      "tier": "tier1",
+      "elapsed_ms": 7183,
+      "merkle_root": "sha256:25f7f509b0edd772b2fb02def55d506be666d5a17b54677ddab17583e7b4edb2",
+      "outbound_preview": "",
+      "agent_events": 15
+    }
+  ]
+}

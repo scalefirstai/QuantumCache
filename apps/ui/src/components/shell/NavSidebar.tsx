@@ -33,6 +33,18 @@ const autogenLinks: NavLink[] = [
   { to: "/playground", label: "Playground" },
 ];
 
+const datasetLinks: NavLink[] = [
+  { to: "/datasets", label: "Overview" },
+  { to: "/datasets/$type", params: { type: "knowledge" }, label: "Knowledge" },
+  { to: "/datasets/$type", params: { type: "canonical" }, label: "Canonical" },
+  { to: "/datasets/$type", params: { type: "audit" }, label: "Audit" },
+];
+
+const ruleLinks: NavLink[] = [
+  { to: "/rules", label: "All rules" },
+  { to: "/rules/queue", label: "Review queue" },
+];
+
 export function NavSidebar() {
   return (
     <aside
@@ -64,6 +76,34 @@ export function NavSidebar() {
           AutoGen Lite
         </div>
         {autogenLinks.map((l) => (
+          <Link
+            key={l.label}
+            to={l.to}
+            params={l.params}
+            className="text-[13px] px-2 py-1.5 rounded-md text-bny-slate hover:bg-bny-paper [&.active]:bg-bny-tealLight [&.active]:text-bny-ink [&.active]:font-medium"
+            activeProps={{ className: "active" }}
+          >
+            {l.label}
+          </Link>
+        ))}
+        <div className="text-[10px] uppercase tracking-wider text-bny-fog mt-4 px-2">
+          Datasets
+        </div>
+        {datasetLinks.map((l) => (
+          <Link
+            key={l.label}
+            to={l.to}
+            params={l.params}
+            className="text-[13px] px-2 py-1.5 rounded-md text-bny-slate hover:bg-bny-paper [&.active]:bg-bny-tealLight [&.active]:text-bny-ink [&.active]:font-medium"
+            activeProps={{ className: "active" }}
+          >
+            {l.label}
+          </Link>
+        ))}
+        <div className="text-[10px] uppercase tracking-wider text-bny-fog mt-4 px-2">
+          Rule engine
+        </div>
+        {ruleLinks.map((l) => (
           <Link
             key={l.label}
             to={l.to}

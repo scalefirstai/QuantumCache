@@ -2,6 +2,13 @@ import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
   testDir: "./tests/e2e",
+  // datasets.spec.ts has its own config + webServer (fs-mode API on :8001 +
+  // VITE_API_MODE=http). Excluded here so the default fixture-mode runner
+  // doesn't pick it up.
+  // datasets.spec.ts and rules.spec.ts have their own configs + webServer
+  // (fs-mode API on :8001 + VITE_API_MODE=http). Excluded here so the
+  // default fixture-mode runner doesn't pick them up.
+  testIgnore: [/datasets\.spec\.ts/, /rules\.spec\.ts/],
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,

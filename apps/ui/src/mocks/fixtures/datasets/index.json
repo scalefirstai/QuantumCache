@@ -1,0 +1,23 @@
+[
+  {
+    "id": "knowledge",
+    "label": "Knowledge",
+    "count": 24,
+    "lastUpdatedAt": "2026-05-10T10:37:29.996890+00:00",
+    "description": "Source documents the platform retrieves from (filings, framework docs)."
+  },
+  {
+    "id": "canonical",
+    "label": "Canonical",
+    "count": 12,
+    "lastUpdatedAt": "2026-05-12T07:55:08.513618+00:00",
+    "description": "Taxonomy of canonical question IDs across DDQ frameworks."
+  },
+  {
+    "id": "audit",
+    "label": "Audit",
+    "count": 10,
+    "lastUpdatedAt": "2026-05-12T07:50:25.187850+00:00",
+    "description": "Sealed L01 run journals (immutable, hash-chained)."
+  }
+]

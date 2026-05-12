@@ -1,0 +1,95 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.11, pytest-9.0.3, pluggy-1.6.0 -- /Volumes/D/Projects/QuantumCache/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Volumes/D/Projects/QuantumCache
+plugins: anyio-4.13.0
+collecting ... collected 8 items
+
+tests/integration/test_rule_engine_end_to_end.py::test_freshness_rule_edit_changes_verdict   wrote freshness.library.expired (freshness, status=active)
+  wrote freshness.library.review_overdue (freshness, status=active)
+  wrote freshness.library.bootstrap_tag (freshness, status=active)
+  wrote freshness.evidence.pillar3.age_12mo (freshness, status=active)
+  wrote approval.halt.pii (approval, status=active)
+  wrote approval.halt.validate (approval, status=active)
+  wrote approval.sme.freshness_stale (approval, status=active)
+  wrote approval.sme.consistency_drift (approval, status=active)
+  wrote approval.sme.low_confidence (approval, status=active)
+  wrote approval.sme.tier1 (approval, status=active)
+  wrote approval.auto.clean (approval, status=active)
+
+[BEFORE EDIT] stale=True reasons=['library entry is bootstrap-tagged — needs SME re-approval before client packet']
+[AFTER EDIT]  stale=False reasons=[]
+PASSED
+tests/integration/test_rule_engine_end_to_end.py::test_freshness_new_rule_changes_verdict   wrote freshness.library.expired (freshness, status=active)
+  wrote freshness.library.review_overdue (freshness, status=active)
+  wrote freshness.library.bootstrap_tag (freshness, status=active)
+  wrote freshness.evidence.pillar3.age_12mo (freshness, status=active)
+  wrote approval.halt.pii (approval, status=active)
+  wrote approval.halt.validate (approval, status=active)
+  wrote approval.sme.freshness_stale (approval, status=active)
+  wrote approval.sme.consistency_drift (approval, status=active)
+  wrote approval.sme.low_confidence (approval, status=active)
+  wrote approval.sme.tier1 (approval, status=active)
+  wrote approval.auto.clean (approval, status=active)
+
+[BEFORE NEW RULE] stale=False reasons=[]
+[AFTER NEW RULE]  stale=True reasons=['confidential entry lib_x requires SME review']
+PASSED
+tests/integration/test_rule_engine_end_to_end.py::test_approval_lower_confidence_threshold   wrote freshness.library.expired (freshness, status=active)
+  wrote freshness.library.review_overdue (freshness, status=active)
+  wrote freshness.library.bootstrap_tag (freshness, status=active)
+  wrote freshness.evidence.pillar3.age_12mo (freshness, status=active)
+  wrote approval.halt.pii (approval, status=active)
+  wrote approval.halt.validate (approval, status=active)
+  wrote approval.sme.freshness_stale (approval, status=active)
+  wrote approval.sme.consistency_drift (approval, status=active)
+  wrote approval.sme.low_confidence (approval, status=active)
+  wrote approval.sme.tier1 (approval, status=active)
+  wrote approval.auto.clean (approval, status=active)
+
+[BEFORE THRESHOLD EDIT] route=auto_approve queue=ops rationale=All guardrails pass; tier-2/3 domain auto-approves.
+[AFTER THRESHOLD EDIT]  route=sme_queue queue=ops rationale=Classify confidence below 0.70 SME threshold — SME confirmation required.
+PASSED
+tests/integration/test_rule_engine_end_to_end.py::test_approval_inactive_rule_does_not_fire   wrote freshness.library.expired (freshness, status=active)
+  wrote freshness.library.review_overdue (freshness, status=active)
+  wrote freshness.library.bootstrap_tag (freshness, status=active)
+  wrote freshness.evidence.pillar3.age_12mo (freshness, status=active)
+  wrote approval.halt.pii (approval, status=active)
+  wrote approval.halt.validate (approval, status=active)
+  wrote approval.sme.freshness_stale (approval, status=active)
+  wrote approval.sme.consistency_drift (approval, status=active)
+  wrote approval.sme.low_confidence (approval, status=active)
+  wrote approval.sme.tier1 (approval, status=active)
+  wrote approval.auto.clean (approval, status=active)
+
+[BEFORE ARCHIVE] route=halt queue=legal
+[AFTER ARCHIVE]  route=auto_approve queue=ops rationale=All guardrails pass; tier-2/3 domain auto-approves.
+PASSED
+tests/integration/test_rule_engine_end_to_end.py::test_freshness_emits_rule_engine_event   wrote freshness.library.expired (freshness, status=active)
+  wrote freshness.library.review_overdue (freshness, status=active)
+  wrote freshness.library.bootstrap_tag (freshness, status=active)
+  wrote freshness.evidence.pillar3.age_12mo (freshness, status=active)
+  wrote approval.halt.pii (approval, status=active)
+  wrote approval.halt.validate (approval, status=active)
+  wrote approval.sme.freshness_stale (approval, status=active)
+  wrote approval.sme.consistency_drift (approval, status=active)
+  wrote approval.sme.low_confidence (approval, status=active)
+  wrote approval.sme.tier1 (approval, status=active)
+  wrote approval.auto.clean (approval, status=active)
+PASSED
+tests/integration/test_rule_engine_end_to_end.py::test_approval_emits_fired_rule_id   wrote freshness.library.expired (freshness, status=active)
+  wrote freshness.library.review_overdue (freshness, status=active)
+  wrote freshness.library.bootstrap_tag (freshness, status=active)
+  wrote freshness.evidence.pillar3.age_12mo (freshness, status=active)
+  wrote approval.halt.pii (approval, status=active)
+  wrote approval.halt.validate (approval, status=active)
+  wrote approval.sme.freshness_stale (approval, status=active)
+  wrote approval.sme.consistency_drift (approval, status=active)
+  wrote approval.sme.low_confidence (approval, status=active)
+  wrote approval.sme.tier1 (approval, status=active)
+  wrote approval.auto.clean (approval, status=active)
+PASSED
+tests/integration/test_rule_engine_end_to_end.py::test_freshness_legacy_path_still_works PASSED
+tests/integration/test_rule_engine_end_to_end.py::test_approval_legacy_path_still_works PASSED
+
+============================== 8 passed in 0.28s ===============================

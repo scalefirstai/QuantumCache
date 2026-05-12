@@ -16,6 +16,14 @@ import { ModelsRoute } from "./routes/Models";
 import { SkillsRoute } from "./routes/Skills";
 import { PlaygroundRoute } from "./routes/Playground";
 import { HomeRoute } from "./routes/Home";
+import { DatasetsRoute } from "./routes/Datasets";
+import { DatasetListRoute } from "./routes/DatasetList";
+import { KnowledgeDetailRoute } from "./routes/KnowledgeDetail";
+import { CanonicalDetailRoute } from "./routes/CanonicalDetail";
+import { AuditDetailRoute } from "./routes/AuditDetail";
+import { RulesListRoute } from "./routes/RulesList";
+import { RuleDetailRoute } from "./routes/RuleDetail";
+import { RuleQueueRoute } from "./routes/RuleQueue";
 
 const rootRoute = createRootRoute({
   component: () => (
@@ -103,6 +111,54 @@ const playgroundRoute = createRoute({
   component: PlaygroundRoute,
 });
 
+const datasetsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/datasets",
+  component: DatasetsRoute,
+});
+
+const datasetListRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/datasets/$type",
+  component: DatasetListRoute,
+});
+
+const knowledgeDetailRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/datasets/knowledge/$docId",
+  component: KnowledgeDetailRoute,
+});
+
+const canonicalDetailRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/datasets/canonical/$canonicalId",
+  component: CanonicalDetailRoute,
+});
+
+const auditDetailRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/datasets/audit/$runId",
+  component: AuditDetailRoute,
+});
+
+const rulesListRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/rules",
+  component: RulesListRoute,
+});
+
+const ruleQueueRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/rules/queue",
+  component: RuleQueueRoute,
+});
+
+const ruleDetailRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/rules/$ruleId",
+  component: RuleDetailRoute,
+});
+
 const routeTree = rootRoute.addChildren([
   indexRoute,
   runRoute,
@@ -115,6 +171,14 @@ const routeTree = rootRoute.addChildren([
   modelsRoute,
   skillsListRoute,
   playgroundRoute,
+  datasetsRoute,
+  datasetListRoute,
+  knowledgeDetailRoute,
+  canonicalDetailRoute,
+  auditDetailRoute,
+  rulesListRoute,
+  ruleQueueRoute,
+  ruleDetailRoute,
 ]);
 
 export const router = createRouter({

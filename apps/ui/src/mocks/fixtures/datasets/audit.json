@@ -1,0 +1,102 @@
+[
+  {
+    "runId": "run_20260512T075018_5a386714",
+    "ddqId": "ddq_cccd1f0acbb7",
+    "client": "",
+    "framework": "BESPOKE",
+    "verdict": "halt",
+    "sealedAt": "2026-05-12T07:50:25.187850+00:00",
+    "eventCount": 15,
+    "merkleRoot": "sha256:25f7f509b0edd772b2fb02def55d506be666d5a17b54677ddab17583e7b4edb2"
+  },
+  {
+    "runId": "run_20260512T074133_7bed389c",
+    "ddqId": "ddq_8db64d9cb6c5",
+    "client": "",
+    "framework": "CAIQ",
+    "verdict": "halt",
+    "sealedAt": "2026-05-12T07:41:52.568872+00:00",
+    "eventCount": 16,
+    "merkleRoot": "sha256:7efed42251bbda22e89b0dacfc159b4a2b5bd45f03124bf8aa5c5d1da35a7f5e"
+  },
+  {
+    "runId": "run_20260512T074005_876c175f",
+    "ddqId": "ddq_8db64d9cb6c5",
+    "client": "",
+    "framework": "CAIQ",
+    "verdict": "halt",
+    "sealedAt": "2026-05-12T07:40:30.242061+00:00",
+    "eventCount": 17,
+    "merkleRoot": "sha256:6ebe64c38327cb83ecefe2003ff7c3da7b704859bd2c717fd2366a313cf7fb9b"
+  },
+  {
+    "runId": "run_20260512T073840_96ac50a8",
+    "ddqId": "ddq_750aa196f356",
+    "client": "",
+    "framework": "CAIQ",
+    "verdict": "escalate",
+    "sealedAt": "2026-05-12T07:38:59.851430+00:00",
+    "eventCount": 17,
+    "merkleRoot": "sha256:aa37b6e1baf3d8a49bed8775cab0c2acf72775d7383877f7d4997dc95b09fd5b"
+  },
+  {
+    "runId": "run_20260512T073547_4692fead",
+    "ddqId": "ddq_b32ac6e19b76",
+    "client": "",
+    "framework": "CAIQ",
+    "verdict": "escalate",
+    "sealedAt": "2026-05-12T07:36:12.097659+00:00",
+    "eventCount": 17,
+    "merkleRoot": "sha256:bc051df71c7987d31f1df3ec09a765c1a2028dad224f0e2d4f468eca411d66b1"
+  },
+  {
+    "runId": "run_20260512T014441_ad0c51de",
+    "ddqId": "ddq_8db64d9cb6c5",
+    "client": "",
+    "framework": "CAIQ",
+    "verdict": "halt",
+    "sealedAt": "2026-05-12T01:45:02.699991+00:00",
+    "eventCount": 17,
+    "merkleRoot": "sha256:e5d5c105e45d1376a38f3731e6571b5ba9095d4091f55a3235af5964f1842958"
+  },
+  {
+    "runId": "run_20260512T014414_aca3f452",
+    "ddqId": "ddq_8db64d9cb6c5",
+    "client": "",
+    "framework": "CAIQ",
+    "verdict": "escalate",
+    "sealedAt": "2026-05-12T01:44:41.606067+00:00",
+    "eventCount": 17,
+    "merkleRoot": "sha256:24c1f890276cb294ccd36bc25379d9fc073bbd0466b213d4c3abd7d54240f879"
+  },
+  {
+    "runId": "run_20260512T012052_90295c12",
+    "ddqId": "ddq_8db64d9cb6c5",
+    "client": "",
+    "framework": "ADVERSARIAL",
+    "verdict": "halt",
+    "sealedAt": "2026-05-12T01:20:58.908170+00:00",
+    "eventCount": 15,
+    "merkleRoot": "sha256:5de23e89b50bf53df16fe8f8a49765c146afe719ef74bd752a77602a5c2c3112"
+  },
+  {
+    "runId": "run_20260512T012033_297a2d8b",
+    "ddqId": "ddq_8db64d9cb6c5",
+    "client": "",
+    "framework": "AFME",
+    "verdict": "escalate",
+    "sealedAt": "2026-05-12T01:20:52.304930+00:00",
+    "eventCount": 17,
+    "merkleRoot": "sha256:be2f70dd1cb5fbb3279d70523e8556b24200f64ea61f3b9a2e4f2f14d5702465"
+  },
+  {
+    "runId": "run_20260512T012026_69c8d1f0",
+    "ddqId": "ddq_8db64d9cb6c5",
+    "client": "",
+    "framework": "AFME",
+    "verdict": "halt",
+    "sealedAt": "2026-05-12T01:20:33.467253+00:00",
+    "eventCount": 15,
+    "merkleRoot": "sha256:a3740311511f03175d12f61fd1ce45145ceaf31562573571b591b136cbe1bf65"
+  }
+]

@@ -1,0 +1,482 @@
+[
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2021q1",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2021-03-31",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:8c8a6c9e0db572d217e020c8dd70ebd1981260cc95ed73cf618ef51d57e471ca",
+    "contentType": "application/pdf",
+    "bytes": 381411,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-march-2021.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-mellon-corporate-pillar-3-disclosure-march-2021.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996724+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2021q2",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2021-06-30",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:80f5f76fc87be552e700978a3ab420dbde28816d9847b0972c217156a83b7d91",
+    "contentType": "application/pdf",
+    "bytes": 440935,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-june-2021.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-mellon-corporate-pillar-3-disclosure-june-2021.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996749+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2021q3",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2021-09-30",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:f4ae3333dd3f1b40682074ac0522a60d6204100937991a54ad41fab57b4a4bc1",
+    "contentType": "application/pdf",
+    "bytes": 426159,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-september-2021.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-mellon-corporate-pillar-3-disclosure-september-2021.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996759+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2021q4",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2021-12-31",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:2783dc6d45246f7117dc75d01644bdac43ae14d985ae9587468966e37a9f42e1",
+    "contentType": "application/pdf",
+    "bytes": 425308,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-december-2021.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-mellon-corporate-pillar-3-disclosure-december-2021.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996768+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2022q1",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2022-03-31",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:253cbb2b9d1a892cfca60acdb39e5fe29e64664fc87f96f59de6e2bb924ecc2f",
+    "contentType": "application/pdf",
+    "bytes": 425083,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-march-2022.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-mellon-corporate-pillar-3-disclosure-march-2022.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996776+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2022q2",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2022-06-30",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:be588e8544da2c96d90ea5453318c43db8d17c44304165db2b4532e79d22f293",
+    "contentType": "application/pdf",
+    "bytes": 425528,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-june-2022.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-mellon-corporate-pillar-3-disclosure-june-2022.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996785+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2022q3",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2022-09-30",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:02e2a3c3664cad0331a0c3a5af26f15a84c2f1666bb62af87f2a8d74d7c0c86d",
+    "contentType": "application/pdf",
+    "bytes": 425748,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-september-2022.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-mellon-corporate-pillar-3-disclosure-september-2022.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996793+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2022q4",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2022-12-31",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:e0e56eca9bfde7be1cb43c2981be530dc43c66d05f40f91591482de8e9341cc5",
+    "contentType": "application/pdf",
+    "bytes": 422758,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-december-2022.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-mellon-corporate-pillar-3-disclosure-december-2022.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996801+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2023q1",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2023-03-31",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:759ec838d6383d41f6936aa61b3bb2b4d0d049f412ff14914410119f741d9f32",
+    "contentType": "application/pdf",
+    "bytes": 421850,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-march-2023.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-mellon-corporate-pillar-3-disclosure-march-2023.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996809+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2023q2",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2023-06-30",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:184550cb8ba12d388e4b706e913c84cd4f7d722adfc3bb57b074f8951c6acbeb",
+    "contentType": "application/pdf",
+    "bytes": 412084,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-june-2023.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-mellon-corporate-pillar-3-disclosure-june-2023.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996817+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2023q3",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2023-09-30",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:bbe5dcb574d136fb22cb383e474b667e29cd4ed071666c7698b3fe16146e1f62",
+    "contentType": "application/pdf",
+    "bytes": 406394,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-september-2023.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-mellon-corporate-pillar-3-disclosure-september-2023.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996825+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2023q4",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2023-12-31",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:1300b2ea7e59eb6472313f919d94ea33e26885baa4476f2112a8ea545410f981",
+    "contentType": "application/pdf",
+    "bytes": 441648,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-december-2023.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-mellon-corporate-pillar-3-disclosure-december-2023.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996832+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2024q1",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2024-03-31",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:777d42c6da65f38b43f9540f915e4ba1f893628642818252f1dd78b3cab0f2ec",
+    "contentType": "application/pdf",
+    "bytes": 361646,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-march-2024.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-mellon-corporate-pillar-3-disclosure-march-2024.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996839+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2024q2",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2024-06-30",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:8a226f4fc79a78dad3671cd5971abe79c5cf7010d8d4aaac380b0b80faa8ea84",
+    "contentType": "application/pdf",
+    "bytes": 500943,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-mellon-corporate-pillar-3-disclosure-june-2024.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-mellon-corporate-pillar-3-disclosure-june-2024.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996846+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2024q3",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2024-09-30",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:fda1dc6a7f28ed99552b922d5cfc0b264eb129c911686939015c20dbc224f3ea",
+    "contentType": "application/pdf",
+    "bytes": 513788,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-corporate-pillar-3-disclosure-september-2024.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-corporate-pillar-3-disclosure-september-2024.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996854+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2024q4",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2024-12-31",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:3a06cb127def01f51a29e7b96e92024a2aace39f55af86202fe7e00a0880f198",
+    "contentType": "application/pdf",
+    "bytes": 531921,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-corporate-pillar-3-disclosure-december-2024.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-corporate-pillar-3-disclosure-december-2024.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996861+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2025q1",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2025-03-31",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:2c1c28a05c6b806154cc3aea99afcada5a3e06a8f83c26991b2e76c66b57ee3e",
+    "contentType": "application/pdf",
+    "bytes": 521495,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-corporate-pillar-3-disclosure-march-2025.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-corporate-pillar-3-disclosure-march-2025.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996868+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2025q2",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2025-06-30",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:f39a534202f41b82a5333de179730a3946822d4d7c7532d804564ff975e18bfd",
+    "contentType": "application/pdf",
+    "bytes": 566065,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-2q2025-pillar3-report.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-2q2025-pillar3-report.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996876+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2025q3",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2025-09-30",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:564c61ccb20f26882ff274a1e9b1fd776e6a32a0866c3fccd77f20012d17b105",
+    "contentType": "application/pdf",
+    "bytes": 501306,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-3q2025-pillar3-report.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-3q2025-pillar3-report.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996883+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "bny-ir:bny-mellon-corp:pillar-3:2025q4",
+    "source": "bny-ir",
+    "entity": "bny-mellon-corp",
+    "kind": "pillar3",
+    "effectiveDate": "2025-12-31",
+    "primaryDesc": "Pillar 3 quarterly disclosure",
+    "docHash": "sha256:3c293b45055f40010639dde49048ff4e61b027edfe27f62affa624f97eb03f26",
+    "contentType": "application/pdf",
+    "bytes": 605444,
+    "url": "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bny-4q2025-pillar-3-report.pdf",
+    "s3Uri": "s3://bny-ddq-knowledge-raw/bny-ir/bny-mellon-corp/pillar-3/bny-4q2025-pillar-3-report.pdf",
+    "tags": [
+      "bootstrap",
+      "bny-ir"
+    ],
+    "ingestedAt": "2026-05-10T10:37:29.996890+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 pillar3 \u00b7 Pillar 3 quarterly disclosure"
+  },
+  {
+    "docId": "edgar:bny-mellon-corp:0001193125-21-202195",
+    "source": "edgar",
+    "entity": "bny-mellon-corp",
+    "kind": null,
+    "effectiveDate": "2021-06-28",
+    "primaryDesc": "8-K",
+    "docHash": "sha256:2f9ab77eb3647a5b30e5c32c710b26fa0a97f39a2b35a4899291f9f9a155d3ee",
+    "contentType": "text/html",
+    "bytes": 29812,
+    "url": null,
+    "s3Uri": "s3://bny-ddq-knowledge-raw/edgar/bny-mellon-corp/0001193125-21-202195/d195203d8k.htm",
+    "tags": [
+      "bootstrap",
+      "edgar"
+    ],
+    "ingestedAt": "2026-05-10T10:37:22.230576+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 8-K"
+  },
+  {
+    "docId": "edgar:bny-mellon-corp:0001193125-21-225868",
+    "source": "edgar",
+    "entity": "bny-mellon-corp",
+    "kind": null,
+    "effectiveDate": "2021-07-27",
+    "primaryDesc": "8-K",
+    "docHash": "sha256:0f98ce4507370a6525e4fe23d7da61163005dcafdfc2418a0dd181b0c2e66c5f",
+    "contentType": "text/html",
+    "bytes": 30119,
+    "url": null,
+    "s3Uri": "s3://bny-ddq-knowledge-raw/edgar/bny-mellon-corp/0001193125-21-225868/d205617d8k.htm",
+    "tags": [
+      "bootstrap",
+      "edgar"
+    ],
+    "ingestedAt": "2026-05-10T10:37:22.230565+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 8-K"
+  },
+  {
+    "docId": "edgar:bny-mellon-corp:0001193125-21-306733",
+    "source": "edgar",
+    "entity": "bny-mellon-corp",
+    "kind": null,
+    "effectiveDate": "2021-10-25",
+    "primaryDesc": "8-K",
+    "docHash": "sha256:e9a6856b3f348035a220666b60d6b7f24e4491e451d616664642311af26fc83f",
+    "contentType": "text/html",
+    "bytes": 30150,
+    "url": null,
+    "s3Uri": "s3://bny-ddq-knowledge-raw/edgar/bny-mellon-corp/0001193125-21-306733/d236462d8k.htm",
+    "tags": [
+      "bootstrap",
+      "edgar"
+    ],
+    "ingestedAt": "2026-05-10T10:37:22.230550+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 8-K"
+  },
+  {
+    "docId": "edgar:bny-mellon-corp:0001193125-21-322458",
+    "source": "edgar",
+    "entity": "bny-mellon-corp",
+    "kind": null,
+    "effectiveDate": "2021-11-08",
+    "primaryDesc": "8-K",
+    "docHash": "sha256:66ebab6aff9606ded2def66a959a8621a3abb1bf1d3c3fe5434597194c2ad004",
+    "contentType": "text/html",
+    "bytes": 28176,
+    "url": null,
+    "s3Uri": "s3://bny-ddq-knowledge-raw/edgar/bny-mellon-corp/0001193125-21-322458/d241018d8k.htm",
+    "tags": [
+      "bootstrap",
+      "edgar"
+    ],
+    "ingestedAt": "2026-05-10T10:37:22.230540+00:00",
+    "updatedAt": null,
+    "displayTitle": "bny-mellon-corp \u00b7 8-K"
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "canonical_id": "canon.or.bcp.bcr_01_q1",
+  "label": "Business continuity plan testing",
+  "description": "How often is the business continuity plan tested end-to-end?",
+  "parent_id": "canon.or.bcp",
+  "framework_mappings": [
+    {
+      "framework": "CAIQ",
+      "version": "v4.0.3",
+      "question_ref": "BCR-01.1"
+    },
+    {
+      "framework": "AFME",
+      "version": "2026",
+      "question_ref": "AFME-OR-7.3"
+    }
+  ],
+  "tier": 1,
+  "do_not_answer": false,
+  "owners": [
+    "ops-risk"
+  ],
+  "tags": [
+    "bootstrap"
+  ],
+  "created_at": "2026-05-12T07:55:08.513618+00:00",
+  "updated_at": "2026-05-12T07:55:08.513618+00:00",
+  "synonyms_embedding": null
+}
