@@ -1,11 +1,11 @@
 # Bootstrap-script dependencies. Production services (M1+) get a real pyproject.toml.
 # Pinned for Python 3.12 (2026-05-12 venv refresh).
-boto3==1.42.97
+boto3==1.43.6
 beautifulsoup4==4.14.3
 lxml==6.1.0
 # 1.26.7 closes GHSA-cxqh-p2w9-fmr7 (CLI path-traversal in __main__.py).
 # We only `import fitz` programmatically; pin satisfies Dependabot regardless.
-pymupdf==1.26.7
+pymupdf==1.27.2.3
 python-docx==1.2.0
 pyarrow==21.0.0
 opensearch-py==2.8.0
