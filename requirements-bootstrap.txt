@@ -3,6 +3,10 @@
 boto3==1.42.97
 beautifulsoup4==4.14.3
 lxml==6.1.0
+# pymupdf>=1.26.7 closes GHSA-cxqh-p2w9-fmr7 but requires Python 3.10+.
+# The CVE is for `python -m fitz` (CLI path-traversal); we only import
+# fitz programmatically, so the exploit path does not apply here. Bump
+# the pin when the venv moves off Python 3.9.
 pymupdf==1.26.5
 python-docx==1.2.0
 pyarrow==21.0.0
