@@ -35,15 +35,15 @@ const runModules = import.meta.glob<{ default: RunView }>(
 );
 
 export async function getRun(runId: string): Promise<RunView> {
-  // Match by path suffix; falls through to 404 if no fixture exists.
+  // Fixture lookup is only consulted when running in fixture mode (no
+  // backend wired). In http mode the API is authoritative — runs created
+  // by the orchestrator after the UI build won't have a static fixture
+  // and must still load.
   const entry = Object.entries(runModules).find(([path]) =>
     path.endsWith(`/${runId}.json`),
   );
-  if (!entry) {
-    throw new ApiError("Run not found", 404, `/api/v1/runs/${runId}`);
-  }
-  const [, loader] = entry;
-  return get<RunView>(`/api/v1/runs/${runId}`, () =>
-    loader().then((m) => ({ default: m.default as unknown as RunView })),
-  );
+  const fixtureLoader = entry
+    ? () => entry[1]().then((m) => ({ default: m.default as unknown as RunView }))
+    : () => Promise.reject(new ApiError("Run not found", 404, `/api/v1/runs/${runId}`));
+  return get<RunView>(`/api/v1/runs/${runId}`, fixtureLoader);
 }

@@ -40,3 +40,8 @@ data/sources/caiq/_extracted/
 # Local LocalStack volumes
 infra/docker/.localstack/
 infra/docker/volume/
+
+# Playwright E2E artifacts — regenerable by re-running the spec.
+apps/api_gateway/tests/screenshots/
+apps/ui/test-results/
+apps/ui/playwright-report/

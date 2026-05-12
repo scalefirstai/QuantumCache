@@ -26,14 +26,16 @@ const pipelineModules = import.meta.glob<{ default: Pipeline }>(
 );
 
 export async function getPipeline(ddqId: string): Promise<Pipeline> {
+  // Fixture is only authoritative in fixture mode; in http mode the API
+  // serves freshly-sealed packets that don't have a static fixture yet.
   const entry = Object.entries(pipelineModules).find(([path]) =>
     path.endsWith(`/${ddqId}.json`),
   );
-  if (!entry) {
-    throw new ApiError("Pipeline not found", 404, `/api/v1/pipelines/${ddqId}`);
-  }
-  const [, loader] = entry;
-  return get<Pipeline>(`/api/v1/pipelines/${ddqId}`, () =>
-    loader().then((m) => ({ default: m.default as unknown as Pipeline })),
-  );
+  const fixtureLoader = entry
+    ? () => entry[1]().then((m) => ({ default: m.default as unknown as Pipeline }))
+    : () =>
+        Promise.reject(
+          new ApiError("Pipeline not found", 404, `/api/v1/pipelines/${ddqId}`),
+        );
+  return get<Pipeline>(`/api/v1/pipelines/${ddqId}`, fixtureLoader);
 }

@@ -1,0 +1,328 @@
+{
+  "run_id": "run_20260512T012026_69c8d1f0",
+  "ddq_id": "ddq_8db64d9cb6c5",
+  "sealed_at": "2026-05-12T01:20:33.467253+00:00",
+  "platform_version": "v0.2.0-agents",
+  "taxonomy_version": "tx_v0.1",
+  "library_version": "lib_v0.1",
+  "input": {
+    "question_id": "Q3",
+    "framework": "AFME",
+    "text": "Please confirm that a qualified team within your organisation, independent of your custody business, reviews your insurance cover on at least an annual basis."
+  },
+  "outbound_response": "",
+  "outbound_response_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence_refs": [],
+  "agents": {
+    "QuestionMapper": {
+      "canonical_id": null,
+      "confidence": 0.0,
+      "routed_to_sme": true
+    },
+    "EvidenceSourcer": {
+      "selected": 0,
+      "sufficient": false
+    },
+    "DraftComposer": {
+      "tier": "tier2_sonnet",
+      "draft_chars": 0,
+      "used_library_entry": false,
+      "citation_count": 0
+    },
+    "CitationVerifier": {
+      "all_pass": false,
+      "checked": 0
+    },
+    "ConsistencyChecker": {
+      "consistent": true,
+      "drift": false
+    },
+    "PiiScrubber": {
+      "findings": 0,
+      "halt": false
+    },
+    "FreshnessAuditor": {
+      "stale": false,
+      "reasons": []
+    },
+    "ApprovalRouter": {
+      "route": "halt",
+      "queue": "legal",
+      "tier": "tier2"
+    }
+  },
+  "verdict": "halt",
+  "route": "halt",
+  "events": [
+    {
+      "event_id": "evt_ab801d66b5144dcf",
+      "kind": "intake.received",
+      "agent": "Orchestrator",
+      "agent_version": "1.0.0",
+      "ts": "2026-05-12T01:20:26.325306+00:00",
+      "payload": {
+        "question_id": "Q3",
+        "framework": "AFME",
+        "raw_question_text_hash": "sha256:0862307003de4e9806c7332c1f70a01df92acc33e38c346a21c923923ec76c8f"
+      },
+      "payload_hash": "sha256:97ac6c3cfe981d2d2eebc34b2fc013794c0864c67f0872723907b2903cc23b30",
+      "prev_hash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "chain_hash": "sha256:1c2af3de9382749ee7aab3aa00cf01fa38f7a2421941c4cefd0e300b1f7b71c8"
+    },
+    {
+      "event_id": "evt_709b9e926c9d4bc9",
+      "kind": "agent.QuestionMapper.invoke",
+      "agent": "QuestionMapper",
+      "agent_version": "1.0.0",
+      "ts": "2026-05-12T01:20:26.857950+00:00",
+      "payload": {
+        "question_id": "Q3",
+        "framework": "AFME",
+        "candidate_count": 0,
+        "prompt_hash": "sha256:f55baa0918efcb5bf93392eb69c03a8cd101aed971f4bb2dbb3312e7fe27b6b5",
+        "model_tier": "tier3_haiku"
+      },
+      "payload_hash": "sha256:c0bf55403cdac60b93f62abef1f9fac702877916edfb18c4c9b21f787349e246",
+      "prev_hash": "sha256:1c2af3de9382749ee7aab3aa00cf01fa38f7a2421941c4cefd0e300b1f7b71c8",
+      "chain_hash": "sha256:5950b2d23653f572aeb1648fabb6c5147f57981df971ff6eebf5988f43ac1648"
+    },
+    {
+      "event_id": "evt_2e8825f4419b4662",
+      "kind": "agent.QuestionMapper.result",
+      "agent": "QuestionMapper",
+      "agent_version": "1.0.0",
+      "ts": "2026-05-12T01:20:28.345439+00:00",
+      "payload": {
+        "canonical_id": null,
+        "confidence": 0.0,
+        "routed_to_sme": true,
+        "response_hash": "sha256:27f499a9e07ec11579470db67aebcb25364042338937d3077d23d0d30dd8caf1",
+        "tokens": {
+          "input": 575,
+          "output": 49,
+          "cache_read": 0
+        }
+      },
+      "payload_hash": "sha256:64c6578bb31323f2c5d3ef8dbb80348e61060cb4af9d2d52bbce3c25ca7046b5",
+      "prev_hash": "sha256:5950b2d23653f572aeb1648fabb6c5147f57981df971ff6eebf5988f43ac1648",
+      "chain_hash": "sha256:1d2f5fabdc10baa6d67d7ed7ced14b349d8142a896079422d1245f6feeec6702"
+    },
+    {
+      "event_id": "evt_6c3d685e0c28452b",
+      "kind": "library.lookup",
+      "agent": "Orchestrator",
+      "agent_version": "1.0.0",
+      "ts": "2026-05-12T01:20:28.345503+00:00",
+      "payload": {
+        "canonical_id": null,
+        "entity": "BNY_MELLON_CORP",
+        "product": null,
+        "hit": false,
+        "entry_id": null
+      },
+      "payload_hash": "sha256:c3583ec9a0a492cf0e6d1059fca24550b4ead57c948cf1b2aaa05deeae767650",
+      "prev_hash": "sha256:1d2f5fabdc10baa6d67d7ed7ced14b349d8142a896079422d1245f6feeec6702",
+      "chain_hash": "sha256:3c5682ae43889f15ad9c4546fb0a8af25662ae903fed1bf7309ce80052b9affb"
+    },
+    {
+      "event_id": "evt_8da8a39033394bbb",
+      "kind": "retrieve.hybrid",
+      "agent": "Orchestrator",
+      "agent_version": "1.0.0",
+      "ts": "2026-05-12T01:20:28.630799+00:00",
+      "payload": {
+        "k": 10,
+        "filters": {
+          "source": [
+            "edgar",
+            "bny-ir"
+          ]
+        },
+        "returned": 10,
+        "top_score": 0.027757078986587184,
+        "top_3_sources": [
+          "edgar",
+          "edgar",
+          "edgar"
+        ]
+      },
+      "payload_hash": "sha256:3c231e40c6d33db27b34a0f48f6dc730ef6de01a7b4b3385d50081cab1fbcfea",
+      "prev_hash": "sha256:3c5682ae43889f15ad9c4546fb0a8af25662ae903fed1bf7309ce80052b9affb",
+      "chain_hash": "sha256:6daee5758213e7b8f56387a08c461075943af6ea986326dea5e5555123fcb067"
+    },
+    {
+      "event_id": "evt_566edbb74dd04654",
+      "kind": "agent.EvidenceSourcer.invoke",
+      "agent": "EvidenceSourcer",
+      "agent_version": "1.0.0",
+      "ts": "2026-05-12T01:20:28.631672+00:00",
+      "payload": {
+        "question_id": "Q3",
+        "canonical_id": null,
+        "candidate_count": 10,
+        "library_hit": false,
+        "prompt_hash": "sha256:9cc80ac169e34146ee6bf275ec7cfe6a581ed4e30ed80abe2a931c2dfc53e53f",
+        "model_tier": "tier2_sonnet"
+      },
+      "payload_hash": "sha256:aae62eb3d88f8b03bb14bbac07c3f312e546cd3920a971ebe524aed4d0c28d4f",
+      "prev_hash": "sha256:6daee5758213e7b8f56387a08c461075943af6ea986326dea5e5555123fcb067",
+      "chain_hash": "sha256:58065256eb308fc0024f35d6308f2a36419aa5933949fc6d7a2c1d4f109916a3"
+    },
+    {
+      "event_id": "evt_7bd16b3c9a7a4d05",
+      "kind": "agent.EvidenceSourcer.result",
+      "agent": "EvidenceSourcer",
+      "agent_version": "1.0.0",
+      "ts": "2026-05-12T01:20:32.303925+00:00",
+      "payload": {
+        "selected_count": 0,
+        "selected_span_ids": [],
+        "sufficient": false,
+        "response_hash": "sha256:26ab2a6d45a37ebcaa83ba50a0c63c04c1d84d738efa1ea8bd4806ff360153a0",
+        "tokens": {
+          "input": 2629,
+          "output": 107,
+          "cache_read": 0
+        }
+      },
+      "payload_hash": "sha256:3b5c2dcc489a71df992da9e5eeef4557d8e43656913ef125b58dc032200c3c6b",
+      "prev_hash": "sha256:58065256eb308fc0024f35d6308f2a36419aa5933949fc6d7a2c1d4f109916a3",
+      "chain_hash": "sha256:ae011aecb8ae36c9288f0f2e8350922170b5f91e51bedb088600715433790c91"
+    },
+    {
+      "event_id": "evt_4434f53a30c94d59",
+      "kind": "agent.DraftComposer.skip",
+      "agent": "DraftComposer",
+      "agent_version": "1.0.0",
+      "ts": "2026-05-12T01:20:32.304041+00:00",
+      "payload": {
+        "reason": "no evidence and no library entry \u2014 handing off to SME"
+      },
+      "payload_hash": "sha256:790b4d70ad013228dcd2b8ea02a70fe3c8e5fefb57a467e4793ece2a819bfcaf",
+      "prev_hash": "sha256:ae011aecb8ae36c9288f0f2e8350922170b5f91e51bedb088600715433790c91",
+      "chain_hash": "sha256:a8709ca0e6bdf8597d0a7ad7ef49a649fe88f8c9d06bba723064da42587b7b4d"
+    },
+    {
+      "event_id": "evt_07c8e37c4d5a49f9",
+      "kind": "agent.CitationVerifier.result",
+      "agent": "CitationVerifier",
+      "agent_version": "1.0.0",
+      "ts": "2026-05-12T01:20:32.304129+00:00",
+      "payload": {
+        "all_pass": false,
+        "reason": "no citations in draft",
+        "checked": 0
+      },
+      "payload_hash": "sha256:53ce38701aa0ebe6aa882c54f597bd83ac717f84558f254b5ff27c02b1a48076",
+      "prev_hash": "sha256:a8709ca0e6bdf8597d0a7ad7ef49a649fe88f8c9d06bba723064da42587b7b4d",
+      "chain_hash": "sha256:6b8a6d105c549308306ca0dbe65b4927e8920eb516f110e6d17f2798ca1241fa"
+    },
+    {
+      "event_id": "evt_be5538ae67924d09",
+      "kind": "agent.ConsistencyChecker.result",
+      "agent": "ConsistencyChecker",
+      "agent_version": "1.0.0",
+      "ts": "2026-05-12T01:20:32.304206+00:00",
+      "payload": {
+        "consistent": true,
+        "drift_detected": false,
+        "reason": "no prior responses for this canonical_id"
+      },
+      "payload_hash": "sha256:c33a38b14f883aae0c6ea091d814147cd31b04d3d3b30af114f61d41119c9353",
+      "prev_hash": "sha256:6b8a6d105c549308306ca0dbe65b4927e8920eb516f110e6d17f2798ca1241fa",
+      "chain_hash": "sha256:f01c8cc28411ae64a75ab5dcbc139289bb07d0eaef030022ee85c1c36b0eb628"
+    },
+    {
+      "event_id": "evt_e1a8162c55094806",
+      "kind": "agent.PiiScrubber.invoke",
+      "agent": "PiiScrubber",
+      "agent_version": "1.0.0",
+      "ts": "2026-05-12T01:20:32.305320+00:00",
+      "payload": {
+        "regex_findings": 0,
+        "input_chars": 0,
+        "prompt_hash": "sha256:5f9a2e42cd0aab67d7a6e718fe22adba09ad5c3739b330085c6740de57666f82"
+      },
+      "payload_hash": "sha256:a07a630f1010422a4bfb5c41c94c722ed0a5831854d535076ebe48db6515a0cf",
+      "prev_hash": "sha256:f01c8cc28411ae64a75ab5dcbc139289bb07d0eaef030022ee85c1c36b0eb628",
+      "chain_hash": "sha256:424a0f01641e06e1a52ee106f09200a5c0ef1e0e6ce133e3c15dcbaa192cf5f4"
+    },
+    {
+      "event_id": "evt_06c7c7dc7b264604",
+      "kind": "agent.PiiScrubber.result",
+      "agent": "PiiScrubber",
+      "agent_version": "1.0.0",
+      "ts": "2026-05-12T01:20:33.466787+00:00",
+      "payload": {
+        "findings_total": 0,
+        "regex_findings": 0,
+        "llm_findings": 0,
+        "halt": false,
+        "response_hash": "sha256:0015aa9982f920c671e2daa2e48a651ca7d0fee29fc42b0ebec45cf601d48759",
+        "tokens": {
+          "input": 475,
+          "output": 65,
+          "cache_read": 0
+        }
+      },
+      "payload_hash": "sha256:ef98f6555c92c32e4151157b30c6aabf001bbbc07d9d4144f32334b8873b93b0",
+      "prev_hash": "sha256:424a0f01641e06e1a52ee106f09200a5c0ef1e0e6ce133e3c15dcbaa192cf5f4",
+      "chain_hash": "sha256:377faeaa41c3b437a8eb45b6e7463b947173f5acac45fc76f6062fb3ca2776e6"
+    },
+    {
+      "event_id": "evt_7d4dd42768f44ea2",
+      "kind": "agent.FreshnessAuditor.result",
+      "agent": "FreshnessAuditor",
+      "agent_version": "1.0.0",
+      "ts": "2026-05-12T01:20:33.466944+00:00",
+      "payload": {
+        "stale": false,
+        "reason_count": 0,
+        "reasons": [],
+        "oldest_evidence_date": null,
+        "today": "2026-05-11"
+      },
+      "payload_hash": "sha256:e6426a00d04cb748343e5c9b41e6f62be9113885d7f21e3ce70df01338047f1d",
+      "prev_hash": "sha256:377faeaa41c3b437a8eb45b6e7463b947173f5acac45fc76f6062fb3ca2776e6",
+      "chain_hash": "sha256:8acba8bb3d268d1aa31e280d7e7b590b6f9efb5827785fe5477904c1c259ca7d"
+    },
+    {
+      "event_id": "evt_9e6e8fb3327246df",
+      "kind": "validate.aggregate",
+      "agent": "Orchestrator",
+      "agent_version": "1.0.0",
+      "ts": "2026-05-12T01:20:33.467024+00:00",
+      "payload": {
+        "verdict": "halt",
+        "verifier_all_pass": false,
+        "pii_halt": false,
+        "consistency_drift": false,
+        "freshness_stale": false,
+        "draft_chars": 0,
+        "sourcer_sufficient": false,
+        "mapper_routed_to_sme": true
+      },
+      "payload_hash": "sha256:25d939dc13b953b5e0f883df4503eae34c05ae04947123e829c07fd5b25016a2",
+      "prev_hash": "sha256:8acba8bb3d268d1aa31e280d7e7b590b6f9efb5827785fe5477904c1c259ca7d",
+      "chain_hash": "sha256:8439ebc406452d8e71438a39c673aa3cdd2d1e71b3bac1a8b78a85318711c462"
+    },
+    {
+      "event_id": "evt_94791f15f95c4c3c",
+      "kind": "agent.ApprovalRouter.result",
+      "agent": "ApprovalRouter",
+      "agent_version": "1.0.0",
+      "ts": "2026-05-12T01:20:33.467120+00:00",
+      "payload": {
+        "route": "halt",
+        "queue": "legal",
+        "tier": "tier2",
+        "canonical_id": null,
+        "rationale": "Validator halted (citation/freshness/scrub guardrail) \u2014 legal review."
+      },
+      "payload_hash": "sha256:5829142826ec9334dc6e5a86c5daccab362c8317506c0d182f57d84ea84ff145",
+      "prev_hash": "sha256:8439ebc406452d8e71438a39c673aa3cdd2d1e71b3bac1a8b78a85318711c462",
+      "chain_hash": "sha256:803b156ddd079635c6d827a2139c759c93d6ec3ee0e0ceaf6ece8f3732770744"
+    }
+  ],
+  "merkle_root": "sha256:a3740311511f03175d12f61fd1ce45145ceaf31562573571b591b136cbe1bf65"
+}
