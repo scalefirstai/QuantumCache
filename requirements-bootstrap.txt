@@ -15,7 +15,7 @@ opensearch-py==2.8.0
 # never loads untrusted checkpoints (only the BGE-small model from
 # HuggingFace, fetched once over TLS). Production targets (Linux x86_64,
 # Apple Silicon) should bump torch to ≥ 2.8 in the prod requirements file.
-torch==2.2.2
+torch==2.8.0
 # Pinned alongside torch 2.2 — newer s-t lines drop torch 2.2 support.
 sentence-transformers==3.4.1
 qdrant-client>=1.11,<2
