@@ -8,7 +8,7 @@ lxml==6.1.0
 pymupdf==1.26.7
 python-docx==1.2.0
 pyarrow==21.0.0
-opensearch-py==2.8.0
+opensearch-py==3.2.0
 # PyTorch dropped macOS-x86_64 wheels after 2.2.x; this venv is on an
 # Intel Mac, so we can't take the GHSA-53q9-r3pm-6pq6 fix (torch ≥ 2.6) here.
 # The CVE requires torch.load on an attacker-controlled .pt file — our code
