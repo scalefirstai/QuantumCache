@@ -1,0 +1,55 @@
+# Scheduled version-update PRs. Security updates are auto-enabled at the
+# repo level (Settings → Code security) and run regardless of this file.
+
+version: 2
+updates:
+  # Python — bootstrap scripts + future services share this file today.
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "13:00"
+      timezone: "Etc/UTC"
+    open-pull-requests-limit: 5
+    groups:
+      # Roll up patch/minor bumps into one PR per ecosystem so the queue
+      # stays readable. Majors stay separate (they need scrutiny).
+      patch-and-minor:
+        applies-to: version-updates
+        update-types: ["patch", "minor"]
+    ignore:
+      # PyTorch 2.6+ has no macOS-x86_64 wheel; pin lifts when prod
+      # requirements land on Linux / Apple Silicon. Don't churn local
+      # dev's lockfile chasing wheels pip can't install here.
+      - dependency-name: torch
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
+
+  # Frontend.
+  - package-ecosystem: npm
+    directory: /apps/ui
+    schedule:
+      interval: weekly
+      day: monday
+      time: "13:00"
+      timezone: "Etc/UTC"
+    open-pull-requests-limit: 5
+    groups:
+      patch-and-minor:
+        applies-to: version-updates
+        update-types: ["patch", "minor"]
+      # Tanstack ships in lockstep; bumping one without the others breaks
+      # routing internals. Always update together.
+      tanstack:
+        applies-to: version-updates
+        patterns: ["@tanstack/*"]
+
+  # GitHub Actions used by our workflows (codeql-action, checkout, etc.).
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "13:00"
+      timezone: "Etc/UTC"
+    open-pull-requests-limit: 3
