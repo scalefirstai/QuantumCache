@@ -14,17 +14,18 @@ from typing import Optional
 
 from core.ports.agent import Agent, AgentEvent, RunContext
 from packages.llm_sdk import AnthropicClient, LLMClient, LLMRequest
+from packages.prompts import resolve_active
 from packages.schemas.agents import (
     ConsistencyCheckerInput, ConsistencyCheckerOutput,
 )
 
 
-PROMPT_PATH = Path(__file__).parent / "prompts" / "v1.0.0.md"
+# Active prompt resolved per-call so UI edits land on the next orchestrator run.
 _JSON_RE = re.compile(r"\{.*\}", re.DOTALL)
 
 
 def _render_prompt(input_: ConsistencyCheckerInput) -> tuple[str, str]:
-    raw = PROMPT_PATH.read_text(encoding="utf-8")
+    raw = resolve_active(__file__).path.read_text(encoding="utf-8")
     parts = raw.split("---", 2)
     body = parts[2] if len(parts) >= 3 else raw
     system_part, user_part = body.split("# User", 1)

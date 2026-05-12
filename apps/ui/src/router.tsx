@@ -5,11 +5,16 @@ import {
   Outlet,
 } from "@tanstack/react-router";
 import { AppShell } from "./components/shell/AppShell";
+import { AgentsRoute } from "./routes/Agents";
+import { AgentDetailRoute } from "./routes/AgentDetail";
 import { RunWalkthroughRoute } from "./routes/RunWalkthrough";
 import { PipelineRoute } from "./routes/Pipeline";
 import { EmployeeConsoleRoute } from "./routes/EmployeeConsole";
 import { PerformanceReviewRoute } from "./routes/PerformanceReview";
 import { SkillDetailRoute } from "./routes/SkillDetail";
+import { ModelsRoute } from "./routes/Models";
+import { SkillsRoute } from "./routes/Skills";
+import { PlaygroundRoute } from "./routes/Playground";
 import { HomeRoute } from "./routes/Home";
 
 const rootRoute = createRootRoute({
@@ -68,6 +73,36 @@ const skillRoute = createRoute({
   component: SkillDetailRoute,
 });
 
+const agentsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/agents",
+  component: AgentsRoute,
+});
+
+const agentDetailRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/agents/$agentId",
+  component: AgentDetailRoute,
+});
+
+const modelsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/models",
+  component: ModelsRoute,
+});
+
+const skillsListRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/skills",
+  component: SkillsRoute,
+});
+
+const playgroundRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/playground",
+  component: PlaygroundRoute,
+});
+
 const routeTree = rootRoute.addChildren([
   indexRoute,
   runRoute,
@@ -75,6 +110,11 @@ const routeTree = rootRoute.addChildren([
   employeeRoute,
   reviewRoute,
   skillRoute,
+  agentsRoute,
+  agentDetailRoute,
+  modelsRoute,
+  skillsListRoute,
+  playgroundRoute,
 ]);
 
 export const router = createRouter({

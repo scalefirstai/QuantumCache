@@ -1,0 +1,30 @@
+{
+  "ddq_id": "ddq_b32ac6e19b76",
+  "sealed_at": "2026-05-12T07:36:12.137827+00:00",
+  "platform_version": "v0.2.0-agents",
+  "from": "Playground <playground@quantumcache.local>",
+  "to": "ddq.intake@bny.com",
+  "subject": "Playground \u00b7 pg_20260512T073533_e2f8f5",
+  "raw_eml_sha256": "sha256:e4faf5a327fec4d64d66d17ad3dd9c98633a92b3be2f5490642e1b5fbb042476",
+  "question_count": 1,
+  "results": [
+    {
+      "run_id": "run_20260512T073547_4692fead",
+      "question_id": "PG-1",
+      "framework": "CAIQ",
+      "canonical_id": "canon.is.audit.a_a_01_q1",
+      "confidence": 0.937,
+      "library_hit": true,
+      "draft_chars": 1700,
+      "citation_count": 4,
+      "validate_verdict": "escalate",
+      "route": "sme_queue",
+      "queue": "infosec",
+      "tier": "tier1",
+      "elapsed_ms": 24523,
+      "merkle_root": "sha256:bc051df71c7987d31f1df3ec09a765c1a2028dad224f0e2d4f468eca411d66b1",
+      "outbound_preview": "Yes. BNY's Audit Committee has established pre-approval policies and procedures applicable to all services provided by our independent registered public accountants, in accordance with SEC rules. The pre-approval policy takes two approaches: services may be pre-approved pursuant to policies and proc",
+      "agent_events": 17
+    }
+  ]
+}

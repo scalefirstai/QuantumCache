@@ -14,15 +14,15 @@ from typing import Optional
 
 from core.ports.agent import Agent, AgentEvent, RunContext
 from packages.llm_sdk import AnthropicClient, LLMClient, LLMRequest
+from packages.prompts import resolve_active
 from packages.schemas.agents import QuestionMapperInput, QuestionMapperOutput
 
 
-PROMPT_PATH = Path(__file__).parent / "prompts" / "v1.0.0.md"
 SME_CONFIDENCE_THRESHOLD = 0.70
 
 
 def _render_prompt(input_: QuestionMapperInput) -> tuple[str, str]:
-    raw = PROMPT_PATH.read_text(encoding="utf-8")
+    raw = resolve_active(__file__).path.read_text(encoding="utf-8")
     # Split off YAML frontmatter.
     parts = raw.split("---", 2)
     body = parts[2] if len(parts) >= 3 else raw

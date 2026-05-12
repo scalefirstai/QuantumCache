@@ -26,6 +26,13 @@ const links: NavLink[] = [
   },
 ];
 
+const autogenLinks: NavLink[] = [
+  { to: "/agents", label: "Agents" },
+  { to: "/models", label: "Models" },
+  { to: "/skills", label: "Skills" },
+  { to: "/playground", label: "Playground" },
+];
+
 export function NavSidebar() {
   return (
     <aside
@@ -43,6 +50,20 @@ export function NavSidebar() {
       </div>
       <nav className="flex flex-col gap-1">
         {links.map((l) => (
+          <Link
+            key={l.label}
+            to={l.to}
+            params={l.params}
+            className="text-[13px] px-2 py-1.5 rounded-md text-bny-slate hover:bg-bny-paper [&.active]:bg-bny-tealLight [&.active]:text-bny-ink [&.active]:font-medium"
+            activeProps={{ className: "active" }}
+          >
+            {l.label}
+          </Link>
+        ))}
+        <div className="text-[10px] uppercase tracking-wider text-bny-fog mt-4 px-2">
+          AutoGen Lite
+        </div>
+        {autogenLinks.map((l) => (
           <Link
             key={l.label}
             to={l.to}

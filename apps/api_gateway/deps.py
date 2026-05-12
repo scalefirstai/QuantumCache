@@ -25,6 +25,7 @@ from functools import lru_cache
 from typing import Any, Optional
 
 from infra.adapters.fs_manifests import FsManifests
+from infra.adapters.fs_prompts import FsPrompts
 from infra.adapters.fs_sealed_runs import FsSealedRuns
 from infra.adapters.s3_sealed_runs import S3SealedRuns
 
@@ -37,6 +38,7 @@ class Container:
         self.settings = settings
         self.runs = _build_runs_repo(settings)
         self.manifests = FsManifests(settings.manifests_dir, settings.evals_reports_dir)
+        self.prompts = FsPrompts(settings.repo_root / "services")
         self.builders = FixtureBuilders(settings.repo_root)
         self.mongo: Optional[Any] = None
         self.lib: Optional[Any] = None

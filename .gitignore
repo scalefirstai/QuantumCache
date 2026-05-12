@@ -45,3 +45,7 @@ infra/docker/volume/
 apps/api_gateway/tests/screenshots/
 apps/ui/test-results/
 apps/ui/playwright-report/
+
+# Playground transient subprocess workdirs — synthesized .eml + orchestrator
+# log per submission. Sealed runs end up in data/manifests/runs/.
+data/fixtures/playground/
