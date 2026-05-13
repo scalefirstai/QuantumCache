@@ -450,7 +450,11 @@ max_tokens: 2048
 eval_set: drafter_v1
 ---
 ```
-Prompts are versioned. Promotion to prod requires regression pass.
+Prompts are versioned. Promotion to prod requires regression pass. Verbatim
+system/user prompts, hard rules, and decision logic for all eight agents
+live in [`docs/agents/prompts.md`](agents/prompts.md) — that document is
+the canonical SME-facing catalog and must be kept in sync with the prompt
+files on each version bump.
 
 **LLM access.**
 ```python

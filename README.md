@@ -357,6 +357,8 @@ evals/             eval set v0 (100 items) + thresholds + harness
 docs/
   ddq.md           build contract (the spec; 737 lines)
   DATA-PLAN.md     bootstrap plan
+  agents/
+    prompts.md     verbatim system + user prompts for all 8 L06 agents
   decisions/       ADRs
   runbooks/
 ```
