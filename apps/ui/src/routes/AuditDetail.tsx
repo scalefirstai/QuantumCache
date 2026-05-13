@@ -23,8 +23,8 @@ import {
   Select,
   TextArea,
   VerdictPill,
-  formatDate,
 } from "@/components/datasets/Common";
+import { formatDate } from "@/components/datasets/format";
 
 export function AuditDetailRoute() {
   const { runId } = useParams({ from: "/datasets/audit/$runId" });
@@ -45,6 +45,7 @@ export function AuditDetailRoute() {
 
   useEffect(() => {
     refresh();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [runId]);
 
   if (err) return <ErrorBox title="Failed to load audit run" detail={err} />;
@@ -237,7 +238,7 @@ function RedactionModal({
 
   useEffect(() => {
     setForm((f) => ({ ...f, eventId: run.events[0]?.eventId ?? "" }));
-  }, [run.runId, run.events.length]);
+  }, [run.runId, run.events]);
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -246,8 +247,8 @@ function RedactionModal({
     try {
       await createAuditRedaction(run.runId, form);
       onCreated();
-    } catch (e: any) {
-      setError(e?.message ?? "Redaction failed");
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Redaction failed");
     } finally {
       setSubmitting(false);
     }

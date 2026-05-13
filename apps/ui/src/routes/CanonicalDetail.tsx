@@ -22,8 +22,8 @@ import {
   Select,
   TagPill,
   TextArea,
-  formatDate,
 } from "@/components/datasets/Common";
+import { formatDate } from "@/components/datasets/format";
 
 export function CanonicalDetailRoute() {
   const { canonicalId } = useParams({ from: "/datasets/canonical/$canonicalId" });
@@ -37,6 +37,7 @@ export function CanonicalDetailRoute() {
 
   useEffect(() => {
     refresh();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [canonicalId]);
 
   if (err) return <ErrorBox title="Failed to load canonical" detail={err} />;
@@ -200,8 +201,8 @@ function CanonicalEditModal({
     try {
       await updateCanonical(item.canonicalId, form);
       onSaved();
-    } catch (e: any) {
-      setError(e?.message ?? "Update failed");
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Update failed");
     } finally {
       setSubmitting(false);
     }

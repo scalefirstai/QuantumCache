@@ -9,14 +9,14 @@ import {
   PageHeader,
   TagPill,
   VerdictPill,
-  formatDate,
 } from "@/components/datasets/Common";
+import { formatDate } from "@/components/datasets/format";
+import { Pagination } from "@/components/datasets/Pagination";
 import {
   DEFAULT_PAGE_SIZE,
-  Pagination,
   paginate,
   type PageSize,
-} from "@/components/datasets/Pagination";
+} from "@/components/datasets/paginationUtils";
 
 export function AuditListRoute() {
   const [items, setItems] = useState<AuditRunSummary[] | null>(null);

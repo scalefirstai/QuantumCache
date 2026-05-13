@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { listDatasets } from "@/api/datasets";
 import type { DatasetSummary } from "@/types/dataset";
 import { Loading, ErrorBox } from "@/components/shell/StateMessages";
-import { PageHeader, formatDate } from "@/components/datasets/Common";
+import { PageHeader } from "@/components/datasets/Common";
+import { formatDate } from "@/components/datasets/format";
 
 const lane: Record<string, string> = {
   knowledge: "bg-lane-knowledgeBg text-lane-knowledgeFg",

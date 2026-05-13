@@ -20,8 +20,8 @@ import {
   SecondaryButton,
   TagPill,
   TextArea,
-  formatDate,
 } from "@/components/datasets/Common";
+import { formatDate } from "@/components/datasets/format";
 import { StatusBadge } from "@/components/rules/StatusBadge";
 import { ApprovalModal } from "@/components/rules/ApprovalModal";
 import { RuleEditor } from "@/components/rules/RuleEditor";

@@ -3,11 +3,8 @@ import { useEffect, useState } from "react";
 import { listReviewQueue } from "@/api/rules";
 import type { RuleSummary } from "@/types/rule";
 import { Loading, ErrorBox } from "@/components/shell/StateMessages";
-import {
-  PageHeader,
-  TagPill,
-  formatDate,
-} from "@/components/datasets/Common";
+import { PageHeader, TagPill } from "@/components/datasets/Common";
+import { formatDate } from "@/components/datasets/format";
 import { StatusBadge } from "@/components/rules/StatusBadge";
 
 export function RuleQueueRoute() {

@@ -16,9 +16,8 @@ import {
   PrimaryButton,
   SecondaryButton,
   TagPill,
-  formatBytes,
-  formatDate,
 } from "@/components/datasets/Common";
+import { formatBytes, formatDate } from "@/components/datasets/format";
 
 export function KnowledgeDetailRoute() {
   const { docId } = useParams({ from: "/datasets/knowledge/$docId" });
@@ -31,6 +30,7 @@ export function KnowledgeDetailRoute() {
 
   useEffect(() => {
     refresh();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [docId]);
 
   if (err) return <ErrorBox title="Failed to load document" detail={err} />;
@@ -159,8 +159,8 @@ function KnowledgeEditModal({
     try {
       await updateKnowledge(doc.docId, form);
       onSaved();
-    } catch (e: any) {
-      setError(e?.message ?? "Update failed");
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Update failed");
     } finally {
       setSubmitting(false);
     }

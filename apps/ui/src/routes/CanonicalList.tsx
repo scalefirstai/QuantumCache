@@ -22,12 +22,12 @@ import {
   TagPill,
   TextArea,
 } from "@/components/datasets/Common";
+import { Pagination } from "@/components/datasets/Pagination";
 import {
   DEFAULT_PAGE_SIZE,
-  Pagination,
   paginate,
   type PageSize,
-} from "@/components/datasets/Pagination";
+} from "@/components/datasets/paginationUtils";
 
 export function CanonicalListRoute() {
   const [items, setItems] = useState<CanonicalDetail[] | null>(null);
@@ -257,8 +257,8 @@ function CanonicalCreateModal({
     try {
       await createCanonical(form);
       onCreated();
-    } catch (e: any) {
-      setError(e?.message ?? "Create failed");
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Create failed");
     } finally {
       setSubmitting(false);
     }

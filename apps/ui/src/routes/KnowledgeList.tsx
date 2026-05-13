@@ -21,14 +21,14 @@ import {
   PrimaryButton,
   SecondaryButton,
   TagPill,
-  formatBytes,
 } from "@/components/datasets/Common";
+import { formatBytes } from "@/components/datasets/format";
+import { Pagination } from "@/components/datasets/Pagination";
 import {
   DEFAULT_PAGE_SIZE,
-  Pagination,
   paginate,
   type PageSize,
-} from "@/components/datasets/Pagination";
+} from "@/components/datasets/paginationUtils";
 
 export function KnowledgeListRoute() {
   const [items, setItems] = useState<KnowledgeDoc[] | null>(null);
@@ -317,8 +317,8 @@ function KnowledgeCreateModal({
       const hash = await sha256OfFile(f);
       setDocHash(hash);
       setStage("idle");
-    } catch (e: any) {
-      setError(`Hashing failed: ${e?.message ?? e}`);
+    } catch (e) {
+      setError(`Hashing failed: ${e instanceof Error ? e.message : String(e)}`);
       setStage("idle");
     }
   };
@@ -346,8 +346,8 @@ function KnowledgeCreateModal({
         sizeBytes: file.size,
         source: meta.source,
       });
-    } catch (err: any) {
-      setError(err?.message ?? "Failed to get upload URL");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to get upload URL");
       setStage("idle");
       return;
     }
@@ -358,8 +358,8 @@ function KnowledgeCreateModal({
       await putKnowledgeUploadObject(ticket, file, (loaded, total) => {
         setPutProgress(total > 0 ? loaded / total : 0);
       });
-    } catch (err: any) {
-      setError(err?.message ?? "Upload failed");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Upload failed");
       setStage("idle");
       return;
     }
@@ -383,8 +383,8 @@ function KnowledgeCreateModal({
         clientDocHash: docHash,
       });
       onCreated();
-    } catch (err: any) {
-      setError(err?.message ?? "Confirm failed");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Confirm failed");
       setStage("idle");
     }
   };
