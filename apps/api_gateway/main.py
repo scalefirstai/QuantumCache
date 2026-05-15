@@ -17,7 +17,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from .deps import container
-from .routers import agents, datasets, employees, models, pipelines, playground, rules, runs, skills, templates
+from .routers import agents, datasets, employees, models, opp_deal, pipelines, playground, rules, runs, skills, templates
 
 
 def create_app() -> FastAPI:
@@ -61,6 +61,7 @@ def create_app() -> FastAPI:
     app.include_router(playground.router)
     app.include_router(datasets.router)
     app.include_router(rules.router)
+    app.include_router(opp_deal.router)
     return app
 
 

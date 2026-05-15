@@ -8,7 +8,7 @@ export default defineConfig({
   // datasets.spec.ts and rules.spec.ts have their own configs + webServer
   // (fs-mode API on :8001 + VITE_API_MODE=http). Excluded here so the
   // default fixture-mode runner doesn't pick them up.
-  testIgnore: [/datasets\.spec\.ts/, /rules\.spec\.ts/],
+  testIgnore: [/datasets\.spec\.ts/, /rules\.spec\.ts/, /opp-deal(-walkthrough)?\.spec\.ts/],
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,

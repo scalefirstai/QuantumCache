@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import type { Pipeline } from "@/types/pipeline";
 
 function shortHash(h: string | undefined, n = 12): string {
@@ -11,6 +12,24 @@ export function EmailHeader({ pipeline }: { pipeline: Pipeline }) {
       data-testid="pipeline-email-header"
       className="bg-white border border-bny-mist rounded-lg px-4 py-3"
     >
+      <div
+        className="text-[11px] mb-2 text-bny-slate flex items-center flex-wrap gap-1"
+        data-testid="pipeline-breadcrumb"
+      >
+        <Link to="/" className="hover:text-bny-teal">Deal pipeline</Link>
+        <span className="text-bny-fog">›</span>
+        <Link to="/opportunities" className="hover:text-bny-teal">
+          Opportunities
+        </Link>
+        <span className="text-bny-fog">›</span>
+        <span className="text-bny-ink font-medium">DDQ workflow</span>
+        <span
+          className="ml-2 text-[9px] uppercase tracking-wider rounded px-1.5 py-px border bg-bny-ochre/10 text-bny-ochre border-bny-ochre/30"
+          title="This stage is owned by the DDQ team and feeds S03 of each opportunity"
+        >
+          Owned by DDQ team · S03
+        </span>
+      </div>
       <div className="flex items-center justify-between gap-4">
         <div className="min-w-0">
           <div className="text-[11px] uppercase tracking-wider text-bny-fog font-medium mb-1">

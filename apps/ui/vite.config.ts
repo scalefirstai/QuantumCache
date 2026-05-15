@@ -11,6 +11,16 @@ export default defineConfig({
   },
   server: {
     port: 5173,
+    proxy: {
+      // Forward /api/* to the FastAPI gateway when VITE_API_BASE_URL isn't
+      // set. Override target via DDQ_API_PROXY=http://host:port if you're
+      // running the gateway elsewhere. Fixture-mode features short-circuit
+      // before fetch, so the proxy is a no-op for them.
+      "/api": {
+        target: process.env.DDQ_API_PROXY ?? "http://127.0.0.1:8000",
+        changeOrigin: true,
+      },
+    },
   },
   test: {
     globals: true,

@@ -6,7 +6,7 @@ export function PageHeader({
   subtitle,
   actions,
 }: {
-  eyebrow?: string;
+  eyebrow?: ReactNode;
   title: string;
   subtitle?: string;
   actions?: ReactNode;
@@ -61,12 +61,14 @@ export function SecondaryButton({
   testId,
   type = "button",
   tone = "neutral",
+  disabled,
 }: {
   onClick?: () => void;
   children: ReactNode;
   testId?: string;
   type?: "button" | "submit";
   tone?: "neutral" | "danger";
+  disabled?: boolean;
 }) {
   const palette =
     tone === "danger"
@@ -77,7 +79,8 @@ export function SecondaryButton({
       type={type}
       data-testid={testId}
       onClick={onClick}
-      className={`text-sm px-3 py-1.5 rounded-md border bg-white ${palette} focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-bny-teal`}
+      disabled={disabled}
+      className={`text-sm px-3 py-1.5 rounded-md border bg-white ${palette} focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-bny-teal disabled:opacity-50 disabled:cursor-not-allowed`}
     >
       {children}
     </button>

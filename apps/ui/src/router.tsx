@@ -24,6 +24,10 @@ import { AuditDetailRoute } from "./routes/AuditDetail";
 import { RulesListRoute } from "./routes/RulesList";
 import { RuleDetailRoute } from "./routes/RuleDetail";
 import { RuleQueueRoute } from "./routes/RuleQueue";
+import { OpportunitiesRoute } from "./routes/Opportunities";
+import { OpportunityWorkspaceRoute } from "./routes/OpportunityWorkspace";
+import { EcrmSourcesRoute } from "./routes/EcrmSources";
+import type { StageId } from "./types/oppDeal";
 
 const rootRoute = createRootRoute({
   component: () => (
@@ -159,6 +163,30 @@ const ruleDetailRoute = createRoute({
   component: RuleDetailRoute,
 });
 
+const opportunitiesRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/opportunities",
+  component: OpportunitiesRoute,
+});
+
+const ecrmSourcesRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/sources",
+  component: EcrmSourcesRoute,
+});
+
+const opportunityWorkspaceRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/opportunities/$oppId",
+  validateSearch: (search: Record<string, unknown>): { stage?: StageId } => ({
+    stage:
+      typeof search.stage === "string"
+        ? (search.stage as StageId)
+        : undefined,
+  }),
+  component: OpportunityWorkspaceRoute,
+});
+
 const routeTree = rootRoute.addChildren([
   indexRoute,
   runRoute,
@@ -179,6 +207,9 @@ const routeTree = rootRoute.addChildren([
   rulesListRoute,
   ruleQueueRoute,
   ruleDetailRoute,
+  opportunitiesRoute,
+  opportunityWorkspaceRoute,
+  ecrmSourcesRoute,
 ]);
 
 export const router = createRouter({
